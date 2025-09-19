@@ -128,7 +128,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-90">
-          <p>&copy; 2024 Agrocentro. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Agrocentro. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
