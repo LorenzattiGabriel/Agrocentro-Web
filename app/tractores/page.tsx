@@ -1,10 +1,18 @@
-import { FeaturedProducts } from "@/components/featured-products"
+import SectionCatalogo from "@/components/SectionCatalogo/SectionCatalogo"
 
 
 export default function TractoresPage() {
   return (
     <main className="min-h-screen">
-      <FeaturedProducts />
+        <h1 className="
+            text-2xl md:text-3xl font-semibold text-secondary
+            pl-10 pt-3
+            mb-10 pr-4
+        ">
+            TRACTORES NUEVOS
+        </h1>
+
+        <SectionCatalogo/>
     </main>
   )
 }
