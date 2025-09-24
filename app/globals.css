@@ -125,3 +125,10 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+
+
+/* Fix para que los titulos no queden escondidos bajo el header nav al hacer una redireccion con href y la ID del titulo*/
+h1, h2, h3, [id] {
+  scroll-margin-top: 200px; 
+}
