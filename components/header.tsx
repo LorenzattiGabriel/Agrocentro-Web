@@ -44,9 +44,11 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
+            
             <Link href="/" className="text-foreground hover:text-primary transition-colors">
               Inicio
             </Link>
+            
             <div className="relative group">
               <button className="text-foreground hover:text-primary transition-colors">Productos</button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -61,12 +63,27 @@ export function Header() {
                 </Link>
               </div>
             </div>
+            
             <Link href="/usados" className="text-foreground hover:text-primary transition-colors">
               Usados
             </Link>
+            
             <Link href="/servicios" className="text-foreground hover:text-primary transition-colors">
               Servicios
             </Link>
+            
+            <div className="relative group">
+              <button className="text-foreground hover:text-primary transition-colors">Nosotros</button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/quienes-somos" className="block px-4 py-2 text-sm hover:bg-muted">
+                  Quiénes Somos
+                </Link>
+                <Link href="/sucursales" className="block px-4 py-2 text-sm hover:bg-muted">
+                  Sucursales
+                </Link>
+              </div>
+            </div>
+            
             <Link href="/contacto" className="text-foreground hover:text-primary transition-colors">
               Contacto
             </Link>

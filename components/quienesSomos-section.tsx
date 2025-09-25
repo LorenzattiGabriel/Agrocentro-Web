@@ -1,4 +1,4 @@
-export function QuienesSomosPage() {
+export function QuienesSomosSection() {
   return (
     <section className="py-12 md:py-16">
       {/* --- CONOCIENDO AGROCENTRO --- */}
