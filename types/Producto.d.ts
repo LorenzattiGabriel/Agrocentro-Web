@@ -1,6 +1,8 @@
+export type ProductoSection = "tractores" | "implementos" | "repuestos" | "usados"
+
 export type Producto = {
     id: number,
-    section: "tractores" | "implementos" | "repuestos" | "usados"
+    section: ProductoSection
 }
 
 export type Tractor = Producto & {

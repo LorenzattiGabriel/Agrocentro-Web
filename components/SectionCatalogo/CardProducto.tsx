@@ -13,7 +13,7 @@ export default function CardProducto({producto}:Props){
         <article
             key={producto.id} 
             className="
-                max-w-70
+                max-w-70 w-full
                 bg-white 
                 flex flex-col overflow-hidden 
                 rounded-2xl border-1 hover:border-secondary

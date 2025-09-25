@@ -12,7 +12,7 @@ export default function TractoresPage() {
             TRACTORES NUEVOS
         </h1>
 
-        <SectionCatalogo/>
+        <SectionCatalogo section="tractores"/>
     </main>
   )
 }

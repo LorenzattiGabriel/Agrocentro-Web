@@ -1,10 +1,22 @@
+"use client";
+
 import tractoresNuevos from "@/constants/tractores-nuevos.json"
 import CardProducto from "./CardProducto";
+import OrdernarButton from "./buttons/OrdernarButton";
+import SearchBar from "./searchbar/SearchBar";
+import { ProductoSection, Tractor } from "@/types/Producto";
+import { useState } from "react";
 
 
-export default function SectionCatalogo(){
-    
+type Props = {
+    section: ProductoSection
+}
 
+export default function SectionCatalogo({section}: Props){
+
+    const allProducts = tractoresNuevos;
+
+    const [productos, setProductos] = useState(allProducts);
 
     return (
     <div className="
@@ -32,23 +44,32 @@ export default function SectionCatalogo(){
             </form>
         </aside>
 
-        <div>
 
-            {/* Barra busqueda */}
-            <div>
+        <div className="max-w-300">
 
+            {/* Busqueda */}
+            <div className="
+                h-10
+                flex flex-col md:flex-row 
+                items-start md:items-stretch gap-4 
+                px-8
+                mb-6
+            ">
+                <OrdernarButton />
+                <SearchBar section={section} productos={allProducts} setProductos={setProductos}/>
             </div>
+           
 
             {/* Catalogo */}
             <section
                 className="
                     grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 
-                    gap-6 
-                    w-full max-w-300
+                    justify-items-center justify-left
+                    gap-3 xl:gap-6
                     py-8 px-8
                 "
             >
-                {tractoresNuevos.map((tractor) => <CardProducto producto={{...tractor, section: "tractores"}} key={tractor.id}/>)}
+                {productos.map((producto) => <CardProducto producto={{...producto, section: "tractores"}} key={producto.id}/>)}
             </section>
 
 
