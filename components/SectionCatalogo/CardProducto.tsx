@@ -19,6 +19,7 @@ export default function CardProducto({producto}:Props){
                 rounded-2xl border-1 hover:border-secondary
                 hover:shadow-2xl hover:bg-[#00a63d18] hover:scale-101 
                 transition-all hover:transition-all 
+                fade-in-up
             "
         >
             <img 

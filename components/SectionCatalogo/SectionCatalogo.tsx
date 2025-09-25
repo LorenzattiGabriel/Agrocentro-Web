@@ -2,10 +2,11 @@
 
 import tractoresNuevos from "@/constants/tractores-nuevos.json"
 import CardProducto from "./CardProducto";
-import OrdernarButton from "./buttons/OrdernarButton";
+import OrdernarButton from "./OrdenarButton/OrdernarButton";
 import SearchBar from "./searchbar/SearchBar";
-import { ProductoSection, Tractor } from "@/types/Producto";
+import { ProductoSection } from "@/types/Producto";
 import { useState } from "react";
+import { orderOptions } from "./OrdenarButton/utils/options";
 
 
 type Props = {
@@ -17,6 +18,7 @@ export default function SectionCatalogo({section}: Props){
     const allProducts = tractoresNuevos;
 
     const [productos, setProductos] = useState(allProducts);
+    const [selectedOrder, setSelectedOrder] = useState(orderOptions[0].value);
 
     return (
     <div className="
@@ -55,8 +57,8 @@ export default function SectionCatalogo({section}: Props){
                 px-8
                 mb-6
             ">
-                <OrdernarButton />
-                <SearchBar section={section} productos={allProducts} setProductos={setProductos}/>
+                <OrdernarButton selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} productos={productos} setProductos={setProductos}/>
+                <SearchBar selectedOrder={selectedOrder} section={section} productos={allProducts} setProductos={setProductos}/>
             </div>
            
 

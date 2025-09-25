@@ -1,40 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
+import { getOrderFunction } from "../OrdenarButton/utils/utils";
+import type {Props} from "./Props"
 
-type Props = {
-    section: string,
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[],
-    setProductos: Dispatch<SetStateAction<({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]>>
-}
 
-export default function SearchBar({section, productos, setProductos}: Props){
+export default function SearchBar({selectedOrder, section, productos, setProductos}: Props){
 
     const inputName = "searchbar-form-input"
 
@@ -43,15 +12,17 @@ export default function SearchBar({section, productos, setProductos}: Props){
             className="flex-1 w-full flex gap-2"
             onSubmit={(e)=>{
                     e.preventDefault();
-                    console.log("prevent default ok")
-                    setProductos(
-                        productos.filter((prod)=>{
-                            const form = e.target as HTMLFormElement;
-                            const input = form.elements.namedItem(inputName) as HTMLInputElement;
-                            
-                            return prod.name.toLowerCase().includes(input.value.toLowerCase().trim())
-                        })
-                    )
+                    
+                    const productosFiltrados = productos.filter((prod)=>{
+                        const form = e.target as HTMLFormElement;
+                        const input = form.elements.namedItem(inputName) as HTMLInputElement;
+                        
+                        return prod.name.toLowerCase().includes(input.value.toLowerCase().trim())
+                    })
+
+                    const sortFunc = getOrderFunction(selectedOrder);    
+                    if (sortFunc) sortFunc(productosFiltrados, setProductos);
+                    else setProductos(productosFiltrados)
                 }} 
         >
             <input
@@ -63,7 +34,9 @@ export default function SearchBar({section, productos, setProductos}: Props){
                     border rounded 
                     px-3 py-1 
                     text-md 
-                    focus:outline-accent focus:outline-1
+                    focus:outline-accent focus:outline-1 focus:bg-gray-100
+                    hover:bg-gray-100
+                    transition-all hover:transition-all
                 "
             />
             <button

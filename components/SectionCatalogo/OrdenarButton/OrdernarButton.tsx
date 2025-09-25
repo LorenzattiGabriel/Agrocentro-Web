@@ -1,38 +1,14 @@
 import { useState, useRef, RefObject, Dispatch, SetStateAction } from "react";
+import { orderOptions } from "./utils/options";
+import { handleDropdownBlur, handleOnClick } from "./utils/handlers";
+import { getOrderLabel } from "./utils/utils";
+import type { Props } from "./Props";
 
-const orderOptions = [
-    { value: "ventas", label: "Más vendido" },
-    { value: "precio-asc", label: "Precio (menor a mayor)" },
-    { value: "precio-desc", label: "Precio (mayor a menor)" },
-    { value: "hp-asc", label: "HP (menor a mayor)" },
-    { value: "hp-desc", label: "HP (mayor a menor)" },
-];
 
-function getOrderLabel(value: string) {
-    const found = orderOptions.find(opt => opt.value === value);
-    return found ? found.label : "";
-}
-
-// Close dropdown on outside click
-// (This is a simple approach, in a real app consider useEffect for event listeners)
-function handleDropdownBlur(
-    e: React.FocusEvent<HTMLButtonElement | HTMLUListElement>,
-    dropdownRef: RefObject<HTMLDivElement>,
-    setDropdownOpen: Dispatch<SetStateAction<boolean>>
-) {
-    // If focus moves outside the dropdown, close it
-    if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.relatedTarget as Node)
-    ) {
-        setDropdownOpen(false);
-    }
-}
-
-export default function OrdernarButton(){
+export default function OrdernarButton({selectedOrder, setSelectedOrder, productos, setProductos}: Props){
 
     const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-    const [selectedOrder, setSelectedOrder] = useState(orderOptions[0].value);
+
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     return(
@@ -83,15 +59,9 @@ export default function OrdernarButton(){
                                 transition-all hover:transition-all
                                 ${selectedOrder === opt.value ? "bg-gray-200 font-semibold" : ""}`
                             }
-                            onClick={() => {
-                                setSelectedOrder(opt.value);
-                                setDropdownOpen(false);
-                            }}
+                            onClick={() => {handleOnClick(opt,setSelectedOrder,setDropdownOpen, productos, setProductos)}}
                             onKeyDown={e => {
-                                if (e.key === "Enter" || e.key === " ") {
-                                    setSelectedOrder(opt.value);
-                                    setDropdownOpen(false);
-                                }
+                                if (e.key === "Enter" || e.key === " ") handleOnClick(opt,setSelectedOrder,setDropdownOpen, productos, setProductos);
                             }}
                         >
                             {opt.label}
