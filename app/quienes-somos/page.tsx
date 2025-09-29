@@ -1,4 +1,3 @@
-import { FeaturedProducts } from "@/components/featured-products"
 import { QuienesSomosSection } from "../../components/quienesSomos-section"
 
 export default function QuienesSomosPage() {
@@ -8,3 +7,4 @@ export default function QuienesSomosPage() {
     </main>
   )
 }
+

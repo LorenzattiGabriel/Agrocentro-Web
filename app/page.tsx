@@ -9,12 +9,10 @@ import { QuienesSomosPage } from "@/components/quienesSomos-section"
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <HeroSection />
       <ServicesSection />
       <FeaturedProducts />
       <LocationsSection />
-      <Footer />
     </main>
   )
 }
