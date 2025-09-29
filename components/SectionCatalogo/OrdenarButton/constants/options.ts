@@ -1,4 +1,4 @@
-import { sortByHpAsc, sortByHpDesc, sortById, sortByPrecioAsc, sortByPrecioDesc } from "./sortFunctions";
+import { sortByHpAsc, sortByHpDesc, sortById, sortByPrecioAsc, sortByPrecioDesc } from "../utils/sortFunctions";
 
 export const orderOptions = [
     { value: "ventas", label: "Más vendido", sortFunction: sortById },

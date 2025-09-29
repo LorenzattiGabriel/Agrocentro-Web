@@ -5,8 +5,11 @@ import CardProducto from "./CardProducto";
 import OrdernarButton from "./OrdenarButton/OrdernarButton";
 import SearchBar from "./searchbar/SearchBar";
 import { ProductoSection } from "@/types/Producto";
-import { useState } from "react";
-import { orderOptions } from "./OrdenarButton/utils/options";
+import { useEffect, useState } from "react";
+import { orderOptions } from "./OrdenarButton/constants/options";
+import FiltroCheckbox from "./filtros/FiltroCheckbox/FiltroCheckbox";
+import { opcionesCheckbox } from "./filtros/FiltroCheckbox/constants/opcionesCheckbox";
+import { getOrderFunction } from "./OrdenarButton/utils/utils";
 
 
 type Props = {
@@ -19,6 +22,30 @@ export default function SectionCatalogo({section}: Props){
 
     const [productos, setProductos] = useState(allProducts);
     const [selectedOrder, setSelectedOrder] = useState(orderOptions[0].value);
+    const [search, setSearch] = useState("");
+
+
+    const [productosFiltroMarca, setProductosFiltroMarca] = useState(allProducts);
+
+    // Orden de implementacion de filtros (se aplican todos al mismo tiempo, pero van en cierto orden de ejecucion):
+    // Marca -> SearchBox -> Sort/Ordenar Por
+    useEffect(()=>{
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        //search
+        let productosSearch = [];
+        if (search === "") productosSearch = productosFiltroMarca;
+        else productosSearch = productosFiltroMarca.filter((prod) => 
+            prod.name.toLowerCase().includes(search.toLowerCase().trim())
+        );
+
+        //orden
+        const sortFunc = getOrderFunction(selectedOrder);    
+        if (sortFunc) sortFunc(productosSearch, setProductos);
+        else throw new Error("No hay funcion para ordenar.");
+
+    }, [productosFiltroMarca, search, selectedOrder])
+
 
     return (
     <div className="
@@ -30,16 +57,13 @@ export default function SectionCatalogo({section}: Props){
         <aside className="
             
         ">
-            <form >
+            <form className="sticky top-35 z-2 pt-3">
 
-                <fieldset>
-                    <legend>HP (caballos de fuerza)</legend>
-                    <label><input type="radio"/>Todos</label>
-                    <label><input type="radio"/>Menos de 100</label>
-                    <label><input type="radio"/>Entre 100 y 150</label>
-                    <label><input type="radio"/>Entre 150 y 200</label>
-                    <label><input type="radio"/>Más de 200</label>
-                </fieldset>
+                <FiltroCheckbox 
+                    opcionCheckbox={opcionesCheckbox.marcas_tractores} 
+                    productos={allProducts}
+                    setProductosFiltrados={setProductosFiltroMarca}
+                />
 
 
 
@@ -51,16 +75,20 @@ export default function SectionCatalogo({section}: Props){
 
             {/* Busqueda */}
             <div className="
-                h-10
-                flex flex-col md:flex-row 
-                items-start md:items-stretch gap-4 
-                px-8
-                mb-6
+                pt-3 pb-6 md:pb-3 bg-white
+                sticky top-35 z-2
             ">
-                <OrdernarButton selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} productos={productos} setProductos={setProductos}/>
-                <SearchBar selectedOrder={selectedOrder} section={section} productos={allProducts} setProductos={setProductos}/>
-            </div>
-           
+                <div className="
+                    md:h-10
+                    flex flex-col md:flex-row 
+                    items-start md:items-stretch gap-4 
+                    px-8
+                ">
+                    <OrdernarButton selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} />
+
+                    <SearchBar  section={section} setSearch={setSearch}/>
+                </div>
+           </div>
 
             {/* Catalogo */}
             <section

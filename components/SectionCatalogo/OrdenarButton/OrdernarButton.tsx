@@ -1,11 +1,11 @@
-import { useState, useRef, RefObject, Dispatch, SetStateAction } from "react";
-import { orderOptions } from "./utils/options";
+import { useState, useRef} from "react";
+import { orderOptions } from "./constants/options";
 import { handleDropdownBlur, handleOnClick } from "./utils/handlers";
 import { getOrderLabel } from "./utils/utils";
 import type { Props } from "./Props";
 
 
-export default function OrdernarButton({selectedOrder, setSelectedOrder, productos, setProductos}: Props){
+export default function OrdernarButton({selectedOrder, setSelectedOrder}: Props){
 
     const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
@@ -59,9 +59,9 @@ export default function OrdernarButton({selectedOrder, setSelectedOrder, product
                                 transition-all hover:transition-all
                                 ${selectedOrder === opt.value ? "bg-gray-200 font-semibold" : ""}`
                             }
-                            onClick={() => {handleOnClick(opt,setSelectedOrder,setDropdownOpen, productos, setProductos)}}
+                            onClick={() => {handleOnClick(opt,setSelectedOrder,setDropdownOpen)}}
                             onKeyDown={e => {
-                                if (e.key === "Enter" || e.key === " ") handleOnClick(opt,setSelectedOrder,setDropdownOpen, productos, setProductos);
+                                if (e.key === "Enter" || e.key === " ") handleOnClick(opt,setSelectedOrder,setDropdownOpen);
                             }}
                         >
                             {opt.label}

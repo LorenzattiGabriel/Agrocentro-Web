@@ -1,11 +1,10 @@
-import { Dispatch, SetStateAction } from "react";
-import { getOrderFunction } from "../OrdenarButton/utils/utils";
 import type {Props} from "./Props"
 
-
-export default function SearchBar({selectedOrder, section, productos, setProductos}: Props){
+export default function SearchBar({section, setSearch}: Props){
 
     const inputName = "searchbar-form-input"
+
+    
 
     return (
         <form 
@@ -13,16 +12,10 @@ export default function SearchBar({selectedOrder, section, productos, setProduct
             onSubmit={(e)=>{
                     e.preventDefault();
                     
-                    const productosFiltrados = productos.filter((prod)=>{
-                        const form = e.target as HTMLFormElement;
-                        const input = form.elements.namedItem(inputName) as HTMLInputElement;
-                        
-                        return prod.name.toLowerCase().includes(input.value.toLowerCase().trim())
-                    })
-
-                    const sortFunc = getOrderFunction(selectedOrder);    
-                    if (sortFunc) sortFunc(productosFiltrados, setProductos);
-                    else setProductos(productosFiltrados)
+                    const form = e.target as HTMLFormElement;
+                    const input = form.elements.namedItem(inputName) as HTMLInputElement;
+                    
+                    setSearch(input.value);
                 }} 
         >
             <input

@@ -1,4 +1,4 @@
-import { orderOptions } from "./options";
+import { orderOptions } from "../constants/options";
 
 export function getOrderLabel(value: string) {
     const found = orderOptions.find(opt => opt.value === value);

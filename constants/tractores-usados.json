@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Tractor John Deere 6110M",
+        "marca": "John Deere",
+        "price": "Consultar",
+        "image": "/john-deere-green-tractor-6110m.jpg",
+        "hp": 110,
+        "year": 2005,
+        "horas": 14500
+    },
+    {
+        "id": 2,
+        "name": "Tractor Massey Ferguson 4275",
+        "marca": "Massey Ferguson",
+        "price": 45000,
+        "image": "/red-massey-ferguson-tractor-used.jpg",
+        "hp": 75,
+        "year": 2005,
+        "horas": 14500
+    }
+]
