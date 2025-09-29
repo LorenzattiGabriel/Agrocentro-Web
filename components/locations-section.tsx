@@ -1,29 +1,18 @@
+'use client'
+
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Clock, Mail } from "lucide-react"
 
-const locations = [
-  {
-    name: "Río Primero",
-    address: "Ruta Nacional 9 Km 695",
-    city: "Río Primero, Córdoba",
-    phone: "(03525) 123-456",
-    email: "rioprimero@agrocentro.com.ar",
-    hours: "Lun-Vie: 8:00-18:00 | Sáb: 8:00-12:30",
-    image: "/agricultural-machinery-dealership-building.jpg",
-  },
-  {
-    name: "Villa Santa Rosa",
-    address: "Av. San Martín 1250",
-    city: "Villa Santa Rosa, Córdoba",
-    phone: "(03525) 789-012",
-    email: "villasantarosa@agrocentro.com.ar",
-    hours: "Lun-Vie: 8:00-18:00 | Sáb: 8:00-12:30",
-    image: "/agricultural-machinery-showroom.jpg",
-  },
-]
+import { useRouter } from "next/navigation"
+
+import { locations } from "@/constants/locations"
 
 export function LocationsSection() {
+
+    const router = useRouter();
+
   return (
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -75,7 +64,10 @@ export function LocationsSection() {
                 </div>
 
                 <div className="flex gap-3 mt-6">
-                  <Button className="flex-1 bg-primary hover:bg-primary/90">Cómo llegar</Button>
+                  <Button className="flex-1 bg-primary hover:bg-primary/90 hover:cursor-pointer" onClick={()=>router.push(`sucursales/#sucursal-${location.id}-title`)}>
+                    Cómo llegar
+                  </Button>
+
                   <Button variant="outline" className="flex-1 bg-transparent">
                     Contactar
                   </Button>

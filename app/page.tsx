@@ -5,16 +5,15 @@ import { FeaturedProducts } from "@/components/featured-products"
 import { LocationsSection } from "@/components/locations-section"
 import { Footer } from "@/components/footer"
 import { ContactoSection } from "@/components/contacto-section"
+import { QuienesSomosPage } from "@/components/quienesSomos-section"
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <Header />
       <HeroSection />
       <ServicesSection />
       <FeaturedProducts />
       <LocationsSection />
-      <Footer />
     </main>
   )
 }

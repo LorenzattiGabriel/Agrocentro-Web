@@ -4,6 +4,8 @@ import { Lato, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
 
 const lato = Lato({
   subsets: ["latin"],
@@ -32,8 +34,14 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`font-sans ${lato.variable} ${openSans.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        <Suspense fallback={null}>
+            <Header />
+            {children}
+            <Footer />
+        </Suspense>
+        
         <Analytics />
+
       </body>
     </html>
   )
