@@ -8,11 +8,11 @@ import { ProductoSection } from "@/types/Producto";
 import { useEffect, useState } from "react";
 import { orderOptions } from "./OrdenarButton/constants/options";
 import FiltroCheckbox from "./filtros/FiltroCheckbox/FiltroCheckbox";
-import { opcionesCheckbox } from "./filtros/FiltroCheckbox/constants/opcionesCheckbox";
+import { filtrosCheckbox } from "./filtros/FiltroCheckbox/constants/filtrosCheckbox";
 import { getOrderFunction } from "./OrdenarButton/utils/utils";
 import FiltroRango from "./filtros/FiltroRango/FiltroRango";
 import { filtrosRango } from "./filtros/FiltroRango/constants/filtrosRango";
-
+import { Rango } from "./filtros/FiltroRango/types/rango";
 
 type Props = {
     section: ProductoSection
@@ -27,37 +27,41 @@ export default function SectionCatalogo({section}: Props){
     const [search, setSearch] = useState("");
 
 
-    const [productosFiltroMarca, setProductosFiltroMarca] = useState(allProducts);
-    const [productosFiltroHP, setProductosFiltroHP] = useState(allProducts);
-    const [productosFiltroPrecio, setProductosFiltroPrecio] = useState(allProducts);
+    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(filtrosCheckbox.marcas_tractores.arrOpciones);
+    const [rangoHP, setRangoHP] = useState<Rango>({min:0, max: Infinity});
+    const [rangoPrecio, setRangoPrecio] = useState<Rango>({min:0, max: Infinity});
+
+
 
     // Orden de implementacion de filtros (se aplican todos al mismo tiempo, pero van en cierto orden de ejecucion):
     // Marca -> HP -> Precio -> SearchBox -> Sort/Ordenar Por
     
     useEffect(()=>{
-        setProductosFiltroHP(productosFiltroMarca);
-    }, [productosFiltroMarca]);
-
-    useEffect(()=>{
-        setProductosFiltroPrecio(productosFiltroHP)
-    }, [productosFiltroHP]);
-    
-    useEffect(()=>{
         window.scrollTo({ top: 0, behavior: "smooth" });
 
+        let result = allProducts;
+
+        //marca
+        result = filtrosCheckbox.marcas_tractores.filtrar(opcionesSeleccionadasMarca, result);
+
+        //hp
+        result = filtrosRango.hp.filtrar(rangoHP, result);
+
+        //precio
+        result = filtrosRango.precio.filtrar(rangoPrecio, result);
+
+
         //search
-        let productosSearch = [];
-        if (search === "") productosSearch = productosFiltroPrecio;
-        else productosSearch = productosFiltroPrecio.filter((prod) => 
+        if (search !== "") result = result.filter((prod) => 
             prod.name.toLowerCase().includes(search.toLowerCase().trim())
         );
 
         //orden
         const sortFunc = getOrderFunction(selectedOrder);    
-        if (sortFunc) sortFunc(productosSearch, setProductos);
+        if (sortFunc) sortFunc(result, setProductos);
         else throw new Error("No hay funcion para ordenar.");
 
-    }, [productosFiltroPrecio, search, selectedOrder]);
+    }, [opcionesSeleccionadasMarca, rangoHP, rangoPrecio, search, selectedOrder]);
 
 
     return (
@@ -67,10 +71,8 @@ export default function SectionCatalogo({section}: Props){
         min-h-screen
     ">
         {/* Filtros */}
-        <aside className="
-            
-        ">
-            <form className="sticky top-35 z-2 pt-3 flex justify-end">
+        <aside>
+            <form className="sticky top-35 z-2 pt-3 pb-10 flex justify-end">
 
                 <div className="max-w-60 flex flex-col gap-8">
                     <div>
@@ -79,24 +81,21 @@ export default function SectionCatalogo({section}: Props){
                     </div>
 
                     <FiltroCheckbox 
-                        opcionCheckbox={opcionesCheckbox.marcas_tractores} 
-                        productos={allProducts}
-                        setProductosFiltrados={setProductosFiltroMarca}
+                        opcionCheckbox={filtrosCheckbox.marcas_tractores}
+                        opcionesSeleccionadas={opcionesSeleccionadasMarca}
+                        setOpcionesSeleccionadas={setOpcionesSeleccionadasMarca}
                     />
 
                     <FiltroRango 
                         filtroRango={filtrosRango.hp}
-                        productos={productosFiltroMarca}
-                        setProductosFiltrados={setProductosFiltroHP}
+                        setRango={setRangoHP}
                     />
 
                     <FiltroRango 
                         filtroRango={filtrosRango.precio}
-                        productos={productosFiltroHP}
-                        setProductosFiltrados={setProductosFiltroPrecio}
+                        setRango={setRangoPrecio}
                     />
                 </div>
-
 
             </form>
         </aside>

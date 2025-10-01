@@ -1,52 +1,17 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { type OpcionCheckbox } from "./constants/opcionesCheckbox";
+import { type FiltroCheckbox } from "./constants/filtrosCheckbox";
 
 type Props = {
-    opcionCheckbox: OpcionCheckbox,
+    opcionCheckbox: FiltroCheckbox,
 
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[],
-
-    setProductosFiltrados: Dispatch<SetStateAction<({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]>>
+    opcionesSeleccionadas: string[],
+    setOpcionesSeleccionadas: Dispatch<SetStateAction<string[]>>
 }
 
 
-export default function FiltroCheckbox({opcionCheckbox, productos, setProductosFiltrados}: Props) {
-    
-    const [opcionesSeleccionadas, setOpcionesSeleccionadas] = useState<string[]>(opcionCheckbox.arrOpciones);
+export default function FiltroCheckbox({opcionCheckbox, opcionesSeleccionadas, setOpcionesSeleccionadas}: Props) {
+
     const [verTodo, setVerTodo] = useState<boolean>(true);
-
-    useEffect(()=>{
-        opcionCheckbox.filtrar(opcionesSeleccionadas, productos, setProductosFiltrados);
-
-    }, [opcionesSeleccionadas])
 
     return (
         <fieldset id={opcionCheckbox.id} className="flex flex-col gap-5">
@@ -84,7 +49,12 @@ export default function FiltroCheckbox({opcionCheckbox, productos, setProductosF
                                     }
                                     
                                     if (e.target.checked) setOpcionesSeleccionadas([...opcionesSeleccionadas, opcion])
-                                    else setOpcionesSeleccionadas(opcionesSeleccionadas.filter(opt=>opt!==opcion));
+                                    else {
+                                        let result = opcionesSeleccionadas.filter(opt=>opt!==opcion);
+
+                                        if (result.length === 0) {setVerTodo(true); setOpcionesSeleccionadas(opcionCheckbox.arrOpciones)}
+                                        else setOpcionesSeleccionadas(result)
+                                    }
                                 }}
                             />
                             {opcion}

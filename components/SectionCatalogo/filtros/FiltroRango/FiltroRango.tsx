@@ -5,10 +5,10 @@ import { Props } from "./Props";
 
 
 
-export default function FiltroRango({filtroRango, productos, setProductosFiltrados}: Props) {
+export default function FiltroRango({filtroRango, setRango}: Props) {
     
-    const [rango, setRango] = useState<Rango>({min:0, max: Infinity});
-    
+    const [rangoLocal, setRangoLocal] = useState<Rango>({min:0, max: Infinity});
+
     return (
         <fieldset className="flex flex-col items-start gap-5">
             <div>
@@ -22,22 +22,22 @@ export default function FiltroRango({filtroRango, productos, setProductosFiltrad
             <div>
                 <div className="flex flex-wrap gap-2">
 
-                    <InputRango value={rango.min} placeholder="Mínimo" min={0} 
+                    <InputRango value={rangoLocal.min} placeholder="Mínimo" min={0} 
                         changeHandler={(value: string)=>{
                             const num = Number(value);
-                            setRango({...rango, min: value === "" || isNaN(num) ? 0 : num })
+                            setRangoLocal({...rangoLocal, min: value === "" || isNaN(num) ? 0 : num })
                         }}
-                        submitHandler={()=>{filtroRango.filtrar(rango, productos, setProductosFiltrados)}}
+                        submitHandler={()=>{setRango(rangoLocal)}}
                     />
 
                     <span className="font-semibold">-</span>
                     
-                    <InputRango value={rango.max} placeholder="Máximo" min={0} 
+                    <InputRango value={rangoLocal.max} placeholder="Máximo" min={0} 
                         changeHandler={(value: string)=>{
                             const num = Number(value);
-                            setRango({...rango, max: value === "" || isNaN(num) ? Infinity : num })
+                            setRangoLocal({...rangoLocal, max: value === "" || isNaN(num) ? Infinity : num })
                         }}
-                        submitHandler={()=>{filtroRango.filtrar(rango, productos, setProductosFiltrados)}}
+                        submitHandler={()=>{setRango(rangoLocal)}}
                     />
                     
                     <button 
@@ -50,7 +50,7 @@ export default function FiltroRango({filtroRango, productos, setProductosFiltrad
                             transition
                         "
                         type="button"
-                        onMouseDown={()=>{filtroRango.filtrar(rango, productos, setProductosFiltrados)}}
+                        onMouseDown={()=>{setRango(rangoLocal)}}
                     >
                         <span className="relative -top-[1px]">{'>'}</span>
                     </button>
