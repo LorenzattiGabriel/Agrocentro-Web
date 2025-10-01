@@ -10,6 +10,8 @@ import { orderOptions } from "./OrdenarButton/constants/options";
 import FiltroCheckbox from "./filtros/FiltroCheckbox/FiltroCheckbox";
 import { opcionesCheckbox } from "./filtros/FiltroCheckbox/constants/opcionesCheckbox";
 import { getOrderFunction } from "./OrdenarButton/utils/utils";
+import FiltroRango from "./filtros/FiltroRango/FiltroRango";
+import { filtrosRango } from "./filtros/FiltroRango/constants/filtrosRango";
 
 
 type Props = {
@@ -26,16 +28,27 @@ export default function SectionCatalogo({section}: Props){
 
 
     const [productosFiltroMarca, setProductosFiltroMarca] = useState(allProducts);
+    const [productosFiltroHP, setProductosFiltroHP] = useState(allProducts);
+    const [productosFiltroPrecio, setProductosFiltroPrecio] = useState(allProducts);
 
     // Orden de implementacion de filtros (se aplican todos al mismo tiempo, pero van en cierto orden de ejecucion):
-    // Marca -> SearchBox -> Sort/Ordenar Por
+    // Marca -> HP -> Precio -> SearchBox -> Sort/Ordenar Por
+    
+    useEffect(()=>{
+        setProductosFiltroHP(productosFiltroMarca);
+    }, [productosFiltroMarca]);
+
+    useEffect(()=>{
+        setProductosFiltroPrecio(productosFiltroHP)
+    }, [productosFiltroHP]);
+    
     useEffect(()=>{
         window.scrollTo({ top: 0, behavior: "smooth" });
 
         //search
         let productosSearch = [];
-        if (search === "") productosSearch = productosFiltroMarca;
-        else productosSearch = productosFiltroMarca.filter((prod) => 
+        if (search === "") productosSearch = productosFiltroPrecio;
+        else productosSearch = productosFiltroPrecio.filter((prod) => 
             prod.name.toLowerCase().includes(search.toLowerCase().trim())
         );
 
@@ -44,7 +57,7 @@ export default function SectionCatalogo({section}: Props){
         if (sortFunc) sortFunc(productosSearch, setProductos);
         else throw new Error("No hay funcion para ordenar.");
 
-    }, [productosFiltroMarca, search, selectedOrder])
+    }, [productosFiltroPrecio, search, selectedOrder]);
 
 
     return (
@@ -57,14 +70,32 @@ export default function SectionCatalogo({section}: Props){
         <aside className="
             
         ">
-            <form className="sticky top-35 z-2 pt-3">
+            <form className="sticky top-35 z-2 pt-3 flex justify-end">
 
-                <FiltroCheckbox 
-                    opcionCheckbox={opcionesCheckbox.marcas_tractores} 
-                    productos={allProducts}
-                    setProductosFiltrados={setProductosFiltroMarca}
-                />
+                <div className="max-w-60 flex flex-col gap-8">
+                    <div>
+                        <h2 className="font-bold text-4xl mb-1">{section.replace(/\b\w/g, c => c.toUpperCase())}</h2>
+                        <p>{productos.length} resultados</p>
+                    </div>
 
+                    <FiltroCheckbox 
+                        opcionCheckbox={opcionesCheckbox.marcas_tractores} 
+                        productos={allProducts}
+                        setProductosFiltrados={setProductosFiltroMarca}
+                    />
+
+                    <FiltroRango 
+                        filtroRango={filtrosRango.hp}
+                        productos={productosFiltroMarca}
+                        setProductosFiltrados={setProductosFiltroHP}
+                    />
+
+                    <FiltroRango 
+                        filtroRango={filtrosRango.precio}
+                        productos={productosFiltroHP}
+                        setProductosFiltrados={setProductosFiltroPrecio}
+                    />
+                </div>
 
 
             </form>

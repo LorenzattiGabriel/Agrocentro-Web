@@ -1,18 +1,64 @@
+import { useState } from "react"
+import InputRango from "./components/InputRango";
+import { Rango } from "./types/rango";
+import { Props } from "./Props";
 
 
 
-
-export default function FiltroRango({nombre}: any) {
+export default function FiltroRango({filtroRango, productos, setProductosFiltrados}: Props) {
     
+    const [rango, setRango] = useState<Rango>({min:0, max: Infinity});
     
     return (
-        <fieldset>
-            <legend>{nombre}</legend>
-            {/* <label><input type="radio"/>Todos</label>
-            <label><input type="radio"/>Menos de 100</label>
-            <label><input type="radio"/>Entre 100 y 150</label>
-            <label><input type="radio"/>Entre 150 y 200</label>
-            <label><input type="radio"/>Más de 200</label> */}
+        <fieldset className="flex flex-col items-start gap-5">
+            <div>
+                <legend className="font-bold text-xl">
+                    {filtroRango.nombre}
+                    {filtroRango.subtitulo && <span className="font-semibold text-sm">{filtroRango.subtitulo}</span>}
+                </legend>
+                
+            </div>
+
+            <div>
+                <div className="flex flex-wrap gap-2">
+
+                    <InputRango value={rango.min} placeholder="Mínimo" min={0} 
+                        changeHandler={(value: string)=>{
+                            const num = Number(value);
+                            setRango({...rango, min: value === "" || isNaN(num) ? 0 : num })
+                        }}
+                        submitHandler={()=>{filtroRango.filtrar(rango, productos, setProductosFiltrados)}}
+                    />
+
+                    <span className="font-semibold">-</span>
+                    
+                    <InputRango value={rango.max} placeholder="Máximo" min={0} 
+                        changeHandler={(value: string)=>{
+                            const num = Number(value);
+                            setRango({...rango, max: value === "" || isNaN(num) ? Infinity : num })
+                        }}
+                        submitHandler={()=>{filtroRango.filtrar(rango, productos, setProductosFiltrados)}}
+                    />
+                    
+                    <button 
+                        className="
+                            font-black text-background bg-accent 
+                            rounded-full 
+                            p-1 w-7 h-7 
+                            flex items-center justify-center 
+                            cursor-pointer hover:bg-secondary hover:scale-105 
+                            transition
+                        "
+                        type="button"
+                        onMouseDown={()=>{filtroRango.filtrar(rango, productos, setProductosFiltrados)}}
+                    >
+                        <span className="relative -top-[1px]">{'>'}</span>
+                    </button>
+
+                </div>
+
+            </div>
+
         </fieldset>
     )
 }

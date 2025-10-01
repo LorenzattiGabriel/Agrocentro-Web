@@ -49,7 +49,7 @@ export default function FiltroCheckbox({opcionCheckbox, productos, setProductosF
     }, [opcionesSeleccionadas])
 
     return (
-        <fieldset id={opcionCheckbox.id} className="flex flex-col items-start gap-5 max-w-60 ml-auto">
+        <fieldset id={opcionCheckbox.id} className="flex flex-col gap-5">
             <div className="flex w-full items-center justify-between">
                 <legend className="font-bold text-xl">{opcionCheckbox.nombreFiltro}</legend>
 
