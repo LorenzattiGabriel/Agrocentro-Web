@@ -5,10 +5,9 @@ type CotizadorModalProps = {
   isOpen: boolean;
   onClose: () => void;
   maquina: string;
-  precio: number;
 };
 
-const CotizadorModal = ({ isOpen, onClose, maquina, precio }: CotizadorModalProps) => {
+const CotizadorModal = ({ isOpen, onClose, maquina }: CotizadorModalProps) => {
   if (!isOpen) return null;
   const [enviado, setEnviado] = useState(false)
   const [nombre, setNombre] = useState("");
@@ -17,7 +16,7 @@ const CotizadorModal = ({ isOpen, onClose, maquina, precio }: CotizadorModalProp
   const [medioPago, setMedioPago] = useState("");
 
   const handleSubmit = () => {
-    const mensaje = `Hola, estoy interesado en la máquina ${maquina} que figura a $${precio}. 
+    const mensaje = `Hola, estoy interesado en la máquina ${maquina}. 
 El método de pago sería: ${medioPago}. 
 Estos son mis datos de contacto: 
 Nombre: ${nombre}. 
@@ -61,7 +60,6 @@ Mail: ${email}.`;
           </button>
 
           <h2 className="text-2xl font-bold">Cotizar: {maquina}</h2>
-          <p className="text-gray-600 mb-4">Precio sugerido: ${precio}</p>
 
           {/* --- CAMPOS A COMPLETAR --- */}
           <input
