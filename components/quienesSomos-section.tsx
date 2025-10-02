@@ -17,7 +17,7 @@ export function QuienesSomosSection() {
 
         {/* --- MISION --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="max-w-xl mx-auto text-center">
+          <div className="order-1 md:order-1 max-w-xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-secondary mb-4">Misión</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Ser una empresa referente a nivel regional en la distibución y servicio de maquinaria
@@ -25,7 +25,7 @@ export function QuienesSomosSection() {
               desarrollo sostenible del sector agropecuario.
             </p>
           </div>
-          <div className="flex justify-center">
+          <div className="order-2 md:order-2 flex justify-center">
             <img
               src="/ig_mision.JPG"
               alt="imagen mision"
@@ -36,20 +36,20 @@ export function QuienesSomosSection() {
 
         {/* --- VISION --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <img
-              src="/ig_vision.JPG"
-              alt="imagen mision"
-              className="rounded-lg shadow-lg w-full h-auto object-cover"
-            />
-          </div>
-          <div className="max-w-xl mx-auto text-center">
+          <div className="order-3 md:order-2 max-w-xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-secondary mb-4">Visión</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Proveer maquinarias agrícolas de alta calidad y soluciones innovadoras que mejoren la 
               productividad, eficiencia y sustentabilidad del campo, estableciendo relaciones duraderas 
               con nuestros clientes basadas en confianza, compromiso y cercanía.
             </p>
+          </div>
+          <div className="order-3 md:order-1">
+            <img
+              src="/ig_vision.JPG"
+              alt="imagen mision"
+              className="rounded-lg shadow-lg w-full h-auto object-cover"
+            />
           </div>
         </div>
 
