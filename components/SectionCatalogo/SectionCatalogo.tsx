@@ -13,6 +13,8 @@ import { getOrderFunction } from "./OrdenarButton/utils/utils";
 import FiltroRango from "./filtros/FiltroRango/FiltroRango";
 import { filtrosRango } from "./filtros/FiltroRango/constants/filtrosRango";
 import { Rango } from "./filtros/FiltroRango/types/rango";
+import FiltrarButton from "./buttons/FiltrarButton";
+
 
 type Props = {
     section: ProductoSection
@@ -31,6 +33,7 @@ export default function SectionCatalogo({section}: Props){
     const [rangoHP, setRangoHP] = useState<Rango>({min:0, max: Infinity});
     const [rangoPrecio, setRangoPrecio] = useState<Rango>({min:0, max: Infinity});
 
+    const [showSidebar, setShowSidebar] = useState(false);
 
 
     // Orden de implementacion de filtros (se aplican todos al mismo tiempo, pero van en cierto orden de ejecucion):
@@ -66,13 +69,29 @@ export default function SectionCatalogo({section}: Props){
 
     return (
     <div className="
-        grid grid-cols-[1.5fr_5fr]       
+        grid grid-cols-1 sm:grid-cols-[1.5fr_5fr]       
         xl:px-10 2xl:px-30
         min-h-screen
     ">
+        {/* Overlay mobile */}
+        <div 
+            className={`fixed inset-0 z-200 bg-black/90 sm:hidden ${!showSidebar&&"hidden"}`} 
+            onMouseDown={()=>{setShowSidebar(false)}}>    
+        </div>
+
         {/* Filtros */}
-        <aside>
-            <form className="sticky top-35 z-2 pt-3 pb-10 flex justify-end">
+        <aside className="absolute sm:static">
+            <form className={`
+                fixed top-0 bottom-0 z-201
+                
+                transition-transform duration-300
+                ${showSidebar ? "translate-x-0" : "-translate-x-full"} md:translate-x-0                
+
+                sm:sticky sm:top-35 sm:z-2 
+                pt-3 pb-10 px-7 md:pr-0 lg:pl-0
+                bg-background
+                flex justify-end
+            `}>
 
                 <div className="max-w-60 flex flex-col gap-8">
                     <div>
@@ -114,9 +133,16 @@ export default function SectionCatalogo({section}: Props){
                     items-start md:items-stretch gap-4 
                     px-8
                 ">
-                    <OrdernarButton selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} />
+                    <div className="flex justify-between w-full sm:w-fit gap-2">
+                        <FiltrarButton handler={()=>{setShowSidebar(true)}}/>
+                        <OrdernarButton selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} />
+
+                    </div>
+                    
 
                     <SearchBar  section={section} setSearch={setSearch}/>
+
+
                 </div>
            </div>
 

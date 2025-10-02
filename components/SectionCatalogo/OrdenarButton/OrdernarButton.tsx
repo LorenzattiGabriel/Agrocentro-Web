@@ -17,10 +17,10 @@ export default function OrdernarButton({selectedOrder, setSelectedOrder}: Props)
                 id="orderByDropdownButton"
                 type="button"
                 className="
-                    h-10
+                    min-h-10 h-fit
                     border rounded 
                     px-3 py-1 
-                    text-sm font-medium flex items-center 
+                    text-sm font-medium flex items-center flex-wrap justify-center
                     gap-2 
                     focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-gray-200
                     hover:cursor-pointer hover:bg-gray-200
