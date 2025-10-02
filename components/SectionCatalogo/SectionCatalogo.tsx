@@ -109,11 +109,6 @@ export default function SectionCatalogo({section}: Props){
                         filtroRango={filtrosRango.hp}
                         setRango={setRangoHP}
                     />
-
-                    <FiltroRango 
-                        filtroRango={filtrosRango.precio}
-                        setRango={setRangoPrecio}
-                    />
                 </div>
 
             </form>
@@ -155,7 +150,7 @@ export default function SectionCatalogo({section}: Props){
                     py-8 px-8
                 "
             >
-                {productos.map((producto) => <CardProducto producto={{...producto, section: "tractores"}} key={producto.id}/>)}
+                {productos.map((producto) => <CardProducto section={section} producto={{...producto, section: "tractores"}} key={producto.id}/>)}
             </section>
 
 
