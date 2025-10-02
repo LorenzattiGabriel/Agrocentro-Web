@@ -4,7 +4,207 @@
         "name": "Cosechadora John Deere S550",
         "marca": "John Deere",
         "price": "Consultar",
-        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1753340616s9C.jpg",
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 2,
+        "name": "Sembradora Agrometal MX 23",
+        "marca": "Agrometal",
+        "price": "Consultar",
+        "image": "/agricultural-seeder-implement-green.jpg",
+        "categoria": "Sembradora"
+    },
+    {
+        "id": 3,
+        "name": "Pulverizadora Apache 3030",
+        "marca": "Apache",
+        "price": "Consultar",
+        "image": "/agricultural-sprayer-equipment.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 4,
+        "name": "Cosechadora New Holland CR7.90",
+        "marca": "New Holland",
+        "price": 420000,
+        "image": "https://www.publicdomainpictures.net/pictures/60000/velka/wheat-threshing.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 5,
+        "name": "Cosechadora Case IH Axial-Flow 7250",
+        "marca": "Case IH",
+        "price": 450000,
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-17533414708hc.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 6,
+        "name": "Pulverizadora Apache 3030",
+        "marca": "Apache",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/100000/velka/crop-sprayer-tractor-1405317015ON3.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 7,
+        "name": "Cosechadora Claas Lexion 7700",
+        "marca": "Claas",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 8,
+        "name": "Sembradora John Deere 1740",
+        "marca": "John Deere",
+        "price": 79500,
+        "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
+        "categoria": "Sembradora"
+    },
+    {
+        "id": 13,
+        "name": "Cosechadora Massey Ferguson MF 9795",
+        "marca": "Massey Ferguson",
+        "price": 390000,
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1753337753h4g.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 9,
+        "name": "Cosechadora John Deere X9 1100",
+        "marca": "John Deere",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 10,
+        "name": "Pulverizadora John Deere M110",
+        "marca": "John Deere",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwmachine-boer-1691824318ODv.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 11,
+        "name": "Pulverizadora Case IH Patriot 350",
+        "marca": "Case IH",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/30000/velka/tractor-field-spray.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 12,
+        "name": "Cosechadora New Holland CR7.90",
+        "marca": "New Holland",
+        "price": "$420,000",
+        "image": "https://www.publicdomainpictures.net/pictures/560000/velka/maaidorser-landbouwmachine.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 14,
+        "name": "Cosechadora John Deere S550",
+        "marca": "John Deere",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 15,
+        "name": "Sembradora Agrometal MX 23",
+        "marca": "Agrometal",
+        "price": "Consultar",
+        "image": "/agricultural-seeder-implement-green.jpg",
+        "categoria": "Sembradora"
+    },
+    {
+        "id": 16,
+        "name": "Pulverizadora Apache 3030",
+        "marca": "Apache",
+        "price": "Consultar",
+        "image": "/agricultural-sprayer-equipment.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 17,
+        "name": "Cosechadora New Holland CR7.90",
+        "marca": "New Holland",
+        "price": 420000,
+        "image": "https://www.publicdomainpictures.net/pictures/60000/velka/wheat-threshing.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 18,
+        "name": "Cosechadora Case IH Axial-Flow 7250",
+        "marca": "Case IH",
+        "price": 450000,
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-17533414708hc.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 19,
+        "name": "Pulverizadora Apache 3030",
+        "marca": "Apache",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/100000/velka/crop-sprayer-tractor-1405317015ON3.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 20,
+        "name": "Cosechadora Claas Lexion 7700",
+        "marca": "Claas",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 21,
+        "name": "Sembradora John Deere 1740",
+        "marca": "John Deere",
+        "price": 79500,
+        "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
+        "categoria": "Sembradora"
+    },
+    {
+        "id": 22,
+        "name": "Cosechadora Massey Ferguson MF 9795",
+        "marca": "Massey Ferguson",
+        "price": 390000,
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1753337753h4g.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 23,
+        "name": "Cosechadora John Deere X9 1100",
+        "marca": "John Deere",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
+        "categoria": "Cosechadora"
+    },
+    {
+        "id": 24,
+        "name": "Pulverizadora John Deere M110",
+        "marca": "John Deere",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwmachine-boer-1691824318ODv.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 25,
+        "name": "Pulverizadora Case IH Patriot 350",
+        "marca": "Case IH",
+        "price": "Consultar",
+        "image": "https://www.publicdomainpictures.net/pictures/30000/velka/tractor-field-spray.jpg",
+        "categoria": "Pulverizadora"
+    },
+    {
+        "id": 26,
+        "name": "Cosechadora New Holland CR7.90",
+        "marca": "New Holland",
+        "price": "$420,000",
+        "image": "https://www.publicdomainpictures.net/pictures/560000/velka/maaidorser-landbouwmachine.jpg",
         "categoria": "Cosechadora"
     }
 ]

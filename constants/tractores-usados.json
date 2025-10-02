@@ -1,22 +1,597 @@
 [
-    {
-        "id": 1,
-        "name": "Tractor John Deere 6110M",
-        "marca": "John Deere",
-        "price": "Consultar",
-        "image": "/john-deere-green-tractor-6110m.jpg",
-        "hp": 110,
-        "year": 2005,
-        "horas": 14500
-    },
-    {
-        "id": 2,
-        "name": "Tractor Massey Ferguson 4275",
-        "marca": "Massey Ferguson",
-        "price": 45000,
-        "image": "/red-massey-ferguson-tractor-used.jpg",
-        "hp": 75,
-        "year": 2005,
-        "horas": 14500
-    }
+  {
+    "id": 6,
+    "name": "Tractor John Deere 6110M",
+    "marca": "John Deere",
+    "price": "Consultar",
+    "image": "/john-deere-green-tractor-6110m.jpg",
+    "hp": 110,
+    "year": 2004
+  },
+  {
+    "id": 9,
+    "name": "Tractor Massey Ferguson 4275",
+    "marca": "Massey Ferguson",
+    "price": 45000,
+    "image": "/red-massey-ferguson-tractor-used.jpg",
+    "hp": 75,
+    "year": 2009
+  },
+  {
+    "id": 13,
+    "name": "New Holland T7.190",
+    "marca": "New Holland",
+    "price": 20000,
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 190,
+    "year": 2005
+  },
+  {
+    "id": 18,
+    "name": "Massey Ferguson 6713",
+    "marca": "Massey Ferguson",
+    "price": 25000,
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 130,
+    "year": 2004
+  },
+  {
+    "id": 15,
+    "name": "Case IH Puma 150",
+    "marca": "Case IH",
+    "price": 24000,
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwvoertuig-boer-1692783580rpz.png",
+    "hp": 150,
+    "year": 2009
+  },
+  {
+    "id": 1,
+    "name": "Kubota M5-111",
+    "marca": "Kubota",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.jpg",
+    "hp": 111,
+    "year": 2006
+  },
+  {
+    "id": 17,
+    "name": "Fendt 724 Vario",
+    "marca": "Fendt",
+    "price": 85000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-oude-tractor.png",
+    "hp": 240,
+    "year": 2007
+  },
+  {
+    "id": 21,
+    "name": "Deutz-Fahr 5100 G",
+    "marca": "Deutz-Fahr",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 100,
+    "year": 2004
+  },
+  {
+    "id": 2,
+    "name": "Valtra N163",
+    "marca": "Valtra",
+    "price": 30000,
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 160,
+    "year": 2009
+  },
+  {
+    "id": 10,
+    "name": "Claas Arion 650",
+    "marca": "Claas",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/oude-tractor-groene-tractor.png",
+    "hp": 180,
+    "year": 2006
+  },
+  {
+    "id": 11,
+    "name": "John Deere 8R 310",
+    "marca": "John Deere",
+    "price": 170000,
+    "image": "https://www.publicdomainpictures.net/pictures/110000/velka/old-green-tractor.jpg",
+    "hp": 310,
+    "year": 2001
+  },
+  {
+    "id": 12,
+    "name": "New Holland T8.390",
+    "marca": "New Holland",
+    "price": 150000,
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig-boer.png",
+    "hp": 390,
+    "year": 2003
+  },
+  {
+    "id": 3,
+    "name": "Massey Ferguson 7614",
+    "marca": "Massey Ferguson",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/300000/velka/old-tractor-1563557766X1z.jpg",
+    "hp": 140,
+    "year": 2004
+  },
+  {
+    "id": 14,
+    "name": "Case IH Magnum 380",
+    "marca": "Case IH",
+    "price": 150000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 380,
+    "year": 2005
+  },
+  {
+    "id": 5,
+    "name": "Kubota M7-171",
+    "marca": "Kubota",
+    "price": 170000,
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwer-akker.jpg",
+    "hp": 170,
+    "year": 2007
+  },
+  {
+    "id": 16,
+    "name": "Fendt 936 Vario",
+    "marca": "Fendt",
+    "price": 175000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 360,
+    "year": 2010
+  },
+  {
+    "id": 7,
+    "name": "Deutz-Fahr 9340 TTV",
+    "marca": "Deutz-Fahr",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/blue-tractor-lawn-mower.jpg",
+    "hp": 340,
+    "year": 2002
+  },
+  {
+    "id": 4,
+    "name": "Valtra T234",
+    "marca": "Valtra",
+    "price": 155000,
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/tractor-landbouwvoertuig.png",
+    "hp": 235,
+    "year": 2004
+  },
+  {
+    "id": 19,
+    "name": "Claas Xerion 5000",
+    "marca": "Claas",
+    "price": 195000,
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 500,
+    "year": 2011
+  },
+  {
+    "id": 20,
+    "name": "John Deere 8320R",
+    "marca": "John Deere",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+    "hp": 320,
+    "year": 2005
+  },
+  {
+    "id": 8,
+    "name": "New Holland T7.270",
+    "marca": "New Holland",
+    "price": 175000,
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuigpng.png",
+    "hp": 270,
+    "year": 2004
+  },
+  {
+    "id": 22,
+    "name": "Massey Ferguson 7716",
+    "marca": "Massey Ferguson",
+    "price": 135000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/traktor-trekker-landbouwvoertuig.jpg",
+    "hp": 160,
+    "year": 2009
+  },
+  {
+    "id": 23,
+    "name": "Case IH Optum 300",
+    "marca": "Case IH",
+    "price": 170000,
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/landschap-traktorlandbouwvoertuig-1653817776ei6.jpg",
+    "hp": 300,
+    "year": 2006
+  },
+  {
+    "id": 24,
+    "name": "Kubota M6-131",
+    "marca": "Kubota",
+    "price": 130000,
+    "image": "https://c.pxhere.com/photos/70/f0/tractors_schl_ter_oldtimer_red_workhorse_munich_tractor_manufacturer_strong-490469.jpg!d",
+    "hp": 130,
+    "year": 2003
+  },
+  {
+    "id": 25,
+    "name": "Fendt 720 Vario",
+    "marca": "Fendt",
+    "price": 130000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.png",
+    "hp": 200,
+    "year": 2004
+  },
+  {
+    "id": 26,
+    "name": "Deutz-Fahr 5100 C",
+    "marca": "Deutz-Fahr",
+    "price": 12000,
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig.jpg",
+    "hp": 100,
+    "year": 2002
+  },
+  {
+    "id": 27,
+    "name": "Valtra A104",
+    "marca": "Valtra",
+    "price": 25000,
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 100,
+    "year": 2009
+  },
+  {
+    "id": 28,
+    "name": "Claas Nexos 230",
+    "marca": "Claas",
+    "price": 28000,
+    "image": "https://www.publicdomainpictures.net/pictures/690000/velka/photo-tractor-agriculture-rural.jpg",
+    "hp": 105,
+    "year": 2008
+  },
+  {
+    "id": 29,
+    "name": "John Deere 5075E",
+    "marca": "John Deere",
+    "price": 21000,
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 75,
+    "year": 2003
+  },
+  {
+    "id": 30,
+    "name": "New Holland Workmaster 55",
+    "marca": "New Holland",
+    "price": 20000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-rode-tractor-oldtimer.png",
+    "hp": 55,
+    "year": 2009
+  },
+  {
+    "id": 31,
+    "name": "Massey Ferguson 4707",
+    "marca": "Massey Ferguson",
+    "price": 25000,
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2633099_1280.jpg",
+    "hp": 70,
+    "year": 2007
+  },
+  {
+    "id": 32,
+    "name": "Case IH Farmall 75A",
+    "marca": "Case IH",
+    "price": 23000,
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 75,
+    "year": 2005
+  },
+  {
+    "id": 33,
+    "name": "Kubota L3901",
+    "marca": "Kubota",
+    "price": 16000,
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2715529_1280.png",
+    "hp": 39,
+    "year": 2004
+  },
+
+  {
+    "id": 34,
+    "name": "Tractor John Deere 6110M",
+    "marca": "John Deere",
+    "price": "Consultar",
+    "image": "/john-deere-green-tractor-6110m.jpg",
+    "hp": 110,
+    "year": 2009
+  },
+  {
+    "id": 35,
+    "name": "Tractor Massey Ferguson 4275",
+    "marca": "Massey Ferguson",
+    "price": 45000,
+    "image": "/red-massey-ferguson-tractor-used.jpg",
+    "hp": 75,
+    "year": 2003
+  },
+  {
+    "id": 36,
+    "name": "New Holland T7.190",
+    "marca": "New Holland",
+    "price": 20000,
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 190,
+    "year": 2009
+  },
+  {
+    "id": 37,
+    "name": "Massey Ferguson 6713",
+    "marca": "Massey Ferguson",
+    "price": 25000,
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 130,
+    "year": 2002
+  },
+  {
+    "id": 38,
+    "name": "Case IH Puma 150",
+    "marca": "Case IH",
+    "price": 24000,
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwvoertuig-boer-1692783580rpz.png",
+    "hp": 150,
+    "year": 2009
+  },
+  {
+    "id": 39,
+    "name": "Kubota M5-111",
+    "marca": "Kubota",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.jpg",
+    "hp": 111,
+    "year": 2002
+  },
+  {
+    "id": 40,
+    "name": "Fendt 724 Vario",
+    "marca": "Fendt",
+    "price": 85000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-oude-tractor.png",
+    "hp": 240,
+    "year": 2001
+  },
+  {
+    "id": 41,
+    "name": "Deutz-Fahr 5100 G",
+    "marca": "Deutz-Fahr",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 100,
+    "year": 2009
+  },
+  {
+    "id": 42,
+    "name": "Valtra N163",
+    "marca": "Valtra",
+    "price": 30000,
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 160,
+    "year": 2000
+  },
+  {
+    "id": 43,
+    "name": "Claas Arion 650",
+    "marca": "Claas",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/oude-tractor-groene-tractor.png",
+    "hp": 180,
+    "year": 2004
+  },
+  {
+    "id": 44,
+    "name": "John Deere 8R 310",
+    "marca": "John Deere",
+    "price": 170000,
+    "image": "https://www.publicdomainpictures.net/pictures/110000/velka/old-green-tractor.jpg",
+    "hp": 310,
+    "year": 2009
+  },
+  {
+    "id": 45,
+    "name": "New Holland T8.390",
+    "marca": "New Holland",
+    "price": 150000,
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig-boer.png",
+    "hp": 390,
+    "year": 2004
+  },
+  {
+    "id": 46,
+    "name": "Massey Ferguson 7614",
+    "marca": "Massey Ferguson",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/300000/velka/old-tractor-1563557766X1z.jpg",
+    "hp": 140,
+    "year": 2007
+  },
+  {
+    "id": 47,
+    "name": "Case IH Magnum 380",
+    "marca": "Case IH",
+    "price": 150000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 380,
+    "year": 2009
+  },
+  {
+    "id": 48,
+    "name": "Kubota M7-171",
+    "marca": "Kubota",
+    "price": 170000,
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwer-akker.jpg",
+    "hp": 170,
+    "year": 2010
+  },
+  {
+    "id": 49,
+    "name": "Fendt 936 Vario",
+    "marca": "Fendt",
+    "price": 175000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 360,
+    "year": 2004
+  },
+  {
+    "id": 50,
+    "name": "Deutz-Fahr 9340 TTV",
+    "marca": "Deutz-Fahr",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/blue-tractor-lawn-mower.jpg",
+    "hp": 340,
+    "year": 2002
+  },
+  {
+    "id": 51,
+    "name": "Valtra T234",
+    "marca": "Valtra",
+    "price": 155000,
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/tractor-landbouwvoertuig.png",
+    "hp": 235,
+    "year": 2006
+  },
+  {
+    "id": 52,
+    "name": "Claas Xerion 5000",
+    "marca": "Claas",
+    "price": 195000,
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 500,
+    "year": 2008
+  },
+  {
+    "id": 53,
+    "name": "John Deere 8320R",
+    "marca": "John Deere",
+    "price": "Consultar",
+    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+    "hp": 320,
+    "year": 2007
+  },
+  {
+    "id": 54,
+    "name": "New Holland T7.270",
+    "marca": "New Holland",
+    "price": 175000,
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuigpng.png",
+    "hp": 270,
+    "year": 2009
+  },
+  {
+    "id": 55,
+    "name": "Massey Ferguson 7716",
+    "marca": "Massey Ferguson",
+    "price": 135000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/traktor-trekker-landbouwvoertuig.jpg",
+    "hp": 160,
+    "year": 2008
+  },
+  {
+    "id": 56,
+    "name": "Case IH Optum 300",
+    "marca": "Case IH",
+    "price": 170000,
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/landschap-traktorlandbouwvoertuig-1653817776ei6.jpg",
+    "hp": 300,
+    "year": 2004
+  },
+  {
+    "id": 57,
+    "name": "Kubota M6-131",
+    "marca": "Kubota",
+    "price": 130000,
+    "image": "https://c.pxhere.com/photos/70/f0/tractors_schl_ter_oldtimer_red_workhorse_munich_tractor_manufacturer_strong-490469.jpg!d",
+    "hp": 130,
+    "year": 2001
+  },
+  {
+    "id": 58,
+    "name": "Fendt 720 Vario",
+    "marca": "Fendt",
+    "price": 130000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.png",
+    "hp": 200,
+    "year": 2002
+  },
+  {
+    "id": 59,
+    "name": "Deutz-Fahr 5100 C",
+    "marca": "Deutz-Fahr",
+    "price": 12000,
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig.jpg",
+    "hp": 100,
+    "year": 2004
+  },
+  {
+    "id": 60,
+    "name": "Valtra A104",
+    "marca": "Valtra",
+    "price": 25000,
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 100,
+    "year": 2002
+  },
+  {
+    "id": 61,
+    "name": "Claas Nexos 230",
+    "marca": "Claas",
+    "price": 28000,
+    "image": "https://www.publicdomainpictures.net/pictures/690000/velka/photo-tractor-agriculture-rural.jpg",
+    "hp": 105,
+    "year": 2005
+  },
+  {
+    "id": 62,
+    "name": "John Deere 5075E",
+    "marca": "John Deere",
+    "price": 21000,
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 75,
+    "year": 2003
+  },
+  {
+    "id": 63,
+    "name": "New Holland Workmaster 55",
+    "marca": "New Holland",
+    "price": 20000,
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-rode-tractor-oldtimer.png",
+    "hp": 55,
+    "year": 2009
+  },
+  {
+    "id": 64,
+    "name": "Massey Ferguson 4707",
+    "marca": "Massey Ferguson",
+    "price": 25000,
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2633099_1280.jpg",
+    "hp": 70,
+    "year": 2007
+  },
+  {
+    "id": 65,
+    "name": "Case IH Farmall 75A",
+    "marca": "Case IH",
+    "price": 23000,
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 75,
+    "year": 2002
+  },
+  {
+    "id": 66,
+    "name": "Kubota L3901",
+    "marca": "Kubota",
+    "price": 16000,
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2715529_1280.png",
+    "hp": 39,
+    "year": 2004
+  }
 ]
