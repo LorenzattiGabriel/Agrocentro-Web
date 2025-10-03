@@ -1,209 +1,33 @@
-import { Dispatch, SetStateAction } from "react";
+import { Producto, TractorNuevo, TractorUsado } from "@/types/Producto";
 
 
-//
-export function sortById(
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[],
-    setProductos: Dispatch<SetStateAction<({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]>>
-){
-    const arrProd = productos.map((prod)=>prod);
 
-    setProductos(
-        arrProd.sort((a,b)=>Number(a.id) - Number(b.id))
-    )
-}
-
-//Productos sin precio van al final
-export function sortByPrecioAsc(
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[],
-    setProductos: Dispatch<SetStateAction<({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]>>
-){
-    let productosSinPrecio = productos.filter((prod)=> typeof prod.price !== "number");
-    let productosConPrecio = productos.filter((prod)=> typeof prod.price === "number");
-
-    
-    setProductos(
-        productosConPrecio.sort((a,b)=>Number(a.price) - Number(b.price))
-        .concat(productosSinPrecio)
-    )
-}
-
-//Productos sin precio van al final
-export function sortByPrecioDesc(
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[],
-    setProductos: Dispatch<SetStateAction<({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]>>
-){
-    let productosSinPrecio = productos.filter((prod)=> typeof prod.price !== "number");
-    let productosConPrecio = productos.filter((prod)=> typeof prod.price === "number");
-
-    
-    setProductos(
-        productosConPrecio.sort((a,b)=>Number(b.price) - Number(a.price))
-        .concat(productosSinPrecio)
-    )
+export function sortById(productos: Producto[])
+{
+    return productos.sort((a,b)=>Number(a.id) - Number(b.id))
 }
 
 
-
-export function sortByHpAsc(
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[],
-    setProductos: Dispatch<SetStateAction<({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]>>
-){
-    const arrProd = productos.map((prod)=>prod);
-
-    setProductos(
-        arrProd.sort((a,b)=>Number(a.hp) - Number(b.hp))
-    )
+export function sortByHpAsc(productos: TractorNuevo[])
+{
+    return productos.sort((a,b)=>Number(a.hp) - Number(b.hp));
 }
 
 
-export function sortByHpDesc(
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[],
-    setProductos: Dispatch<SetStateAction<({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]>>
-){
-    const arrProd = productos.map((prod)=>prod);
+export function sortByHpDesc(productos: TractorNuevo[])
+{
+    return productos.sort((a,b)=>Number(b.hp) - Number(a.hp));
 
-    setProductos(
-        arrProd.sort((a,b)=>Number(b.hp) - Number(a.hp))
-    )
+}
+
+
+export function sortByYearAsc(productos: TractorUsado[])
+{
+    return productos.sort((a,b)=>Number(a.year) - Number(b.year));
+}
+
+export function sortByYearDesc(productos: TractorUsado[])
+{
+    return productos.sort((a,b)=>Number(b.year) - Number(a.year));
+
 }

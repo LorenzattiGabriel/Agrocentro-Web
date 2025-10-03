@@ -1,4 +1,4 @@
-import { filtrarHP, filtrarPrecio } from "../utils/filtrar";
+import { filtrarHP, filtrarYear } from "../utils/filtrar";
 
 
 
@@ -8,9 +8,8 @@ export const filtrosRango = {
         nombre: "HP",
         filtrar: filtrarHP
     },
-    precio: {
-        nombre: "Precio",
-        subtitulo: " | $ USD",
-        filtrar: filtrarPrecio
+    year: {
+        nombre: "Año",
+        filtrar: filtrarYear
     }
 }

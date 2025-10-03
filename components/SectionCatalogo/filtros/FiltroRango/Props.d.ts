@@ -1,8 +1,8 @@
-import { FiltroRango } from "./types/filtrosRango";
+import { filtrosRango } from "./types/filtrosRango";
 import { Rango } from "./types/rango";
 
 type Props = {
-    filtroRango: FiltroRango
+    filtroRango: filtrosRango
 
     setRango: Dispatch<SetStateAction<Rango>>
 }

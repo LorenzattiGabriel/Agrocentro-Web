@@ -1,25 +1,30 @@
-import { Dispatch, SetStateAction } from "react";
+import { Implemento, Producto, Repuesto, TractorUsado } from "@/types/Producto";
 
 
 export function filtrarMarca(
-    marcasSeleccionadas: string[],
+    opcionesSeleccionadas: string[],
 
-    productos: ({
-        id: number;
-        name: string;
-        marca: string;
-        price: string;
-        image: string;
-        hp: number;
-    } | {
-        id: number;
-        name: string;
-        marca: string;
-        price: number;
-        image: string;
-        hp: number;
-    })[]
+    productos: Producto[]
 ){    
-    return productos.filter((prod)=>marcasSeleccionadas.find((marca)=>marca===prod.marca))
-    
+    return productos.filter((prod)=>opcionesSeleccionadas.find((marca)=>marca===prod.marca))
+}
+
+
+export function filtrarCategoria(
+    opcionesSeleccionadas: string[],
+
+    productos: Implemento[] | Repuesto[]
+){    
+    return productos.filter((prod)=>opcionesSeleccionadas.find((categoria)=>categoria===prod.marca))
+}
+
+
+
+
+export function filtrarYear(
+    opcionesSeleccionadas: number[],
+
+    productos: TractorUsado[]
+){    
+    return productos.filter((usado)=>opcionesSeleccionadas.find((year)=>year===usado.year))
 }

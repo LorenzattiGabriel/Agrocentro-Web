@@ -1,15 +1,12 @@
 "use client";
 
-import { ProductoSection, Tractor } from "@/types/Producto"
-import CotizarButton from "./buttons/CotizarButton"
-import DetalleButton from "./buttons/DetalleButton"
+import { Producto } from "@/types/Producto"
 
 type Props = {
-    producto: Tractor,
-    section: ProductoSection
+    producto: Producto
 }
 
-export default function CardProducto({producto, section}:Props){
+export default function CardProducto({producto}:Props){
     return (
         <article
             key={producto.id} 
@@ -23,7 +20,7 @@ export default function CardProducto({producto, section}:Props){
                 transition-all hover:transition-all 
                 fade-in-up
             "
-            onClick={()=>window.open(`/${section}/${producto.id}`, "_self")} 
+            onClick={()=>window.open(`/${producto.section}/${producto.id}`, "_self")} 
         >
             <img 
                 src={producto.image} 

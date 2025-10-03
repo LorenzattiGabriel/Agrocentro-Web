@@ -1,70 +1,24 @@
 "use client";
 
-import tractoresNuevos from "@/constants/tractores-nuevos.json"
-import CardProducto from "./CardProducto";
 import OrdernarButton from "./OrdenarButton/OrdernarButton";
 import SearchBar from "./searchbar/SearchBar";
 import { ProductoSection } from "@/types/Producto";
-import { useEffect, useState } from "react";
-import { orderOptions } from "./OrdenarButton/constants/options";
-import FiltroCheckbox from "./filtros/FiltroCheckbox/FiltroCheckbox";
-import { filtrosCheckbox } from "./filtros/FiltroCheckbox/constants/filtrosCheckbox";
-import { getOrderFunction } from "./OrdenarButton/utils/utils";
-import FiltroRango from "./filtros/FiltroRango/FiltroRango";
-import { filtrosRango } from "./filtros/FiltroRango/constants/filtrosRango";
-import { Rango } from "./filtros/FiltroRango/types/rango";
+import { Dispatch, SetStateAction, useState } from "react";
 import FiltrarButton from "./buttons/FiltrarButton";
 
 
 type Props = {
-    section: ProductoSection
+    section: ProductoSection,
+    cards: JSX.Element[],
+    setSearch: Dispatch<SetStateAction<string>>,
+    selectedOrder: string,
+    setSelectedOrder: Dispatch<SetStateAction<string>>,
+    filtrosElement: JSX.Element
 }
 
-export default function SectionCatalogo({section}: Props){
-
-    const allProducts = tractoresNuevos;
-
-    const [productos, setProductos] = useState(allProducts);
-    const [selectedOrder, setSelectedOrder] = useState(orderOptions[0].value);
-    const [search, setSearch] = useState("");
-
-
-    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(filtrosCheckbox.marcas_tractores.arrOpciones);
-    const [rangoHP, setRangoHP] = useState<Rango>({min:0, max: Infinity});
-    const [rangoPrecio, setRangoPrecio] = useState<Rango>({min:0, max: Infinity});
+export default function SectionCatalogo({section, cards, setSearch, selectedOrder, setSelectedOrder, filtrosElement}: Props){
 
     const [showSidebar, setShowSidebar] = useState(false);
-
-
-    // Orden de implementacion de filtros (se aplican todos al mismo tiempo, pero van en cierto orden de ejecucion):
-    // Marca -> HP -> Precio -> SearchBox -> Sort/Ordenar Por
-    
-    useEffect(()=>{
-        window.scrollTo({ top: 0, behavior: "smooth" });
-
-        let result = allProducts;
-
-        //marca
-        result = filtrosCheckbox.marcas_tractores.filtrar(opcionesSeleccionadasMarca, result);
-
-        //hp
-        result = filtrosRango.hp.filtrar(rangoHP, result);
-
-        //precio
-        result = filtrosRango.precio.filtrar(rangoPrecio, result);
-
-
-        //search
-        if (search !== "") result = result.filter((prod) => 
-            prod.name.toLowerCase().includes(search.toLowerCase().trim())
-        );
-
-        //orden
-        const sortFunc = getOrderFunction(selectedOrder);    
-        if (sortFunc) sortFunc(result, setProductos);
-        else throw new Error("No hay funcion para ordenar.");
-
-    }, [opcionesSeleccionadasMarca, rangoHP, rangoPrecio, search, selectedOrder]);
 
 
     return (
@@ -85,10 +39,10 @@ export default function SectionCatalogo({section}: Props){
                 fixed top-0 bottom-0 z-201
                 
                 transition-transform duration-300
-                ${showSidebar ? "translate-x-0" : "-translate-x-full"} md:translate-x-0                
+                ${showSidebar ? "translate-x-0" : "-translate-x-full"} sm:translate-x-0                
 
                 sm:sticky sm:top-35 sm:z-2 
-                pt-3 pb-10 px-7 md:pr-0 lg:pl-0
+                pt-25 sm:pt-3 pb-10 px-7 md:pr-0 lg:pl-0
                 bg-background
                 flex justify-end
             `}>
@@ -96,19 +50,10 @@ export default function SectionCatalogo({section}: Props){
                 <div className="max-w-60 flex flex-col gap-8">
                     <div>
                         <h2 className="font-bold text-4xl mb-1">{section.replace(/\b\w/g, c => c.toUpperCase())}</h2>
-                        <p>{productos.length} resultados</p>
+                        <p>{cards.length} resultados</p>
                     </div>
 
-                    <FiltroCheckbox 
-                        opcionCheckbox={filtrosCheckbox.marcas_tractores}
-                        opcionesSeleccionadas={opcionesSeleccionadasMarca}
-                        setOpcionesSeleccionadas={setOpcionesSeleccionadasMarca}
-                    />
-
-                    <FiltroRango 
-                        filtroRango={filtrosRango.hp}
-                        setRango={setRangoHP}
-                    />
+                    {filtrosElement}
                 </div>
 
             </form>
@@ -130,13 +75,11 @@ export default function SectionCatalogo({section}: Props){
                 ">
                     <div className="flex justify-between w-full sm:w-fit gap-2">
                         <FiltrarButton handler={()=>{setShowSidebar(true)}}/>
-                        <OrdernarButton selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} />
+                        <OrdernarButton section={section} selectedOrder={selectedOrder} setSelectedOrder={setSelectedOrder} />
 
                     </div>
                     
-
                     <SearchBar  section={section} setSearch={setSearch}/>
-
 
                 </div>
            </div>
@@ -150,7 +93,7 @@ export default function SectionCatalogo({section}: Props){
                     py-8 px-8
                 "
             >
-                {productos.map((producto) => <CardProducto section={section} producto={{...producto, section: "tractores"}} key={producto.id}/>)}
+                {cards}
             </section>
 
 

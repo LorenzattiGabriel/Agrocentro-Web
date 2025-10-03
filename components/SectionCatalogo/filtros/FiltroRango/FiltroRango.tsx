@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react"
 import InputRango from "./components/InputRango";
 import { Rango } from "./types/rango";
