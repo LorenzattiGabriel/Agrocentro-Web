@@ -7,13 +7,16 @@ type Props = {
     opcionCheckbox: FiltroCheckbox,
 
     opcionesSeleccionadas: string[],
-    setOpcionesSeleccionadas: Dispatch<SetStateAction<string[]>>
+    setOpcionesSeleccionadas: Dispatch<SetStateAction<string[]>>,
+
+    verTodo: boolean,
+    setVerTodo: Dispatch<SetStateAction<boolean>>
 }
 
 
-export default function FiltroCheckbox({opcionCheckbox, opcionesSeleccionadas, setOpcionesSeleccionadas}: Props) {
+export default function FiltroCheckbox({opcionCheckbox, opcionesSeleccionadas, setOpcionesSeleccionadas, verTodo, setVerTodo}: Props) {
 
-    const [verTodo, setVerTodo] = useState<boolean>(true);
+    
 
     return (
         <fieldset id={opcionCheckbox.id} className="flex flex-col gap-5">

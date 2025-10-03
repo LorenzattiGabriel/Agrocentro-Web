@@ -13,10 +13,11 @@ type Props = {
     setSearch: Dispatch<SetStateAction<string>>,
     selectedOrder: string,
     setSelectedOrder: Dispatch<SetStateAction<string>>,
-    filtrosElement: JSX.Element
+    filtrosElement: JSX.Element,
+    tagsElement: JSX.Element
 }
 
-export default function SectionCatalogo({section, cards, setSearch, selectedOrder, setSelectedOrder, filtrosElement}: Props){
+export default function SectionCatalogo({section, cards, setSearch, selectedOrder, setSelectedOrder, filtrosElement, tagsElement}: Props){
 
     const [showSidebar, setShowSidebar] = useState(false);
 
@@ -52,6 +53,8 @@ export default function SectionCatalogo({section, cards, setSearch, selectedOrde
                         <h2 className="font-bold text-4xl mb-1">{section.replace(/\b\w/g, c => c.toUpperCase())}</h2>
                         <p>{cards.length} resultados</p>
                     </div>
+
+                    {tagsElement}
 
                     {filtrosElement}
                 </div>

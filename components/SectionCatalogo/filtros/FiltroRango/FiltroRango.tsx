@@ -1,15 +1,12 @@
 "use client";
 
-import { useState } from "react"
 import InputRango from "./components/InputRango";
-import { Rango } from "./types/rango";
 import { Props } from "./Props";
 
 
 
-export default function FiltroRango({filtroRango, setRango}: Props) {
-    
-    const [rangoLocal, setRangoLocal] = useState<Rango>({min:0, max: Infinity});
+export default function FiltroRango({filtroRango, rango, setRango, min_input_id, max_input_id}: Props) {
+
 
     return (
         <fieldset className="flex flex-col items-start gap-5">
@@ -24,22 +21,24 @@ export default function FiltroRango({filtroRango, setRango}: Props) {
             <div>
                 <div className="flex flex-wrap gap-2">
 
-                    <InputRango value={rangoLocal.min} placeholder="Mínimo" min={0} 
-                        changeHandler={(value: string)=>{
-                            const num = Number(value);
-                            setRangoLocal({...rangoLocal, min: value === "" || isNaN(num) ? 0 : num })
+                    <InputRango  placeholder="Mínimo" min={0} 
+                        input_id={min_input_id}
+                        submitHandler={()=>{
+                            const input = document.getElementById(min_input_id) as HTMLInputElement;
+                            const num = Number(input.value);
+                            setRango({...rango, min: input.value === "" || isNaN(num) ? 0 : num })
                         }}
-                        submitHandler={()=>{setRango(rangoLocal)}}
                     />
 
                     <span className="font-semibold">-</span>
                     
-                    <InputRango value={rangoLocal.max} placeholder="Máximo" min={0} 
-                        changeHandler={(value: string)=>{
-                            const num = Number(value);
-                            setRangoLocal({...rangoLocal, max: value === "" || isNaN(num) ? Infinity : num })
+                    <InputRango placeholder="Máximo" min={0} 
+                        input_id={max_input_id}
+                        submitHandler={()=>{
+                            const input = document.getElementById(max_input_id) as HTMLInputElement;
+                            const num = Number(input.value);
+                            setRango({...rango, max: input.value === "" || isNaN(num) ? Infinity : num })
                         }}
-                        submitHandler={()=>{setRango(rangoLocal)}}
                     />
                     
                     <button 
@@ -52,7 +51,18 @@ export default function FiltroRango({filtroRango, setRango}: Props) {
                             transition
                         "
                         type="button"
-                        onMouseDown={()=>{setRango(rangoLocal)}}
+                        onMouseDown={()=>{
+                            const input_min = document.getElementById(min_input_id) as HTMLInputElement;
+                            const num_min = Number(input_min.value);
+                            
+                            const input_max = document.getElementById(max_input_id) as HTMLInputElement;
+                            const num_max = Number(input_max.value);
+                            setRango({
+                                min: input_min.value === "" || isNaN(num_min) ? 0 : num_min,
+                                max: input_max.value === "" || isNaN(num_max) ? Infinity : num_max
+                            });
+                            
+                        }}
                     >
                         <span className="relative -top-[1px]">{'>'}</span>
                     </button>

@@ -1,5 +1,7 @@
 import type {Props} from "./Props"
 
+export const searchbar_input_id = "saerchbar-form-input-id";
+
 export default function SearchBar({section, setSearch}: Props){
 
     const inputName = "searchbar-form-input"
@@ -19,6 +21,7 @@ export default function SearchBar({section, setSearch}: Props){
                 }} 
         >
             <input
+                id={searchbar_input_id}
                 name={inputName}
                 type="text"
                 placeholder={`Buscar ${section}...`}
