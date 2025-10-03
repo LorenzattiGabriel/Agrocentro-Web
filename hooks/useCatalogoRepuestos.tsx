@@ -4,19 +4,19 @@ import { filtrosCheckbox } from "@/components/SectionCatalogo/filtros/FiltroChec
 import { orderOptions_tractores_usados } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
 import { getOrderOptions } from "@/components/SectionCatalogo/OrdenarButton/utils/utils";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData";
-import { Implemento, ProductoSection } from "@/types/Producto";
+import { ProductoSection, Repuesto } from "@/types/Producto";
 import { useEffect, useState } from "react";
 
 
-export default function useCatalogoImplementos(){
+export default function useCatalogoRepuestos(){
 
-    const section : ProductoSection = "implementos"; 
-    const data = getDemoData(section) as Implemento[];
+    const section : ProductoSection = "repuestos"; 
+    const data = getDemoData(section) as Repuesto[];
 
-    const [productos, setProductos] = useState<Implemento[]>(data);
+    const [productos, setProductos] = useState<Repuesto[]>(data);
     
-    const [opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria] = useState<string[]>(filtrosCheckbox.categorias_Implementos.arrOpciones);
-    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(filtrosCheckbox.marcas_implementos.arrOpciones);
+    const [opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria] = useState<string[]>(filtrosCheckbox.categorias_Repuestos.arrOpciones);
+    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(filtrosCheckbox.marcas_Repuestos.arrOpciones);
     
     const [search, setSearch] = useState("");
     const [selectedOrder, setSelectedOrder] = useState(getOrderOptions(section)[0].value);
@@ -28,9 +28,9 @@ export default function useCatalogoImplementos(){
         let result = data; 
 
         //marca
-        result = filtrosCheckbox.marcas_implementos.filtrar(opcionesSeleccionadasMarca, result as Implemento[]) as Implemento[];
+        result = filtrosCheckbox.marcas_Repuestos.filtrar(opcionesSeleccionadasMarca, result) as Repuesto[];
         //categoria
-        result = filtrosCheckbox.categorias_Implementos.filtrar(opcionesSeleccionadasCategoria, result as Implemento[]) as Implemento[];
+        result = filtrosCheckbox.categorias_Repuestos.filtrar(opcionesSeleccionadasCategoria, result) as Repuesto[];
         
 
         //search
@@ -41,7 +41,7 @@ export default function useCatalogoImplementos(){
         //orden
         const sortFunc = orderOptions_tractores_usados.find(opt => opt.value === selectedOrder)?.sortFunction;    
         if (sortFunc) {
-            result = sortFunc(result as any) as Implemento[];
+            result = sortFunc(result as any) as Repuesto[];
             setProductos(result);
         }
         else throw new Error("No hay funcion para ordenar.");

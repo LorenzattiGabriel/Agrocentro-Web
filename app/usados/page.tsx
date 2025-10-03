@@ -8,8 +8,7 @@ import FiltroRango from "@/components/SectionCatalogo/filtros/FiltroRango/Filtro
 import FiltroTag from "@/components/SectionCatalogo/FiltroTag/FiltroTag";
 import { searchbar_input_id } from "@/components/SectionCatalogo/searchbar/SearchBar";
 import SectionCatalogo from "@/components/SectionCatalogo/SectionCatalogo"
-import useCatalogoTractores from "@/hooks/useCatalogoTractores"
-import useCatalogoTractoresUsados from "@/hooks/useCatalogoImplementos";
+import useCatalogoTractoresUsados from "@/hooks/useCatalogoTractoresUsados";
 import { useState } from "react";
 
 

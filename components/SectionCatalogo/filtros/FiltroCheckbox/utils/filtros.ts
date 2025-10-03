@@ -15,7 +15,7 @@ export function filtrarCategoria(
 
     productos: Implemento[] | Repuesto[]
 ){    
-    return productos.filter((prod)=>opcionesSeleccionadas.find((categoria)=>categoria===prod.marca))
+    return productos.filter((prod)=>opcionesSeleccionadas.find((categoria)=>categoria===prod.categoria))
 }
 
 
