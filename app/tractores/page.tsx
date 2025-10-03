@@ -3,7 +3,6 @@
 import CardProducto from "@/components/SectionCatalogo/CardProducto";
 import { filtrosCheckbox } from "@/components/SectionCatalogo/filtros/FiltroCheckbox/constants/filtrosCheckbox";
 import FiltroCheckbox from "@/components/SectionCatalogo/filtros/FiltroCheckbox/FiltroCheckbox";
-import { inputRango_classname } from "@/components/SectionCatalogo/filtros/FiltroRango/components/InputRango";
 import { filtrosRango } from "@/components/SectionCatalogo/filtros/FiltroRango/constants/filtrosRango";
 import FiltroRango from "@/components/SectionCatalogo/filtros/FiltroRango/FiltroRango";
 import FiltroTag from "@/components/SectionCatalogo/FiltroTag/FiltroTag";

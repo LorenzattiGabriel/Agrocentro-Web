@@ -31,16 +31,22 @@ export default function CardProducto({producto}:Props){
 
             <div className="flex-1 flex flex-col p-4">
                 <header>
+                    
                     <h2 className="text-lg font-semibold text-foreground mb-1">{producto.name}</h2>
                     <p className="text-sm text-secondary mb-2">{producto.marca}</p>
                 </header>
 
                 <main className="h-full">
                     <dl className="flex flex-col justify-end gap-1 text-md h-full">
+                        {!producto.nuevo&&producto.year&&<div className="flex items-center gap-1">
+                            <dt className="hidden">Año</dt>
+                            <dd className=" font-bold text-foreground/90">{producto.year}</dd>
+                        </div>}
                         <div className="flex items-center gap-1">
                             <dt className="font-medium">HP:</dt>
                             <dd>{producto.hp}</dd>
                         </div>
+                        
                     </dl>
                 </main>
                 
