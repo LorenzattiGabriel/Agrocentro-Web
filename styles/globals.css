@@ -132,3 +132,7 @@
 h1, h2, h3, [id] {
   scroll-margin-top: 200px; 
 }
+
+button:hover{
+    cursor: pointer !important;
+}

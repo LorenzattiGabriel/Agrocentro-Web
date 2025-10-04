@@ -64,13 +64,13 @@ export default function TractoresUsadosPage() {
             pl-10 pt-3
             mb-10 pr-4
         ">
-            TRACTORES NUEVOS
+            TRACTORES USADOS
         </h1>
 
        
 
         <SectionCatalogo 
-            section="tractores"
+            section="usados"
             cards={cards}
             setSearch={setSearch}
             selectedOrder={selectedOrder}
