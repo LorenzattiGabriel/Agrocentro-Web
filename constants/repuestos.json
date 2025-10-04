@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "Radiador para Tractor John Deere 5403 / 5605 / 5705",
+        "marca": "Mundo Radiador",
+        "descripcion": "Radiador de agua compatible con tractores JD serie 5000, ideal para trabajos agrícolas medianos.",
+        "modelos": ["5403", "5605", "5705"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 2,
+        "name": "Bomba hidráulica New Holland 84353124 – 160 L/min",
+        "marca": "Rexroth / New Holland",
+        "descripcion": "Bomba de alto caudal para tractores New Holland, ideal para sistemas hidráulicos exigentes.",
+        "modelos": ["T7.185", "T7.200", "T7.210", "T7.225"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 3,
+        "name": "Radiador de Agua Tractor Massey Ferguson 265/275/285/290",
+        "marca": "Diego Radiadores",
+        "descripcion": "Diseñado para modelos clásicos de Massey Ferguson; estructura reforzada, listo para instalar.",
+        "modelos": ["265", "275", "285", "290"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 4,
+        "name": "Bomba hidráulica para John Deere 9500 – referencia AH227021",
+        "marca": "John Deere",
+        "descripcion": "Bomba hidráulica estándar para tractores John Deere serie 9500, confiable y de fácil mantenimiento.",
+        "modelos": ["9500"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 5,
+        "name": "Radiador John Deere RE70533",
+        "marca": "Cam‑Agriparts",
+        "descripcion": "Radiador OEM para JD RE70533, alta eficiencia térmica, recomendado para uso intensivo.",
+        "modelos": ["6400", "6500", "6600"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 6,
+        "name": "Bomba hidráulica doble cuerpo Massey Ferguson – referencia 3800196M91",
+        "marca": "Massey Ferguson",
+        "descripcion": "Bomba doble para uso en tractores Massey Ferguson, permite mayor capacidad de trabajo hidráulico.",
+        "modelos": ["265", "275", "285", "299"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 7,
+        "name": "Radiador Tanque de Agua SJ20650 para John Deere",
+        "marca": "FridayParts",
+        "descripcion": "Repuesto de alta calidad para tractores JD, fabricado en aluminio con núcleo soldado.",
+        "modelos": ["5055E", "5065E", "5075E"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 8,
+        "name": "Bomba hidráulica eje Ø29mm para Ford / New Holland",
+        "marca": "Genérico / OEM alternativo",
+        "descripcion": "Bomba compatible para tractores Ford y New Holland, eje de 29 mm, buen rendimiento general.",
+        "modelos": ["6600", "7610", "7630", "8340"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 9,
+        "name": "Radiador John Deere RE70236 (OEM)",
+        "marca": "Agriquipo",
+        "descripcion": "Radiador original RE70236, garantiza rendimiento óptimo en motores JD medianos.",
+        "modelos": ["6200", "6300"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 10,
+        "name": "Bomba hidráulica para Fiat / Case‑IH / Ford – referencia 1901322",
+        "marca": "Genérico / OEM alternativo",
+        "descripcion": "Bomba económica para tractores Fiat, Case IH y Ford, ideal para reparaciones rápidas.",
+        "modelos": ["580", "780", "880", "980"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 11,
+        "name": "Radiador para New Holland TM150/165/180/190",
+        "marca": "Potenza",
+        "descripcion": "Radiador para tractores de alta potencia NH serie TM, con excelente capacidad de enfriamiento.",
+        "modelos": ["TM150", "TM165", "TM180", "TM190"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 12,
+        "name": "Bomba hidráulica para John Deere – RE197623 / RE57445",
+        "marca": "John Deere",
+        "descripcion": "Bomba hidráulica original John Deere, compatible con varios modelos medianos y grandes.",
+        "modelos": ["6400", "6500", "6600"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 13,
+        "name": "Radiador Case 8910/8920/8930/8940",
+        "marca": "Potenza",
+        "descripcion": "Radiador completo para línea Case 89XX; construcción robusta para maquinaria exigente.",
+        "modelos": ["8910", "8920", "8930", "8940"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 14,
+        "name": "Bomba hidráulica para New Holland T6090 – referencia 87538170R",
+        "marca": "New Holland",
+        "descripcion": "Bomba de alta presión para tractor New Holland T6090, diseñada para operaciones pesadas.",
+        "modelos": ["T6090"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 15,
+        "name": "Radiador Massey Ferguson 1185S",
+        "marca": "Potenza",
+        "descripcion": "Repuesto compatible con MF 1185S, de instalación directa y núcleo reforzado.",
+        "modelos": ["1185S"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 16,
+        "name": "Bomba hidráulica para Deutz / Zanello 4200 – 76 L",
+        "marca": "Venturi",
+        "descripcion": "Bomba hidráulica para tractores Deutz y Zanello, capacidad media para trabajos agrícolas.",
+        "modelos": ["4200", "4215", "5215"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 17,
+        "name": "Radiador Fiat R60",
+        "marca": "Potenza",
+        "descripcion": "Radiador de agua para Fiat R60, alta resistencia a temperaturas extremas.",
+        "modelos": ["R60"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 18,
+        "name": "Bomba hidráulica doble para tractor Massey Ferguson 4200/4300",
+        "marca": "Massey Ferguson",
+        "descripcion": "Bomba hidráulica doble cuerpo, resistente y eficiente para modelos Massey Ferguson 4200 y 4300.",
+        "modelos": ["4225", "4235", "4245", "4260", "4355"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    },
+    {
+        "id": 19,
+        "name": "Radiador Fiat 700 E",
+        "marca": "Potenza",
+        "descripcion": "Diseñado para tractores Fiat 700E, ofrece excelente rendimiento térmico en climas cálidos.",
+        "modelos": ["700E"],
+        "image": "/images/repuestos/radiador.webp",
+        "categoria": "Radiadores"
+    },
+    {
+        "id": 20,
+        "name": "Bomba hidráulica tipo pistón Caterpillar / Komatsu / John Deere (importada)",
+        "marca": "Multimarca importada",
+        "descripcion": "Bomba pistón importada para maquinaria pesada Caterpillar, Komatsu y John Deere, alta durabilidad.",
+        "modelos": ["320D", "PC200", "310SL"],
+        "image": "/images/repuestos/hydraulic-pump2.jpg",
+        "categoria": "Bombas"
+    }
+]

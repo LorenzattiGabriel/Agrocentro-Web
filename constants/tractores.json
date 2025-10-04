@@ -1,0 +1,1322 @@
+[
+  {
+    "id": 1,
+    "name": "Tractor John Deere 6110M",
+    "marca": "John Deere",
+    "image": "/john-deere-green-tractor-6110m.jpg",
+    "hp": 110,
+    "modelo": "6110M",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 2,
+    "name": "Tractor Massey Ferguson 4275",
+    "marca": "Massey Ferguson",
+    "image": "/red-massey-ferguson-tractor-used.jpg",
+    "hp": 75,
+    "modelo": "4275",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 3,
+    "name": "New Holland T7.190",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 190,
+    "modelo": "T7.190",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 4,
+    "name": "Massey Ferguson 6713",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 130,
+    "modelo": "6713",
+    "nuevo": true,
+    "year": 2003
+  },
+  {
+    "id": 5,
+    "name": "Case IH Puma 150",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwvoertuig-boer-1692783580rpz.png",
+    "hp": 150,
+    "modelo": "Puma 150",
+    "nuevo": true,
+    "year": 2005
+  },
+  {
+    "id": 6,
+    "name": "Kubota M5-111",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.jpg",
+    "hp": 111,
+    "modelo": "M5-111",
+    "nuevo": true,
+    "year": 2008
+  },
+  {
+    "id": 7,
+    "name": "Fendt 724 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-oude-tractor.png",
+    "hp": 240,
+    "modelo": "724 Vario",
+    "nuevo": true,
+    "year": 2005
+  },
+  {
+    "id": 8,
+    "name": "Deutz-Fahr 5100 G",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 100,
+    "modelo": "5100 G",
+    "nuevo": true,
+    "year": 2009
+  },
+  {
+    "id": 9,
+    "name": "Valtra N163",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 160,
+    "modelo": "N163",
+    "nuevo": true,
+    "year": 2011
+  },
+  {
+    "id": 10,
+    "name": "Claas Arion 650",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/oude-tractor-groene-tractor.png",
+    "hp": 180,
+    "modelo": "Arion 650",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 11,
+    "name": "John Deere 8R 310",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/110000/velka/old-green-tractor.jpg",
+    "hp": 310,
+    "modelo": "8R 310",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 12,
+    "name": "New Holland T8.390",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig-boer.png",
+    "hp": 390,
+    "modelo": "T8.390",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 13,
+    "name": "Massey Ferguson 7614",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/300000/velka/old-tractor-1563557766X1z.jpg",
+    "hp": 140,
+    "modelo": "7614",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 14,
+    "name": "Case IH Magnum 380",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 380,
+    "modelo": "Magnum 380",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 15,
+    "name": "Kubota M7-171",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwer-akker.jpg",
+    "hp": 170,
+    "modelo": "M7-171",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 16,
+    "name": "Fendt 936 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 360,
+    "modelo": "936 Vario",
+    "nuevo": true,
+    "year": 2007
+  },
+  {
+    "id": 17,
+    "name": "Deutz-Fahr 9340 TTV",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/blue-tractor-lawn-mower.jpg",
+    "hp": 340,
+    "modelo": "9340 TTV",
+    "nuevo": true,
+    "year": 2009
+  },
+  {
+    "id": 18,
+    "name": "Valtra T234",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/tractor-landbouwvoertuig.png",
+    "hp": 235,
+    "modelo": "T234",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 19,
+    "name": "Claas Xerion 5000",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 500,
+    "modelo": "Xerion 5000",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 20,
+    "name": "John Deere 8320R",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+    "hp": 320,
+    "modelo": "8320R",
+    "nuevo": true,
+    "year": 2009
+  },
+  {
+    "id": 21,
+    "name": "New Holland T7.270",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuigpng.png",
+    "hp": 270,
+    "modelo": "T7.270",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 22,
+    "name": "Massey Ferguson 7716",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/traktor-trekker-landbouwvoertuig.jpg",
+    "hp": 160,
+    "modelo": "7716",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 23,
+    "name": "Case IH Optum 300",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/landschap-traktorlandbouwvoertuig-1653817776ei6.jpg",
+    "hp": 300,
+    "modelo": "Optum 300",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 24,
+    "name": "Kubota M6-131",
+    "marca": "Kubota",
+    "image": "https://c.pxhere.com/photos/70/f0/tractors_schl_ter_oldtimer_red_workhorse_munich_tractor_manufacturer_strong-490469.jpg!d",
+    "hp": 130,
+    "modelo": "M6-131",
+    "nuevo": true,
+    "year": 2006
+  },
+  {
+    "id": 25,
+    "name": "Fendt 720 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.png",
+    "hp": 200,
+    "modelo": "720 Vario",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 26,
+    "name": "Deutz-Fahr 5100 C",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig.jpg",
+    "hp": 100,
+    "modelo": "5100 C",
+    "nuevo": true,
+    "year": 2008
+  },
+  {
+    "id": 27,
+    "name": "Valtra A104",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 100,
+    "modelo": "A104",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 28,
+    "name": "Claas Nexos 230",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/690000/velka/photo-tractor-agriculture-rural.jpg",
+    "hp": 105,
+    "modelo": "Nexos 230",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 29,
+    "name": "John Deere 5075E",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 75,
+    "modelo": "5075E",
+    "nuevo": true,
+    "year": 2011
+  },
+  {
+    "id": 30,
+    "name": "New Holland Workmaster 55",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-rode-tractor-oldtimer.png",
+    "hp": 55,
+    "modelo": "Workmaster 55",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 31,
+    "name": "Massey Ferguson 4707",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2633099_1280.jpg",
+    "hp": 70,
+    "modelo": "4707",
+    "nuevo": true,
+    "year": 2003
+  },
+  {
+    "id": 32,
+    "name": "Case IH Farmall 75A",
+    "marca": "Case IH",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 75,
+    "modelo": "Farmall 75A",
+    "nuevo": true,
+    "year": 2007
+  },
+  {
+    "id": 33,
+    "name": "Kubota L3901",
+    "marca": "Kubota",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2715529_1280.png",
+    "hp": 39,
+    "modelo": "L3901",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 34,
+    "name": "Valtra N163",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 160,
+    "modelo": "N163",
+    "nuevo": false,
+    "year": 2007
+  },
+  {
+    "id": 35,
+    "name": "Fendt 724 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-oude-tractor.png",
+    "hp": 240,
+    "modelo": "724 Vario",
+    "nuevo": false,
+    "year": 2007
+  },
+  {
+    "id": 36,
+    "name": "John Deere 5075E",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 75,
+    "modelo": "5075E",
+    "nuevo": false,
+    "year": 2006
+  },
+  {
+    "id": 37,
+    "name": "Kubota L3901",
+    "marca": "Kubota",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2715529_1280.png",
+    "hp": 39,
+    "modelo": "L3901",
+    "nuevo": false,
+    "year": 2006
+  },
+  {
+    "id": 38,
+    "name": "Tractor Massey Ferguson 4275",
+    "marca": "Massey Ferguson",
+    "image": "/red-massey-ferguson-tractor-used.jpg",
+    "hp": 75,
+    "modelo": "4275",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 39,
+    "name": "New Holland T8.390",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig-boer.png",
+    "hp": 390,
+    "modelo": "T8.390",
+    "nuevo": false,
+    "year": 2009
+  },
+  {
+    "id": 40,
+    "name": "Massey Ferguson 6713",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 130,
+    "modelo": "6713",
+    "nuevo": false,
+    "year": 2006
+  },
+  {
+    "id": 41,
+    "name": "Massey Ferguson 7614",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/300000/velka/old-tractor-1563557766X1z.jpg",
+    "hp": 140,
+    "modelo": "7614",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 42,
+    "name": "Claas Nexos 230",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/690000/velka/photo-tractor-agriculture-rural.jpg",
+    "hp": 105,
+    "modelo": "Nexos 230",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 43,
+    "name": "Deutz-Fahr 5100 C",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig.jpg",
+    "hp": 100,
+    "modelo": "5100 C",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 44,
+    "name": "Deutz-Fahr 9340 TTV",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/blue-tractor-lawn-mower.jpg",
+    "hp": 340,
+    "modelo": "9340 TTV",
+    "nuevo": false,
+    "year": 2002
+  },
+  {
+    "id": 45,
+    "name": "Massey Ferguson 4707",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2633099_1280.jpg",
+    "hp": 70,
+    "modelo": "4707",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 46,
+    "name": "Tractor John Deere 6110M",
+    "marca": "John Deere",
+    "image": "/john-deere-green-tractor-6110m.jpg",
+    "hp": 110,
+    "modelo": "6110M",
+    "nuevo": false,
+    "year": 2000
+  },
+  {
+    "id": 47,
+    "name": "Claas Xerion 5000",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 500,
+    "modelo": "Xerion 5000",
+    "nuevo": false,
+    "year": 2000
+  },
+  {
+    "id": 48,
+    "name": "John Deere 8R 310",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/110000/velka/old-green-tractor.jpg",
+    "hp": 310,
+    "modelo": "8R 310",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 49,
+    "name": "Kubota M6-131",
+    "marca": "Kubota",
+    "image": "https://c.pxhere.com/photos/70/f0/tractors_schl_ter_oldtimer_red_workhorse_munich_tractor_manufacturer_strong-490469.jpg!d",
+    "hp": 130,
+    "modelo": "M6-131",
+    "nuevo": false,
+    "year": 2000
+  },
+  {
+    "id": 50,
+    "name": "John Deere 8320R",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+    "hp": 320,
+    "modelo": "8320R",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 51,
+    "name": "Deutz-Fahr 5100 G",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 100,
+    "modelo": "5100 G",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 52,
+    "name": "Kubota M7-171",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwer-akker.jpg",
+    "hp": 170,
+    "modelo": "M7-171",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 53,
+    "name": "New Holland T7.190",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 190,
+    "modelo": "T7.190",
+    "nuevo": false,
+    "year": 2008
+  },
+  {
+    "id": 54,
+    "name": "Claas Arion 650",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/oude-tractor-groene-tractor.png",
+    "hp": 180,
+    "modelo": "Arion 650",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 55,
+    "name": "Valtra A104",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 100,
+    "modelo": "A104",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 56,
+    "name": "Case IH Magnum 380",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 380,
+    "modelo": "Magnum 380",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 57,
+    "name": "Case IH Optum 300",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/landschap-traktorlandbouwvoertuig-1653817776ei6.jpg",
+    "hp": 300,
+    "modelo": "Optum 300",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 58,
+    "name": "Valtra T234",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/tractor-landbouwvoertuig.png",
+    "hp": 235,
+    "modelo": "T234",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 59,
+    "name": "Kubota M5-111",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.jpg",
+    "hp": 111,
+    "modelo": "M5-111",
+    "nuevo": false,
+    "year": 2004
+  },
+  {
+    "id": 60,
+    "name": "New Holland T7.270",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuigpng.png",
+    "hp": 270,
+    "modelo": "T7.270",
+    "nuevo": false,
+    "year": 2002
+  },
+  {
+    "id": 61,
+    "name": "Case IH Puma 150",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwvoertuig-boer-1692783580rpz.png",
+    "hp": 150,
+    "modelo": "Puma 150",
+    "nuevo": false,
+    "year": 2009
+  },
+  {
+    "id": 62,
+    "name": "New Holland Workmaster 55",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-rode-tractor-oldtimer.png",
+    "hp": 55,
+    "modelo": "Workmaster 55",
+    "nuevo": false,
+    "year": 2008
+  },
+  {
+    "id": 63,
+    "name": "Fendt 720 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.png",
+    "hp": 200,
+    "modelo": "720 Vario",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 64,
+    "name": "Massey Ferguson 7716",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/traktor-trekker-landbouwvoertuig.jpg",
+    "hp": 160,
+    "modelo": "7716",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 65,
+    "name": "Fendt 936 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 360,
+    "modelo": "936 Vario",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 66,
+    "name": "Case IH Farmall 75A",
+    "marca": "Case IH",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 75,
+    "modelo": "Farmall 75A",
+    "nuevo": false,
+    "year": 2009
+  },
+  {
+    "id": 101,
+    "name": "Tractor John Deere 6110M",
+    "marca": "John Deere",
+    "image": "/john-deere-green-tractor-6110m.jpg",
+    "hp": 110,
+    "modelo": "6110M",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 102,
+    "name": "Tractor Massey Ferguson 4275",
+    "marca": "Massey Ferguson",
+    "image": "/red-massey-ferguson-tractor-used.jpg",
+    "hp": 75,
+    "modelo": "4275",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 103,
+    "name": "New Holland T7.190",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 190,
+    "modelo": "T7.190",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 104,
+    "name": "Massey Ferguson 6713",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 130,
+    "modelo": "6713",
+    "nuevo": true,
+    "year": 2003
+  },
+  {
+    "id": 105,
+    "name": "Case IH Puma 150",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwvoertuig-boer-1692783580rpz.png",
+    "hp": 150,
+    "modelo": "Puma 150",
+    "nuevo": true,
+    "year": 2005
+  },
+  {
+    "id": 106,
+    "name": "Kubota M5-111",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.jpg",
+    "hp": 111,
+    "modelo": "M5-111",
+    "nuevo": true,
+    "year": 2008
+  },
+  {
+    "id": 107,
+    "name": "Fendt 724 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-oude-tractor.png",
+    "hp": 240,
+    "modelo": "724 Vario",
+    "nuevo": true,
+    "year": 2005
+  },
+  {
+    "id": 108,
+    "name": "Deutz-Fahr 5100 G",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 100,
+    "modelo": "5100 G",
+    "nuevo": true,
+    "year": 2009
+  },
+  {
+    "id": 109,
+    "name": "Valtra N163",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 160,
+    "modelo": "N163",
+    "nuevo": true,
+    "year": 2011
+  },
+  {
+    "id": 110,
+    "name": "Claas Arion 650",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/oude-tractor-groene-tractor.png",
+    "hp": 180,
+    "modelo": "Arion 650",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 111,
+    "name": "John Deere 8R 310",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/110000/velka/old-green-tractor.jpg",
+    "hp": 310,
+    "modelo": "8R 310",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 112,
+    "name": "New Holland T8.390",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig-boer.png",
+    "hp": 390,
+    "modelo": "T8.390",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 113,
+    "name": "Massey Ferguson 7614",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/300000/velka/old-tractor-1563557766X1z.jpg",
+    "hp": 140,
+    "modelo": "7614",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 114,
+    "name": "Case IH Magnum 380",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 380,
+    "modelo": "Magnum 380",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 115,
+    "name": "Kubota M7-171",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwer-akker.jpg",
+    "hp": 170,
+    "modelo": "M7-171",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 116,
+    "name": "Fendt 936 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 360,
+    "modelo": "936 Vario",
+    "nuevo": true,
+    "year": 2007
+  },
+  {
+    "id": 117,
+    "name": "Deutz-Fahr 9340 TTV",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/blue-tractor-lawn-mower.jpg",
+    "hp": 340,
+    "modelo": "9340 TTV",
+    "nuevo": true,
+    "year": 2009
+  },
+  {
+    "id": 118,
+    "name": "Valtra T234",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/tractor-landbouwvoertuig.png",
+    "hp": 235,
+    "modelo": "T234",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 119,
+    "name": "Claas Xerion 5000",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 500,
+    "modelo": "Xerion 5000",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 120,
+    "name": "John Deere 8320R",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+    "hp": 320,
+    "modelo": "8320R",
+    "nuevo": true,
+    "year": 2009
+  },
+  {
+    "id": 121,
+    "name": "New Holland T7.270",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuigpng.png",
+    "hp": 270,
+    "modelo": "T7.270",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 122,
+    "name": "Massey Ferguson 7716",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/traktor-trekker-landbouwvoertuig.jpg",
+    "hp": 160,
+    "modelo": "7716",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 123,
+    "name": "Case IH Optum 300",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/landschap-traktorlandbouwvoertuig-1653817776ei6.jpg",
+    "hp": 300,
+    "modelo": "Optum 300",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 124,
+    "name": "Kubota M6-131",
+    "marca": "Kubota",
+    "image": "https://c.pxhere.com/photos/70/f0/tractors_schl_ter_oldtimer_red_workhorse_munich_tractor_manufacturer_strong-490469.jpg!d",
+    "hp": 130,
+    "modelo": "M6-131",
+    "nuevo": true,
+    "year": 2006
+  },
+  {
+    "id": 125,
+    "name": "Fendt 720 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.png",
+    "hp": 200,
+    "modelo": "720 Vario",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 126,
+    "name": "Deutz-Fahr 5100 C",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig.jpg",
+    "hp": 100,
+    "modelo": "5100 C",
+    "nuevo": true,
+    "year": 2008
+  },
+  {
+    "id": 127,
+    "name": "Valtra A104",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 100,
+    "modelo": "A104",
+    "nuevo": true,
+    "year": 2000
+  },
+  {
+    "id": 128,
+    "name": "Claas Nexos 230",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/690000/velka/photo-tractor-agriculture-rural.jpg",
+    "hp": 105,
+    "modelo": "Nexos 230",
+    "nuevo": true,
+    "year": 2002
+  },
+  {
+    "id": 129,
+    "name": "John Deere 5075E",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 75,
+    "modelo": "5075E",
+    "nuevo": true,
+    "year": 2011
+  },
+  {
+    "id": 130,
+    "name": "New Holland Workmaster 55",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-rode-tractor-oldtimer.png",
+    "hp": 55,
+    "modelo": "Workmaster 55",
+    "nuevo": true,
+    "year": 2001
+  },
+  {
+    "id": 131,
+    "name": "Massey Ferguson 4707",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2633099_1280.jpg",
+    "hp": 70,
+    "modelo": "4707",
+    "nuevo": true,
+    "year": 2003
+  },
+  {
+    "id": 132,
+    "name": "Case IH Farmall 75A",
+    "marca": "Case IH",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 75,
+    "modelo": "Farmall 75A",
+    "nuevo": true,
+    "year": 2007
+  },
+  {
+    "id": 133,
+    "name": "Kubota L3901",
+    "marca": "Kubota",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2715529_1280.png",
+    "hp": 39,
+    "modelo": "L3901",
+    "nuevo": true,
+    "year": 2004
+  },
+  {
+    "id": 134,
+    "name": "Valtra N163",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 160,
+    "modelo": "N163",
+    "nuevo": false,
+    "year": 2007
+  },
+  {
+    "id": 135,
+    "name": "Fendt 724 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-oude-tractor.png",
+    "hp": 240,
+    "modelo": "724 Vario",
+    "nuevo": false,
+    "year": 2007
+  },
+  {
+    "id": 136,
+    "name": "John Deere 5075E",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 75,
+    "modelo": "5075E",
+    "nuevo": false,
+    "year": 2006
+  },
+  {
+    "id": 137,
+    "name": "Kubota L3901",
+    "marca": "Kubota",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2715529_1280.png",
+    "hp": 39,
+    "modelo": "L3901",
+    "nuevo": false,
+    "year": 2006
+  },
+  {
+    "id": 138,
+    "name": "Tractor Massey Ferguson 4275",
+    "marca": "Massey Ferguson",
+    "image": "/red-massey-ferguson-tractor-used.jpg",
+    "hp": 75,
+    "modelo": "4275",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 139,
+    "name": "New Holland T8.390",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig-boer.png",
+    "hp": 390,
+    "modelo": "T8.390",
+    "nuevo": false,
+    "year": 2009
+  },
+  {
+    "id": 140,
+    "name": "Massey Ferguson 6713",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 130,
+    "modelo": "6713",
+    "nuevo": false,
+    "year": 2006
+  },
+  {
+    "id": 141,
+    "name": "Massey Ferguson 7614",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/300000/velka/old-tractor-1563557766X1z.jpg",
+    "hp": 140,
+    "modelo": "7614",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 142,
+    "name": "Claas Nexos 230",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/690000/velka/photo-tractor-agriculture-rural.jpg",
+    "hp": 105,
+    "modelo": "Nexos 230",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 143,
+    "name": "Deutz-Fahr 5100 C",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuig.jpg",
+    "hp": 100,
+    "modelo": "5100 C",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 144,
+    "name": "Deutz-Fahr 9340 TTV",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/blue-tractor-lawn-mower.jpg",
+    "hp": 340,
+    "modelo": "9340 TTV",
+    "nuevo": false,
+    "year": 2002
+  },
+  {
+    "id": 145,
+    "name": "Massey Ferguson 4707",
+    "marca": "Massey Ferguson",
+    "image": "https://storage.needpix.com/rsynced_images/tractor-2633099_1280.jpg",
+    "hp": 70,
+    "modelo": "4707",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 146,
+    "name": "Tractor John Deere 6110M",
+    "marca": "John Deere",
+    "image": "/john-deere-green-tractor-6110m.jpg",
+    "hp": 110,
+    "modelo": "6110M",
+    "nuevo": false,
+    "year": 2000
+  },
+  {
+    "id": 147,
+    "name": "Claas Xerion 5000",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 500,
+    "modelo": "Xerion 5000",
+    "nuevo": false,
+    "year": 2000
+  },
+  {
+    "id": 148,
+    "name": "John Deere 8R 310",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/110000/velka/old-green-tractor.jpg",
+    "hp": 310,
+    "modelo": "8R 310",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 149,
+    "name": "Kubota M6-131",
+    "marca": "Kubota",
+    "image": "https://c.pxhere.com/photos/70/f0/tractors_schl_ter_oldtimer_red_workhorse_munich_tractor_manufacturer_strong-490469.jpg!d",
+    "hp": 130,
+    "modelo": "M6-131",
+    "nuevo": false,
+    "year": 2000
+  },
+  {
+    "id": 150,
+    "name": "John Deere 8320R",
+    "marca": "John Deere",
+    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+    "hp": 320,
+    "modelo": "8320R",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 151,
+    "name": "Deutz-Fahr 5100 G",
+    "marca": "Deutz-Fahr",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 100,
+    "modelo": "5100 G",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 152,
+    "name": "Kubota M7-171",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwer-akker.jpg",
+    "hp": 170,
+    "modelo": "M7-171",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 153,
+    "name": "New Holland T7.190",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/450000/velka/traktor-landbouwvoertuig.png",
+    "hp": 190,
+    "modelo": "T7.190",
+    "nuevo": false,
+    "year": 2008
+  },
+  {
+    "id": 154,
+    "name": "Claas Arion 650",
+    "marca": "Claas",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/oude-tractor-groene-tractor.png",
+    "hp": 180,
+    "modelo": "Arion 650",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 155,
+    "name": "Valtra A104",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/90000/velka/tractor-bulldozer.jpg",
+    "hp": 100,
+    "modelo": "A104",
+    "nuevo": false,
+    "year": 2011
+  },
+  {
+    "id": 156,
+    "name": "Case IH Magnum 380",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 380,
+    "modelo": "Magnum 380",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 157,
+    "name": "Case IH Optum 300",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/landschap-traktorlandbouwvoertuig-1653817776ei6.jpg",
+    "hp": 300,
+    "modelo": "Optum 300",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 158,
+    "name": "Valtra T234",
+    "marca": "Valtra",
+    "image": "https://www.publicdomainpictures.net/pictures/460000/velka/tractor-landbouwvoertuig.png",
+    "hp": 235,
+    "modelo": "T234",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 159,
+    "name": "Kubota M5-111",
+    "marca": "Kubota",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.jpg",
+    "hp": 111,
+    "modelo": "M5-111",
+    "nuevo": false,
+    "year": 2004
+  },
+  {
+    "id": 160,
+    "name": "New Holland T7.270",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/490000/velka/tractor-landbouwvoertuigpng.png",
+    "hp": 270,
+    "modelo": "T7.270",
+    "nuevo": false,
+    "year": 2002
+  },
+  {
+    "id": 161,
+    "name": "Case IH Puma 150",
+    "marca": "Case IH",
+    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwvoertuig-boer-1692783580rpz.png",
+    "hp": 150,
+    "modelo": "Puma 150",
+    "nuevo": false,
+    "year": 2009
+  },
+  {
+    "id": 162,
+    "name": "New Holland Workmaster 55",
+    "marca": "New Holland",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-rode-tractor-oldtimer.png",
+    "hp": 55,
+    "modelo": "Workmaster 55",
+    "nuevo": false,
+    "year": 2008
+  },
+  {
+    "id": 163,
+    "name": "Fendt 720 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/tractor-landbouwvoertuig-trekker.png",
+    "hp": 200,
+    "modelo": "720 Vario",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 164,
+    "name": "Massey Ferguson 7716",
+    "marca": "Massey Ferguson",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/traktor-trekker-landbouwvoertuig.jpg",
+    "hp": 160,
+    "modelo": "7716",
+    "nuevo": false,
+    "year": 2003
+  },
+  {
+    "id": 165,
+    "name": "Fendt 936 Vario",
+    "marca": "Fendt",
+    "image": "https://www.publicdomainpictures.net/pictures/430000/velka/rode-tractor-oude-tractor.png",
+    "hp": 360,
+    "modelo": "936 Vario",
+    "nuevo": false,
+    "year": 2005
+  },
+  {
+    "id": 166,
+    "name": "Case IH Farmall 75A",
+    "marca": "Case IH",
+    "image": "https://storage.needpix.com/rsynced_images/utb-tractor-2262832_1280.png",
+    "hp": 75,
+    "modelo": "Farmall 75A",
+    "nuevo": false,
+    "year": 2009
+  }
+]

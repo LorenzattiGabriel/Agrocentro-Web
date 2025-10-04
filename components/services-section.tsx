@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tractor, Wrench, Package, Shield, Users, Clock } from "lucide-react"
+import Link from "next/link"
 
 const services = [
   {
@@ -8,36 +9,42 @@ const services = [
     title: "Maquinaria Nueva",
     description: "Tractores e implementos de las mejores marcas del mercado con garantía oficial.",
     features: ["Garantía oficial", "Financiación disponible", "Entrega inmediata"],
+    url: "/tractores"
   },
   {
     icon: Package,
     title: "Equipos Usados",
     description: "Maquinaria usada seleccionada y revisada por nuestros técnicos especializados.",
     features: ["Revisión técnica", "Garantía extendida", "Historial verificado"],
+    url: "/usados"
   },
   {
     icon: Wrench,
     title: "Servicio Técnico",
     description: "Mantenimiento, reparación y puesta a punto de maquinaria agrícola.",
     features: ["Técnicos certificados", "Repuestos originales", "Servicio a campo"],
+    url: "/contacto"
   },
   {
     icon: Shield,
     title: "Repuestos Originales",
     description: "Stock permanente de repuestos originales para todas las marcas.",
     features: ["Stock permanente", "Entrega rápida", "Precios competitivos"],
+    url: "/repuestos"
   },
   {
     icon: Users,
     title: "Asesoramiento",
     description: "Te ayudamos a elegir la maquinaria ideal para tu tipo de explotación.",
     features: ["Consulta gratuita", "Análisis personalizado", "Seguimiento post-venta"],
+    url: "/contacto"
   },
   {
     icon: Clock,
     title: "Atención Integral",
     description: "Servicio completo desde la venta hasta el mantenimiento de tu equipo.",
     features: ["Atención personalizada", "Soporte continuo", "Respuesta rápida"],
+    url: "/contacto"
   },
 ]
 
@@ -73,12 +80,15 @@ export function ServicesSection() {
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    variant="outline"
-                    className="w-full hover:bg-accent hover:text-accent-foreground bg-transparent"
-                  >
-                    Más información
-                  </Button>
+                    <Link href={service.url}>
+                        <Button
+                            variant="outline"
+                            className="w-full hover:bg-accent hover:text-accent-foreground bg-transparent"
+                            type="button"
+                            >
+                            Más información
+                        </Button>
+                    </Link>
                 </CardContent>
               </Card>
             )

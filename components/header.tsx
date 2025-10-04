@@ -10,7 +10,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-5000">
       {/* Top bar with contact info */}
       <div className="bg-secondary text-secondary-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">

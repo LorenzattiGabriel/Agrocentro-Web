@@ -1,0 +1,114 @@
+/* Animation del boton WhatsApp "Cotizar"*/
+@keyframes diagonal-glow {
+  0% {
+    background-position: -150% -150%;
+  }
+  100% {
+    background-position: 150% 150%;
+  }
+}
+
+.glow-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    transparent 45%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 55%
+  );
+  background-size: 200% 200%;
+  animation: diagonal-glow 6s linear infinite;
+}
+
+/* Animation del boton WhatsApp "Cotizar"*/
+@keyframes diagonal-glow-right {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.glow-sweep-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-sweep-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    75deg, /* steeper incline to the right */
+    transparent 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 60%
+  );
+  animation: diagonal-glow-right 2s linear infinite;
+}
+
+
+/* delay */
+@keyframes diagonal-glow-right-delay {
+  0%, 60% {
+    transform: translateX(-150%);
+  }
+  80% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+.glow-sweep-right-delay {
+  position: relative;
+  overflow: hidden;
+}
+.glow-sweep-right-delay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    75deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 60%
+  );
+  animation: diagonal-glow-right-delay 20s linear infinite; /* total cycle = 5s */
+}
+
+
+
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.8s ease forwards;
+}
+

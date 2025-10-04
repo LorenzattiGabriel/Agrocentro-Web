@@ -1,17 +1,16 @@
-'use client'
-
-
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Clock, Mail } from "lucide-react"
+import Link from "next/link"
 
-import { useRouter } from "next/navigation"
 
 import { locations } from "@/constants/locations"
 
+const urlContacto = "/contacto";
+
+
 export function LocationsSection() {
 
-    const router = useRouter();
 
   return (
     <section className="py-16 bg-muted/30">
@@ -64,13 +63,17 @@ export function LocationsSection() {
                 </div>
 
                 <div className="flex gap-3 mt-6">
-                  <Button className="flex-1 bg-primary hover:bg-primary/90 hover:cursor-pointer" onClick={()=>router.push(`sucursales/#sucursal-${location.id}-title`)}>
-                    Cómo llegar
-                  </Button>
+                    <Link href={`/sucursales/#sucursal-${location.id}-title`} className="flex-1">
+                        <Button className="w-full bg-primary hover:bg-primary/90 hover:cursor-pointer">
+                            Cómo llegar
+                        </Button>
+                    </Link>
 
-                  <Button variant="outline" className="flex-1 bg-transparent">
-                    Contactar
-                  </Button>
+                    <Link href={urlContacto} className="flex-1">
+                        <Button variant="outline" className="w-full bg-transparent">
+                        Contactar
+                        </Button>
+                    </Link>
                 </div>
               </CardContent>
             </Card>
