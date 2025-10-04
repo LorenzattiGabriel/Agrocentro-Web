@@ -1,16 +1,20 @@
+"use client";
 
+import { Dispatch, SetStateAction } from "react";
+
+type Props = {
+    clickHandler: Function
+}
 
 const wppButtonId = "WhatsApp-icon-img-contactar-button";
 
-export default function CotizarButton(){
+export default function CotizarButton({clickHandler}:Props){
 
-    const toggleRed = ()=>{document.getElementById(wppButtonId)?.classList.add("icon-hover-red")}
-    const disableRed = ()=>{document.getElementById(wppButtonId)?.classList.remove("icon-hover-red")}
 
     return (
         <button
             type="button"
-            onClick={()=>{window.open("https://wa.me/#", "_blank", "noopener,noreferrer")}} //noopener,noreferrer: medida de seguridad contra Reverse Tabnabbing
+            onClick={()=>clickHandler()}
             
             className=" group
                 flex items-center gap-3 justify-center

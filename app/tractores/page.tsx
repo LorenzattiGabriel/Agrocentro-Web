@@ -29,6 +29,31 @@ export default function TractoresPage() {
     const min_input_hp_id = "tractor-hp-filtrorango-min"
     const max_input_hp_id = "tractor-hp-filtrorango-max"
 
+    const tagElemento = 
+        <>
+        {/* Marcas seleccionadas */}
+        {Array.isArray(opcionesSeleccionadasMarca) 
+        &&
+        opcionesSeleccionadasMarca.length !== filtrosCheckbox.marcas_tractores_nuevos.arrOpciones.length 
+        &&
+        (opcionesSeleccionadasMarca).map((marca: string) => (
+            <FiltroTag 
+                nombre={marca}
+                handler={()=>{
+                    let result = opcionesSeleccionadasMarca.filter(opt=>opt!==marca);
+
+                    if (result.length === 0) {
+                        setVerTodo(true);
+                        setOpcionesSeleccionadasMarca(filtrosCheckbox.marcas_tractores_nuevos.arrOpciones);
+                    }
+                    else setOpcionesSeleccionadasMarca(result);
+                }}
+            />
+        ))
+        }
+        </>
+
+
   return (
     <main className="min-h-screen">
         <h1 className="
@@ -66,27 +91,6 @@ export default function TractoresPage() {
             }
             tagsElement={
                 <div className="flex flex-wrap gap-2 mb-2">
-                    {/* Marcas seleccionadas */}
-                    {Array.isArray(opcionesSeleccionadasMarca) 
-                    &&
-                    opcionesSeleccionadasMarca.length !== filtrosCheckbox.marcas_tractores_nuevos.arrOpciones.length 
-                    &&
-                    (opcionesSeleccionadasMarca).map((marca: string) => (
-                        <FiltroTag 
-                            nombre={marca}
-                            handler={()=>{
-                                let result = opcionesSeleccionadasMarca.filter(opt=>opt!==marca);
-
-                                if (result.length === 0) {
-                                    setVerTodo(true);
-                                    setOpcionesSeleccionadasMarca(filtrosCheckbox.marcas_tractores_nuevos.arrOpciones);
-                                }
-                                else setOpcionesSeleccionadasMarca(result);
-                            }}
-                        />
-                    ))
-                    }
-
                     {/* Rango HP */}
                     {rangoHP && (rangoHP.min > 0 || rangoHP.max < Infinity) && (
                         <FiltroTag 

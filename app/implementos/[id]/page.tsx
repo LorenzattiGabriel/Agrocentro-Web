@@ -1,10 +1,12 @@
 "use client";
 
+import CotizadorModal from "@/components/cotizador-modal";
 import CotizarButton from "@/components/SectionCatalogo/buttons/CotizarButton";
 import VolverButton from "@/components/SectionCatalogo/buttons/VolverButton";
 import CardProducto from "@/components/SectionCatalogo/CardProducto";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData"
 import { Implemento } from "@/types/Producto";
+import { useState } from "react";
 
 
 
@@ -16,6 +18,9 @@ interface Props {
 
 
 export default function ImplementoPage({ params }: Props){
+
+    const [verCotizador, setVerCotizador] = useState<boolean>(false);
+    
     const implemento = productos.find(p=>p.id === Number(params.id)) as Implemento;
 
     const recomendados = productos.filter(p=>p.categoria===implemento?.categoria).slice(0, 10);
@@ -65,7 +70,12 @@ export default function ImplementoPage({ params }: Props){
                         Contacta al vendedor para conocer el precio y disponibilidad.
                     </p>
                     <div className="w-full">
-                        <CotizarButton/>
+                        <CotizarButton clickHandler={()=>setVerCotizador(true)}/>
+                        <CotizadorModal 
+                            isOpen={verCotizador}
+                            onClose={()=>setVerCotizador(false)}
+                            maquina={implemento.name}
+                        />  
                     </div>
                 </div>
             </div>
