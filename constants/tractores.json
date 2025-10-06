@@ -1,0 +1,24 @@
+[
+  {
+    "nombre": "John Deere 5075E",
+    "descripcion": "Tractor versátil con excelente rendimiento para tareas múltiples.",
+    "marca": "John Deere",
+    "potencia_valor": 75,
+    "potencia_unidad": "HP",
+    "modelo": "5075E",
+    "anio": 2021,
+    "precio": 45800,
+    "imagen_url": "/images/tractores/jd-5075e.jpg"
+  },
+  {
+    "nombre": "Massey Ferguson 4292",
+    "descripcion": "Ideal para agricultura intensiva con alto torque.",
+    "marca": "Massey Ferguson",
+    "potencia_valor": 92,
+    "potencia_unidad": "HP",
+    "modelo": "4292",
+    "anio": 2023,
+    "precio": 71500,
+    "imagen_url": "/images/tractores/mf-4292.jpg"
+  }
+]

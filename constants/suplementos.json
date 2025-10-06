@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Aceite hidráulico Shell Tellus S2",
+    "descripcion": "Lubricante para sistemas hidráulicos de maquinaria agrícola.",
+    "marca": "Shell",
+    "categoria": "lubricante",
+    "compatibilidad": "Tractores 100–140 HP",
+    "unidad_medida": "L",
+    "contenido": 20,
+    "precio": 15200,
+    "imagen_url": "/images/suplementos/aceite-shell.jpg",
+    "atributos": {
+      "viscosidad": "ISO VG 46",
+      "origen": "Brasil"
+    }
+  },
+  {
+    "nombre": "Filtro de aire Donaldson P181126",
+    "descripcion": "Filtro de aire seco para tractores y cosechadoras.",
+    "marca": "Donaldson",
+    "categoria": "filtro",
+    "compatibilidad": "Motores Perkins y Cummins",
+    "unidad_medida": "unidad",
+    "contenido": 1,
+    "precio": 6800,
+    "imagen_url": "/images/suplementos/filtro-donaldson.jpg",
+    "atributos": {
+      "diametro_exterior": "178 mm",
+      "altura": "305 mm"
+    }
+  }
+]
