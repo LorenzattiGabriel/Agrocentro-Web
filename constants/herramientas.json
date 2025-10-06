@@ -1,0 +1,30 @@
+[
+  {
+    "nombre": "Taladro eléctrico Bosch",
+    "descripcion": "Taladro profesional de 650W con velocidad variable.",
+    "marca": "Bosch",
+    "categoria": "eléctrica",
+    "sku": "BOS-TLD-650",
+    "precio": 15000,
+    "stock": 10,
+    "imagen_url": "/images/herramientas/taladro-bosch.jpg",
+    "atributos": {
+      "voltaje": "220V",
+      "garantia": "12 meses"
+    }
+  },
+  {
+    "nombre": "Llave francesa 12''",
+    "descripcion": "Herramienta manual para ajuste de tuercas de distintos tamaños.",
+    "marca": "Tramontina",
+    "categoria": "manual",
+    "sku": "TRA-LF12",
+    "precio": 5800,
+    "stock": 25,
+    "imagen_url": "/images/herramientas/llave-francesa.jpg",
+    "atributos": {
+      "material": "acero forjado",
+      "garantia": "6 meses"
+    }
+  }
+]
