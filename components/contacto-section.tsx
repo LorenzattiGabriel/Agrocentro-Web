@@ -1,6 +1,38 @@
+'use client';
+import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export function ContactoSection() {
+
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    mensaje: "",
+  });
+
+  const numAgrocentro = "3574438081";
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { nombre, telefono, email, mensaje } = formData;
+
+    const texto = `Hola, mi nombre es ${nombre}%0A` +
+      `Teléfono: ${telefono}%0A` +
+      `Email: ${email}%0A%0A` +
+      `Quería consultar algo, %0A${mensaje}`;
+
+    const url = `https://wa.me/${numAgrocentro}?text=${texto}`;
+
+    window.open(url, "_blank");
+  };
+
+
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat py-16"
@@ -14,24 +46,43 @@ export function ContactoSection() {
           </h2>
           {/* --- FORMULARIO --- */}
           <div>
-            <form className="space-y-6">
+            <form 
+            onSubmit={handleSubmit}
+            className="space-y-6"
+            >
+              {/* --- NOMBRE --- */}
               <input
                 type="text"
+                name= "nombre"
                 placeholder="Nombre"
+                onChange={handleChange}
+                required
                 className="w-full p-3 border-input rounded"
               />
+              {/* --- EMAIL --- */}
               <input
                 type="email"
+                name= "email"
                 placeholder="Correo electrónico"
+                onChange={handleChange}
+                required
                 className="w-full p-3 border-input rounded"
               />
+              {/* --- TELEFONO --- */}
               <input
                 type="tel"
+                name= "telefono"
                 placeholder="Teléfono"
+                onChange={handleChange}
+                required
                 className="w-full p-3 border-input rounded"
               />
+              {/* --- MENSAJE --- */}
               <textarea
+                name= "mensaje"
                 placeholder="Mensaje"
+                onChange={handleChange}
+                required
                 className="w-full p-3 border-input rounded resize-none h-32"
               />
               <button
@@ -77,45 +128,3 @@ export function ContactoSection() {
     </section>
   );
 }
-
-{/*
-  <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-lg">
-
-          <h2 className="text-3xl font-bold text-center text-secondary mb-6">
-            Contacta con nosotros
-          </h2>
-
-          <div>
-            <form className="space-y-6">
-              <input
-                type="text"
-                placeholder="Nombre"
-                className="w-full p-3 border-input rounded"
-              />
-
-              <input
-                type="email"
-                placeholder="Correo electrónico"
-                className="w-full p-3 border-input rounded"
-              />
-
-              <input
-                type="tel"
-                placeholder="Teléfono"
-                className="w-full p-3 border-input rounded"
-              />
-
-              <textarea
-                placeholder="Mensaje"
-                className="w-full p-3 border-input rounded resize-none h-32"
-              />
-
-              <button
-                type="submit"
-                className="bg-primary text-white py-3 px-6 rounded hover:bg-primary/90 transition"
-              >
-                Enviar
-              </button>
-            </form>
-          </div>
-        */}
