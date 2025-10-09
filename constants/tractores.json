@@ -1,7 +1,7 @@
 [
   {
     "nombre": "John Deere 5075E",
-    "descripcion": "Tractor versátil con excelente rendimiento para tareas múltiples.",
+    "descripcion": "Tractor versátil con excelente rendimiento para tareas múltiples en campo y tambo.",
     "marca": "John Deere",
     "potencia_valor": 75,
     "potencia_unidad": "HP",
@@ -12,7 +12,7 @@
   },
   {
     "nombre": "Massey Ferguson 4292",
-    "descripcion": "Ideal para agricultura intensiva con alto torque.",
+    "descripcion": "Potente y confiable, ideal para agricultura intensiva y labores exigentes.",
     "marca": "Massey Ferguson",
     "potencia_valor": 92,
     "potencia_unidad": "HP",
@@ -20,5 +20,148 @@
     "anio": 2023,
     "precio": 71500,
     "imagen_url": "/images/tractores/mf-4292.jpg"
+  },
+  {
+    "nombre": "New Holland TT4.75",
+    "descripcion": "Compacto y eficiente, diseñado para trabajos de precisión en cultivos medianos.",
+    "marca": "New Holland",
+    "potencia_valor": 75,
+    "potencia_unidad": "HP",
+    "modelo": "TT4.75",
+    "anio": 2022,
+    "precio": 64000,
+    "imagen_url": "/images/tractores/nh-tt475.jpg"
+  },
+  {
+    "nombre": "Case IH Farmall 110A",
+    "descripcion": "Tractor de alto desempeño con gran capacidad de levante y bajo consumo.",
+    "marca": "Case IH",
+    "potencia_valor": 110,
+    "potencia_unidad": "HP",
+    "modelo": "Farmall 110A",
+    "anio": 2024,
+    "precio": 89200,
+    "imagen_url": "/images/tractores/case-farmall110a.jpg"
+  },
+  {
+    "nombre": "Valtra A94",
+    "descripcion": "Modelo robusto y confiable con excelente torque para trabajos continuos.",
+    "marca": "Valtra",
+    "potencia_valor": 98,
+    "potencia_unidad": "HP",
+    "modelo": "A94",
+    "anio": 2023,
+    "precio": 87000,
+    "imagen_url": "/images/tractores/valtra-a94.jpg"
+  },
+  {
+    "nombre": "John Deere 6110M",
+    "descripcion": "Perfecto equilibrio entre potencia, tecnología y eficiencia.",
+    "marca": "John Deere",
+    "potencia_valor": 110,
+    "potencia_unidad": "HP",
+    "modelo": "6110M",
+    "anio": 2024,
+    "precio": 102500,
+    "imagen_url": "/images/tractores/jd-6110m.jpg"
+  },
+  {
+    "nombre": "Pauny EVO 220A",
+    "descripcion": "Tractor argentino con gran capacidad de tiro y bajo mantenimiento.",
+    "marca": "Pauny",
+    "potencia_valor": 220,
+    "potencia_unidad": "HP",
+    "modelo": "EVO 220A",
+    "anio": 2022,
+    "precio": 95000,
+    "imagen_url": "/images/tractores/pauny-evo220a.jpg"
+  },
+  {
+    "nombre": "New Holland T7.165S",
+    "descripcion": "Máquina de alto rendimiento ideal para grandes extensiones agrícolas.",
+    "marca": "New Holland",
+    "potencia_valor": 165,
+    "potencia_unidad": "HP",
+    "modelo": "T7.165S",
+    "anio": 2023,
+    "precio": 135000,
+    "imagen_url": "/images/tractores/nh-t7165s.jpg"
+  },
+  {
+    "nombre": "Case IH Puma 155",
+    "descripcion": "Tractor de alta potencia con tecnología de transmisión avanzada.",
+    "marca": "Case IH",
+    "potencia_valor": 155,
+    "potencia_unidad": "HP",
+    "modelo": "Puma 155",
+    "anio": 2024,
+    "precio": 148000,
+    "imagen_url": "/images/tractores/case-puma155.jpg"
+  },
+  {
+    "nombre": "Massey Ferguson 4710",
+    "descripcion": "Tractor mediano con excelente relación peso-potencia y bajo consumo.",
+    "marca": "Massey Ferguson",
+    "potencia_valor": 100,
+    "potencia_unidad": "HP",
+    "modelo": "4710",
+    "anio": 2021,
+    "precio": 78000,
+    "imagen_url": "/images/tractores/mf-4710.jpg"
+  },
+  {
+    "nombre": "Valtra BH224",
+    "descripcion": "Motor de alto torque con sistema hidráulico eficiente y durable.",
+    "marca": "Valtra",
+    "potencia_valor": 224,
+    "potencia_unidad": "HP",
+    "modelo": "BH224",
+    "anio": 2024,
+    "precio": 152000,
+    "imagen_url": "/images/tractores/valtra-bh224.jpg"
+  },
+  {
+    "nombre": "John Deere 5045D",
+    "descripcion": "Compacto y maniobrable, ideal para pequeños productores y tambos.",
+    "marca": "John Deere",
+    "potencia_valor": 45,
+    "potencia_unidad": "HP",
+    "modelo": "5045D",
+    "anio": 2020,
+    "precio": 38500,
+    "imagen_url": "/images/tractores/jd-5045d.jpg"
+  },
+  {
+    "nombre": "New Holland TD5.90",
+    "descripcion": "Rendimiento confiable con bajo consumo de combustible.",
+    "marca": "New Holland",
+    "potencia_valor": 90,
+    "potencia_unidad": "HP",
+    "modelo": "TD5.90",
+    "anio": 2022,
+    "precio": 69500,
+    "imagen_url": "/images/tractores/nh-td590.jpg"
+  },
+  {
+    "nombre": "Pauny 250 EVO",
+    "descripcion": "Tractor nacional de alta potencia con diseño robusto y eficiente.",
+    "marca": "Pauny",
+    "potencia_valor": 250,
+    "potencia_unidad": "HP",
+    "modelo": "250 EVO",
+    "anio": 2023,
+    "precio": 158000,
+    "imagen_url": "/images/tractores/pauny-250evo.jpg"
+  },
+  {
+    "nombre": "Massey Ferguson 7720",
+    "descripcion": "Tractor premium con transmisión Dyna-6 y cabina de confort total.",
+    "marca": "Massey Ferguson",
+    "potencia_valor": 200,
+    "potencia_unidad": "HP",
+    "modelo": "7720",
+    "anio": 2024,
+    "precio": 165000,
+    "imagen_url": "/images/tractores/mf-7720.jpg"
   }
 ]

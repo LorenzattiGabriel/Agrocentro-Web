@@ -15,18 +15,288 @@
     }
   },
   {
-    "nombre": "Filtro de aire Donaldson P181126",
-    "descripcion": "Filtro de aire seco para tractores y cosechadoras.",
-    "marca": "Donaldson",
+    "nombre": "Grasa multiuso Total Multis EP2",
+    "descripcion": "Grasa de litio de alto rendimiento para cojinetes y articulaciones.",
+    "marca": "Total",
+    "categoria": "grasa",
+    "compatibilidad": "Rodamientos y articulaciones",
+    "unidad_medida": "kg",
+    "contenido": 1,
+    "precio": 3400,
+    "imagen_url": "/images/suplementos/grasa-total.jpg",
+    "atributos": {
+      "punto_gota": "190 °C",
+      "color": "verde"
+    }
+  },
+  {
+    "nombre": "Líquido refrigerante Petronas Paraflu",
+    "descripcion": "Refrigerante listo para usar que evita la corrosión del motor.",
+    "marca": "Petronas",
+    "categoria": "refrigerante",
+    "compatibilidad": "Motores diésel agrícolas",
+    "unidad_medida": "L",
+    "contenido": 5,
+    "precio": 4400,
+    "imagen_url": "/images/suplementos/refrigerante-paraflu.jpg",
+    "atributos": {
+      "color": "verde",
+      "concentracion": "Listo para usar"
+    }
+  },
+  {
+    "nombre": "Aceite de motor Mobil Delvac MX 15W40",
+    "descripcion": "Aceite mineral para motores diésel con protección avanzada contra desgaste.",
+    "marca": "Mobil",
+    "categoria": "lubricante",
+    "compatibilidad": "Motores diésel agrícolas y camiones",
+    "unidad_medida": "L",
+    "contenido": 20,
+    "precio": 18800,
+    "imagen_url": "/images/suplementos/aceite-mobil.jpg",
+    "atributos": {
+      "tipo": "Mineral",
+      "viscosidad": "15W-40"
+    }
+  },
+  {
+    "nombre": "Filtro de cabina John Deere RE46222",
+    "descripcion": "Filtro de aire acondicionado para cabinas cerradas de tractores John Deere.",
+    "marca": "John Deere",
     "categoria": "filtro",
-    "compatibilidad": "Motores Perkins y Cummins",
+    "compatibilidad": "John Deere Serie 6000 y 7000",
     "unidad_medida": "unidad",
     "contenido": 1,
-    "precio": 6800,
-    "imagen_url": "/images/suplementos/filtro-donaldson.jpg",
+    "precio": 9200,
+    "imagen_url": "/images/suplementos/filtro-cabina-jd.jpg",
     "atributos": {
-      "diametro_exterior": "178 mm",
-      "altura": "305 mm"
+      "tipo": "Cabina",
+      "eficiencia": "99.8%"
+    }
+  },
+  {
+    "nombre": "Pintura anticorrosiva Sherwin AgriCoat",
+    "descripcion": "Pintura protectora para maquinaria agrícola y estructuras metálicas.",
+    "marca": "Sherwin Williams",
+    "categoria": "pintura",
+    "compatibilidad": "Superficies metálicas",
+    "unidad_medida": "L",
+    "contenido": 4,
+    "precio": 7800,
+    "imagen_url": "/images/suplementos/pintura-sherwin.jpg",
+    "atributos": {
+      "color": "rojo óxido",
+      "acabado": "semimate"
+    }
+  },
+  {
+    "nombre": "Sellador de radiador Bardahl Stop Leak",
+    "descripcion": "Aditivo para detener fugas menores en radiadores y juntas.",
+    "marca": "Bardahl",
+    "categoria": "aditivo",
+    "compatibilidad": "Sistemas de refrigeración",
+    "unidad_medida": "mL",
+    "contenido": 300,
+    "precio": 2300,
+    "imagen_url": "/images/suplementos/sellador-bardahl.jpg",
+    "atributos": {
+      "formato": "líquido",
+      "aplicacion": "radiadores"
+    }
+  },
+  {
+    "nombre": "Aditivo diésel Liqui Moly Super Diesel Additive",
+    "descripcion": "Limpia inyectores y mejora la combustión del combustible diésel.",
+    "marca": "Liqui Moly",
+    "categoria": "aditivo",
+    "compatibilidad": "Motores diésel agrícolas",
+    "unidad_medida": "mL",
+    "contenido": 250,
+    "precio": 8900,
+    "imagen_url": "/images/suplementos/aditivo-liquimoly.jpg",
+    "atributos": {
+      "mejora_cetanos": "+4 puntos",
+      "uso": "cada 2000 km"
+    }
+  },
+  {
+    "nombre": "Monitor de rendimiento AgLeader Integra",
+    "descripcion": "Sistema avanzado de monitoreo y mapeo de rendimiento de cultivos.",
+    "marca": "AgLeader",
+    "categoria": "monitor",
+    "compatibilidad": "Cosechadoras AgLeader",
+    "unidad_medida": "unidad",
+    "contenido": 1,
+    "precio": 1250000,
+    "imagen_url": "/images/suplementos/monitor-agleader.jpg",
+    "atributos": {
+      "pantalla": "12 pulgadas",
+      "tipo": "táctil"
+    }
+  },
+  {
+    "nombre": "Aceite para transmisión Valvoline ATF Dexron III",
+    "descripcion": "Fluido de transmisión automática para maquinaria agrícola e industrial.",
+    "marca": "Valvoline",
+    "categoria": "lubricante",
+    "compatibilidad": "Transmisiones automáticas y convertidores de torque",
+    "unidad_medida": "L",
+    "contenido": 4,
+    "precio": 9600,
+    "imagen_url": "/images/suplementos/aceite-valvoline.jpg",
+    "atributos": {
+      "tipo": "ATF Dexron III",
+      "color": "rojo"
+    }
+  },
+  {
+    "nombre": "Limpiador de inyectores Wynn’s Diesel Injector Cleaner",
+    "descripcion": "Aditivo que limpia y protege inyectores en motores diésel.",
+    "marca": "Wynn's",
+    "categoria": "aditivo",
+    "compatibilidad": "Motores diésel y common rail",
+    "unidad_medida": "mL",
+    "contenido": 325,
+    "precio": 6600,
+    "imagen_url": "/images/suplementos/limpiador-wynns.jpg",
+    "atributos": {
+      "frecuencia_uso": "cada 5000 km",
+      "tipo": "limpieza profunda"
+    }
+  },
+  {
+    "nombre": "Anticongelante Prestone 50/50",
+    "descripcion": "Listo para usar, protege hasta -37°C y evita el sobrecalentamiento.",
+    "marca": "Prestone",
+    "categoria": "refrigerante",
+    "compatibilidad": "Todo tipo de motores agrícolas",
+    "unidad_medida": "L",
+    "contenido": 5,
+    "precio": 5900,
+    "imagen_url": "/images/suplementos/anticongelante-prestone.jpg",
+    "atributos": {
+      "proporcion": "50/50",
+      "color": "amarillo"
+    }
+  },
+  {
+    "nombre": "Aceite para cadena Stihl BioPlus",
+    "descripcion": "Aceite biodegradable para lubricación de cadenas y guías.",
+    "marca": "Stihl",
+    "categoria": "lubricante",
+    "compatibilidad": "Motosierras agrícolas y forestales",
+    "unidad_medida": "L",
+    "contenido": 5,
+    "precio": 7900,
+    "imagen_url": "/images/suplementos/aceite-stihl.jpg",
+    "atributos": {
+      "tipo": "biodegradable",
+      "viscosidad": "alta adherencia"
+    }
+  },
+  {
+    "nombre": "Pintura en aerosol Rust-Oleum 2X",
+    "descripcion": "Pintura de secado rápido ideal para retoques en maquinaria.",
+    "marca": "Rust-Oleum",
+    "categoria": "pintura",
+    "compatibilidad": "Metal, plástico, madera",
+    "unidad_medida": "mL",
+    "contenido": 400,
+    "precio": 2800,
+    "imagen_url": "/images/suplementos/pintura-rustoleum.jpg",
+    "atributos": {
+      "acabado": "brillante",
+      "secado": "10 minutos"
+    }
+  },
+  {
+    "nombre": "Grasa grafitada YPF Alta Carga",
+    "descripcion": "Grasa industrial de alto punto de goteo con aditivos antifricción.",
+    "marca": "YPF",
+    "categoria": "grasa",
+    "compatibilidad": "Chasis, rodamientos y juntas universales",
+    "unidad_medida": "kg",
+    "contenido": 5,
+    "precio": 9700,
+    "imagen_url": "/images/suplementos/grasa-ypf.jpg",
+    "atributos": {
+      "base": "litio",
+      "color": "gris oscuro"
+    }
+  },
+  {
+    "nombre": "Filtro de combustible Fleetguard FF5488",
+    "descripcion": "Filtro para motores diésel Cummins y Perkins de alta exigencia.",
+    "marca": "Fleetguard",
+    "categoria": "filtro",
+    "compatibilidad": "Motores agrícolas diésel",
+    "unidad_medida": "unidad",
+    "contenido": 1,
+    "precio": 7200,
+    "imagen_url": "/images/suplementos/filtro-fleetguard.jpg",
+    "atributos": {
+      "micrones": "15 µm",
+      "altura": "150 mm"
+    }
+  },
+  {
+    "nombre": "Aditivo anticorrosivo Castrol Radicool",
+    "descripcion": "Protege el sistema de enfriamiento contra la oxidación y el sarro.",
+    "marca": "Castrol",
+    "categoria": "aditivo",
+    "compatibilidad": "Sistemas de refrigeración agrícola",
+    "unidad_medida": "L",
+    "contenido": 1,
+    "precio": 3600,
+    "imagen_url": "/images/suplementos/aditivo-castrol.jpg",
+    "atributos": {
+      "color": "rosa",
+      "vida_util": "2 años"
+    }
+  },
+  {
+    "nombre": "Lubricante sintético Total Quartz 9000 5W40",
+    "descripcion": "Aceite sintético para motores de alto rendimiento.",
+    "marca": "Total",
+    "categoria": "lubricante",
+    "compatibilidad": "Motores de maquinaria agrícola moderna",
+    "unidad_medida": "L",
+    "contenido": 5,
+    "precio": 11200,
+    "imagen_url": "/images/suplementos/aceite-total.jpg",
+    "atributos": {
+      "viscosidad": "5W-40",
+      "tipo": "sintético"
+    }
+  },
+  {
+    "nombre": "Aceite para engranajes Mobilgear 600 XP 220",
+    "descripcion": "Aceite industrial para cajas de engranajes y transmisiones agrícolas.",
+    "marca": "Mobil",
+    "categoria": "lubricante",
+    "compatibilidad": "Cajas de transmisión y reductores",
+    "unidad_medida": "L",
+    "contenido": 20,
+    "precio": 24500,
+    "imagen_url": "/images/suplementos/aceite-mobilgear.jpg",
+    "atributos": {
+      "tipo": "industrial",
+      "viscosidad": "ISO VG 220"
+    }
+  },
+  {
+    "nombre": "Monitor Topcon X25",
+    "descripcion": "Pantalla táctil de agricultura de precisión con GPS integrado.",
+    "marca": "Topcon",
+    "categoria": "monitor",
+    "compatibilidad": "Sistemas ISOBUS universales",
+    "unidad_medida": "unidad",
+    "contenido": 1,
+    "precio": 975000,
+    "imagen_url": "/images/suplementos/monitor-topcon.jpg",
+    "atributos": {
+      "pantalla": "8 pulgadas",
+      "gps": "integrado"
     }
   }
 ]

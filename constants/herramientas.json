@@ -1,21 +1,22 @@
 [
   {
-    "nombre": "Taladro eléctrico Bosch",
-    "descripcion": "Taladro profesional de 650W con velocidad variable.",
+    "nombre": "Taladro eléctrico Bosch GSB 550",
+    "descripcion": "Taladro percutor de 550W con velocidad variable y reversa.",
     "marca": "Bosch",
     "categoria": "eléctrica",
-    "sku": "BOS-TLD-650",
-    "precio": 15000,
-    "stock": 10,
-    "imagen_url": "/images/herramientas/taladro-bosch.jpg",
+    "sku": "BOS-GSB550",
+    "precio": 15900,
+    "stock": 12,
+    "imagen_url": "/images/herramientas/taladro-bosch-gsb550.jpg",
     "atributos": {
       "voltaje": "220V",
+      "potencia": "550W",
       "garantia": "12 meses"
     }
   },
   {
-    "nombre": "Llave francesa 12''",
-    "descripcion": "Herramienta manual para ajuste de tuercas de distintos tamaños.",
+    "nombre": "Llave francesa 12'' Tramontina",
+    "descripcion": "Herramienta ajustable fabricada en acero forjado de alta resistencia.",
     "marca": "Tramontina",
     "categoria": "manual",
     "sku": "TRA-LF12",
@@ -25,6 +26,221 @@
     "atributos": {
       "material": "acero forjado",
       "garantia": "6 meses"
+    }
+  },
+  {
+    "nombre": "Amoladora angular DeWalt DWE4011",
+    "descripcion": "Amoladora compacta de 800W ideal para corte y desbaste.",
+    "marca": "DeWalt",
+    "categoria": "eléctrica",
+    "sku": "DEW-DWE4011",
+    "precio": 21000,
+    "stock": 15,
+    "imagen_url": "/images/herramientas/amoladora-dewalt.jpg",
+    "atributos": {
+      "voltaje": "220V",
+      "diametro_disco": "115 mm",
+      "garantia": "1 año"
+    }
+  },
+  {
+    "nombre": "Sierra circular Makita HS7600",
+    "descripcion": "Sierra circular de 1200W para cortes precisos en madera.",
+    "marca": "Makita",
+    "categoria": "eléctrica",
+    "sku": "MAK-HS7600",
+    "precio": 32500,
+    "stock": 8,
+    "imagen_url": "/images/herramientas/sierra-makita.jpg",
+    "atributos": {
+      "voltaje": "220V",
+      "diametro_disco": "185 mm",
+      "garantia": "1 año"
+    }
+  },
+  {
+    "nombre": "Pinza universal Stanley 8''",
+    "descripcion": "Pinza forjada en acero con mango ergonómico antideslizante.",
+    "marca": "Stanley",
+    "categoria": "manual",
+    "sku": "STA-PINZA8",
+    "precio": 4200,
+    "stock": 40,
+    "imagen_url": "/images/herramientas/pinza-stanley.jpg",
+    "atributos": {
+      "material": "acero al carbono",
+      "garantia": "6 meses"
+    }
+  },
+  {
+    "nombre": "Juego de llaves combinadas Bahco 12 piezas",
+    "descripcion": "Set de llaves combinadas cromadas con medidas métricas.",
+    "marca": "Bahco",
+    "categoria": "manual",
+    "sku": "BAH-LLAV12",
+    "precio": 23800,
+    "stock": 10,
+    "imagen_url": "/images/herramientas/llaves-bahco.jpg",
+    "atributos": {
+      "material": "acero cromo vanadio",
+      "rango": "8-24 mm"
+    }
+  },
+  {
+    "nombre": "Multímetro digital Fluke 107",
+    "descripcion": "Instrumento compacto para medición de tensión, corriente y resistencia.",
+    "marca": "Fluke",
+    "categoria": "medición",
+    "sku": "FLU-107",
+    "precio": 46800,
+    "stock": 5,
+    "imagen_url": "/images/herramientas/multimetro-fluke.jpg",
+    "atributos": {
+      "tipo": "digital",
+      "baterias": "2x AAA",
+      "garantia": "2 años"
+    }
+  },
+  {
+    "nombre": "Calibre Vernier Insize 150mm",
+    "descripcion": "Calibre de precisión de acero inoxidable con lectura en milímetros.",
+    "marca": "Insize",
+    "categoria": "medición",
+    "sku": "INS-150MM",
+    "precio": 12400,
+    "stock": 20,
+    "imagen_url": "/images/herramientas/calibre-insize.jpg",
+    "atributos": {
+      "material": "acero inoxidable",
+      "precision": "0.02 mm"
+    }
+  },
+  {
+    "nombre": "Soldadora inverter Lusqtoff 200A",
+    "descripcion": "Soldadora portátil ideal para uso profesional y mantenimiento.",
+    "marca": "Lusqtoff",
+    "categoria": "eléctrica",
+    "sku": "LUS-200A",
+    "precio": 55900,
+    "stock": 6,
+    "imagen_url": "/images/herramientas/soldadora-lusqtoff.jpg",
+    "atributos": {
+      "corriente": "200A",
+      "tipo": "MMA",
+      "garantia": "1 año"
+    }
+  },
+  {
+    "nombre": "Martillo carpintero Bellota 27mm",
+    "descripcion": "Martillo equilibrado con cabeza templada y mango de fibra.",
+    "marca": "Bellota",
+    "categoria": "manual",
+    "sku": "BEL-27MM",
+    "precio": 3900,
+    "stock": 30,
+    "imagen_url": "/images/herramientas/martillo-bellota.jpg",
+    "atributos": {
+      "peso": "500 g",
+      "material_mango": "fibra de vidrio"
+    }
+  },
+  {
+    "nombre": "Nivel láser Stanley STHT1-77409",
+    "descripcion": "Nivel de líneas cruzadas con base magnética para trabajos de precisión.",
+    "marca": "Stanley",
+    "categoria": "medición",
+    "sku": "STA-LASER",
+    "precio": 72000,
+    "stock": 4,
+    "imagen_url": "/images/herramientas/nivel-laser-stanley.jpg",
+    "atributos": {
+      "rango": "10 m",
+      "precision": "±3 mm/m"
+    }
+  },
+  {
+    "nombre": "Atornillador inalámbrico Black+Decker 3.6V",
+    "descripcion": "Atornillador portátil recargable con luz LED incorporada.",
+    "marca": "Black+Decker",
+    "categoria": "eléctrica",
+    "sku": "BLD-36V",
+    "precio": 18900,
+    "stock": 18,
+    "imagen_url": "/images/herramientas/atornillador-blackdecker.jpg",
+    "atributos": {
+      "voltaje": "3.6V",
+      "bateria": "ion-litio",
+      "garantia": "6 meses"
+    }
+  },
+  {
+    "nombre": "Llave tubo con crique Bahco 1/2''",
+    "descripcion": "Mango con sistema de cambio rápido y 24 piezas incluidas.",
+    "marca": "Bahco",
+    "categoria": "manual",
+    "sku": "BAH-TUBO12",
+    "precio": 27900,
+    "stock": 9,
+    "imagen_url": "/images/herramientas/llave-tubo-bahco.jpg",
+    "atributos": {
+      "medidas": "10-24 mm",
+      "material": "acero cromo vanadio"
+    }
+  },
+  {
+    "nombre": "Cinta métrica Truper 5m",
+    "descripcion": "Cinta retráctil con gancho magnético y traba automática.",
+    "marca": "Truper",
+    "categoria": "medición",
+    "sku": "TRU-5M",
+    "precio": 2800,
+    "stock": 50,
+    "imagen_url": "/images/herramientas/cinta-truper.jpg",
+    "atributos": {
+      "longitud": "5 m",
+      "ancho": "19 mm"
+    }
+  },
+  {
+    "nombre": "Lijadora orbital Makita BO3710",
+    "descripcion": "Diseño ergonómico con sistema de aspiración y baja vibración.",
+    "marca": "Makita",
+    "categoria": "eléctrica",
+    "sku": "MAK-BO3710",
+    "precio": 35400,
+    "stock": 7,
+    "imagen_url": "/images/herramientas/lijadora-makita.jpg",
+    "atributos": {
+      "potencia": "190W",
+      "voltaje": "220V"
+    }
+  },
+  {
+    "nombre": "Pistola de calor Black+Decker KX2001K",
+    "descripcion": "Dos niveles de temperatura y flujo de aire para múltiples aplicaciones.",
+    "marca": "Black+Decker",
+    "categoria": "eléctrica",
+    "sku": "BLD-KX2001K",
+    "precio": 22600,
+    "stock": 11,
+    "imagen_url": "/images/herramientas/pistola-calor-bld.jpg",
+    "atributos": {
+      "temperatura": "460-600 °C",
+      "potencia": "2000W"
+    }
+  },
+  {
+    "nombre": "Cortadora de metal DeWalt D28730",
+    "descripcion": "Cortadora de 355 mm para trabajos de alta exigencia.",
+    "marca": "DeWalt",
+    "categoria": "eléctrica",
+    "sku": "DEW-D28730",
+    "precio": 105000,
+    "stock": 3,
+    "imagen_url": "/images/herramientas/cortadora-dewalt.jpg",
+    "atributos": {
+      "potencia": "2300W",
+      "diametro_disco": "355 mm"
     }
   }
 ]
