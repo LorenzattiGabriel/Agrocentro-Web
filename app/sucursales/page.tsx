@@ -2,6 +2,7 @@ import { locations } from "@/constants/locations";
 import ContenidoSucursal from "@/components/sucursales/ContenidoSucursal/ContenidoSucursal";
 
 
+
 export default function SucursalesPage() {
   return (
     <main className="min-h-screen py-10">

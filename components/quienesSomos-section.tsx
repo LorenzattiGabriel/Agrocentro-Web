@@ -27,7 +27,7 @@ export function QuienesSomosSection() {
           </div>
           <div className="order-2 md:order-2 flex justify-center">
             <img
-              src="/ig_mision.JPG"
+              src="/ig_mision.jpg"
               alt="imagen mision"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />

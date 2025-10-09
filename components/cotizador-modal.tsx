@@ -26,7 +26,6 @@ Mail: ${email}.`;
     const urlWhatsapp = `https://wa.me/5491111111111?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsapp, "_blank");
 
-    window.open(urlWhatsapp, "_blank");
     setEnviado(true);
 
   };
