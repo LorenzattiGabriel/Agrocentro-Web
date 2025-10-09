@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { InstagramIcon, Mail, Phone, MapPin } from "lucide-react";
 
 export function ContactoSection() {
 
@@ -46,14 +46,14 @@ export function ContactoSection() {
           </h2>
           {/* --- FORMULARIO --- */}
           <div>
-            <form 
-            onSubmit={handleSubmit}
-            className="space-y-6"
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6"
             >
               {/* --- NOMBRE --- */}
               <input
                 type="text"
-                name= "nombre"
+                name="nombre"
                 placeholder="Nombre"
                 onChange={handleChange}
                 required
@@ -62,7 +62,7 @@ export function ContactoSection() {
               {/* --- EMAIL --- */}
               <input
                 type="email"
-                name= "email"
+                name="email"
                 placeholder="Correo electrónico"
                 onChange={handleChange}
                 required
@@ -71,7 +71,7 @@ export function ContactoSection() {
               {/* --- TELEFONO --- */}
               <input
                 type="tel"
-                name= "telefono"
+                name="telefono"
                 placeholder="Teléfono"
                 onChange={handleChange}
                 required
@@ -79,7 +79,7 @@ export function ContactoSection() {
               />
               {/* --- MENSAJE --- */}
               <textarea
-                name= "mensaje"
+                name="mensaje"
                 placeholder="Mensaje"
                 onChange={handleChange}
                 required
@@ -103,23 +103,37 @@ export function ContactoSection() {
                 <MapPin className="h-4 w-4 mt-1 mr-2 flex-shrink-0" />
                 <div>
                   <p className="font-medium">Río Primero</p>
-                  <p className="opacity-90">Ruta Nacional 9 Km 695</p>
+                  <div className="flex items-center">
+                    <Phone className="h-4 w-4 mr-2" />
+                    <p className="opacity-90">(357) 4438083</p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mt-1 mr-2 flex-shrink-0" />
                 <div>
                   <p className="font-medium">Villa Santa Rosa</p>
-                  <p className="opacity-90">Av. San Martín 1250</p>
+                  <div className="flex items-center">
+                    <Phone className="h-4 w-4 mr-2" />
+                    <p className="opacity-90">(357) 4438081</p>
+                  </div>
                 </div>
               </div>
+
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <p className="opacity-90">(03525) 123-456</p>
+                <InstagramIcon className="h-4 w-4 mr-2" />
+                <a
+                  href="https://www.instagram.com/agrocentrocba.sas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-90 hover:underline hover:text-pink-600 transition"
+                >
+                  agrocentrocba.sas
+                </a>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                <p className="opacity-90">info@agrocentro.com.ar</p>
+                <p className="opacity-90">Agrocentrocba.sas@gmail.com</p>
               </div>
             </div>
           </div>
