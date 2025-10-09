@@ -72,6 +72,7 @@ export default function ImplementoPage({ params }: Props){
                     <div className="w-full">
                         <CotizarButton clickHandler={()=>setVerCotizador(true)}/>
                         <CotizadorModal 
+                            productoSection={repuesto.section}
                             isOpen={verCotizador}
                             onClose={()=>setVerCotizador(false)}
                             maquina={repuesto.name}

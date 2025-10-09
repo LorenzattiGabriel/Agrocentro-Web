@@ -71,6 +71,7 @@ export default function TractorNuevoPage({ params }: Props){
                     <div className="w-full">
                         <CotizarButton clickHandler={()=>{setVerCotizador(true)}}/>
                         <CotizadorModal 
+                            productoSection={tractor.section}
                             isOpen={verCotizador}
                             onClose={()=>setVerCotizador(false)}
                             maquina={tractor.name}

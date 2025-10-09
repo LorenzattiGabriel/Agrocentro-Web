@@ -1,19 +1,36 @@
 'use client';
+import { ProductoSection } from '@/types/Producto';
 import { useEffect, useState } from 'react';
 
 type CotizadorModalProps = {
   isOpen: boolean;
   onClose: () => void;
   maquina: string;
+  productoSection: ProductoSection;
 };
 
-const CotizadorModal = ({ isOpen, onClose, maquina }: CotizadorModalProps) => {
+const telefonoRepuestosCentral_VillaStaRosa = "3574438081";
+const telefonoMaquinaria = "3574440032";
+
+function getTelefono(productoSection: ProductoSection){
+    switch(productoSection) {
+        case 'tractores': return telefonoMaquinaria;
+        case 'implementos': return telefonoMaquinaria;
+        case 'repuestos': return telefonoRepuestosCentral_VillaStaRosa;
+        case 'usados': return telefonoMaquinaria;
+    }
+}
+
+const CotizadorModal = ({ isOpen, onClose, maquina, productoSection }: CotizadorModalProps) => {
   if (!isOpen) return null;
   const [enviado, setEnviado] = useState(false)
   const [nombre, setNombre] = useState("");
   const [telefono, setTelefono] = useState("");
   const [email, setEmail] = useState("");
   const [medioPago, setMedioPago] = useState("");
+
+
+  const telefonoWpp = getTelefono(productoSection);
 
   const handleSubmit = () => {
     const mensaje = `Hola, estoy interesado en la máquina ${maquina}. 
@@ -23,7 +40,7 @@ Nombre: ${nombre}.
 Teléfono: ${telefono}. 
 Mail: ${email}.`;
 
-    const urlWhatsapp = `https://wa.me/5491111111111?text=${encodeURIComponent(mensaje)}`;
+    const urlWhatsapp = `https://wa.me/${telefonoWpp}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsapp, "_blank");
 
     setEnviado(true);
