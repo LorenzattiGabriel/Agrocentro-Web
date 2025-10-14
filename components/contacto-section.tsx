@@ -141,4 +141,4 @@ export function ContactoSection() {
       </div>
     </section>
   );
-
+}
