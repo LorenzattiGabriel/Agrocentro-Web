@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { ProductoSection } from '@/types/ProductoSection';
+import { ProductoSection } from '../types/Producto';
 
 type CotizadorModalProps = {
   isOpen: boolean;
