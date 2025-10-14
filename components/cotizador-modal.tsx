@@ -43,7 +43,6 @@ Mail: ${email}.`;
     const urlWhatsapp = `https://wa.me/${numWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsapp, "_blank");
 
-    window.open(urlWhatsapp, "_blank");
     setEnviado(true);
 
   };
