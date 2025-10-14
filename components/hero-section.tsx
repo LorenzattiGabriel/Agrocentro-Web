@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 const heroSlides = [
   {
@@ -11,6 +12,7 @@ const heroSlides = [
     description: "Más de 20 años brindando soluciones integrales para el agro en Río Primero y Villa Santa Rosa",
     image: "/modern-green-tractor-in-agricultural-field.jpg",
     cta: "Ver Productos",
+    url: "/tractores"
   },
   {
     title: "Usados Seleccionados",
@@ -18,6 +20,7 @@ const heroSlides = [
     description: "Garantía y respaldo oficial en cada equipo usado que ofrecemos",
     image: "/used-agricultural-machinery-in-warehouse.jpg",
     cta: "Ver Usados",
+    url: "/usados"
   },
   {
     title: "Servicio Técnico Especializado",
@@ -25,8 +28,11 @@ const heroSlides = [
     description: "Técnicos certificados y repuestos originales para mantener tu equipo en óptimas condiciones",
     image: "/agricultural-technician-repairing-tractor.jpg",
     cta: "Solicitar Servicio",
+    url: "/contacto"
   },
 ]
+
+const urlContacto = "/contacto";
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -52,7 +58,7 @@ export function HeroSection() {
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
+            index === currentSlide ? "opacity-100 z-100" : "opacity-0 z-99"
           }`}
         >
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${slide.image})` }} />
@@ -63,16 +69,20 @@ export function HeroSection() {
               <h3 className="text-2xl font-semibold mb-4 text-accent">{slide.subtitle}</h3>
               <p className="text-lg mb-8 text-pretty leading-relaxed">{slide.description}</p>
               <div className="flex gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  {slide.cta}
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-white border-white hover:bg-white hover:text-foreground bg-transparent"
-                >
-                  Contactar
-                </Button>
+                <Link href={slide.url}>
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 cursor-pointer">
+                        {slide.cta}
+                    </Button>
+                </Link>
+                <Link href={urlContacto}>
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        className="text-white border-white hover:bg-white hover:text-foreground bg-transparent cursor-pointer"
+                    >
+                        Contactar
+                    </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -82,24 +92,24 @@ export function HeroSection() {
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors cursor-pointer z-200"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors cursor-pointer z-200"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
 
       {/* Slide indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-200">
         {heroSlides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? "bg-white" : "bg-white/50"}`}
+            className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${index === currentSlide ? "bg-white" : "bg-white/50"}`}
           />
         ))}
       </div>

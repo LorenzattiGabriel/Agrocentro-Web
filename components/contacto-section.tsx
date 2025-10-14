@@ -35,10 +35,10 @@ export function ContactoSection() {
 
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-16"
+      className="relative bg-cover bg-center bg-no-repeat min-h-[600px] py-16"
       style={{ backgroundImage: 'url("/bg_contactoSection.jpg")' }}
     >
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row p-2">
+      <div className="relative z-10 max-w-4xl mx-auto flex flex-col md:flex-row p-2">
         {/* --- COLUMNA BLANCA --- */}
         <div className="flex-1 bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold text-center text-secondary mb-6">
@@ -141,4 +141,4 @@ export function ContactoSection() {
       </div>
     </section>
   );
-}
+

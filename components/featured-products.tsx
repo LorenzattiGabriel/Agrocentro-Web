@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 const featuredProducts = [
   {
@@ -12,6 +13,7 @@ const featuredProducts = [
     features: ["110 HP", "Transmisión PowerQuad", "Cabina con A/C"],
     condition: "Nuevo",
     badge: "Destacado",
+    url: "/tractores/1"
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const featuredProducts = [
     features: ["23 surcos", "Dosificación neumática", "Monitor de siembra"],
     condition: "Nuevo",
     badge: "Nuevo",
+    url: "/implementos/2"
   },
   {
     id: 3,
@@ -32,6 +35,7 @@ const featuredProducts = [
     features: ["75 HP", "4x4", "1.200 horas"],
     condition: "Usado",
     badge: "Oportunidad",
+    url: "/tractores/2"
   },
   {
     id: 4,
@@ -42,8 +46,12 @@ const featuredProducts = [
     features: ["3000L", "Barral 24m", "GPS Ready"],
     condition: "Nuevo",
     badge: "Destacado",
+    url: "/implementos/3"
   },
 ]
+
+const urlNuevos = "/tractores";
+const urlContacto = "/contacto";
 
 export function FeaturedProducts() {
   return (
@@ -95,9 +103,11 @@ export function FeaturedProducts() {
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-xl font-bold text-primary">{product.price}</span>
-                  <Button size="sm" className="bg-primary hover:bg-primary/90">
-                    Ver más
-                  </Button>
+                  <Link href={product.url}>
+                    <Button size="sm" className="bg-primary hover:bg-primary/90" >
+                        Ver más
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -105,12 +115,16 @@ export function FeaturedProducts() {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="mr-4 bg-transparent">
-            Ver todos los productos
-          </Button>
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
-            Solicitar cotización
-          </Button>
+            <Link href={urlNuevos}>
+                <Button size="lg" variant="outline" className="mr-4 bg-transparent">
+                    Ver todos los productos
+                </Button>
+            </Link>
+            <Link href={urlContacto}>
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                    Solicitar cotización
+                </Button>
+            </Link>
         </div>
       </div>
     </section>
