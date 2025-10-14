@@ -25,7 +25,7 @@ export function ContactoSection() {
     const texto = `Hola, mi nombre es ${nombre}%0A` +
       `Teléfono: ${telefono}%0A` +
       `Email: ${email}%0A%0A` +
-      `Quería consultar algo, %0A${mensaje}`;
+      `Quería realizar una consulta, %0A${mensaje}`;
 
     const url = `https://wa.me/${numAgrocentro}?text=${texto}`;
 
