@@ -17,7 +17,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
               <Phone className="h-4 w-4" />
-              <span>Contacto: (03525) 123-456</span>
+              <span>Contacto: (357) 4438081</span>
             </div>
             <div className="flex items-center gap-1">
               <MapPin className="h-4 w-4" />
@@ -25,7 +25,7 @@ export function Header() {
             </div>
           </div>
           <div className="hidden md:block">
-            <span>Horarios: Lun-Vie 8:00-18:00 | Sáb 8:00-12:30</span>
+            <span>Horarios: Mañana 8:00-12.45 | Tarde 15:30-19:30</span>
           </div>
         </div>
       </div>

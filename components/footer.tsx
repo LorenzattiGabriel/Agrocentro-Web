@@ -117,11 +117,11 @@ export function Footer() {
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                <p className="opacity-90">(03525) 123-456</p>
+                <p className="opacity-90">(357) 4438081</p>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                <p className="opacity-90">info@agrocentro.com.ar</p>
+                <p className="opacity-90">agrocentrocba.sas@gmail.com</p>
               </div>
             </div>
           </div>
