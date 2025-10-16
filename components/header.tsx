@@ -32,7 +32,7 @@ export function Header() {
 
       {/* Main navigation */}
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image src="/images/agrocentro-logo.png" alt="Agrocentro" width={60} height={60} className="mr-3" />
@@ -43,7 +43,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8 mx-auto">
             
             <Link href="/" className="text-foreground hover:text-primary transition-colors">
               Inicio
@@ -89,15 +89,6 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Search and CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              <Search className="h-4 w-4 mr-2" />
-              Buscar
-            </Button>
-            <Button className="bg-primary hover:bg-primary/90">Cotizar</Button>
-          </div>
-
           {/* Mobile menu button */}
           <button className="lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -129,13 +120,7 @@ export function Header() {
               <Link href="/contacto" className="text-foreground hover:text-primary">
                 Contacto
               </Link>
-              <div className="flex space-x-2 pt-4">
-                <Button variant="outline" size="sm" className="flex-1 bg-transparent">
-                  <Search className="h-4 w-4 mr-2" />
-                  Buscar
-                </Button>
-                <Button className="bg-primary hover:bg-primary/90 flex-1">Cotizar</Button>
-              </div>
+              
             </div>
           </nav>
         )}
