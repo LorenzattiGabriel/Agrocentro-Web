@@ -21,7 +21,7 @@ model repuestos {
   categoria   String
 
   atributos   Json? //luego se crea un type en typescript: 
-                    //{label: String, detalle: String | {label: String, detalle: String}}
+                    //{label: String, detalle: String | {subLabel: String, detalle: String}}
 
   @@index([nombre])
   @@index([marca])
@@ -35,13 +35,14 @@ model implementos {
   nombre         String
   ids_imagenes   String[]
   marca          String
+  modelo         String
   categoria      String
 
   esNuevo        Boolean
   anio           Int?
 
   atributos      Json? //luego se crea un type en typescript: 
-                       //{label: String, detalle: String | {label: String, detalle: String}}
+                       //{label: String, detalle: String | {subLabel: String, detalle: String}}
 
   @@index([nombre])
   @@index([marca])
