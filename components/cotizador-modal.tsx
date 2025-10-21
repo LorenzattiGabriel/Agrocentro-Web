@@ -17,8 +17,8 @@ function getTelefono(productoSection: ProductoSection) {
   switch (productoSection) {
     case 'tractores': return numMaquinarias;
     case 'implementos': return numMaquinarias;
-    case 'repuestos': return numVillaSantaRosa;
     case 'usados': return numMaquinarias;
+    case 'repuestos': return numVillaSantaRosa;
   }
 }
 
@@ -42,9 +42,7 @@ Mail: ${email}.`;
 
     const urlWhatsapp = `https://wa.me/${numWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsapp, "_blank");
-
     setEnviado(true);
-
   };
 
   {/* --- CERRAR CON ESC --- */ }
@@ -58,9 +56,29 @@ Mail: ${email}.`;
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
+  {/* --- CERRAR CON BOTON DE "VOLVER" --- */ }
+  useEffect(() => {
+    if (!isOpen) return;
+    window.history.pushState({ modalOpen: true }, "");
+    const handlePopState = (event: PopStateEvent) => {
+      if (isOpen) onClose();
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex items-center justify-center z-50"
-      onClick={onClose}
+      onClick={(e) => {
+        if (e.target === e.currentTarget)
+          onClose()
+      }}
     >
 
       <section className="flex items-center justify-center py-16 px-4"
