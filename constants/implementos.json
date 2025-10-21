@@ -1,210 +1,366 @@
 [
   {
-    "id": 1,
-    "name": "Cosechadora John Deere S550",
-    "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "S550"
+    "nombre": "Mixer horizontal",
+    "marca": "Montecor",
+    "modelo": "14m3",
+    "categoria": "Mixer",
+    "esNuevo": false,
+    "anio": 2012,
+    "atributos": [
+      {
+        "label": "Capacidad",
+        "detalle": "14m^3"
+      },
+      {
+        "label": "Balanza",
+        "detalle": "Incluye balanza"
+      }
+    ]
   },
   {
-    "id": 2,
-    "name": "Sembradora Agrometal MX 23",
-    "marca": "Agrometal",
-    "image": "/agricultural-seeder-implement-green.jpg",
+    "nombre": "Rastrillo hilerador en V",
+    "marca": "Yanantuoni",
+    "modelo": "RV 1116",
+    "categoria": "Rastrillo",
+    "esNuevo": false,
+    "anio": 2022,
+    "atributos": [
+      {
+        "label": "Estrellas",
+        "detalle": "16"
+      },
+      {
+        "label": "Sistema de hilerado",
+        "detalle": "Central"
+      },
+      {
+        "label": "Rodado",
+        "detalle": "16"
+      }
+    ]
+  },
+  {
+    "nombre": "Extractora de granos secos",
+    "marca": "Tecnocar",
+    "modelo": "EC-150",
+    "categoria": "Extractora",
+    "esNuevo": false,
+    "anio": null,
+    "atributos": [
+      {
+        "label": "Rendimiento",
+        "detalle": "150 TT/H"
+      },
+      {
+        "label": "Rodado",
+        "detalle": "650x15"
+      },
+      {
+        "label": "Potencia requerida",
+        "detalle": "60HP"
+      }
+    ]
+  },
+  {
+    "nombre": "Cabezal maicero",
+    "marca": "Maizco",
+    "modelo": "Premium",
+    "categoria": "Cabezal",
+    "esNuevo": false,
+    "anio": null,
+    "atributos": [
+      {
+        "label": "Carro",
+        "detalle": "Incluye carro"
+      }
+    ]
+  },
+  {
+    "nombre": "Tolva semillera",
+    "marca": "Muccillo",
+    "modelo": "",
+    "categoria": "Tolva",
+    "esNuevo": false,
+    "anio": null,
+    "atributos": [
+      {
+        "label": "Capacidad",
+        "detalle": "6 toneladas"
+      },
+      {
+        "label": "Chimango",
+        "detalle": "Hidráulico"
+      }
+    ]
+  },
+  {
+    "nombre": "Sembradora",
+    "marca": "Giorgi",
+    "modelo": "Precisa 8000",
     "categoria": "Sembradora",
-    "modelo": "MX 23"
+    "esNuevo": false,
+    "anio": 2004,
+    "atributos": [
+      {
+        "label": "Tipo",
+        "detalle": "Neumática"
+      },
+      {
+        "label": "Líneas",
+        "detalle": "13 líneas a 52 cm"
+      },
+      {
+        "label": "Fertilización",
+        "detalle": "En la línea y al costado"
+      }
+    ]
   },
   {
-    "id": 3,
-    "name": "Pulverizadora Apache 3030",
-    "marca": "Apache",
-    "image": "/agricultural-sprayer-equipment.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "3030"
-  },
-  {
-    "id": 4,
-    "name": "Cosechadora New Holland CR7.90",
-    "marca": "New Holland",
-    "image": "https://www.publicdomainpictures.net/pictures/60000/velka/wheat-threshing.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "CR7.90"
-  },
-  {
-    "id": 5,
-    "name": "Cosechadora Case IH Axial-Flow 7250",
-    "marca": "Case IH",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-17533414708hc.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "Axial-Flow 7250"
-  },
-  {
-    "id": 6,
-    "name": "Pulverizadora Apache 3030",
-    "marca": "Apache",
-    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/crop-sprayer-tractor-1405317015ON3.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "3030"
-  },
-  {
-    "id": 7,
-    "name": "Cosechadora Claas Lexion 7700",
-    "marca": "Claas",
-    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "Lexion 7700"
-  },
-  {
-    "id": 8,
-    "name": "Sembradora John Deere 1740",
+    "nombre": "Rotoenfardadora",
     "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
-    "categoria": "Sembradora",
-    "modelo": "1740"
+    "modelo": "566",
+    "categoria": "Rotoenfardadora",
+    "esNuevo": false,
+    "anio": null,
+    "atributos": [
+      {
+        "label": "Cantidad de rollos",
+        "detalle": null
+      }
+    ]
   },
   {
-    "id": 13,
-    "name": "Cosechadora Massey Ferguson MF 9795",
-    "marca": "Massey Ferguson",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1753337753h4g.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "MF 9795"
+    "nombre": "Tolva semillera",
+    "marca": "Consultar",
+    "modelo": "Consultar",
+    "categoria": "Tolva",
+    "esNuevo": false,
+    "anio": null,
+    "atributos": [
+      {
+        "label": "Capacidad",
+        "detalle": "7 toneladas"
+      },
+      {
+        "label": "Chimango",
+        "detalle": "Con inoculador"
+      }
+    ]
+  }
+
+
+,
+  {
+    "nombre": "Tolva autodescargable",
+    "marca": "Ascanelli",
+    "modelo": "Magnum + 24 toneladas",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Capacidad Lts.", "detalle": "29600" },
+      { "label": "Capacidad Tn", "detalle": "24" },
+      { "label": "Potencia Requerida HP", "detalle": "120" },
+      { "label": "Diámetro Tubo Descarga mm.", "detalle": "450" },
+      { "label": "Rodados Alta Flotación", "detalle": "4 23.1 - 30 ( 16 Telas)" },
+      { "label": "Ejes", "detalle": "Dos ejes, 4 ruedas, robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite." },
+      { "label": "Sistema de descarga", "detalle": "Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines." },
+      { "label": "Tiempo de descarga", "detalle": "2.5 minutos." },
+      { "label": "Sistema hidráulico", "detalle": "Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo." },
+      { "label": "Descarga por gravedad", "detalle": "Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)." },
+      { "label": "Chasis", "detalle": "De estructura extra-resistente, chasis principal tubular. Composición de cuba general abulonada, enfocada en la exportación, reduciendo tensiones y flexibilizando el comportamiento del implemento frente a esfuerzos" },
+      { "label": "Accesorios", "detalle": "Cobertor de lona accionado desde el piso (con cierre total). Instalación eléctrica con luces de posición, giro, stop y reflector en tubo de descarga. paragolpes plegable." },
+      { "label": "Opcional: Balanza Electrónica", "detalle": "Con puntas de ejes desmontables y celdas sobre el eje trasero." },
+      { "label": "Opcional: Boquilla Giratoria", "detalle": "Exclusivo sistema de boquilla superior giratoria hidráulica para orientar la descarga." },
+      { "label": "Opcional: Tubo Oscilante", "detalle": "Sistema de inclinación de tubo completo, por accionamiento hidráulico, ganando despeje del pico a la pisada de rueda y reduciendo la altura de descarga para embolsado principalmente." },
+      { "label": "Opcional: Tubo Descarga", "detalle": "500 mm" }
+    ]
   },
   {
-    "id": 9,
-    "name": "Cosechadora John Deere X9 1100",
-    "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "X9 1100"
+    "nombre": "Embolsadora de granos",
+    "marca": "Ascanelli",
+    "modelo": "grub 9 pies",
+    "categoria": "Embolsadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Capacidad de Recepción Its.", "detalle": "20000" },
+      { "label": "Sinfín Cementado Horizontal mm", "detalle": "450" },
+      { "label": "Potencia Requerida HP", "detalle": "100" },
+      { "label": "Tamaño de bolsas", "detalle": "9 pies" },
+      { "label": "Rodados", "detalle": "2 (11L-16TL FATE - 838*279 R16)" },
+      { "label": "Geometría de Tunel", "detalle": "Oblongo o aplastado." },
+      { "label": "Transmisión", "detalle": "Transmisión por cadena, Barra cardánica protegida. Limitador de torque a perno fusible. Toma de potencia: 540 r.p.m." },
+      { "label": "Sistema Hidráulico", "detalle": "Accionamiento de válvulas manual, las cuales permiten el movimiento de la percha de manera simple y rápida." },
+      { "label": "Sistema de elevación de percha", "detalle": "GRUB permite elevar la bolsa con un sistema Patentado único de percha integrada mediante el accionamiento de un cilindro hidráulico. Este sistema brinda mayor comodidad al usuario al momento de la colocación de la bolsa en la maquina." },
+      { "label": "Sistema de freno", "detalle": "Discos en ambas ruedas. Intensidad de frenado regulable mediante bomba de accionamiento hidráulico manual a palanca y manómetro indicador." }
+    ]
   },
   {
-    "id": 10,
-    "name": "Pulverizadora John Deere M110",
-    "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwmachine-boer-1691824318ODv.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "M110"
+    "nombre": "Cisterna para combustible",
+    "marca": "Belen",
+    "modelo": "3000 litros full",
+    "categoria": "Cisterna",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Capacidad", "detalle": "3000 litros" },
+      { "label": "Características", "detalle": "tanque de fibra arriba de 750 litros con cajones laterales en ambos lados, baulera trasera, rompeolas interno y llantas duales." }
+    ]
   },
   {
-    "id": 11,
-    "name": "Pulverizadora Case IH Patriot 350",
-    "marca": "Case IH",
-    "image": "https://www.publicdomainpictures.net/pictures/30000/velka/tractor-field-spray.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "Patriot 350"
+    "nombre": "Cisterna para combustible",
+    "marca": "Belen",
+    "modelo": "3000 litros con cajonera",
+    "categoria": "Cisterna",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Capacidad", "detalle": "3000 litros" },
+      { "label": "Características", "detalle": "Con un cajón lateral y rompeolas interno" }
+    ]
   },
   {
-    "id": 12,
-    "name": "Cosechadora New Holland CR7.90",
-    "marca": "New Holland",
-    "image": "https://www.publicdomainpictures.net/pictures/560000/velka/maaidorser-landbouwmachine.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "CR7.90"
+    "nombre": "Grúa eco",
+    "marca": "Fabrinor",
+    "modelo": "1200kg",
+    "categoria": "Grúa",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Capacidad", "detalle": "1200kg" },
+      { "label": "Características", "detalle": "Con gancho giratorio y percha" }
+    ]
   },
   {
-    "id": 14,
-    "name": "Cosechadora John Deere S550",
-    "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "S550"
+    "nombre": "Tolva para semillas y fertilizantes",
+    "marca": "Comofra",
+    "modelo": "Quantum AT/SF 26.000",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Capacidad", "detalle": "26000 litros" },
+      { "label": "Peso engomado", "detalle": "3700kg" },
+      { "label": "Carga máxima", "detalle": "21000kg" },
+      { "label": "Capacidad (m3)", "detalle": "26m3" },
+      { "label": "Diámetro tubo desc.", "detalle": "190mm" },
+      { "label": "Longitud tubo desc.", "detalle": "6000mm" },
+      { "label": "Tiempo descarga aproximada", "detalle": "65min" },
+      { "label": "Accionamiento", "detalle": "motor hidráulico 200cm3 con multiplicación" },
+      { "label": "Bomba hidr. Requerida", "detalle": "60 l/min" },
+      { "label": "Eje", "detalle": "tubular estándar para camión con tensores regulares" },
+      { "label": "Rodado de llanta dual", "detalle": "8.25 x 22.5" },
+      { "label": "Rodado para cubierta", "detalle": "275/89-22.5 - 285/80-22.5 - 295/80-22.5" },
+      { "label": "Rodado opcional llanta", "detalle": "11.75x22.5 | P/ cubierta 385/80-22.5" },
+      { "label": "Chasis", "detalle": "perfil de chapa SAE 1010 esp. 6.35mm" },
+      { "label": "Tolva", "detalle": "construida en chapa negra estampada, divisorio central, doble boquilla" },
+      { "label": "Kit luces", "detalle": "reglamentaria de serie" },
+      { "label": "Tubo descarga multiuso", "detalle": "diámetro 190mm | Motor hidráulico 200cm3 | kit mangueras hidráulicas | tubo telescopio" },
+      { "label": "Equipamiento", "detalle": "lona sistema destape rápido | tanque para inoculador | guardabarros | tanque para agua" }
+    ]
   },
   {
-    "id": 15,
-    "name": "Sembradora Agrometal MX 23",
-    "marca": "Agrometal",
-    "image": "/agricultural-seeder-implement-green.jpg",
-    "categoria": "Sembradora",
-    "modelo": "MX 23"
+    "nombre": "Rastrillo hilerador",
+    "marca": "Don Baron",
+    "modelo": "14 estrellas ancho regulable",
+    "categoria": "Rastrillo",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Estrellas", "detalle": "14" },
+      { "label": "Ancho", "detalle": "regulable" },
+      { "label": "Chasis", "detalle": "construido con tubos estructurales de sección cuadrada." },
+      { "label": "Estrellas (detalle)", "detalle": "de 1,60 mts de diámetro con mazas montadas sobre rodamientos cónicos 30206 enfrentados, con retenes y guardapolvos lo que asegura una mayor vida útil del conjunto. Poseen 40 dientes, cada uno en acero SAE 1070 tratado térmicamente, de diseño exclusivo que favorece un acarreo suave y limpio del forraje, aún en terrenos irregulares gracias a su diseño de alto despeje logrando rendimiento y calidad en la recolección del mismo. Las estrellas se elevan y bajan hidráulicamente 350 mm, trabándose en la posición de transporte, cuidando la vida útil de los resortes." },
+      { "label": "Cilindro hidráulico", "detalle": "para apertura trasera." },
+      { "label": "Horquillas delanteras", "detalle": "con freno a disco." },
+      { "label": "Rodados", "detalle": "cuatro llantas 17’’x 7’’ (se entrega sin neumáticos)." }
+    ]
   },
   {
-    "id": 16,
-    "name": "Pulverizadora Apache 3030",
-    "marca": "Apache",
-    "image": "/agricultural-sprayer-equipment.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "3030"
+    "nombre": "Batea volcadora",
+    "marca": "Comofra",
+    "modelo": "BV 15m3 / 18 tn",
+    "categoria": "Batea",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Capacidad", "detalle": "15m3 / 18 tn" },
+      { "label": "Material", "detalle": "chapa de acero al carbono" },
+      { "label": "Caja de carga", "detalle": "tipo semi-monocasco reforzada con laterales envolventes." },
+      { "label": "Chasis", "detalle": "reforzado, de estructura simple y resistente, elaborado en chapa estampada de gran robustez y rigidez." },
+      { "label": "Enganche", "detalle": "con rótula oscilante" },
+      { "label": "Portón trasero", "detalle": "diseñado también para apertura tipo libro" },
+      { "label": "Sistema de ejes", "detalle": "ofrece opciones de rodado (11L16), (275/80 x 22,5), (385/65 x 22,5), y (400/60 x 22,5). En configuración de un solo eje, se incluye rodado 750 x 16 dual o 275/80 x 22,5." },
+      { "label": "Sistema hidráulico", "detalle": "equipado con un cilindro telescópico de 4 o 5 etapas que permite elevar la batea a un ángulo superior a 45°, facilitando la descarga completa y rápida de materiales." },
+      { "label": "Ventaja: Bajo costo de mantenimiento", "detalle": null },
+      { "label": "Ventaja: Fácil operación", "detalle": null },
+      { "label": "Ventaja: Alta resistencia", "detalle": "para una mayor vida útil." }
+    ]
   },
   {
-    "id": 17,
-    "name": "Cosechadora New Holland CR7.90",
-    "marca": "New Holland",
-    "image": "https://www.publicdomainpictures.net/pictures/60000/velka/wheat-threshing.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "CR7.90"
+    "nombre": "Desmalezadora",
+    "marca": "Bernardin",
+    "modelo": "1500",
+    "categoria": "Desmalezadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Corte", "detalle": "1.50mts" },
+      { "label": "Características", "detalle": "Con cilindro hidráulico y toma de fuerza" }
+    ]
   },
   {
-    "id": 18,
-    "name": "Cosechadora Case IH Axial-Flow 7250",
-    "marca": "Case IH",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-17533414708hc.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "Axial-Flow 7250"
+    "nombre": "Transportador de rollos",
+    "marca": "Bernardin",
+    "modelo": "TR 8000",
+    "categoria": "Transportador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Chasis", "detalle": "construido íntegramente en estructura tubular de caños reforzados, con horquilla regulable entre púas y largueros tubulares regulables al tamaño del rollo que se va a movilizar." },
+      { "label": "Accionamiento", "detalle": "con sistema hidráulico provisto de 4 pistones de 4”, uno eleva la púa de recolección y el otro provee el movimiento de inclinación de la planchada de carga y dos colocados en ambos ejes trabajando como descarga de rollos." },
+      { "label": "Operación", "detalle": "diseñado para el uso de un solo operario, el cual acciona todas las funciones del transportador de rollos desde el tractor obteniendo mayor velocidad de recolección y menor consumo de combustible." },
+      { "label": "Capacidad", "detalle": "6 rollos de 1,85 m." },
+      { "label": "Largo", "detalle": "11,50 m" },
+      { "label": "Ancho", "detalle": "2,80 m." },
+      { "label": "Altura", "detalle": "2,60 m." },
+      { "label": "Peso", "detalle": "1.800 kg." },
+      { "label": "Pie de apoyo", "detalle": "3.000 kg." },
+      { "label": "Rodado", "detalle": "400/ 60 x 15,5. (18 telas de alta flotación sin cubiertas con ejes independientes)" },
+      { "label": "Sistema de seguridad anti descarga en caños estructurales", "detalle": "si" },
+      { "label": "Barras protectoras de rodado", "detalle": "si" },
+      { "label": "Opcional", "detalle": "accesorio para rollos de menor tamaño." }
+    ]
   },
   {
-    "id": 19,
-    "name": "Pulverizadora Apache 3030",
-    "marca": "Apache",
-    "image": "https://www.publicdomainpictures.net/pictures/100000/velka/crop-sprayer-tractor-1405317015ON3.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "3030"
-  },
-  {
-    "id": 20,
-    "name": "Cosechadora Claas Lexion 7700",
-    "marca": "Claas",
-    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "Lexion 7700"
-  },
-  {
-    "id": 21,
-    "name": "Sembradora John Deere 1740",
-    "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/520000/velka/maaidorser-landbouwwerktuig-boer-1689373359MDk.jpg",
-    "categoria": "Sembradora",
-    "modelo": "1740"
-  },
-  {
-    "id": 22,
-    "name": "Cosechadora Massey Ferguson MF 9795",
-    "marca": "Massey Ferguson",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1753337753h4g.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "MF 9795"
-  },
-  {
-    "id": 23,
-    "name": "Cosechadora John Deere X9 1100",
-    "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/710000/velka/photo-combine-harvester-1752581411YIi.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "X9 1100"
-  },
-  {
-    "id": 24,
-    "name": "Pulverizadora John Deere M110",
-    "marca": "John Deere",
-    "image": "https://www.publicdomainpictures.net/pictures/530000/velka/tractor-landbouwmachine-boer-1691824318ODv.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "M110"
-  },
-  {
-    "id": 25,
-    "name": "Pulverizadora Case IH Patriot 350",
-    "marca": "Case IH",
-    "image": "https://www.publicdomainpictures.net/pictures/30000/velka/tractor-field-spray.jpg",
-    "categoria": "Pulverizadora",
-    "modelo": "Patriot 350"
-  },
-  {
-    "id": 26,
-    "name": "Cosechadora New Holland CR7.90",
-    "marca": "New Holland",
-    "image": "https://www.publicdomainpictures.net/pictures/560000/velka/maaidorser-landbouwmachine.jpg",
-    "categoria": "Cosechadora",
-    "modelo": "CR7.90"
+    "nombre": "Pluma para bolsones",
+    "marca": "Bernardin",
+    "modelo": null,
+    "categoria": "Pluma",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "atributos": [
+      { "label": "Material", "detalle": "Construida totalmente en acero plegado" },
+      { "label": "Brazo de carga cerrado", "detalle": "3mts. De largo" },
+      { "label": "Brazo extendido", "detalle": "6mts." },
+      { "label": "Capacidad máxima de carga (brazo cerrado)", "detalle": "3000kg" },
+      { "label": "Capacidad máxima de carga (brazo extendido)", "detalle": "1000kg" },
+      { "label": "Giro de carga", "detalle": "165 Grados" },
+      { "label": "Cilindro hidráulico (levante)", "detalle": "4 pulgadas" },
+      { "label": "Cilindro hidráulico (giro)", "detalle": "3 pulgadas" },
+      { "label": "Cilindro hidráulico (brazo telescópico)", "detalle": "2 ½ pulgadas" }
+    ]
   }
 ]
