@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Search, Phone, MapPin } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Phone, MapPin, Menu, X } from "lucide-react";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleLinkClick = () => setIsMenuOpen(false);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-5000">
@@ -32,66 +33,110 @@ export function Header() {
 
       {/* Main navigation */}
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image src="/images/agrocentro-logo.png" alt="Agrocentro" width={60} height={60} className="mr-3" />
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/images/agrocentro-logo.png"
+              alt="Agrocentro"
+              width={60}
+              height={60}
+              className="mr-3"
+            />
             <div>
               <h1 className="text-2xl font-bold text-secondary">AGROCENTRO</h1>
-              <p className="text-sm text-muted-foreground">Maquinaria Agrícola</p>
+              <p className="text-sm text-muted-foreground">
+                Maquinaria Agrícola
+              </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 mx-auto">
-            
-            <Link href="/" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              href="/"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Inicio
             </Link>
-            
+
             <div className="relative group">
-              <button className="text-foreground hover:text-primary transition-colors">Productos</button>
+              <button className="text-foreground hover:text-primary transition-colors">
+                Productos
+              </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link href="/tractores" className="block px-4 py-2 text-sm hover:bg-muted">
+                <Link
+                  href="/tractores"
+                  className="block px-4 py-2 text-sm hover:bg-muted"
+                >
                   Tractores
                 </Link>
-                <Link href="/implementos" className="block px-4 py-2 text-sm hover:bg-muted">
+                <Link
+                  href="/implementos"
+                  className="block px-4 py-2 text-sm hover:bg-muted"
+                >
                   Implementos
                 </Link>
-                <Link href="/repuestos" className="block px-4 py-2 text-sm hover:bg-muted">
+                <Link
+                  href="/repuestos"
+                  className="block px-4 py-2 text-sm hover:bg-muted"
+                >
                   Repuestos
                 </Link>
               </div>
             </div>
-            
-            <Link href="/usados" className="text-foreground hover:text-primary transition-colors">
+
+            <Link
+              href="/usados"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Usados
             </Link>
-            
-            <Link href="/servicios" className="text-foreground hover:text-primary transition-colors">
+
+            <Link
+              href="/servicios"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Servicios
             </Link>
-            
+
             <div className="relative group">
-              <button className="text-foreground hover:text-primary transition-colors">Nosotros</button>
+              <button className="text-foreground hover:text-primary transition-colors">
+                Nosotros
+              </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link href="/quienes-somos" className="block px-4 py-2 text-sm hover:bg-muted">
+                <Link
+                  href="/quienes-somos"
+                  className="block px-4 py-2 text-sm hover:bg-muted"
+                >
                   Quiénes Somos
                 </Link>
-                <Link href="/sucursales" className="block px-4 py-2 text-sm hover:bg-muted">
+                <Link
+                  href="/sucursales"
+                  className="block px-4 py-2 text-sm hover:bg-muted"
+                >
                   Sucursales
                 </Link>
               </div>
             </div>
-            
-            <Link href="/contacto" className="text-foreground hover:text-primary transition-colors">
+
+            <Link
+              href="/contacto"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               Contacto
             </Link>
           </nav>
 
-          {/* Mobile menu button */}
-          <button className="lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <button
+            className="ml-auto lg:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -99,32 +144,74 @@ export function Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-foreground hover:text-primary">
+              <Link
+                href="/"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Inicio
               </Link>
-              <Link href="/tractores" className="text-foreground hover:text-primary">
+              <Link
+                href="/tractores"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Tractores
               </Link>
-              <Link href="/implementos" className="text-foreground hover:text-primary">
+              <Link
+                href="/implementos"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Implementos
               </Link>
-              <Link href="/repuestos" className="text-foreground hover:text-primary">
+              <Link
+                href="/repuestos"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Repuestos
               </Link>
-              <Link href="/usados" className="text-foreground hover:text-primary">
+              <Link
+                href="/usados"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Usados
               </Link>
-              <Link href="/servicios" className="text-foreground hover:text-primary">
+              <Link
+                href="/servicios"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Servicios
               </Link>
-              <Link href="/contacto" className="text-foreground hover:text-primary">
+              <Link
+                href="/quienes-somos"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
+                Quiénes Somos
+              </Link>
+              <Link
+                href="/sucursales"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
+                Sucursales
+              </Link>
+
+              <Link
+                href="/contacto"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Contacto
               </Link>
-              
             </div>
           </nav>
         )}
       </div>
     </header>
-  )
+  );
 }
