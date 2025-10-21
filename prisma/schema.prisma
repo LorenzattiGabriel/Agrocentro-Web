@@ -26,6 +26,7 @@ model repuestos {
   @@index([nombre])
   @@index([marca])
   @@index([categoria])
+  @@unique([nombre, marca]) //para insertar otro producto con mismos datos (y evitar la constraint) se puede agregar al "nombre" un numero u otro dato extra 
 }
 
 model implementos {
@@ -47,4 +48,5 @@ model implementos {
   @@index([nombre])
   @@index([marca])
   @@index([categoria])
+  @@unique([nombre, marca, modelo, esNuevo]) //para insertar otro producto con mismos datos (y evitar la constraint) se puede agregar al "nombre" un numero u otro dato extra 
 }
