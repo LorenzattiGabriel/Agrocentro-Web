@@ -8,6 +8,8 @@ import { Phone, MapPin, Menu, X } from "lucide-react";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLinkClick = () => setIsMenuOpen(false);
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-5000">
       {/* Top bar with contact info */}
@@ -142,42 +144,67 @@ export function Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-foreground hover:text-primary">
+              <Link
+                href="/"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
                 Inicio
               </Link>
               <Link
                 href="/tractores"
                 className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
               >
                 Tractores
               </Link>
               <Link
                 href="/implementos"
                 className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
               >
                 Implementos
               </Link>
               <Link
                 href="/repuestos"
                 className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
               >
                 Repuestos
               </Link>
               <Link
                 href="/usados"
                 className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
               >
                 Usados
               </Link>
               <Link
                 href="/servicios"
                 className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
               >
                 Servicios
               </Link>
               <Link
+                href="/quienes-somos"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
+                Quiénes Somos
+              </Link>
+              <Link
+                href="/sucursales"
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
+                Sucursales
+              </Link>
+
+              <Link
                 href="/contacto"
                 className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
               >
                 Contacto
               </Link>
