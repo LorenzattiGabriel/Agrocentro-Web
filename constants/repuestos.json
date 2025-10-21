@@ -3,228 +3,266 @@
     "nombre": "Maza rueda niveladora",
     "marca": "Giorgi",
     "categoria": "Maza",
+    "ids_imagenes": ["Maza-rueda-niveladoraa.png"],
     "atributos": []
   },
   {
     "nombre": "Brazo rueda niveladora Izq. y Der.",
     "marca": "Giorgi",
     "categoria": "Brazo",
+    "ids_imagenes": ["Brazo-rueda-niveladora-Izq.-y-Der.png"],
     "atributos": []
   },
   {
     "nombre": "Maza del doble disco",
     "marca": "Giorgi",
     "categoria": "Maza",
+    "ids_imagenes": ["Maza-del-doble-disco.png"],
     "atributos": []
   },
   {
     "nombre": "Maza de la cuchilla turbo",
     "marca": "Giorgi",
     "categoria": "Maza",
+    "ids_imagenes": ["Maza-de-la-cuchilla-turbo.png"],
     "atributos": []
   },
   {
     "nombre": "Media llanta",
     "marca": "Giorgi",
     "categoria": "Llanta",
+    "ids_imagenes": ["Media-llanta.png"],
     "atributos": []
   },
   {
     "nombre": "Dosificador abono AJS",
     "marca": "Giorgi",
     "categoria": "Dosificador",
+    "ids_imagenes": ["Dosificador-abono-AJS.png"],
     "atributos": []
   },
   {
     "nombre": "Eje rueda niveladora",
     "marca": "Giorgi",
     "categoria": "Eje",
+    "ids_imagenes": ["Eje-rueda-niveladora.png"],
     "atributos": []
   },
   {
     "nombre": "Bujes para sembradora Giorgi",
     "marca": "Giorgi",
     "categoria": "Buje",
+    "ids_imagenes": ["Bujes-para-sembradora-Giorgi.png"],
     "atributos": []
   },
   {
     "nombre": "Traba de cilindro",
     "marca": "Giorgi",
     "categoria": "Traba",
+    "ids_imagenes": ["Traba-de-cilindro.png"],
     "atributos": []
   },
   {
     "nombre": "Brazo soporte cuchilla delantera",
     "marca": "Giorgi",
     "categoria": "Brazo",
+    "ids_imagenes": ["Brazo-soporte-cuchilla-delantera.png"],
     "atributos": []
   },
   {
     "nombre": "Plato de posicionamiento de rueda",
     "marca": "Giorgi",
     "categoria": "Plato",
+    "ids_imagenes": ["Plato-de-posicionamiento-de-rueda.png"],
     "atributos": []
   },
   {
     "nombre": "Tubo fusible de púa",
     "marca": "Giorgi",
     "categoria": "Púa",
+    "ids_imagenes": ["Tubo-fusible-de-púa.png"],
     "atributos": []
   },
   {
     "nombre": "Púa para labranza",
     "marca": "Giorgi",
     "categoria": "Púa",
+    "ids_imagenes": ["Púa-para-labranza.png"],
     "atributos": []
   },
   {
     "nombre": "Buje flotante - cañonera bronce",
     "marca": "Giorgi",
     "categoria": "Buje",
+    "ids_imagenes": ["Buje-flotante---cañonera-bronce.png"],
     "atributos": []
   },
   {
     "nombre": "Cañonera de embrague",
     "marca": "Giorgi",
     "categoria": "Cañonera",
+    "ids_imagenes": ["Cañonera-de-embrague.png"],
     "atributos": []
   },
   {
     "nombre": "Corona mando de placa",
     "marca": "Giorgi",
     "categoria": "Corona",
+    "ids_imagenes": ["Corona-mando-de-placa.png"],
     "atributos": []
   },
   {
     "nombre": "Engranaje simple con masa",
     "marca": "Giorgi",
     "categoria": "Engranaje",
+    "ids_imagenes": ["Engranaje-simple-con-masa.png"],
     "atributos": []
   },
   {
     "nombre": "Conj. rueda compactadora de grano",
     "marca": "Giorgi",
     "categoria": "Rueda",
+    "ids_imagenes": ["Conj.-rueda-compactadora-de-grano.png"],
     "atributos": []
   },
   {
     "nombre": "Eje selector hegaxonal",
     "marca": "Giorgi",
     "categoria": "Eje",
+    "ids_imagenes": ["Eje-selector-hegaxonal.png"],
     "atributos": []
   },
   {
     "nombre": "Masa doble disco",
     "marca": "Crucianelli",
     "categoria": "Maza",
+    "ids_imagenes": ["Masa-doble-disco.png"],
     "atributos": []
   },
   {
     "nombre": "Masa rueda niveladora",
     "marca": "Crucianelli",
     "categoria": "Maza",
+    "ids_imagenes": ["Masa-rueda-niveladora.png"],
     "atributos": []
   },
   {
     "nombre": "Masa cuchilla turbo",
     "marca": "Crucianelli",
     "categoria": "Maza",
+    "ids_imagenes": ["Masa-cuchilla-turbo.png"],
     "atributos": []
   },
   {
     "nombre": "Caja escuadra",
     "marca": "Crucianelli",
     "categoria": "Caja",
+    "ids_imagenes": ["Caja-escuadra.png"],
     "atributos": []
   },
   {
     "nombre": "Dosificador de semillas",
     "marca": "Crucianelli",
     "categoria": "Dosificador",
+    "ids_imagenes": ["Dosificador-de-semillas.png"],
     "atributos": []
   },
   {
     "nombre": "Válvula secuencial",
     "marca": "Crucianelli",
     "categoria": "Repuesto general",
+    "ids_imagenes": ["Válvula-secuencial.png"],
     "atributos": []
   },
   {
     "nombre": "Resorte presión paralelogramo",
     "marca": "Crucianelli",
     "categoria": "Resorte",
+    "ids_imagenes": ["Resorte-presión-paralelogramo.png"],
     "atributos": []
   },
   {
     "nombre": "Resorte presión tapadora",
     "marca": "Crucianelli",
     "categoria": "Resorte",
+    "ids_imagenes": ["Resorte-presión-tapadora.png"],
     "atributos": []
   },
   {
     "nombre": "Resorte rueda compactadora",
     "marca": "Crucianelli",
     "categoria": "Resorte",
+    "ids_imagenes": ["Resorte-rueda-compactadora.png"],
     "atributos": []
   },
   {
     "nombre": "Buje soporte eje giratorio",
     "marca": "Crucianelli",
     "categoria": "Buje",
+    "ids_imagenes": ["Buje-soporte-eje-giratorio.png"],
     "atributos": []
   },
   {
     "nombre": "Buje guia eje giratorio grande",
     "marca": "Crucianelli",
     "categoria": "Buje",
+    "ids_imagenes": ["Buje-guia-eje-giratorio-grande.png"],
     "atributos": []
   },
   {
     "nombre": "Dedo doble disco",
     "marca": "Crucianelli",
     "categoria": "Repuesto general",
+    "ids_imagenes": ["Dedo-doble-disco.png"],
     "atributos": []
   },
   {
     "nombre": "Resorte rueda tapadora",
     "marca": "Crucianelli",
     "categoria": "Resorte",
+    "ids_imagenes": ["Resorte-rueda-tapadora.png"],
     "atributos": []
   },
   {
     "nombre": "Buje registro inclinado tapadora",
     "marca": "Crucianelli",
     "categoria": "Buje",
+    "ids_imagenes": ["Buje-registro-inclinado-tapadora.png"],
     "atributos": []
   },
   {
     "nombre": "Conjunto parte fija zafe",
     "marca": "Crucianelli",
     "categoria": "Parte fija",
+    "ids_imagenes": ["Conjunto-parte-fija-zafe.png"],
     "atributos": []
   },
   {
     "nombre": "Corona base de siembra",
     "marca": "Crucianelli",
     "categoria": "Corona",
+    "ids_imagenes": ["Corona-base-de-siembra.png"],
     "atributos": []
   },
   {
     "nombre": "Centro maiz con gatillo",
     "marca": "Crucianelli",
     "categoria": "Centro",
+    "ids_imagenes": ["Centro-maiz-con-gatillo.png"],
     "atributos": []
   },
   {
     "nombre": "Engranaje triple primer contramando",
     "marca": "Crucianelli",
     "categoria": "Engranaje",
+    "ids_imagenes": ["Engranaje-triple-primer-contramando.png"],
     "atributos": []
   },
   {
     "nombre": "Conjunto biela doble",
     "marca": "Crucianelli",
     "categoria": "Biela",
+    "ids_imagenes": ["Conjunto-biela-doble.png"],
     "atributos": []
   }
 ]

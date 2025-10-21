@@ -6,6 +6,10 @@
     "categoria": "Mixer",
     "esNuevo": false,
     "anio": 2012,
+    "ids_imagenes": [
+      "1.-Mixer-horizontal-(1).jpg",
+      "1.-Mixer-horizontal-(2).jpg"
+    ],
     "atributos": [
       {
         "label": "Capacidad",
@@ -24,6 +28,10 @@
     "categoria": "Rastrillo",
     "esNuevo": false,
     "anio": 2022,
+    "ids_imagenes": [
+      "2.-Rastrillo-hilerador-(1).jpg",
+      "2.-Rastrillo-hilerador-(2).jpg"
+    ],
     "atributos": [
       {
         "label": "Estrellas",
@@ -46,6 +54,11 @@
     "categoria": "Extractora",
     "esNuevo": false,
     "anio": null,
+    "ids_imagenes": [
+      "3.-Extractora-de-granos-secos-(1).jpg",
+      "3.-Extractora-de-granos-secos-(2).jpg",
+      "3.-Extractora-de-granos-secos-(3).jpg"
+    ],
     "atributos": [
       {
         "label": "Rendimiento",
@@ -68,6 +81,12 @@
     "categoria": "Cabezal",
     "esNuevo": false,
     "anio": null,
+    "ids_imagenes": [
+      "4.-Cabezal-maicero-(1).jpg",
+      "4.-Cabezal-maicero-(2).jpg",
+      "4.-Cabezal-maicero-(3).jpg",
+      "4.-Cabezal-maicero-(4).jpg"
+    ],
     "atributos": [
       {
         "label": "Carro",
@@ -82,6 +101,10 @@
     "categoria": "Tolva",
     "esNuevo": false,
     "anio": null,
+    "ids_imagenes": [
+      "5.-Tolva-semillera-(1).jpg",
+      "5.-Tolva-semillera-(2).jpg"
+    ],
     "atributos": [
       {
         "label": "Capacidad",
@@ -100,6 +123,10 @@
     "categoria": "Sembradora",
     "esNuevo": false,
     "anio": 2004,
+    "ids_imagenes": [
+      "6.-Sembradora-marca-Giorgi-(1).jpg",
+      "6.-Sembradora-marca-Giorgi-(2).jpg"
+    ],
     "atributos": [
       {
         "label": "Tipo",
@@ -122,6 +149,12 @@
     "categoria": "Rotoenfardadora",
     "esNuevo": false,
     "anio": null,
+    "ids_imagenes": [
+      "7.-Rotoenfardadora-(1).jpg",
+      "7.-Rotoenfardadora-(2).jpg",
+      "7.-Rotoenfardadora-(3).jpg",
+      "7.-Rotoenfardadora-(4).jpg"
+    ],
     "atributos": [
       {
         "label": "Cantidad de rollos",
@@ -136,6 +169,7 @@
     "categoria": "Tolva",
     "esNuevo": false,
     "anio": null,
+    "ids_imagenes": ["8.-Tolva-semillera-(1).jpg"],
     "atributos": [
       {
         "label": "Capacidad",
@@ -157,7 +191,7 @@
     "categoria": "Tolva",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": ["1.-Tolva-autodescargable.png"],
     "atributos": [
       { "label": "Capacidad Lts.", "detalle": "29600" },
       { "label": "Capacidad Tn", "detalle": "24" },
@@ -184,7 +218,10 @@
     "categoria": "Embolsadora",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "2.-Embolsadora-de-granos--marca-Ascanelli-(1).jpg",
+      "2.-Embolsadora-de-granos--marca-Ascanelli-(2).jpg"
+    ],
     "atributos": [
       { "label": "Capacidad de Recepción Its.", "detalle": "20000" },
       { "label": "Sinfín Cementado Horizontal mm", "detalle": "450" },
@@ -205,7 +242,10 @@
     "categoria": "Cisterna",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "3.-Cisterna-para-combustible---marca-Belen-(1).jpg",
+      "3.-Cisterna-para-combustible---marca-Belen-(2).jpg"
+    ],
     "atributos": [
       { "label": "Capacidad", "detalle": "3000 litros" },
       { "label": "Características", "detalle": "tanque de fibra arriba de 750 litros con cajones laterales en ambos lados, baulera trasera, rompeolas interno y llantas duales." }
@@ -218,7 +258,10 @@
     "categoria": "Cisterna",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "4.-Cisterna-para-combustible---marca-Belen-(1).jpg",
+      "4.-Cisterna-para-combustible---marca-Belen-(2).jpg"
+    ],
     "atributos": [
       { "label": "Capacidad", "detalle": "3000 litros" },
       { "label": "Características", "detalle": "Con un cajón lateral y rompeolas interno" }
@@ -231,7 +274,7 @@
     "categoria": "Grúa",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": ["5.-Grúa-eco---marca-Fabrinor.jpg"],
     "atributos": [
       { "label": "Capacidad", "detalle": "1200kg" },
       { "label": "Características", "detalle": "Con gancho giratorio y percha" }
@@ -244,7 +287,7 @@
     "categoria": "Tolva",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": ["6.-Tolva-para-semillas-y-fertilizantes.png"],
     "atributos": [
       { "label": "Capacidad", "detalle": "26000 litros" },
       { "label": "Peso engomado", "detalle": "3700kg" },
@@ -273,7 +316,10 @@
     "categoria": "Rastrillo",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "7.-Rastrillo-hilerador---marca-Don-Baron-(1).jpg",
+      "7.-Rastrillo-hilerador---marca-Don-Baron-(2).jpg"
+    ],
     "atributos": [
       { "label": "Estrellas", "detalle": "14" },
       { "label": "Ancho", "detalle": "regulable" },
@@ -291,7 +337,10 @@
     "categoria": "Batea",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "8.-Batea-volcadora---marca-Comofra-(1).jpg",
+      "8.-Batea-volcadora---marca-Comofra-(2).jpg"
+    ],
     "atributos": [
       { "label": "Capacidad", "detalle": "15m3 / 18 tn" },
       { "label": "Material", "detalle": "chapa de acero al carbono" },
@@ -313,7 +362,10 @@
     "categoria": "Desmalezadora",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "9.-Desmalezadora-(1).webp",
+      "9.-Desmalezadora-(2).webp"
+    ],
     "atributos": [
       { "label": "Corte", "detalle": "1.50mts" },
       { "label": "Características", "detalle": "Con cilindro hidráulico y toma de fuerza" }
@@ -326,7 +378,7 @@
     "categoria": "Transportador",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": ["10.-Transportador-de-rollos---marca-Bernardin.jpg"],
     "atributos": [
       { "label": "Chasis", "detalle": "construido íntegramente en estructura tubular de caños reforzados, con horquilla regulable entre púas y largueros tubulares regulables al tamaño del rollo que se va a movilizar." },
       { "label": "Accionamiento", "detalle": "con sistema hidráulico provisto de 4 pistones de 4”, uno eleva la púa de recolección y el otro provee el movimiento de inclinación de la planchada de carga y dos colocados en ambos ejes trabajando como descarga de rollos." },
@@ -350,7 +402,10 @@
     "categoria": "Pluma",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "11.-Pluma-para-bolsones---marca-Bernardin-(1).jpg",
+      "11.-Pluma-para-bolsones---marca-Bernardin-(2).jpg"
+    ],
     "atributos": [
       { "label": "Material", "detalle": "Construida totalmente en acero plegado" },
       { "label": "Brazo de carga cerrado", "detalle": "3mts. De largo" },
