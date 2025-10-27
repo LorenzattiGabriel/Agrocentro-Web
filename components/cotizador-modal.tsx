@@ -1,6 +1,7 @@
 'use client';
 import { ProductoSection } from '@/types/Producto';
 import { useEffect, useState } from 'react';
+import { ProductoSection } from '../types/Producto';
 
 type CotizadorModalProps = {
   isOpen: boolean;
@@ -9,16 +10,17 @@ type CotizadorModalProps = {
   productoSection: ProductoSection;
 };
 
-const telefonoRepuestosCentral_VillaStaRosa = "3574438081";
-const telefonoMaquinaria = "3574440032";
+const numVillaSantaRosa = "3574438081";
+const numRioPrimero = "3574438083"
+const numMaquinarias = "3574440032"
 
-function getTelefono(productoSection: ProductoSection){
-    switch(productoSection) {
-        case 'tractores': return telefonoMaquinaria;
-        case 'implementos': return telefonoMaquinaria;
-        case 'repuestos': return telefonoRepuestosCentral_VillaStaRosa;
-        case 'usados': return telefonoMaquinaria;
-    }
+function getTelefono(productoSection: ProductoSection) {
+  switch (productoSection) {
+    case 'tractores': return numMaquinarias;
+    case 'implementos': return numMaquinarias;
+    case 'usados': return numMaquinarias;
+    case 'repuestos': return numVillaSantaRosa;
+  }
 }
 
 const CotizadorModal = ({ isOpen, onClose, maquina, productoSection }: CotizadorModalProps) => {
@@ -29,10 +31,10 @@ const CotizadorModal = ({ isOpen, onClose, maquina, productoSection }: Cotizador
   const [email, setEmail] = useState("");
   const [medioPago, setMedioPago] = useState("");
 
-
-  const telefonoWpp = getTelefono(productoSection);
+  const numWhatsApp = getTelefono(productoSection);
 
   const handleSubmit = () => {
+
     const mensaje = `Hola, estoy interesado en la máquina ${maquina}. 
 El método de pago sería: ${medioPago}. 
 Estos son mis datos de contacto: 
@@ -40,11 +42,9 @@ Nombre: ${nombre}.
 Teléfono: ${telefono}. 
 Mail: ${email}.`;
 
-    const urlWhatsapp = `https://wa.me/${telefonoWpp}?text=${encodeURIComponent(mensaje)}`;
+    const urlWhatsapp = `https://wa.me/${numWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsapp, "_blank");
-
     setEnviado(true);
-
   };
 
   {/* --- CERRAR CON ESC --- */ }
@@ -58,18 +58,45 @@ Mail: ${email}.`;
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
+  {/* --- CERRAR CON BOTON DE "VOLVER" --- */ }
+  useEffect(() => {
+    if (!isOpen) return;
+    window.history.pushState({ modalOpen: true }, "");
+    const handlePopState = (event: PopStateEvent) => {
+      if (isOpen) onClose();
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex items-center justify-center z-50"
-      onClick={onClose}
+      onClick={(e) => {
+        if (e.target === e.currentTarget)
+          onClose()
+      }}
     >
 
-      <section className="flex items-center justify-center py-16 px-4"
+      <form
+        className="flex items-center justify-center py-16 px-4"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
         onClick={(e) => e.stopPropagation()}
       >
+
         <div className="w-full max-w-md p-8 rounded-lg shadow-lg space-y-4 bg-white relative">
 
           <button
             onClick={onClose}
+            type="button"
             className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold"
           >
             ×
@@ -84,13 +111,20 @@ Mail: ${email}.`;
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
             className="w-full border px-4 py-2 rounded"
+            required
           />
           <input
             type="tel"
             placeholder="Teléfono"
             value={telefono}
-            onChange={(e) => setTelefono(e.target.value)}
+            onChange={(e) => {
+              const soloNumeros = e.target.value.replace(/\D/g, "");
+              setTelefono(soloNumeros);
+            }}
             className="w-full border px-4 py-2 rounded"
+            inputMode="numeric"
+            pattern="[0-9]{7,}"
+            required
           />
           <input
             type="email"
@@ -98,6 +132,7 @@ Mail: ${email}.`;
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full border px-4 py-2 rounded"
+            required
           />
 
           {/* --- SELECT --- */}
@@ -105,6 +140,7 @@ Mail: ${email}.`;
             value={medioPago}
             onChange={(e) => setMedioPago(e.target.value)}
             className="w-full border px-4 py-2 rounded"
+            required
           >
             <option value="">Seleccioná un método de pago</option>
             <option value="Efectivo">Efectivo</option>
@@ -119,7 +155,7 @@ Mail: ${email}.`;
           </select>
 
           <button
-            onClick={handleSubmit}
+            type="submit"
             className="w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700"
           >
             Enviar por WhatsApp
@@ -132,8 +168,9 @@ Mail: ${email}.`;
           )}
 
         </div>
-      </section>
+      </form>
     </div>
+
   );
 };
 

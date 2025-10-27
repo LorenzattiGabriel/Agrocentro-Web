@@ -7,6 +7,7 @@ import "@/styles/globals.css"
 import "@/styles/animations.css"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { BotonFlotante } from "@/components/botonFlotante"
 
 const lato = Lato({
   subsets: ["latin"],
@@ -40,9 +41,8 @@ export default function RootLayout({
             {children}
             <Footer />
         </Suspense>
-        
         <Analytics />
-
+        <BotonFlotante/>
       </body>
     </html>
   )
