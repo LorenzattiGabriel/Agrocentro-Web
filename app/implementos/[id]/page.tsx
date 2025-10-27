@@ -31,6 +31,7 @@ export default function ImplementoPage({ params }: Props){
     <main className="min-h-screen bg-gray-50 pt-10">
         
         <section className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+            
             {/* Volver */}
             <div className="col-span-2 flex justify-between items-center">
                 <VolverButton url={urlCatalogo}/>
@@ -72,6 +73,7 @@ export default function ImplementoPage({ params }: Props){
                     <div className="w-full">
                         <CotizarButton clickHandler={()=>setVerCotizador(true)}/>
                         <CotizadorModal 
+                            productoSection={implemento.section}
                             isOpen={verCotizador}
                             onClose={()=>setVerCotizador(false)}
                             maquina={implemento.name}
