@@ -12,16 +12,15 @@ datasource db {
 
 
 model repuestos {
-  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  created_at  DateTime @default(now()) @db.Timestamptz(6)
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at    DateTime @default(now()) @db.Timestamptz(6)
 
-  nombre      String
+  nombre        String
   ids_imagenes  String[]
-  marca       String
-  categoria   String
+  marca         String
+  categoria     String
 
-  atributos   Json? //luego se crea un type en typescript: 
-                    //{label: String, detalle: String | {subLabel: String, detalle: String}}
+  descripcion   String @default("")
 
   @@index([nombre])
   @@index([marca])
@@ -42,8 +41,8 @@ model implementos {
   esNuevo        Boolean
   anio           Int?
 
-  atributos      Json? //luego se crea un type en typescript: 
-                       //{label: String, detalle: String | {subLabel: String, detalle: String}}
+  descripcion    String
+                       
 
   @@index([nombre])
   @@index([marca])
