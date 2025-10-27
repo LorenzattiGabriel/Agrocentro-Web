@@ -90,7 +90,7 @@ Mail: ${email}.`;
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        
+
         <div className="w-full max-w-md p-8 rounded-lg shadow-lg space-y-4 bg-white relative">
 
           <button
@@ -116,8 +116,13 @@ Mail: ${email}.`;
             type="tel"
             placeholder="Teléfono"
             value={telefono}
-            onChange={(e) => setTelefono(e.target.value)}
+            onChange={(e) => {
+              const soloNumeros = e.target.value.replace(/\D/g, "");
+              setTelefono(soloNumeros);
+            }}
             className="w-full border px-4 py-2 rounded"
+            inputMode="numeric"
+            pattern="[0-9]{7,}"
             required
           />
           <input
