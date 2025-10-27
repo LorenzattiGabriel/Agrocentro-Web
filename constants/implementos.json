@@ -417,5 +417,32 @@
       { "label": "Cilindro hidráulico (giro)", "detalle": "3 pulgadas" },
       { "label": "Cilindro hidráulico (brazo telescópico)", "detalle": "2 ½ pulgadas" }
     ]
+  },
+  {
+    "nombre": "Tractor John Deere 6110M",
+    "marca": "John Deere",
+    "modelo": "6110M",
+    "categoria": "Tractor",
+    "esNuevo": false,
+    "anio": 2004,
+    "ids_imagenes": [
+        "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+        "https://www.publicdomainpictures.net/pictures/690000/velka/tractor-agricultural-vehicle-photo.jpg",
+        "https://www.publicdomainpictures.net/pictures/690000/velka/tractor-agricultural-vehicle-photo-1747162109mwL.jpg"
+    ],
+    "atributos": [
+      {
+        "label": "HP",
+        "detalle": "110"
+      },
+      {
+        "label": "Transmisión",
+        "detalle": "PowerQuad Plus 16/16"
+      },
+      {
+        "label": "Producto Demo (no existe)",
+        "detalle": "Este es un tractor de prueba"
+      }
+    ]
   }
 ]
