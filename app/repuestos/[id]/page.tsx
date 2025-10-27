@@ -10,18 +10,20 @@ import { useState } from "react";
 
 
 
-const productos = getDemoData("repuestos") as Repuesto[];
+
 
 interface Props {
   params: { id: string };
 }
 
 
-export default function ImplementoPage({ params }: Props){
+export default async function ImplementoPage({ params }: Props){
+
+    const productos = await getDemoData("repuestos") as Repuesto[];
 
     const [verCotizador, setVerCotizador] = useState<boolean>(false);
     
-    const repuesto = productos.find(p=>p.id === Number(params.id)) as Repuesto;
+    const repuesto = productos.find(p=>p.id === params.id) as Repuesto;
 
     const recomendados = productos.filter(p=>p.categoria===repuesto?.categoria).slice(0, 10);
 
@@ -38,12 +40,12 @@ export default function ImplementoPage({ params }: Props){
             </div>
 
             {/* Product Image */}
-            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{repuesto.name}</h1>
+            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{repuesto.nombre}</h1>
 
             <div className="flex flex-col items-center col-span-2 md:col-span-1 max-h-90">
                 <img
-                    src={repuesto.image}
-                    alt={repuesto.name}
+                    src={repuesto.ids_imagenes[0]}
+                    alt={repuesto.nombre}
                     className="w-fit object-contain rounded-lg bg-white shadow-sm max-h-90"
                 />
                 {/* (Optional) thumbnails if you had more images */}
@@ -54,7 +56,6 @@ export default function ImplementoPage({ params }: Props){
 
                 <div className="space-y-2 text-gray-700 mb-12 text-lg">
                     <p><span className="font-semibold">Marca:</span> {repuesto.marca}</p>
-                    <p><span className="font-semibold">Modelos:</span> {repuesto.modelos.join(", ")}</p>
                     <p className="pt-2 text-[16.5px] font-bold">{repuesto.descripcion}</p>
                 </div>
 
@@ -75,7 +76,7 @@ export default function ImplementoPage({ params }: Props){
                             productoSection={repuesto.section}
                             isOpen={verCotizador}
                             onClose={()=>setVerCotizador(false)}
-                            maquina={repuesto.name}
+                            maquina={repuesto.nombre}
                         />  
                     </div>
                 </div>

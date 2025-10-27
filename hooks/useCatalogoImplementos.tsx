@@ -1,7 +1,7 @@
 "use client";
 
 import { filtrosCheckbox } from "@/components/SectionCatalogo/filtros/FiltroCheckbox/constants/filtrosCheckbox";
-import { orderOptions_tractores_usados } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
+import { orderOptions_usados } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
 import { getOrderOptions } from "@/components/SectionCatalogo/OrdenarButton/utils/utils";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData";
 import { Implemento, ProductoSection } from "@/types/Producto";
@@ -35,11 +35,11 @@ export default function useCatalogoImplementos(){
 
         //search
         if (search !== "") result = result.filter((prod) => 
-            prod.name.toLowerCase().includes(search.toLowerCase().trim())
+            prod.nombre.toLowerCase().includes(search.toLowerCase().trim())
         );
 
         //orden
-        const sortFunc = orderOptions_tractores_usados.find(opt => opt.value === selectedOrder)?.sortFunction;    
+        const sortFunc = orderOptions_usados.find(opt => opt.value === selectedOrder)?.sortFunction;    
         if (sortFunc) {
             result = sortFunc(result as any) as Implemento[];
             setProductos(result);

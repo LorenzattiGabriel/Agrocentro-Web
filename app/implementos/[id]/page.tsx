@@ -5,23 +5,23 @@ import CotizarButton from "@/components/SectionCatalogo/buttons/CotizarButton";
 import VolverButton from "@/components/SectionCatalogo/buttons/VolverButton";
 import CardProducto from "@/components/SectionCatalogo/CardProducto";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData"
-import { Implemento } from "@/types/Producto";
+import { Implemento, ImplementoNuevo } from "@/types/Producto";
 import { useState } from "react";
 
 
-
-const productos = getDemoData("implementos") as Implemento[];
 
 interface Props {
   params: { id: string };
 }
 
 
-export default function ImplementoPage({ params }: Props){
+export default async function ImplementoPage({ params }: Props){
+
+    const productos = await getDemoData("implementos-nuevos") as ImplementoNuevo[];
 
     const [verCotizador, setVerCotizador] = useState<boolean>(false);
     
-    const implemento = productos.find(p=>p.id === Number(params.id)) as Implemento;
+    const implemento = productos.find(p=>p.id === params.id) as ImplementoNuevo;
 
     const recomendados = productos.filter(p=>p.categoria===implemento?.categoria).slice(0, 10);
 
@@ -39,12 +39,12 @@ export default function ImplementoPage({ params }: Props){
             </div>
 
             {/* Product Image */}
-            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{implemento.name}</h1>
+            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{implemento.nombre}</h1>
 
             <div className="flex flex-col items-center col-span-2 md:col-span-1 max-h-90">
                 <img
-                    src={implemento.image}
-                    alt={implemento.name}
+                    src={implemento.ids_imagenes[0]}
+                    alt={implemento.nombre}
                     className="w-fit object-contain rounded-lg bg-white shadow-sm max-h-90"
                 />
                 {/* (Optional) thumbnails if you had more images */}
@@ -76,7 +76,7 @@ export default function ImplementoPage({ params }: Props){
                             productoSection={implemento.section}
                             isOpen={verCotizador}
                             onClose={()=>setVerCotizador(false)}
-                            maquina={implemento.name}
+                            maquina={implemento.nombre}
                         />  
                     </div>
                 </div>
