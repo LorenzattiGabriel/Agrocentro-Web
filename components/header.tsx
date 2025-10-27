@@ -93,13 +93,6 @@ export function Header() {
               Usados
             </Link>
 
-            <Link
-              href="/servicios"
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Servicios
-            </Link>
-
             <div className="relative group">
               <button className="text-foreground hover:text-primary transition-colors">
                 Nosotros
@@ -178,13 +171,6 @@ export function Header() {
                 onClick={handleLinkClick}
               >
                 Usados
-              </Link>
-              <Link
-                href="/servicios"
-                className="text-foreground hover:text-primary"
-                onClick={handleLinkClick}
-              >
-                Servicios
               </Link>
               <Link
                 href="/quienes-somos"
