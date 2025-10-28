@@ -9,11 +9,11 @@ import useCatalogoImplementos from "@/hooks/useCatalogoImplementos";
 import { ImplementoNuevo } from "@/types/Producto";
 import { useState } from "react";
 
-interface CatalogoImplementosClientProps {
+interface Props {
     initialData: ImplementoNuevo[];
 }
 
-export default function CatalogoImplementosClient({ initialData }: CatalogoImplementosClientProps) {
+export default function CatalogoImplementosUsados({ initialData }: Props) {
     
     const arrOpcionesMarca = Array.from(new Set(initialData.map((producto) => producto.marca)));
     const arrOpcionesCategoria = Array.from(new Set(initialData.map((producto) => producto.categoria)));

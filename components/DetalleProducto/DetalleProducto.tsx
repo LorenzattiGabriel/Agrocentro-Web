@@ -3,20 +3,21 @@
 import VolverButton from "../SectionCatalogo/buttons/VolverButton";
 
 
-import { Repuesto } from "@/types/Producto";
+import { Producto, Repuesto } from "@/types/Producto";
 import CotizadorModal from "@/components/cotizador-modal";
 import CotizarButton from "@/components/SectionCatalogo/buttons/CotizarButton";
 import CardProducto from "@/components/SectionCatalogo/CardProducto";
 import { useState } from "react";
+import ContenidoDetalleProducto from "./ContenidoDetalleProducto/ContenidoDetalleProducto";
 
-interface DetalleRepuestoProps {
-    repuesto: Repuesto;
+interface Props {
+    producto: Producto;
     urlCatalogo: string;
-    recomendados: Repuesto[];
+    recomendados: Producto[];
 }
 
 
-export default function DetalleRepuestoClient({ repuesto, urlCatalogo, recomendados }: DetalleRepuestoProps) {
+export default function DetalleProducto({ producto, urlCatalogo, recomendados }: Props) {
 
     const [verCotizador, setVerCotizador] = useState<boolean>(false);
 
@@ -30,16 +31,16 @@ export default function DetalleRepuestoClient({ repuesto, urlCatalogo, recomenda
             {/* Volver */}
             <div className="col-span-2 flex justify-between items-center">
                 <VolverButton url={urlCatalogo}/>
-                <h2 className="col-span-2 text-xl text-right">Categoría: <span className="text-primary">{repuesto.categoria}</span></h2>
+                <h2 className="col-span-2 text-xl text-right">Categoría: <span className="text-primary">{producto.categoria}</span></h2>
             </div>
 
             {/* Product Image */}
-            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{repuesto.nombre}</h1>
+            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{producto.nombre}</h1>
 
             <div className="flex flex-col items-center col-span-2 md:col-span-1 max-h-90">
                 <img
-                    src={repuesto.ids_imagenes[0]}
-                    alt={repuesto.nombre}
+                    src={producto.ids_imagenes[0]}
+                    alt={producto.nombre}
                     className="w-fit object-contain rounded-lg bg-white shadow-sm max-h-90"
                 />
                 {/* (Optional) thumbnails if you had more images */}
@@ -48,10 +49,7 @@ export default function DetalleRepuestoClient({ repuesto, urlCatalogo, recomenda
             {/* Product Info */}
             <div className="flex flex-col col-span-1">
 
-                <div className="space-y-2 text-gray-700 mb-12 text-lg">
-                    <p><span className="font-semibold">Marca:</span> {repuesto.marca}</p>
-                    <p className="pt-2 text-[16.5px] font-bold">{repuesto.descripcion}</p>
-                </div>
+                <ContenidoDetalleProducto producto={producto}/>
 
 
                 {/* Actions */}
@@ -67,10 +65,10 @@ export default function DetalleRepuestoClient({ repuesto, urlCatalogo, recomenda
                     <div className="w-full">
                         <CotizarButton clickHandler={()=>setVerCotizador(true)}/>
                         <CotizadorModal 
-                            productoSection={repuesto.section}
+                            productoSection={producto.section}
                             isOpen={verCotizador}
                             onClose={()=>setVerCotizador(false)}
-                            maquina={repuesto.nombre}
+                            maquina={producto.nombre}
                         />  
                     </div>
                 </div>
@@ -81,7 +79,7 @@ export default function DetalleRepuestoClient({ repuesto, urlCatalogo, recomenda
 
         {/* Extra Section */}
         <section className="max-w-6xl mx-auto px-6 mt-16 col-span-2">
-            <h2 className="text-2xl font-semibold mb-6">Productos relacionados: <span className="text-primary">{repuesto.categoria}</span></h2>
+            <h2 className="text-2xl font-semibold mb-6">Productos relacionados: <span className="text-primary">{producto.categoria}</span></h2>
             {/* Grid of related items here */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {recomendados.map(r=>

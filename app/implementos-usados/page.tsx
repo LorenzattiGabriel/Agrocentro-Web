@@ -1,13 +1,13 @@
-import CatalogoImplementosNuevos from "@/components/SectionCatalogo/Catalogos/CatalogoImplementosNuevos";
+import CatalogoImplementosUsados from "@/components/SectionCatalogo/Catalogos/CatalogoImplementosUsados";
 import getProductsBySection from "@/components/SectionCatalogo/utils/getDemoData";
 import { implementosNuevosImgsPath } from "@/constants/images-paths";
-import { implementosNuevosSection } from "@/constants/website-sections";
+import { implementosUsadosSection } from "@/constants/website-sections";
 import { ImplementoNuevo } from "@/types/Producto";
 
-export default async function ImplementosPage() {
+export default async function ImplementosUsadosPage() {
     
     // 1. Fetch data on the server.
-    const initialImplementos = await getProductsBySection(implementosNuevosSection) as ImplementoNuevo[];
+    const initialImplementos = await getProductsBySection(implementosUsadosSection) as ImplementoNuevo[];
 
     //asignar PATH a imagenes
     initialImplementos.forEach(implementoNuevo => {
@@ -22,6 +22,6 @@ export default async function ImplementosPage() {
 
     // 2. Pass the server-fetched data to a client component.
     return (
-        <CatalogoImplementosNuevos initialData={initialImplementos} />
+        <CatalogoImplementosUsados initialData={initialImplementos} />
     );
 }

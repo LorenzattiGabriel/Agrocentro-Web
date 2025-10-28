@@ -1,4 +1,4 @@
-import DetalleRepuesto from "@/components/DetalleProducto/DetalleRepuesto";
+import DetalleProducto from "@/components/DetalleProducto/DetalleProducto";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData"
 import { repuestosImgsPath } from "@/constants/images-paths";
 import { repuestosSection } from "@/constants/website-sections";
@@ -12,7 +12,7 @@ interface Props {
 
 export default async function RepuestoPage({ params }: Props){
 
-    const productos = await getDemoData("repuestos") as Repuesto[];
+    const productos = await getDemoData(repuestosSection) as Repuesto[];
     
     //asignar PATH a imagenes de Repuestos
     productos.forEach(repuesto => {
@@ -36,6 +36,6 @@ export default async function RepuestoPage({ params }: Props){
 
 
     return (
-        <DetalleRepuesto repuesto={repuesto} urlCatalogo={urlCatalogo} recomendados={recomendados}/>
+        <DetalleProducto producto={repuesto} urlCatalogo={urlCatalogo} recomendados={recomendados}/>
     )
 }

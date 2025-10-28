@@ -1,22 +1,23 @@
 import DetalleProducto from "@/components/DetalleProducto/DetalleProducto";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData";
-import { implementosNuevosImgsPath } from "@/constants/images-paths";
-import { implementosNuevosSection } from "@/constants/website-sections";
+import { implementosUsadosImgsPath } from "@/constants/images-paths";
+import { implementosNuevosSection, implementosUsadosSection } from "@/constants/website-sections";
 import { ImplementoNuevo } from "@/types/Producto";
 
 interface Props {
   params: { id: string };
 }
 
-export default async function ImplementoPage({ params }: Props){
+export default async function ImplementoUsadoPage({ params }: Props){
 
-    const productos = await getDemoData(implementosNuevosSection) as ImplementoNuevo[];
+    const productos = await getDemoData(implementosUsadosSection) as ImplementoNuevo[];
     
     //asignar PATH a imagenes
     productos.forEach(implementoNuevo => {
         implementoNuevo.ids_imagenes = implementoNuevo.ids_imagenes.map(id_imagen => {
-            if (!id_imagen.includes(implementosNuevosImgsPath))
-                return `${implementosNuevosImgsPath}/${id_imagen}`
+            if (!id_imagen.includes(implementosUsadosImgsPath))
+                return `${implementosUsadosImgsPath}/${id_imagen}`
+
 
             return id_imagen;
         });

@@ -1,13 +1,14 @@
 import getProductsBySection from "@/components/SectionCatalogo/utils/getDemoData";
-import CatalogoRepuestosClient from "@/components/SectionCatalogo/Catalogos/CatalogoRepuestosClient";
+import CatalogoRepuestos from "@/components/SectionCatalogo/Catalogos/CatalogoRepuestos";
 import { Repuesto } from "@/types/Producto";
 import { repuestosImgsPath } from "@/constants/images-paths";
+import { repuestosSection } from "@/constants/website-sections";
 
 
 export default async function RepuestosPage() {
 
     // 1. Fetch data on the server. This component is a Server Component by default.
-    const initialRepuestos = await getProductsBySection("repuestos") as Repuesto[];
+    const initialRepuestos = await getProductsBySection(repuestosSection) as Repuesto[];
 
     //asignar PATH a imagenes de Repuestos
     initialRepuestos.forEach(repuesto => {
@@ -23,7 +24,7 @@ export default async function RepuestosPage() {
     // 2. Pass the server-fetched data to a client component.
     return (
         <div>
-            <CatalogoRepuestosClient initialData={initialRepuestos} />
+            <CatalogoRepuestos initialData={initialRepuestos} />
         </div>
     );
 
