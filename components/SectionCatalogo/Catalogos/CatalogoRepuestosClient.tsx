@@ -12,8 +12,6 @@ import { searchbar_input_id } from "../searchbar/SearchBar";
 
 
 
-// Your UI components for filters, search bar, and product list would be imported here
-// import { FiltroMarca, FiltroCategoria, SearchBar, OrderButton, ProductGrid } from "@/components/...";
 
 type Props = {
     initialData: Repuesto[];
@@ -21,7 +19,9 @@ type Props = {
 
 
 export default function CatalogoRepuestosClient ({ initialData }: Props) {
-
+    
+    const arrOpcionesMarca = Array.from(new Set(initialData.map((producto) => producto.marca)));
+    const arrOpcionesCategoria = Array.from(new Set(initialData.map((producto) => producto.categoria)));
     
     const {
         productos, setProductos, 
@@ -29,21 +29,12 @@ export default function CatalogoRepuestosClient ({ initialData }: Props) {
         opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca,
         search, setSearch,
         selectedOrder, setSelectedOrder
-    } = useCatalogoRepuestos(initialData);
+    } = useCatalogoRepuestos(initialData, arrOpcionesMarca, arrOpcionesCategoria);
 
-    //asignar 
-    const images_basic_path = `/images/products/repuestos`;
-    initialData.forEach(producto => {
-        producto.ids_imagenes = producto.ids_imagenes.map(id_imagen => {
-            if (!id_imagen.includes(images_basic_path))
-                return `${images_basic_path}/${producto.marca.toLowerCase()}/${id_imagen}`
-
-            return id_imagen;
-        });
-    });
 
 
     const cards = productos.map((producto) => <CardProducto producto={producto} key={producto.id}/>);
+
 
     const [verTodoCategorias, setVerTodoCategorias] = useState<boolean>(true);
     const [verTodoMarcas, setVerTodoMarcas] = useState<boolean>(true);
@@ -54,7 +45,7 @@ export default function CatalogoRepuestosClient ({ initialData }: Props) {
         {/* Marcas seleccionadas */}
         {Array.isArray(opcionesSeleccionadasMarca) 
         &&
-        opcionesSeleccionadasMarca.length !== filtrosCheckbox.marcas_implementos.arrOpciones.length 
+        opcionesSeleccionadasMarca.length !== arrOpcionesMarca.length
         &&
         (opcionesSeleccionadasMarca).map((marca: string) => (
             <FiltroTag 
@@ -62,9 +53,9 @@ export default function CatalogoRepuestosClient ({ initialData }: Props) {
                 handler={()=>{
                     let result = opcionesSeleccionadasMarca.filter(opt=>opt!==marca);
 
-                    if (result.length === 0) {
-                        setVerTodoMarcas(true);
-                        setOpcionesSeleccionadasMarca(filtrosCheckbox.marcas_implementos.arrOpciones);
+                    if (result.length === 0) { 
+                        setVerTodoMarcas(true); 
+                        setOpcionesSeleccionadasMarca(arrOpcionesMarca);
                     }
                     else setOpcionesSeleccionadasMarca(result);
                 }}
@@ -75,7 +66,7 @@ export default function CatalogoRepuestosClient ({ initialData }: Props) {
         {/* Categorias seleccionadas */}
         {Array.isArray(opcionesSeleccionadasCategoria) 
         &&
-        opcionesSeleccionadasCategoria.length !== filtrosCheckbox.categorias_Implementos.arrOpciones.length 
+        opcionesSeleccionadasCategoria.length !== arrOpcionesCategoria.length
         &&
         (opcionesSeleccionadasCategoria).map((categoria: string) => (
             <FiltroTag 
@@ -87,7 +78,7 @@ export default function CatalogoRepuestosClient ({ initialData }: Props) {
 
                     if (result.length === 0) {
                         setVerTodoCategorias(true);
-                        setOpcionesSeleccionadasCategoria(filtrosCheckbox.categorias_Implementos.arrOpciones);
+                        setOpcionesSeleccionadasCategoria(arrOpcionesCategoria);
                     }
                     else setOpcionesSeleccionadasCategoria(result);
                 }}
@@ -110,6 +101,7 @@ export default function CatalogoRepuestosClient ({ initialData }: Props) {
 
         <SectionCatalogo 
             section="repuestos"
+            sectionName="Repuestos"
             cards={cards}
             setSearch={setSearch}
             selectedOrder={selectedOrder}
@@ -118,13 +110,15 @@ export default function CatalogoRepuestosClient ({ initialData }: Props) {
                 <>
                     <FiltroCheckbox 
                         opcionCheckbox={filtrosCheckbox.marcas_Repuestos}
+                        arrOpciones={arrOpcionesMarca} 
                         opcionesSeleccionadas={opcionesSeleccionadasMarca}
                         setOpcionesSeleccionadas={setOpcionesSeleccionadasMarca}
                         verTodo={verTodoMarcas} setVerTodo={setVerTodoMarcas}
                     />
 
                     <FiltroCheckbox 
-                        opcionCheckbox={filtrosCheckbox.categorias_Repuestos}
+                        opcionCheckbox={filtrosCheckbox.categorias_Repuestos} 
+                        arrOpciones={arrOpcionesCategoria}
                         opcionesSeleccionadas={opcionesSeleccionadasCategoria}
                         setOpcionesSeleccionadas={setOpcionesSeleccionadasCategoria}
                         verTodo={verTodoCategorias} setVerTodo={setVerTodoCategorias}

@@ -1,4 +1,4 @@
-import { Implemento, Producto, Repuesto, TractorUsado } from "@/types/Producto";
+import { Implemento, Producto, Repuesto, ImplementoUsado } from "@/types/Producto";
 
 
 export function filtrarMarca(
@@ -24,7 +24,7 @@ export function filtrarCategoria(
 export function filtrarYear(
     opcionesSeleccionadas: number[],
 
-    productos: TractorUsado[]
+    productos: ImplementoUsado[]
 ){    
     return productos.filter((usado)=>opcionesSeleccionadas.find((year)=>year===usado.year))
 }

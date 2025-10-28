@@ -1,50 +1,45 @@
 "use client";
 
+import VolverButton from "../SectionCatalogo/buttons/VolverButton";
+
+
+import { Repuesto } from "@/types/Producto";
 import CotizadorModal from "@/components/cotizador-modal";
 import CotizarButton from "@/components/SectionCatalogo/buttons/CotizarButton";
-import VolverButton from "@/components/SectionCatalogo/buttons/VolverButton";
 import CardProducto from "@/components/SectionCatalogo/CardProducto";
-import getDemoData from "@/components/SectionCatalogo/utils/getDemoData"
-import { Implemento, ImplementoNuevo } from "@/types/Producto";
 import { useState } from "react";
 
-
-
-interface Props {
-  params: { id: string };
+interface DetalleRepuestoProps {
+    repuesto: Repuesto;
+    urlCatalogo: string;
+    recomendados: Repuesto[];
 }
 
 
-export default async function ImplementoPage({ params }: Props){
-
-    const productos = await getDemoData("implementos-nuevos") as ImplementoNuevo[];
+export default function DetalleRepuestoClient({ repuesto, urlCatalogo, recomendados }: DetalleRepuestoProps) {
 
     const [verCotizador, setVerCotizador] = useState<boolean>(false);
-    
-    const implemento = productos.find(p=>p.id === params.id) as ImplementoNuevo;
 
-    const recomendados = productos.filter(p=>p.categoria===implemento?.categoria).slice(0, 10);
-
-    const urlCatalogo = "/implementos"
 
     return (
     <main className="min-h-screen bg-gray-50 pt-10">
         
+
+        
         <section className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-            
             {/* Volver */}
             <div className="col-span-2 flex justify-between items-center">
                 <VolverButton url={urlCatalogo}/>
-                <h2 className="col-span-2 text-xl text-right">Categoría: <span className="text-primary">{implemento.categoria}</span></h2>
+                <h2 className="col-span-2 text-xl text-right">Categoría: <span className="text-primary">{repuesto.categoria}</span></h2>
             </div>
 
             {/* Product Image */}
-            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{implemento.nombre}</h1>
+            <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{repuesto.nombre}</h1>
 
             <div className="flex flex-col items-center col-span-2 md:col-span-1 max-h-90">
                 <img
-                    src={implemento.ids_imagenes[0]}
-                    alt={implemento.nombre}
+                    src={repuesto.ids_imagenes[0]}
+                    alt={repuesto.nombre}
                     className="w-fit object-contain rounded-lg bg-white shadow-sm max-h-90"
                 />
                 {/* (Optional) thumbnails if you had more images */}
@@ -54,9 +49,8 @@ export default async function ImplementoPage({ params }: Props){
             <div className="flex flex-col col-span-1">
 
                 <div className="space-y-2 text-gray-700 mb-12 text-lg">
-                    <p><span className="font-semibold">Marca:</span> {implemento.marca}</p>
-                    <p><span className="font-semibold">Modelo:</span> {implemento.modelo}</p>
-                    {/* <p><span className="font-semibold">Categoría:</span> {implemento.categoria}</p> */}
+                    <p><span className="font-semibold">Marca:</span> {repuesto.marca}</p>
+                    <p className="pt-2 text-[16.5px] font-bold">{repuesto.descripcion}</p>
                 </div>
 
 
@@ -73,10 +67,10 @@ export default async function ImplementoPage({ params }: Props){
                     <div className="w-full">
                         <CotizarButton clickHandler={()=>setVerCotizador(true)}/>
                         <CotizadorModal 
-                            productoSection={implemento.section}
+                            productoSection={repuesto.section}
                             isOpen={verCotizador}
                             onClose={()=>setVerCotizador(false)}
-                            maquina={implemento.nombre}
+                            maquina={repuesto.nombre}
                         />  
                     </div>
                 </div>
@@ -87,7 +81,7 @@ export default async function ImplementoPage({ params }: Props){
 
         {/* Extra Section */}
         <section className="max-w-6xl mx-auto px-6 mt-16 col-span-2">
-            <h2 className="text-2xl font-semibold mb-6">Productos relacionados: <span className="text-primary">{implemento.categoria}</span></h2>
+            <h2 className="text-2xl font-semibold mb-6">Productos relacionados: <span className="text-primary">{repuesto.categoria}</span></h2>
             {/* Grid of related items here */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                 {recomendados.map(r=>

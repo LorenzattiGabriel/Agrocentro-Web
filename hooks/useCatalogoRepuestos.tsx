@@ -7,13 +7,14 @@ import { ProductoSection, Repuesto } from "@/types/Producto";
 import { useEffect, useState } from "react";
 
 
-export default function useCatalogoRepuestos(initialData: Repuesto[]){
+export default function useCatalogoRepuestos(initialData: Repuesto[], arrOpcionesMarca: string[], arrOpcionesCategoria: string[]){
 
     const section : ProductoSection = "repuestos"; 
+    
     const [productos, setProductos] = useState<Repuesto[]>(initialData);
     
-    const [opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria] = useState<string[]>(filtrosCheckbox.categorias_Repuestos.arrOpciones);
-    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(filtrosCheckbox.marcas_Repuestos.arrOpciones);
+    const [opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria] = useState<string[]>(arrOpcionesCategoria);
+    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(arrOpcionesMarca);
     
     const [search, setSearch] = useState("");
     const [selectedOrder, setSelectedOrder] = useState(getOrderOptions(section)[0].value);

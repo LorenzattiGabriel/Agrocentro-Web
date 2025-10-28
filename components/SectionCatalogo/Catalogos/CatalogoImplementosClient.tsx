@@ -4,24 +4,32 @@ import CardProducto from "@/components/SectionCatalogo/CardProducto";
 import { filtrosCheckbox } from "@/components/SectionCatalogo/filtros/FiltroCheckbox/constants/filtrosCheckbox";
 import FiltroCheckbox from "@/components/SectionCatalogo/filtros/FiltroCheckbox/FiltroCheckbox";
 import FiltroTag from "@/components/SectionCatalogo/FiltroTag/FiltroTag";
-import { searchbar_input_id } from "@/components/SectionCatalogo/searchbar/SearchBar";
-import SectionCatalogo from "@/components/SectionCatalogo/SectionCatalogo"
+import SectionCatalogo from "@/components/SectionCatalogo/SectionCatalogo";
 import useCatalogoImplementos from "@/hooks/useCatalogoImplementos";
+import { ImplementoNuevo } from "@/types/Producto";
 import { useState } from "react";
 
+interface CatalogoImplementosClientProps {
+    initialData: ImplementoNuevo[];
+}
 
-export default function ImplementosPage() {
-
+export default function CatalogoImplementosClient({ initialData }: CatalogoImplementosClientProps) {
+    
+    const arrOpcionesMarca = Array.from(new Set(initialData.map((producto) => producto.marca)));
+    const arrOpcionesCategoria = Array.from(new Set(initialData.map((producto) => producto.categoria)));
+    
     const {
-        productos, setProductos, 
+        productos,
         opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria,
         opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca,
         search, setSearch,
         selectedOrder, setSelectedOrder
-    } = useCatalogoImplementos();
-
+    } = useCatalogoImplementos(initialData, arrOpcionesMarca, arrOpcionesCategoria);
+    
     const cards = productos.map((producto) => <CardProducto producto={producto} key={producto.id}/>);
-
+    
+    
+    
     const [verTodoCategorias, setVerTodoCategorias] = useState<boolean>(true);
     const [verTodoMarcas, setVerTodoMarcas] = useState<boolean>(true);
 
@@ -31,17 +39,18 @@ export default function ImplementosPage() {
     {/* Marcas seleccionadas */}
     {Array.isArray(opcionesSeleccionadasMarca) 
     &&
-    opcionesSeleccionadasMarca.length !== filtrosCheckbox.marcas_implementos.arrOpciones.length 
+    opcionesSeleccionadasMarca.length !== arrOpcionesMarca.length 
     &&
     (opcionesSeleccionadasMarca).map((marca: string) => (
         <FiltroTag 
+            key={marca}
             nombre={marca}
             handler={()=>{
                 let result = opcionesSeleccionadasMarca.filter(opt=>opt!==marca);
 
                 if (result.length === 0) {
                     setVerTodoMarcas(true);
-                    setOpcionesSeleccionadasMarca(filtrosCheckbox.marcas_implementos.arrOpciones);
+                    setOpcionesSeleccionadasMarca(arrOpcionesMarca);
                 }
                 else setOpcionesSeleccionadasMarca(result);
             }}
@@ -52,19 +61,18 @@ export default function ImplementosPage() {
     {/* Categorias seleccionadas */}
     {Array.isArray(opcionesSeleccionadasCategoria) 
     &&
-    opcionesSeleccionadasCategoria.length !== filtrosCheckbox.categorias_Implementos.arrOpciones.length 
+    opcionesSeleccionadasCategoria.length !== arrOpcionesCategoria.length 
     &&
     (opcionesSeleccionadasCategoria).map((categoria: string) => (
         <FiltroTag 
+            key={categoria}
             nombre={categoria}
             handler={()=>{
                 let result = opcionesSeleccionadasCategoria.filter(opt=>opt!==categoria);
                 
-
-
                 if (result.length === 0) {
                     setVerTodoCategorias(true);
-                    setOpcionesSeleccionadasCategoria(filtrosCheckbox.categorias_Implementos.arrOpciones);
+                    setOpcionesSeleccionadasCategoria(arrOpcionesCategoria);
                 }
                 else setOpcionesSeleccionadasCategoria(result);
             }}
@@ -83,10 +91,9 @@ export default function ImplementosPage() {
             IMPLEMENTOS
         </h1>
 
-       
-
         <SectionCatalogo 
-            section="implementos"
+            section="implementos-nuevos"
+            sectionName="Implementos nuevos"
             cards={cards}
             setSearch={setSearch}
             selectedOrder={selectedOrder}
@@ -95,6 +102,7 @@ export default function ImplementosPage() {
                 <>
                     <FiltroCheckbox 
                         opcionCheckbox={filtrosCheckbox.marcas_implementos}
+                        arrOpciones={arrOpcionesMarca}
                         opcionesSeleccionadas={opcionesSeleccionadasMarca}
                         setOpcionesSeleccionadas={setOpcionesSeleccionadasMarca}
                         verTodo={verTodoMarcas} setVerTodo={setVerTodoMarcas}
@@ -102,30 +110,16 @@ export default function ImplementosPage() {
 
                     <FiltroCheckbox 
                         opcionCheckbox={filtrosCheckbox.categorias_Implementos}
+                        arrOpciones={arrOpcionesCategoria}
                         opcionesSeleccionadas={opcionesSeleccionadasCategoria}
                         setOpcionesSeleccionadas={setOpcionesSeleccionadasCategoria}
                         verTodo={verTodoCategorias} setVerTodo={setVerTodoCategorias}
                     />
                 </>
             }
-            tagsElement={
-                <div className="flex flex-wrap gap-2 mb-2">
-                    {/* Search */}
-                    {search && search.trim() !== "" && (
-                        <FiltroTag 
-                            nombre={`"${search}"`}
-                            handler={()=>{
-                                const input = document.getElementById(searchbar_input_id) as HTMLInputElement;
-                                input.value="";
-                                setSearch("");
-                            }}
-                        />
-                    )}
-                </div>
-            }
+            // tagsElement={marcas_y_categorias_tags}
+            tagsElement={<></>}
         />
     </main>
   )
-
-
 }

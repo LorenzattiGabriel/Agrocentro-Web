@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MapPin, Menu, X } from "lucide-react";
+import { ProductoSection } from "@/types/Producto";
+import { implementosNuevosSection, repuestosSection } from "@/constants/website-sections";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,13 +74,13 @@ export function Header() {
                   Tractores
                 </Link>
                 <Link
-                  href="/implementos"
+                  href={`/${implementosNuevosSection}`}
                   className="block px-4 py-2 text-sm hover:bg-muted"
                 >
-                  Implementos
+                  Implementos nuevos
                 </Link>
                 <Link
-                  href="/repuestos"
+                  href={`/${repuestosSection}`}
                   className="block px-4 py-2 text-sm hover:bg-muted"
                 >
                   Repuestos

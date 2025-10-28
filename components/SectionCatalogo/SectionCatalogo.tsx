@@ -9,6 +9,7 @@ import FiltrarButton from "./buttons/FiltrarButton";
 
 type Props = {
     section: ProductoSection,
+    sectionName: string,
     cards: JSX.Element[],
     setSearch: Dispatch<SetStateAction<string>>,
     selectedOrder: string,
@@ -17,7 +18,7 @@ type Props = {
     tagsElement: JSX.Element
 }
 
-export default function SectionCatalogo({section, cards, setSearch, selectedOrder, setSelectedOrder, filtrosElement, tagsElement}: Props){
+export default function SectionCatalogo({section, sectionName, cards, setSearch, selectedOrder, setSelectedOrder, filtrosElement, tagsElement}: Props){
 
     const [showSidebar, setShowSidebar] = useState(false);
 
@@ -50,7 +51,7 @@ export default function SectionCatalogo({section, cards, setSearch, selectedOrde
 
                 <div className="max-w-60 flex flex-col gap-8">
                     <div>
-                        <h2 className="font-bold text-4xl mb-1">{section.replace(/\b\w/g, c => c.toUpperCase())}</h2>
+                        <h2 className="font-bold text-4xl mb-1">{sectionName}</h2>
                         <p>{cards.length} resultados</p>
                     </div>
 
