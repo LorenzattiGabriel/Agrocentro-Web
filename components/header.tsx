@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, MapPin, Menu, X } from "lucide-react";
 import { ProductoSection } from "@/types/Producto";
-import { implementosNuevosSection, repuestosSection } from "@/constants/website-sections";
+import { implementosNuevosSection, implementosUsadosSection, repuestosSection } from "@/constants/website-sections";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,7 +89,7 @@ export function Header() {
             </div>
 
             <Link
-              href="/usados"
+              href={`/${implementosUsadosSection}`}
               className="text-foreground hover:text-primary transition-colors"
             >
               Usados

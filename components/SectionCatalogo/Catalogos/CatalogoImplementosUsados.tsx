@@ -92,8 +92,8 @@ export default function CatalogoImplementosUsados({ initialData }: Props) {
         </h1>
 
         <SectionCatalogo 
-            section="implementos-nuevos"
-            sectionName="Implementos nuevos"
+            section="implementos-usados"
+            sectionName="Implementos usados"
             cards={cards}
             setSearch={setSearch}
             selectedOrder={selectedOrder}

@@ -1,5 +1,5 @@
-import implementosData from '../constants/implementos.json';
-import repuestosData from '../constants/repuestos.json';
+import implementosData from '../constants/productos/implementos.json';
+import repuestosData from '../constants/productos/repuestos.json';
 import { PrismaClient } from '../lib/generated/prisma/client'; // Updated import path
 
 const prisma = new PrismaClient();
