@@ -1,6 +1,7 @@
 'use client';
+import { ProductoSection } from '@/types/Producto';
 import { useEffect, useState } from 'react';
-import { ProductoSection } from '../types/Producto';
+
 
 type CotizadorModalProps = {
   isOpen: boolean;
@@ -15,9 +16,8 @@ const numMaquinarias = "3574440032"
 
 function getTelefono(productoSection: ProductoSection) {
   switch (productoSection) {
-    case 'tractores': return numMaquinarias;
-    case 'implementos': return numMaquinarias;
-    case 'usados': return numMaquinarias;
+    case 'implementos-nuevos': return numMaquinarias;
+    case 'implementos-usados': return numMaquinarias;
     case 'repuestos': return numVillaSantaRosa;
   }
 }

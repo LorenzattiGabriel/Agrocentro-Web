@@ -1,22 +1,20 @@
 "use client";
 
 import { filtrosCheckbox } from "@/components/SectionCatalogo/filtros/FiltroCheckbox/constants/filtrosCheckbox";
-import { orderOptions_tractores_usados } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
-import { getOrderOptions } from "@/components/SectionCatalogo/OrdenarButton/utils/utils";
-import getDemoData from "@/components/SectionCatalogo/utils/getDemoData";
+import { orderOptions_usados } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
+import { getOrderOptions } from "@/components/SectionCatalogo/OrdenarButton/utils/utils"; 
 import { ProductoSection, Repuesto } from "@/types/Producto";
 import { useEffect, useState } from "react";
 
 
-export default function useCatalogoRepuestos(){
+export default function useCatalogoRepuestos(initialData: Repuesto[], arrOpcionesMarca: string[], arrOpcionesCategoria: string[]){
 
     const section : ProductoSection = "repuestos"; 
-    const data = getDemoData(section) as Repuesto[];
-
-    const [productos, setProductos] = useState<Repuesto[]>(data);
     
-    const [opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria] = useState<string[]>(filtrosCheckbox.categorias_Repuestos.arrOpciones);
-    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(filtrosCheckbox.marcas_Repuestos.arrOpciones);
+    const [productos, setProductos] = useState<Repuesto[]>(initialData);
+    
+    const [opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria] = useState<string[]>(arrOpcionesCategoria);
+    const [opcionesSeleccionadasMarca, setOpcionesSeleccionadasMarca] = useState<string[]>(arrOpcionesMarca);
     
     const [search, setSearch] = useState("");
     const [selectedOrder, setSelectedOrder] = useState(getOrderOptions(section)[0].value);
@@ -25,7 +23,7 @@ export default function useCatalogoRepuestos(){
     useEffect(()=>{
         window.scrollTo({ top: 0, behavior: "smooth" });
 
-        let result = data; 
+        let result = initialData; 
 
         //marca
         result = filtrosCheckbox.marcas_Repuestos.filtrar(opcionesSeleccionadasMarca, result) as Repuesto[];
@@ -35,11 +33,11 @@ export default function useCatalogoRepuestos(){
 
         //search
         if (search !== "") result = result.filter((prod) => 
-            prod.name.toLowerCase().includes(search.toLowerCase().trim())
+            prod.nombre.toLowerCase().includes(search.toLowerCase().trim())
         );
 
         //orden
-        const sortFunc = orderOptions_tractores_usados.find(opt => opt.value === selectedOrder)?.sortFunction;    
+        const sortFunc = orderOptions_usados.find(opt => opt.value === selectedOrder)?.sortFunction;    
         if (sortFunc) {
             result = sortFunc(result as any) as Repuesto[];
             setProductos(result);
@@ -47,7 +45,7 @@ export default function useCatalogoRepuestos(){
         else throw new Error("No hay funcion para ordenar.");
         
     }, [opcionesSeleccionadasCategoria, opcionesSeleccionadasMarca, search, selectedOrder]);
-    
+     
     
     return {
         productos, setProductos,

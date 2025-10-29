@@ -1,42 +1,38 @@
-export type ProductoSection = "tractores" | "implementos" | "repuestos" | "usados";
+export type ProductoSection = "implementos-nuevos" |"implementos-usados" | "repuestos";
 
-export type Producto = TractorNuevo | TractorUsado | Implemento | Repuesto;
+export type Producto = ImplementoNuevo | ImplementoUsado | Repuesto;
 
-type Tractor = {
-    id: number,  
-    image: string,
-    name: string,
+// Base type for all implements, containing shared properties
+export type Implemento = {
+    id: string,
+    nombre: string,
+    ids_imagenes: string[],
     marca: string,
-    hp: number
+    modelo: string,
+    categoria: string,
+
+    descripcion: string
 };
 
-export type TractorNuevo = Tractor & {
-    section: "tractores",
-}
+export type ImplementoNuevo = Implemento & {
+    section: "implementos-nuevos"
+};
 
-export type TractorUsado = Tractor & {
-    section: "usados"
+export type ImplementoUsado = Implemento & {
+    section: "implementos-usados",
     year: number
 };
 
-export type Implemento = {
-    id: number,  
-    section: "implementos",    
-    name: string,
-    marca: string,
-    image: string,
-    categoria: string,
-    modelo: string
-};
-
 export type Repuesto = {
-    id: number,  
+    id: string,  
+    
     section: "repuestos",    
-    name: string,
+    
+    nombre: string,
+    ids_imagenes: string[],
     marca: string,
-    descripcion: string,
-    image: string,
     categoria: string,
-    modelos: string[]
+
+    descripcion: string
 };
 

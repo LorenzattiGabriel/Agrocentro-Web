@@ -11,7 +11,7 @@ export const orderOptions_tractores = [
     { value: "hp-desc", label: "HP (mayor a menor)", sortFunction:sortByHpDesc }
 ];
 
-export const orderOptions_tractores_usados = [
+export const orderOptions_usados = [
     { value: "ventas", label: "Más vendido", sortFunction: sortById },
     { value: "hp-asc", label: "HP (menor a mayor)", sortFunction: sortByHpAsc },
     { value: "hp-desc", label: "HP (mayor a menor)", sortFunction:sortByHpDesc },

@@ -17,7 +17,11 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files
-.env*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
@@ -27,3 +31,4 @@ yarn-error.log*
 next-env.d.ts
 
 TODO.txt
+/lib/generated/prisma

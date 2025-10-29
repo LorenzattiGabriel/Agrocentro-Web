@@ -5,6 +5,7 @@ import { type FiltroCheckbox } from "./constants/filtrosCheckbox";
 
 type Props = {
     opcionCheckbox: FiltroCheckbox,
+    arrOpciones: string[],
 
     opcionesSeleccionadas: string[],
     setOpcionesSeleccionadas: Dispatch<SetStateAction<string[]>>,
@@ -14,7 +15,7 @@ type Props = {
 }
 
 
-export default function FiltroCheckbox({opcionCheckbox, opcionesSeleccionadas, setOpcionesSeleccionadas, verTodo, setVerTodo}: Props) {
+export default function FiltroCheckbox({opcionCheckbox, arrOpciones, opcionesSeleccionadas, setOpcionesSeleccionadas, verTodo, setVerTodo}: Props) {
 
     
 
@@ -31,7 +32,7 @@ export default function FiltroCheckbox({opcionCheckbox, opcionesSeleccionadas, s
                             checkbox.checked = false;
                         })
                     
-                        setOpcionesSeleccionadas(opcionCheckbox.arrOpciones);
+                        setOpcionesSeleccionadas(arrOpciones);
 
                         setVerTodo(true);
                     }}
@@ -41,7 +42,7 @@ export default function FiltroCheckbox({opcionCheckbox, opcionesSeleccionadas, s
             </div>
 
             <div className="flex flex-col gap-1 w-full">
-                {opcionCheckbox.arrOpciones.map((opcion)=>{
+                {arrOpciones.map((opcion)=>{
                     return (
                         <label className={`cursor-pointer hover:text-accent w-full transition hover:transition ${verTodo?"hover:border-b-1 hover:border-b-accent":""}`} key={opcion}>
                             <input type="checkbox" className={`mr-4 accent-accent ${verTodo? "hidden" :""}`}
@@ -57,7 +58,7 @@ export default function FiltroCheckbox({opcionCheckbox, opcionesSeleccionadas, s
                                     else {
                                         let result = opcionesSeleccionadas.filter(opt=>opt!==opcion);
 
-                                        if (result.length === 0) {setVerTodo(true); setOpcionesSeleccionadas(opcionCheckbox.arrOpciones)}
+                                        if (result.length === 0) {setVerTodo(true); setOpcionesSeleccionadas(arrOpciones)}
                                         else setOpcionesSeleccionadas(result)
                                     }
                                 }}
