@@ -1,4 +1,5 @@
 import DetalleProducto from "@/components/DetalleProducto/DetalleProducto";
+import ProductoNoEncontrado from "@/components/DetalleProducto/ProductoNoEncontrado";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData";
 import { implementosNuevosImgsPath } from "@/constants/images-paths";
 import { implementosNuevosSection } from "@/constants/website-sections";
@@ -30,8 +31,7 @@ export default async function ImplementoPage({ params }: Props){
     const urlCatalogo = `/${implementosNuevosSection}`;
       
     if (!implemento) {
-        // TODO: Implement a proper 'Not Found' UI
-        return <div className="flex justify-center items-center h-screen">Implemento no encontrado.</div>;
+        return <ProductoNoEncontrado nombreSection="Implemento" urlCatalogo={`/${implementosNuevosSection}`} />
     }
 
     return <DetalleProducto producto={implemento} recomendados={recomendados} urlCatalogo={urlCatalogo} />;

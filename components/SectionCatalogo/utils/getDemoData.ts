@@ -1,5 +1,27 @@
 import { prisma } from "@/lib/prisma";
+import { redirect } from "next/navigation";
 import { ImplementoNuevo, ImplementoUsado, ProductoSection, Repuesto } from "@/types/Producto";
+import arrImplementos from "@/constants/productos/implementos.json"
+import arrRepuestos from "@/constants/productos/repuestos.json"
+
+
+// Add unique IDs and createdAt timestamps to implementos
+let iImplementos = 1;
+const implementosWithIds = arrImplementos.map((item, index) => ({
+    ...item,
+    id: (iImplementos++).toString(), // Generate a unique ID
+    created_at: new Date(), // Add a createdAt timestamp
+}));
+
+let iRepuestos = 1;
+// Add unique IDs and createdAt timestamps to repuestos
+const repuestosWithIds = arrRepuestos.map((item, index) => ({
+    ...item,
+    id: (iRepuestos++).toString(), // Generate a unique ID
+    created_at: new Date(), // Add a createdAt timestamp
+}));
+
+
 
 // This is a simple in-memory cache store.
 // NOTE: In a serverless environment (like Vercel), each function instance
@@ -33,15 +55,25 @@ export const getCatalogData = async () => {
     }
 
     // console.log("Fetching fresh catalog data from database.");
-    const [implementos, repuestos] = await Promise.all([
-        prisma.implementos.findMany(),
-        prisma.repuestos.findMany()
-    ]);
+    try {
+        const [implementos, repuestos] = await Promise.all([
+            prisma.implementos.findMany(),
+            prisma.repuestos.findMany()            
+        ]);
 
-    const data = { implementos, repuestos };
-    cacheStore.catalogData = { data, timestamp: now };
-
-    return data;
+        const data = { implementos, repuestos };
+        cacheStore.catalogData = { data, timestamp: now };
+    
+        return data;
+    } catch (error) {
+        console.error("Database Error in getCatalogData:", error);
+        
+        //FALLBACK JSON:
+            // const data = { implementos: implementosWithIds, repuestos:repuestosWithIds };
+            // cacheStore.catalogData = { data, timestamp: now };
+            // return data;
+        redirect('/error');
+    }
 };
 
 /**

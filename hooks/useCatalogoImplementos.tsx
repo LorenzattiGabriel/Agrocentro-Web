@@ -1,7 +1,7 @@
 "use client";
 
 import { filtrosCheckbox } from "@/components/SectionCatalogo/filtros/FiltroCheckbox/constants/filtrosCheckbox";
-import { orderOptions_usados } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
+import { orderOptions } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
 import { getOrderOptions } from "@/components/SectionCatalogo/OrdenarButton/utils/utils";
 import { ImplementoNuevo, ProductoSection } from "@/types/Producto";
 import { useEffect, useState } from "react";
@@ -38,7 +38,7 @@ export default function useCatalogoImplementos(data: ImplementoNuevo[], arrOpcio
         );
 
         //orden
-        const sortFunc = orderOptions_usados.find(opt => opt.value === selectedOrder)?.sortFunction;    
+        const sortFunc = orderOptions.find(opt => opt.value === selectedOrder)?.sortFunction;    
         if (sortFunc) {
             result = sortFunc(result as any) as ImplementoNuevo[];
             setProductos(result);

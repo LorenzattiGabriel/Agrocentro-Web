@@ -1,4 +1,5 @@
 import DetalleProducto from "@/components/DetalleProducto/DetalleProducto";
+import ProductoNoEncontrado from "@/components/DetalleProducto/ProductoNoEncontrado";
 import getDemoData from "@/components/SectionCatalogo/utils/getDemoData"
 import { repuestosImgsPath } from "@/constants/images-paths";
 import { repuestosSection } from "@/constants/website-sections";
@@ -30,8 +31,7 @@ export default async function RepuestoPage({ params }: Props){
     const urlCatalogo = `/${repuestosSection}`;
       
     if (!repuesto) {
-        // TODO: Implement a proper 'Not Found' UI
-        return <div className="flex justify-center items-center h-screen">Implemento no encontrado.</div>;
+        return <ProductoNoEncontrado nombreSection="Repuesto" urlCatalogo={`/${repuestosSection}`} />
     }
 
 

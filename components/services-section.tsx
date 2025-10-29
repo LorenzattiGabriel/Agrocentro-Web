@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tractor, Wrench, Package, Shield, Users, Clock } from "lucide-react"
 import Link from "next/link"
+import { implementosNuevosSection, implementosUsadosSection, repuestosSection } from "@/constants/website-sections"
 
 const services = [
   {
@@ -9,14 +10,14 @@ const services = [
     title: "Maquinaria Nueva",
     description: "Tractores e implementos de las mejores marcas del mercado con garantía oficial.",
     features: ["Garantía oficial", "Financiación disponible", "Entrega inmediata"],
-    url: "/tractores"
+    url: `/${implementosNuevosSection}`
   },
   {
     icon: Package,
     title: "Equipos Usados",
     description: "Maquinaria usada seleccionada y revisada por nuestros técnicos especializados.",
     features: ["Revisión técnica", "Garantía extendida", "Historial verificado"],
-    url: "/usados"
+    url: `/${implementosUsadosSection}`
   },
   {
     icon: Wrench,
@@ -30,7 +31,7 @@ const services = [
     title: "Repuestos Originales",
     description: "Stock permanente de repuestos originales para todas las marcas.",
     features: ["Stock permanente", "Entrega rápida", "Precios competitivos"],
-    url: "/repuestos"
+    url: `/${repuestosSection}`
   },
   {
     icon: Users,

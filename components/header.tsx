@@ -66,22 +66,16 @@ export function Header() {
               <button className="text-foreground hover:text-primary transition-colors">
                 Productos
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link
-                  href="/tractores"
-                  className="block px-4 py-2 text-sm hover:bg-muted"
-                >
-                  Tractores
-                </Link>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 text-black">
                 <Link
                   href={`/${implementosNuevosSection}`}
-                  className="block px-4 py-2 text-sm hover:bg-muted"
+                  className="block px-4 py-2 text-sm hover:bg-muted hover:text-primary transition-colors"
                 >
-                  Implementos nuevos
+                  Implementos Nuevos
                 </Link>
                 <Link
                   href={`/${repuestosSection}`}
-                  className="block px-4 py-2 text-sm hover:bg-muted"
+                  className="block px-4 py-2 text-sm hover:bg-muted hover:text-primary transition-colors"
                 >
                   Repuestos
                 </Link>
@@ -95,20 +89,20 @@ export function Header() {
               Usados
             </Link>
 
-            <div className="relative group">
+            <div className="relative group ">
               <button className="text-foreground hover:text-primary transition-colors">
                 Nosotros
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 text-black">
                 <Link
                   href="/quienes-somos"
-                  className="block px-4 py-2 text-sm hover:bg-muted"
+                  className="block px-4 py-2 text-sm hover:bg-muted hover:text-primary transition-colors"
                 >
                   Quiénes Somos
                 </Link>
                 <Link
                   href="/sucursales"
-                  className="block px-4 py-2 text-sm hover:bg-muted"
+                  className="block px-4 py-2 text-sm hover:bg-muted hover:text-primary transition-colors"
                 >
                   Sucursales
                 </Link>

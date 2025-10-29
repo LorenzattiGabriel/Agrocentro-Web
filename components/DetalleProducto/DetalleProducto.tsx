@@ -2,12 +2,12 @@
 
 import VolverButton from "../SectionCatalogo/buttons/VolverButton";
 
-
 import { Producto, Repuesto } from "@/types/Producto";
 import CotizadorModal from "@/components/cotizador-modal";
 import CotizarButton from "@/components/SectionCatalogo/buttons/CotizarButton";
 import CardProducto from "@/components/SectionCatalogo/CardProducto";
 import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ContenidoDetalleProducto from "./ContenidoDetalleProducto/ContenidoDetalleProducto";
 
 interface Props {
@@ -15,11 +15,17 @@ interface Props {
     urlCatalogo: string;
     recomendados: Producto[];
 }
-
-
 export default function DetalleProducto({ producto, urlCatalogo, recomendados }: Props) {
 
     const [verCotizador, setVerCotizador] = useState<boolean>(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const nextImage = () => {
+        setCurrentImageIndex((prev) => (prev + 1) % producto.ids_imagenes.length);
+    };
+    const prevImage = () => {
+        setCurrentImageIndex((prev) => (prev - 1 + producto.ids_imagenes.length) % producto.ids_imagenes.length);
+    };
 
 
     return (
@@ -37,13 +43,47 @@ export default function DetalleProducto({ producto, urlCatalogo, recomendados }:
             {/* Product Image */}
             <h1 className="text-4xl font-bold mb-2 col-span-2 text-center">{producto.nombre}</h1>
 
-            <div className="flex flex-col items-center col-span-2 md:col-span-1 max-h-90">
-                <img
-                    src={producto.ids_imagenes[0]}
-                    alt={producto.nombre}
-                    className="w-fit object-contain rounded-lg bg-white shadow-sm max-h-90"
-                />
-                {/* (Optional) thumbnails if you had more images */}
+            <div className="flex flex-col items-center col-span-2 md:col-span-1 gap-4">
+                <div className="relative w-full aspect-square">
+                    {producto.ids_imagenes.map((img, index) => (
+                        <img
+                            key={index}
+                            src={img}
+                            alt={`${producto.nombre} - imagen ${index + 1}`}
+                            className={`absolute inset-0 w-full h-full object-contain rounded-lg bg-white shadow-sm transition-opacity duration-300 ${
+                                index === currentImageIndex ? "opacity-100" : "opacity-0"
+                            }`}
+                        />
+                    ))}
+                    {producto.ids_imagenes.length > 1 && (
+                        <>
+                            <button
+                                onClick={prevImage}
+                                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors cursor-pointer z-10"
+                                aria-label="Imagen anterior"
+                            >
+                                <ChevronLeft className="h-6 w-6" />
+                            </button>
+                            <button
+                                onClick={nextImage}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors cursor-pointer z-10"
+                                aria-label="Siguiente imagen"
+                            >
+                                <ChevronRight className="h-6 w-6" />
+                            </button>
+                        </>
+                    )}
+                </div>
+                {/* Thumbnails */}
+                {producto.ids_imagenes.length > 1 && (
+                    <div className="flex gap-2 justify-center flex-wrap">
+                        {producto.ids_imagenes.map((img, index) => (
+                            <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-20 h-20 rounded-md overflow-hidden border-2 transition ${currentImageIndex === index ? 'border-primary' : 'border-transparent'}`}>
+                                <img src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
+                            </button>
+                        ))}
+                    </div>
+                )}
             </div>
 
             {/* Product Info */}

@@ -1,20 +1,9 @@
-import { sortByHpAsc, sortByHpDesc, sortById, sortByYearAsc, sortByYearDesc} from "../utils/sortFunctions";
+import { sortByNameAsc, sortByNameDesc} from "../utils/sortFunctions";
+
+
 
 export const orderOptions = [
-    { value: "ventas", label: "Más vendido", sortFunction: sortById }
+    { value: "name-asc", label: "Nombre (A-Z)", sortFunction: sortByNameAsc },
+    { value: "name-desc", label: "Nombre (Z-A)", sortFunction: sortByNameDesc}
 ];
 
-
-export const orderOptions_tractores = [
-    { value: "ventas", label: "Más vendido", sortFunction: sortById },
-    { value: "hp-asc", label: "HP (menor a mayor)", sortFunction: sortByHpAsc },
-    { value: "hp-desc", label: "HP (mayor a menor)", sortFunction:sortByHpDesc }
-];
-
-export const orderOptions_usados = [
-    { value: "ventas", label: "Más vendido", sortFunction: sortById },
-    { value: "hp-asc", label: "HP (menor a mayor)", sortFunction: sortByHpAsc },
-    { value: "hp-desc", label: "HP (mayor a menor)", sortFunction:sortByHpDesc },
-    { value: "year-asc", label: "Año (menor a mayor)", sortFunction: sortByYearAsc },
-    { value: "year-desc", label: "Año (mayor a menor)", sortFunction:sortByYearDesc }
-];
