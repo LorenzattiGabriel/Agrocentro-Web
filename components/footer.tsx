@@ -67,31 +67,16 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Servicios</h4>
+            <h4 className="text-lg font-semibold mb-4">Nosotros</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/servicio-tecnico" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Servicio Técnico
+                <Link href="/quienes-somos" className="opacity-90 hover:opacity-100 transition-opacity">
+                  Quiénes somos
                 </Link>
               </li>
               <li>
-                <Link href="/mantenimiento" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Mantenimiento
-                </Link>
-              </li>
-              <li>
-                <Link href="/garantia" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Garantía
-                </Link>
-              </li>
-              <li>
-                <Link href="/asesoramiento" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Asesoramiento
-                </Link>
-              </li>
-              <li>
-                <Link href="/capacitacion" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Capacitación
+                <Link href="/sucursales" className="opacity-90 hover:opacity-100 transition-opacity">
+                  Sucursales
                 </Link>
               </li>
             </ul>

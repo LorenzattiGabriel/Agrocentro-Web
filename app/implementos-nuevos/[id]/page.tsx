@@ -5,6 +5,8 @@ import { implementosNuevosImgsPath } from "@/constants/images-paths";
 import { implementosNuevosSection } from "@/constants/website-sections";
 import { ImplementoNuevo } from "@/types/Producto";
 
+export const dynamic = 'force-dynamic';
+
 interface Props {
   params: { id: string };
 }

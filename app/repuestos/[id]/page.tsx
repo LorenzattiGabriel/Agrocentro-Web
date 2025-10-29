@@ -5,11 +5,11 @@ import { repuestosImgsPath } from "@/constants/images-paths";
 import { repuestosSection } from "@/constants/website-sections";
 import { Repuesto } from "@/types/Producto";
 
+export const dynamic = 'force-dynamic';
 
 interface Props {
   params: { id: string };
 }
-
 
 export default async function RepuestoPage({ params }: Props){
 
