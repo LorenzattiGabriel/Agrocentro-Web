@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
+import { implementosNuevosSection, implementosUsadosSection, repuestosSection } from "@/constants/website-sections"
 
 export function Footer() {
   return (
@@ -38,27 +39,22 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Productos</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/tractores" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Tractores
+                <Link href={`/${implementosNuevosSection}`} className="opacity-90 hover:opacity-100 transition-opacity">
+                  Implementos Nuevos
                 </Link>
               </li>
               <li>
-                <Link href="/implementos" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Implementos
-                </Link>
-              </li>
-              <li>
-                <Link href="/repuestos" className="opacity-90 hover:opacity-100 transition-opacity">
+                <Link href={`/${repuestosSection}`} className="opacity-90 hover:opacity-100 transition-opacity">
                   Repuestos
                 </Link>
               </li>
               <li>
-                <Link href="/usados" className="opacity-90 hover:opacity-100 transition-opacity">
+                <Link href={`/${implementosUsadosSection}`} className="opacity-90 hover:opacity-100 transition-opacity">
                   Maquinaria Usada
                 </Link>
               </li>
               <li>
-                <Link href="/financiacion" className="opacity-90 hover:opacity-100 transition-opacity">
+                <Link href="/contacto" className="opacity-90 hover:opacity-100 transition-opacity">
                   Financiación
                 </Link>
               </li>
