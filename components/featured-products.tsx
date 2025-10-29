@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import { implementosNuevosSection } from "@/constants/website-sections"
 
 const featuredProducts = [
   {
@@ -13,7 +14,7 @@ const featuredProducts = [
     features: ["110 HP", "Transmisión PowerQuad", "Cabina con A/C"],
     condition: "Nuevo",
     badge: "Destacado",
-    url: "/tractores/1"
+    url: `/${implementosNuevosSection}}`
   },
   {
     id: 2,
@@ -24,7 +25,7 @@ const featuredProducts = [
     features: ["23 surcos", "Dosificación neumática", "Monitor de siembra"],
     condition: "Nuevo",
     badge: "Nuevo",
-    url: "/implementos/2"
+    url: `/${implementosNuevosSection}}`
   },
   {
     id: 3,
@@ -35,7 +36,7 @@ const featuredProducts = [
     features: ["75 HP", "4x4", "1.200 horas"],
     condition: "Usado",
     badge: "Oportunidad",
-    url: "/tractores/2"
+    url: `/${implementosNuevosSection}}`
   },
   {
     id: 4,
@@ -46,11 +47,11 @@ const featuredProducts = [
     features: ["3000L", "Barral 24m", "GPS Ready"],
     condition: "Nuevo",
     badge: "Destacado",
-    url: "/implementos/3"
+    url: `/${implementosNuevosSection}}`
   },
 ]
 
-const urlNuevos = "/tractores";
+const urlNuevos = `/${implementosNuevosSection}}`;
 const urlContacto = "/contacto";
 
 export function FeaturedProducts() {
