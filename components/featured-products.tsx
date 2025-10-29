@@ -14,7 +14,7 @@ const featuredProducts = [
     features: ["110 HP", "Transmisión PowerQuad", "Cabina con A/C"],
     condition: "Nuevo",
     badge: "Destacado",
-    url: `/${implementosNuevosSection}}`
+    url: `/${implementosNuevosSection}`
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const featuredProducts = [
     features: ["23 surcos", "Dosificación neumática", "Monitor de siembra"],
     condition: "Nuevo",
     badge: "Nuevo",
-    url: `/${implementosNuevosSection}}`
+    url: `/${implementosNuevosSection}`
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const featuredProducts = [
     features: ["75 HP", "4x4", "1.200 horas"],
     condition: "Usado",
     badge: "Oportunidad",
-    url: `/${implementosNuevosSection}}`
+    url: `/${implementosNuevosSection}`
   },
   {
     id: 4,
@@ -47,11 +47,11 @@ const featuredProducts = [
     features: ["3000L", "Barral 24m", "GPS Ready"],
     condition: "Nuevo",
     badge: "Destacado",
-    url: `/${implementosNuevosSection}}`
+    url: `/${implementosNuevosSection}`
   },
 ]
 
-const urlNuevos = `/${implementosNuevosSection}}`;
+const urlNuevos = `/${implementosNuevosSection}`;
 const urlContacto = "/contacto";
 
 export function FeaturedProducts() {

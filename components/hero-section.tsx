@@ -13,7 +13,7 @@ const heroSlides = [
     description: "Más de 20 años brindando soluciones integrales para el agro en Río Primero y Villa Santa Rosa",
     image: "/modern-green-tractor-in-agricultural-field.jpg",
     cta: "Ver Productos",
-    url: `/${implementosNuevosSection}}`
+    url: `/${implementosNuevosSection}`
   },
   {
     title: "Usados Seleccionados",
@@ -21,7 +21,7 @@ const heroSlides = [
     description: "Garantía y respaldo oficial en cada equipo usado que ofrecemos",
     image: "/used-agricultural-machinery-in-warehouse.jpg",
     cta: "Ver Usados",
-    url: `/${implementosUsadosSection}}`
+    url: `/${implementosUsadosSection}`
   },
   {
     title: "Servicio Técnico Especializado",
