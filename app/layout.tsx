@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   description:
     "Venta de maquinaria agrícola nueva y usada, implementos y repuestos. Sucursales en Río Primero y Villa Santa Rosa.",
   generator: "v0.app",
+  icons: {
+    icon: "/images/agrocentro-logo.png",
+  },
 }
 
 export default function RootLayout({
