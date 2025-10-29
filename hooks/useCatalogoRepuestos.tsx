@@ -1,7 +1,7 @@
 "use client";
 
 import { filtrosCheckbox } from "@/components/SectionCatalogo/filtros/FiltroCheckbox/constants/filtrosCheckbox";
-import { orderOptions_usados } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
+import { orderOptions } from "@/components/SectionCatalogo/OrdenarButton/constants/options";
 import { getOrderOptions } from "@/components/SectionCatalogo/OrdenarButton/utils/utils"; 
 import { ProductoSection, Repuesto } from "@/types/Producto";
 import { useEffect, useState } from "react";
@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 export default function useCatalogoRepuestos(initialData: Repuesto[], arrOpcionesMarca: string[], arrOpcionesCategoria: string[]){
 
     const section : ProductoSection = "repuestos"; 
-    
+
     const [productos, setProductos] = useState<Repuesto[]>(initialData);
     
     const [opcionesSeleccionadasCategoria, setOpcionesSeleccionadasCategoria] = useState<string[]>(arrOpcionesCategoria);
@@ -37,7 +37,7 @@ export default function useCatalogoRepuestos(initialData: Repuesto[], arrOpcione
         );
 
         //orden
-        const sortFunc = orderOptions_usados.find(opt => opt.value === selectedOrder)?.sortFunction;    
+        const sortFunc = orderOptions.find(opt => opt.value === selectedOrder)?.sortFunction;    
         if (sortFunc) {
             result = sortFunc(result as any) as Repuesto[];
             setProductos(result);
