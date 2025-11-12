@@ -14,8 +14,9 @@ export default async function RepuestosPage() {
     //asignar PATH a imagenes de Repuestos
     initialRepuestos.forEach(repuesto => {
         repuesto.ids_imagenes = repuesto.ids_imagenes.map(id_imagen => {
-            if (!id_imagen.includes(repuestosImgsPath))
-                return `${repuestosImgsPath}/${repuesto.marca.toLowerCase()}/${id_imagen}`
+            if (!id_imagen.includes(repuestosImgsPath)) {
+                return `${repuestosImgsPath}/${repuesto.marca.toLowerCase().replace(/\s+/g, '-')}/${id_imagen}`
+            }
 
             return id_imagen;
         });
