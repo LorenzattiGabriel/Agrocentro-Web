@@ -264,5 +264,47 @@
     "categoria": "Biela",
     "ids_imagenes": ["Conjunto-biela-doble.png"],
     "descripcion": "Conjunto biela doble"
+  },
+  {
+    "nombre": "Hilos para enrrollar",
+    "marca": "Prado Verde",
+    "categoria": "Hilos",
+    "ids_imagenes": ["1.-Hilos-para-enrrollar-_-marca-prado-verde.jpg"],
+    "descripcion": "Hilos para enrrollar 4500mts"
+  },
+  {
+    "nombre": "Hilos para enrrollar",
+    "marca": "Parval",
+    "categoria": "Hilos",
+    "ids_imagenes": ["2.-Hilos-para-enrrollar-_-marva-parval.jpg"],
+    "descripcion": "Hilos para enrrollar 4500mts"
+  },
+  {
+    "nombre": "Red de atado",
+    "marca": "Juta",
+    "categoria": "Red",
+    "ids_imagenes": ["3.-Red-de-atado_.jpg"],
+    "descripcion": "Red de atado. Medidas: 123/3600 y 130/3600"
+  },
+  {
+    "nombre": "Rodamientos",
+    "marca": "Variedad",
+    "categoria": "Rodamiento",
+    "ids_imagenes": ["5.-Rodamientos.jpg"],
+    "descripcion": "Variedad de marcas (principales SKF - NTN - NSK) y variedad de medidas."
+  },
+  {
+    "nombre": "Filtros de aire acondicionado",
+    "marca": "Darmet",
+    "categoria": "Filtro",
+    "ids_imagenes": ["6.-Filtros-de-aire-acondicionado.png"],
+    "descripcion": "Filtros de aire acondicionado, variedad de medidas."
+  },
+  {
+    "nombre": "Filtros de aceite y combustible",
+    "marca": "Variedad",
+    "categoria": "Filtro",
+    "ids_imagenes": ["7.-Filtros-de-aceite-y-combustible.png"],
+    "descripcion": "Filtros de aceite y combustible, variedad de marcas y medidas."
   }
 ]
