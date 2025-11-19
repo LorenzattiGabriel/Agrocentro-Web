@@ -11,15 +11,15 @@ const heroSlides = [
     title: "Maquinaria Agrícola de Primera Calidad",
     subtitle: "Tractores, implementos y repuestos para potenciar tu campo",
     description: "Más de 20 años brindando soluciones integrales para el agro en Río Primero y Villa Santa Rosa",
-    image: "/modern-green-tractor-in-agricultural-field.jpg",
-    cta: "Ver Productos",
+    image: "/carrusel1.jpeg",
+    cta: "Ver Nuevos Productos",
     url: `/${implementosNuevosSection}`
   },
   {
     title: "Usados Seleccionados",
     subtitle: "Maquinaria usada revisada por técnicos especializados",
     description: "Garantía y respaldo oficial en cada equipo usado que ofrecemos",
-    image: "/used-agricultural-machinery-in-warehouse.jpg",
+    image: "/carrusel2.jpeg",
     cta: "Ver Usados",
     url: `/${implementosUsadosSection}`
   },
@@ -27,7 +27,7 @@ const heroSlides = [
     title: "Servicio Técnico Especializado",
     subtitle: "Mantenimiento y reparación de maquinaria agrícola",
     description: "Técnicos certificados y repuestos originales para mantener tu equipo en óptimas condiciones",
-    image: "/agricultural-technician-repairing-tractor.jpg",
+    image: "/carrusel3.jpeg",
     cta: "Solicitar Servicio",
     url: "/contacto"
   },
