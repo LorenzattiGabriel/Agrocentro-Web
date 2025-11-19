@@ -2,59 +2,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { implementosNuevosSection } from "@/constants/website-sections"
-
-const featuredProducts = [
-  {
-    id: 1,
-    name: "Tractor John Deere 6110M",
-    category: "Tractores",
-    price: "Consultar",
-    image: "/john-deere-green-tractor-6110m.jpg",
-    features: ["110 HP", "Transmisión PowerQuad", "Cabina con A/C"],
-    condition: "Nuevo",
-    badge: "Destacado",
-    url: `/${implementosNuevosSection}`
-  },
-  {
-    id: 2,
-    name: "Sembradora Agrometal MX 23",
-    category: "Implementos",
-    price: "Consultar",
-    image: "/agricultural-seeder-implement-green.jpg",
-    features: ["23 surcos", "Dosificación neumática", "Monitor de siembra"],
-    condition: "Nuevo",
-    badge: "Nuevo",
-    url: `/${implementosNuevosSection}`
-  },
-  {
-    id: 3,
-    name: "Tractor Massey Ferguson 4275",
-    category: "Tractores",
-    price: "$45.000",
-    image: "/red-massey-ferguson-tractor-used.jpg",
-    features: ["75 HP", "4x4", "1.200 horas"],
-    condition: "Usado",
-    badge: "Oportunidad",
-    url: `/${implementosNuevosSection}`
-  },
-  {
-    id: 4,
-    name: "Pulverizadora Apache 3030",
-    category: "Implementos",
-    price: "Consultar",
-    image: "/agricultural-sprayer-equipment.jpg",
-    features: ["3000L", "Barral 24m", "GPS Ready"],
-    condition: "Nuevo",
-    badge: "Destacado",
-    url: `/${implementosNuevosSection}`
-  },
-]
+import { implementosNuevosSection, implementosUsadosSection } from "@/constants/website-sections"
+import getProductsBySection from "./SectionCatalogo/utils/getDemoData"
+import { ArrowRightIcon } from "lucide-react"
+import { ImplementoNuevo } from "@/types/Producto"
+import { implementosNuevosImgsPath } from "@/constants/images-paths"
 
 const urlNuevos = `/${implementosNuevosSection}`;
 const urlContacto = "/contacto";
 
-export function FeaturedProducts() {
+export async function FeaturedProducts() {
+  const featuredProducts = (await getProductsBySection("implementos-nuevos") as ImplementoNuevo[]).slice(0, 4);
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -67,46 +26,39 @@ export function FeaturedProducts() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProducts.map((product) => (
-            <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div className="relative">
+            <Card key={product.id} className="group overflow-hidden flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="relative overflow-hidden">
                 <img
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  className="w-full h-48 object-cover"
+                  src={product.ids_imagenes[0] ? `${implementosNuevosImgsPath}/${product.ids_imagenes[0]}` : "/placeholder.svg"}
+                  alt={product.nombre}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
                 <Badge
-                  className={`absolute top-2 right-2 ${
-                    product.badge === "Destacado"
-                      ? "bg-primary"
-                      : product.badge === "Nuevo"
-                        ? "bg-accent"
-                        : "bg-orange-500"
-                  }`}
+                  className="absolute top-2 right-2 bg-primary text-primary-foreground"
                 >
-                  {product.badge}
+                  Destacado
                 </Badge>
                 <Badge variant="secondary" className="absolute top-2 left-2">
-                  {product.condition}
+                  Nuevo
                 </Badge>
               </div>
-              <CardContent className="p-4">
-                <div className="mb-2">
-                  <p className="text-sm text-muted-foreground">{product.category}</p>
-                  <h3 className="font-semibold text-lg text-balance">{product.name}</h3>
+              <CardContent className="p-4 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <p className="text-sm text-secondary">{product.categoria}</p>
+                  <h3 className="font-semibold text-lg text-balance mb-2">{product.nombre}</h3>
+                  <p className="text-sm text-muted-foreground line-clamp-3 text-pretty">
+                    {product.descripcion}
+                  </p>
                 </div>
-                <ul className="text-sm text-muted-foreground mb-4 space-y-1">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-center">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-bold text-primary">{product.price}</span>
-                  <Link href={product.url}>
-                    <Button size="sm" className="bg-primary hover:bg-primary/90" >
-                        Ver más
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-xl font-bold text-primary">Consultar</span>
+                  <Link href={`/${product.section}/${product.id}`}>
+                    <Button
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90"
+                    >
+                        Ver más <ArrowRightIcon className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                 </div>
