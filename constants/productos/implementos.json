@@ -253,4 +253,249 @@
     ],
     "descripcion": "(Producto ficticio) Presentamos el tractor John Deere 6110M, un verdadero caballo de batalla del año 2004 que combina la legendaria durabilidad de John Deere con la potencia necesaria para enfrentar las tareas más exigentes del campo. Con su motor de 110 HP, este tractor ha sido un pilar en explotaciones agrícolas de todo el mundo, demostrando una y otra vez su fiabilidad y rendimiento superior en una amplia variedad de aplicaciones, desde la siembra hasta la cosecha y el transporte.\n\nEste modelo está equipado con la reconocida transmisión PowerQuad Plus 16/16, que ofrece cambios de marcha suaves y eficientes, permitiendo al operador adaptar la velocidad y el par motor a las condiciones del terreno con una facilidad inigualable. La cabina, diseñada pensando en la comodidad del operador, proporciona una excelente visibilidad y un entorno de trabajo ergonómico, reduciendo la fatiga durante las largas jornadas de trabajo y maximizando la productividad.\n\nA pesar de ser un modelo de 2004, el John Deere 6110M sigue siendo una opción inteligente y económica para agricultores que buscan un equipo robusto, fácil de mantener y con un rendimiento probado. Es la herramienta perfecta para quienes valoran la potencia, la simplicidad y la confianza que solo una marca como John Deere puede ofrecer. Características: Potencia 110 HP | Transmisión PowerQuad Plus 16/16 | Año 2004."
   }
+,
+  {
+    "nombre": "Embolsadora de granos",
+    "marca": "Ascanelli",
+    "modelo": "EVO",
+    "categoria": "Embolsadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "1.EMBOLSADORA-EVO-01.png",
+      "1.EMBOLSADORA-EVO-02.png",
+      "1.EMBOLSADORA-EVO-03.png",
+      "1.EMBOLSADORA-EVO-04.png"
+    ],
+    "descripcion": "Capacidad de Recepción: 2500 lts. Capacidad de embolsado: 8.000 Kg/min. Sinfín Cementado Horizontal: 450 mm. Potencia Requerida: 100 HP. Tamaño de bolsas: 9 pies. Rodados: 265/70 R16 – Serie 4. Maza 5 AG. Geometría de Tunel: Oblongo o aplastado. Transmisión: Transmisión por cadena, Barra cardánica protegida. Limitador de torque a perno fusible. Toma de potencia: 540 r.p.m. Sistema Hidráulico: Accionamiento de válvula permiten el movimiento de la percha de manera simple y rápida. Sistema de elevación de percha: GRUB permite elevar la bolsa con un sistema Patentado único de percha integrada mediante el accionamiento de un cilindro hidráulico. Este sistema brinda mayor comodidad al usuario al momento de la colocación de la bolsa en la maquina. Sistema de freno: Discos en ambas ruedas. Intensidad de frenado regulable mediante bomba de accionamiento hidráulico manual a palanca y manómetro indicador."
+  },
+  {
+    "nombre": "Mixer vertical",
+    "marca": "Ascanelli",
+    "modelo": "RS 1600",
+    "categoria": "Mixer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "2.1MIXER-SIMPLE-ASCANELLI-RS-1600-EVO.png",
+      "2.2mixer-05.png",
+      "2.3mixer-acarre-1024x681.png",
+      "2.4mixer-puerta-1024x681.png",
+      "2.5mixer-sin-f-1024x681.png"
+    ],
+    "descripcion": "Capacidad: 14 m³. Potencia Requerida TMD directa: 120 HP. Potencia Requerida con caja alta y baja: 100 HP. Sistema de descarga: Acarreador a cadenas integral con regulación de tramo móvil en altura y velocidad de descarga mediante accionamiento hidráulico. Velocidad de Sinfin: Transmisión directa: 35 rpm / 25 rpm. Con caja ALTA/BAJA 35 rpm / 19 rpm. Sistema de mezclado: Sinfín central con alas 5/8”, con nueve cuchillas intercambiables de acero al boro, una cuchilla barredora y dos contra-cuchillas forzadoras regulables. Cuchillas de corte: 9. Rodados de Alta Flotación: (500/45×22.5): 2. Chasis: Tubular abulonado, de un eje simple. Opcionales: – Balanza Electrónica Celdas distribuidas en la cuba. – Encamizado: Revestimiento de cuba 1500 mm de acero inoxidable o Acero SAE 1010 – Revestimiento cementado externo de sinfín perimetral de 100 mm."
+  },
+  {
+    "nombre": "Mixer vertical",
+    "marca": "Ascanelli",
+    "modelo": "RS 2600",
+    "categoria": "Mixer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "3.1MIXER-DOBLE-ASCANELLI-RS-2600-EVO.png",
+      "3.2ruedas-mixer-doble-ascanelli.jpg",
+      "3.3MIXER-2600-chasis-2-1280x718.png",
+      "3.4MIXER-2600-sinfines-1280x718.png",
+      "3.5MIXER-2600tras-1280x718.png"
+    ],
+    "descripcion": "Capacidad: 24 m3³. Potencia Requerida HP Sin Reductor: 150. Sistema de descarga: Acarreador a cadenas integral con regulación de tramo móvil en altura y velocidad de descarga mediante accionamiento hidráulico. Velocidad de Sinfin: Transmisión con caja alta y baja: 35 rpm-25 rpm. Sistema de mezclado: Doble Sinfín con alas 5/8”, con cuchillas de corte de acero al boro y barredoras intercambiables. Dos contra-cuchillas forzadoras regulables. Chasis: tubular. Cuchillas de corte: 9. Sistema de ejes: Sistema balancín autodireccional. Rodados de alta flotación: 500/45×22.5. Opcionales: – Balanza Electrónica: Con puntas de ejes desmontables y celdas sobre el eje trasero. – Encamizado: Revestimiento de cuba 1500 mm de acero inoxidable o Acero SAE 1010. – Revestimiento cementado externo de sinfín peimetral de 100 mm."
+  },
+  {
+    "nombre": "Sembradora grano fino",
+    "marca": "Ascanelli",
+    "modelo": "Magnum RS 4000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "1sembradora.png",
+      "Semb-GF-25.png",
+      "Semb-GF-26.png",
+      "Semb-GF-27.png",
+      "Semb-GF-29.png",
+      "Semb-GF-30.png"
+    ],
+    "descripcion": "Cuchilla de Corte: Disco ondulado diámetro exterior 16″ – Maza con doble rodillo cónico. Disco Plantador: Doble disco diámetro exterior 15″ – Maza con doble rodillo cónico – Púa compactadora fondo de línea. Fertilización: Simple en la línea. Opcional: Cajón alfalfero. Sistema de siembra: Opera con trenes con doble paralelogramo y presión regulable, doble rueda limitadora de profundidad con sistema balancín (libre de engrase), doble rueda de tapadora de chapa (14/15”) y rueda aprieta semillas. Copiado de Terreno: Cuerpo de siembra con paralelogramo largo y 210 mm de recorrido. Configuración de Siembra: Dos barras (Delantera y Trasera) permiten trabajar de manera independiente entre ellas. 17,5 / 35 surcos. – 21/42 surcos."
+  },
+  {
+    "nombre": "Sembradora grano grueso",
+    "marca": "Ascanelli",
+    "modelo": "Magnum RS 4000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "sembrdora-ascanelli-magnum-rs-4000-multiproposito.png",
+      "CUERPOS-SEM-neu.png",
+      "MULTIPROPOSITO-12-700-2017-LANZA-BAJA.png",
+      "Semb-M-37.png",
+      "CUERPOS-SEM-cuadrado.png",
+      "CUERPOS-SEM-junior.png"
+    ],
+    "descripcion": "Cuchilla de Corte: Disco ondulado diámetro exterior 17″ – Maza con doble rodillo cónico. Disco Plantador: Doble disco diámetro exterior 16″ – Maza con doble rodillo cónico – Púa compactadora fondo de línea. Fertilización: Simple en linea o al costado – Doble fertilización – Doble fertilización con kit a 26 cm. Configuración de Siembra: Dos barras (Delantera y Trasera) que trabajand de manera independiente entre ellas. Sistema de siembra: Opera con trenes con doble paralelogramo y presión regulable, doble rueda limitadora de profundidad con sistema balancín (libre de engrase), discos tapadores (15”) con copiado de terreno independiente y rueda aprieta semillas. Copiado de Terreno: Cuerpo de siembra con paralelogramo largo y 210 mm de recorrido. Opcional: – Sistema Precision Planting. – Monitor TIM. – Dosificador Matermac."
+  },
+  {
+    "nombre": "Sembradora multipropósito",
+    "marca": "Ascanelli",
+    "modelo": "Magnum RS 4000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "sembrdora-ascanelli-magnum-rs-4000-multiproposito.png",
+      "CUERPOS-SEM-neu.png",
+      "MULTIPROPOSITO-12-700-2017-LANZA-BAJA.png",
+      "Semb-M-37.png",
+      "CUERPOS-SEM-cuadrado.png",
+      "CUERPOS-SEM-junior.png"
+    ],
+    "descripcion": "Cuchilla de Corte: Disco ondulado diámetro exterior 16″ – Maza con doble rodillo cónico. Disco Plantador: Doble disco diámetro exterior 15″ – Maza con doble rodillo cónico de libre mantenimiento. Fertilización: Simple en línea – Doble fertilización. Sistema de siembra: Opera con trenes con doble paralelogramo y presión regulable, doble rueda limitadora de profundidad con sistema balancín (libre de engrase), doble rueda de tapadora de chapa (14/15”) y rueda aprieta semillas. Copiado de Terreno: Cuerpo de siembra con paralelogramo largo y 210 mm de recorrido. Opcional: Sistema Precision Planting."
+  },
+  {
+    "nombre": "Acondicionador de suelos",
+    "marca": "Ascanelli",
+    "modelo": "ATT 6000",
+    "categoria": "Acondicionador de suelos",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "Acondicionador-de-suelos-Ascanelli_ATT6000-2024.png",
+      "rolos-acondicionador-ascanelli-att6000_Mesa-de-trabajo-1.png",
+      "rolos-acondicionador-ascanelli-att6000_Mesa-de-trabajo-1-(1).png"
+    ],
+    "descripcion": "La gran velocidad de trabajo, de entre 12 y 18 Km/h, combinadas con el bajo consumo de diesel por ha, hacen de esta herramienta una de las más eficientes para el picado y distribución de rastrojos como así también para el control de malezas de invierno, labrando entre 7 y 10.4 ha/hora para el modelo de 6m de ancho de labor, 8.1 y 12.2 ha/hora para el modelo de 7m de ancho de trabajo y 9.3 y 13.9 ha/hora para el modelo de 8m de ancho de laboreo."
+  },
+  {
+    "nombre": "Tolva autodescargable 8 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "EVO 43 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "ascanelli_evo_43tn.png",
+      "tolva-evo-43-ascanelli-detalle-01.jpg",
+      "tolva-evo-43-ascanelli-detalle-02.jpg",
+      "tolva-evo-43-ascanelli-detalle-03.jpg",
+      "tolva-evo-43-ascanelli-detalle-04.jpg",
+      "tolva-evo-43-ascanelli-detalle-05.jpg",
+      "tolva-evo-43-ascanelli-detalle-06.jpg"
+    ],
+    "descripcion": "Capacidad Lts: 51.500. Capacidad Tn: 43. Potencia Requerida HP: 220. Tubo Descarga mm: 580. Rodados Alta Flotación: 8 (24,5-32). Objetivo: Creamos la nueva EVO 43 tn para alinearnos a los cambios observados en el sistema logístico. A modo de ejemplo citamos la incorporación de camiones bi-trenes con mayor capacidad y cosechadoras de alto rendimiento."
+  },
+  {
+    "nombre": "Tolva autodescargable 6 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 33 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-MAGNUM-33-2017.206.png",
+      "Tolva-detalles-01-1.png",
+      "Tolva-detalles-03-3.png",
+      "Tolva-detalles-07-1.png",
+      "Tolva-detalles-41.png"
+    ],
+    "descripcion": "Capacidad Lts.: 41200. Capacidad Tn: 33. Potencia Requerida HP: 150. Diámetro Tubo Descarga mm.: 500. Rodados Alta Flotación: 6 (24.5×32). Ejes: Dos ejes, 6 ruedas, con sistema de balancín auto-direccionable en eje trasero, permitiendo un copiado eficiente de las irregularidades del terreno y una adecuada distribución de carga sobre el mismo. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite. Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tiempo de descarga: 3,5 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "Tolva autodescargable 4 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 33 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "tolva-ascanelli-33-tn-4-ruedas.jpg",
+      "Tolva-detalles-01-1(1).png",
+      "Tolva-detalles-02-1.png",
+      "Tolva-detalles-03-3(1).png",
+      "Tolva-detalles-04.png",
+      "Tolva-detalles-41(1).png"
+    ],
+    "descripcion": "Capacidad Lts.: 41200. Capacidad Tn: 33. Potencia Requerida HP: 150. Diámetro Tubo Descarga mm.: 500. Rodados Alta Flotación: 4 (3075 LR – 32). Ejes: Dos ejes, 4 ruedas. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite. Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tiempo de descarga: 3,5 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "Tolva autodescargable 6 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 30 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-MAGNUM-30-2017.201.png",
+      "Tolva-detalles-01.png",
+      "Tolva-detalles-02-1(1).png",
+      "Tolva-detalles-04(1).png",
+      "Tolva-detalles-06.png",
+      "Tolva-detalles-40.png"
+    ],
+    "descripcion": "Capacidad Lts.: 37000. Capacidad Tn: 30. Potencia Requerida HP: 150. Tubo Descarga mm.: 500. Rodados Alta Flotación: 6 (30/5LR 32). Ejes: Dos ejes, 6 ruedas, con sistema de balancín auto-direccionable en eje trasero, permitiendo un copiado eficiente de las irregularidades del terreno y una adecuada distribución de carga sobre el mismo. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite. Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tiempo de descarga: 3 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "Tolva autodescargable 4 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 30 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "Tolva-30-tn-4-ruedas-AMARILLA-ok.png",
+      "Tolva-30-tn-4-ruedas-Tolva-detalles-02-1.png",
+      "Tolva-30-tn-4-ruedas-Tolva-detalles-04.png",
+      "Tolva-30-tn-4-ruedas-Tolva-detalles-08-1.png"
+    ],
+    "descripcion": "Capacidad Lts.: 37000. Capacidad Tn: 30. Potencia Requerida HP: 150. Diámetro Tubo Descarga mm.: 500. Rodados Alta Flotación: 4 (30/5LR 32). Ejes: Dos ejes, 4 ruedas iguales. Robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite, mazas en baño de aceite. Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tiempo de descarga: 3 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "Tolva autodescargable 4 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 28 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "Tolva-28-.png",
+      "Tolva-28-Tolva-detalles-01-1.png",
+      "Tolva-28-Tolva-detalles-02-1.png",
+      "Tolva-28-Tolva-detalles-03-3.png",
+      "Tolva-28-Tolva-detalles-04.png"
+    ],
+    "descripcion": "Capacidad Lts.: 34500. Capacidad Tn: 28. Potencia Requerida HP: 140. Diámetro Tubo Descarga mm.: 500. Rodados Alta Flotación: 4 (24.5×32). Ejes: Dos ejes, 4 ruedas, robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite. Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tiempo de descarga: 2,5 / 3 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina y el plegado del tubo. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "Tolva autodescargable 4 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ Rice 26 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-ASCANELLI-RICE-ARROZ.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-02-WEB.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-05-WEB.png",
+      "TOLVA-ASCANELLI-RICE-ARROZTolva-detalles-02-1.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-Tolva-detalles-04.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-Tolva-detalles-06.png"
+    ],
+    "descripcion": "Capacidad Lts.: 31450. Capacidad Tn: 26. Potencia Requerida HP: 180. Diámetro Tubo Descarga mm.: 500. Rodados: 4 (24.5×32) con tacos. Ejes: 4 ruedas, 1 eje balancín auto direccionable, mazas lubricadas con grasa. Lanza fija diseñada espacialmente para cosecha de arroz. Sistema de descarga: Sinfín barredor y sinfín elevador con cementado doble y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tubo encamisado. Tiempo de descarga: 2.5 / 3 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "Tolva autodescargable 4 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 24 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-24-TN-2017.364.png",
+      "TOLVA-24-TN-Tolva-detalles-01-1.png",
+      "TOLVA-24-TN-Tolva-detalles-02-1.png",
+      "TOLVA-24-TN-Tolva-detalles-04.png",
+      "TOLVA-24-TN-Tolva-detalles-06.png"
+    ],
+    "descripcion": "Capacidad Lts.: 29600. Capacidad Tn: 24. Potencia Requerida HP: 120. Diámetro Tubo Descarga: 450 mm. Rodados Alta Flotación: 4 23.1 – 30 ( 16 Telas). Ejes: Dos ejes, 4 ruedas, robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite. Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tiempo de descarga: 2.5 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  }
 ]
