@@ -1,91 +1,153 @@
-# Script
+# 🚜 Gestión de Contenido y Catálogo
 
-npx tsx scripts\sanitize-images-filename.ts images/products/implementos/nuevos images/products/implementos/usados images/products/repuestos/crucianelli images/products/repuestos/giorgi
+Este documento detalla el flujo de trabajo para procesar imágenes y datos de productos, así como las instrucciones técnicas para mostrarlos en la página web (Next.js).
 
+---
 
-# Actualizar DB (Seed)
+## 📋 Requisitos Previos
 
-Para sincronizar la base de datos con los datos de los archivos JSON (implementos.json, repuestos.json), ejecuta el siguiente comando:
-`npx tsx scripts/seed.ts`
+1.  Tener **Node.js** instalado en la computadora.
+2.  Abrir la terminal (Cmder, PowerShell o Terminal) en la carpeta raíz de este proyecto.
 
+---
 
-# Actualizar productos
+## 📸 Parte 1: Procesamiento de Imágenes
 
-## Pasos:
+Utilizamos el script `import-images.js` para estandarizar nombres, evitar duplicados y organizar las fotos automáticamente.
 
-## 1. Subir imagenes. Se sigue la estructura en `\constants\images-paths.ts`. 
+### 1. Estructura de la Carpeta de Origen
+La carpeta que descargues (ej. desde Google Drive) **debe** tener esta estructura interna:
 
-- En `/public/images/products` (o lo que se indique en `images-paths.ts`) crear la carpeta de la MARCA dentro de la carpeta `/implementos` o `/repuestos` según el tipo de producto. 
-- Si el nombre de la MARCA tiene espacios, estos se reemplazan con guión medio (-). Ej: `prado verde` -> `prado-verde`.
-- Si el nombre tiene "variedad" u "otros" se reemplaza por `variedad`.
+```text
+Carpeta_Descargada/
+├── Marca (ej. John Deere)/
+│   ├── Producto (ej. Tractor 5050)/
+│   │   ├── foto1.jpg
+│   │   └── foto2.png
+└── Otra Marca/
+    └── ...
+````
 
-- Una vez se tiene la carpeta de la marca, copiar las imagenes a la carpeta directamente (NO hace falta modificar nombres de archivo manualmente).
+### 2\. Comandos de Importación
 
-- Sanitizar nombres de archivos de imagenes corriendo el script `scripts/sanitize-images-filename.ts`. **Nota: es obligatorio ejecutarlo con TypeScript (instalar el package 'tsx' en "devDependencies" del package.json)**.
+Ejecuta el comando correspondiente según el tipo de producto que estés cargando. Reemplaza `"RUTA_DE_ORIGEN"` por la carpeta donde tienes las fotos.
 
-Ejemplo de ejecución:
+**🔩 Para REPUESTOS:**
 
-```
-npx tsx scripts/sanitize-images-filename.ts
------------------------------------------
-� Scanning for files with spaces in: \public\images\products\repuestos
-� Scanning for files with spaces in: \public\images\products\repuestos\crucianelli
-� Scanning for files with spaces in:  \public\images\products\repuestos\darmet
-� Scanning for files with spaces in: \public\images\products\repuestos\giorgi
-� Scanning for files with spaces in: \public\images\products\repuestos\juta
-✅ Renamed: "3. Red de atado_.jpg"  ->  "3.-Red-de-atado_.jpg"
-� Scanning for files with spaces in: \public\images\products\repuestos\parval
-✅ Renamed: "2. Hilos para enrrollar _ marva parval.jpg"  ->  "2.-Hilos-para-enrrollar-_-marva-parval.jpg"
-� Scanning for files with spaces in: \public\images\products\repuestos\prado-verde
-✅ Renamed: "1. Hilos para enrrollar _ marca prado verde.jpg"  ->  "1.-Hilos-para-enrrollar-_-marca-prado-verde.jpg"
-� Scanning for files with spaces in: \public\images\products\repuestos\variedad
-✅ Renamed: "5. Rodamientos.jpg"  ->  "5.-Rodamientos.jpg"
-✅ Renamed: "7. Filtros de aceite y combustible.png"  ->  "7.-Filtros-de-aceite-y-combustible.png"
-✨ Renamed 5 file(s) in images/products/repuestos.
------------------------------------------
-
-� Successfully renamed a total of 5 file(s).
+```bash
+node import-images.js "RUTA_DE_ORIGEN" "./public/images/products/repuestos"
 ```
 
-## 2. Subir datos de producto
+**🚜 Para Implementos NUEVOS:**
 
-- Formatear datos de los productos según el formato existente en `constants\productos\implementos.json` o `constants\productos\repuestos.json` según corresponda.
-Ej: en `implementos.json` se sigue el siguiente formato:
-```
-{
-    "nombre": "nombre del producto", //String
-    "marca": "marca del producto", //String. Aqui SI pueden ir espacios en el String
-    "modelo": "modelo del producto",//String
-    "categoria": "categoria del producto",//String
-    "esNuevo": false,  //boolean
-    "anio": 2012, // Integer
-    "ids_imagenes": [ //String[]
-      "1.-Mixer-horizontal-(1).jpg", //String. Solo el nombre del archivo, el PATH se infiere con la MARCA en el servidor
-      "1.-Mixer-horizontal-(2).jpg"
-    ],
-    "descripcion": "descripcion del producto"//String
-  },
+```bash
+node import-images.js "RUTA_DE_ORIGEN" "./public/images/products/implementos/nuevos"
 ```
 
-- Agregar cada nombre de archivo de imagen a `ids_imagenes`. SOLO EL NOMBRE DE ARCHIVO (el PATH se infiere con la MARCA en el servidor).
+**🛠️ Para Implementos USADOS:**
 
-- **Agregar** productos formateados al archivo JSON correspondiente.
-
-- Nota: Si se agrega una nueva MARCA, asegurarse de crear la carpeta correspondiente en `/public/images/products/implementos` o `/public/images/products/repuestos` antes de subir las imagenes.
-
-- Nota 2: Este paso se puede automatizar con IA y la siguiente prompt:
-```
-As an expert JSON formatter and data entry specialist, at the end of the file [copiar y pegar PATH del archivo JSON] add the data I'll give you, following the existing structure of the JSON file. Also, add the filenames of each product image that can be found on the directory [copiar y pegar PATH de la carpeta de imagenes, por ejemplo '/public/images/products/implementos' o '/public/images/products/repuestos'] The product data is:
-
-[copiar y pegar datos de los productos]
-
+```bash
+node import-images.js "RUTA_DE_ORIGEN" "./public/images/products/implementos/usados"
 ```
 
-- **NOTA 3: Verificar el JSON de nuevo antes de seguir. Si se elimina o modifica algun otro producto del JSON, ese cambio se VERÁ REFLEJADO EN LA DB.**
+### 3\. El Reporte (Manifiesto)
 
-## 3. Actualizar la base de datos
+Al finalizar, el sistema creará un archivo Excel/CSV en la carpeta `/import-manifests` con el nombre `manifest_FECHA.csv`.
+
+> **IMPORTANTE PARA CARGA DE DATOS:**
+> Este archivo contiene la columna **"Final Filename"**. Copia estos nombres exactos para pegarlos en tu base de datos o JSON.
+
+-----
+
+## 📊 Parte 2: Procesamiento de Datos (Excel a JSON)
+
+El script convierte el archivo TSV en un JSON limpio y lo guarda en una carpeta temporal llamada `/temp_data`.
+
+### 1. Descargar datos
+Descarga tu hoja de cálculo como `.tsv`.
+
+### 2. Ejecutar conversión (Obligatorio indicar PATH del archivo)
+
+Debes indicar el path exacto del archivo que descargaste.
+
+**🔹 Para cargar productos NUEVOS:**
+```bash
+node convert-tsv-json.js ""C:\Users\Usuario\Downloads\Nuevos productos para cargar.tsv""
+```
+
+**🔸 Para cargar productos USADOS: Agrega la palabra usado al final del comando.**
+
+```Bash
+
+node convert-tsv-json.js ""C:\Users\Usuario\Downloads\Nuevos productos para cargar.tsv"" usado
+```
+#### Resultado (/temp_data)
+El script creará una carpeta temp_data y guardará allí el archivo JSON (ej. temp_data/Nuevos productos.json). Abre ese archivo para revisar los datos y completar la información faltante antes de moverlo a tu base de datos final.
 
 
-- Ejecutar el script `scripts/seed.ts` para actualizar la base de datos con los nuevos productos.
-`npx tsx scripts/seed.ts`
+# Ignorar carpetas temporales de datos (.gitignore)
+```
+# carpetas temporales de data entry
+/temp_data
+```
 
+-----
+
+## 🧠 Parte 3: Integración y Autocompletado con IA
+
+Una vez que tengas el archivo JSON generado en la carpeta `temp_data`, sigue estos pasos para integrarlo a la web y completar los datos faltantes automáticamente.
+
+### 1. Copiar a la Base de Datos
+1.  Abre el archivo generado en `temp_data/`.
+2.  Copia los objetos (el contenido).
+3.  Pégalos al final de tu archivo principal de productos (ubicado en `/src/constants/` o `/constants/`).
+
+### 2. Autocompletar con IA (Cursor / Copilot)
+Como el script deja vacíos los campos `modelo`, `categoria` e `ids_imagenes`, utiliza este **Prompt** para que la Inteligencia Artificial complete el trabajo por ti.
+
+Copia y pega esto en tu chat de IA (recomendado usar Cursor o VS Code Copilot que pueden leer tus archivos):
+
+```text
+As an expert JSON formatter and data entry specialist, in the file [PEGAR RUTA DEL ARCHIVO JSON EN CONSTANTS] from line [NUMERO DE LINEA DONDE PEGASTE LOS DATOS] onwards, guess and add the data of fields "modelo" and "categoria", following the existing structure of the JSON file. Also, add the filenames of each product image considering the manifest file at [PEGAR RUTA DEL ARCHIVO CSV MANIFEST].
+```
+### Nota: 
+Debes reemplazar los textos entre corchetes [...] con las rutas reales de tus archivos.
+
+#### Ejemplo JSON: 
+```src/constants/products.json```
+
+#### Ejemplo Manifest: 
+```import-manifests/manifest_2025-11-19.csv```
+
+---
+
+## 💻 Parte 4: Guía para Desarrolladores (Frontend)
+
+Notas técnicas para integrar estos datos en Next.js.
+
+### 1\. Renderizado de Descripciones (Saltos de línea)
+
+El campo `descripcion` contiene caracteres `\n`. Para que el navegador los respete y no muestre un bloque de texto plano, utiliza CSS.
+
+**Método Recomendado (Tailwind / CSS puro):**
+Usa la propiedad `white-space: pre-wrap`.
+
+```jsx
+// Componente ProductCard.js o similar
+<p className="text-gray-700" style={{ whiteSpace: "pre-wrap" }}>
+  {product.descripcion}
+</p>
+```
+
+**Método Alternativo (Listas):**
+Si necesitas separar cada línea en un elemento HTML distinto:
+
+```jsx
+<div>
+  {product.descripcion.split('\n').map((line, index) => (
+    <p key={index} className="mb-2">
+      {line}
+    </p>
+  ))}
+</div>
+```

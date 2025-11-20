@@ -253,4 +253,1112 @@
     ],
     "descripcion": "(Producto ficticio) Presentamos el tractor John Deere 6110M, un verdadero caballo de batalla del año 2004 que combina la legendaria durabilidad de John Deere con la potencia necesaria para enfrentar las tareas más exigentes del campo. Con su motor de 110 HP, este tractor ha sido un pilar en explotaciones agrícolas de todo el mundo, demostrando una y otra vez su fiabilidad y rendimiento superior en una amplia variedad de aplicaciones, desde la siembra hasta la cosecha y el transporte.\n\nEste modelo está equipado con la reconocida transmisión PowerQuad Plus 16/16, que ofrece cambios de marcha suaves y eficientes, permitiendo al operador adaptar la velocidad y el par motor a las condiciones del terreno con una facilidad inigualable. La cabina, diseñada pensando en la comodidad del operador, proporciona una excelente visibilidad y un entorno de trabajo ergonómico, reduciendo la fatiga durante las largas jornadas de trabajo y maximizando la productividad.\n\nA pesar de ser un modelo de 2004, el John Deere 6110M sigue siendo una opción inteligente y económica para agricultores que buscan un equipo robusto, fácil de mantener y con un rendimiento probado. Es la herramienta perfecta para quienes valoran la potencia, la simplicidad y la confianza que solo una marca como John Deere puede ofrecer. Características: Potencia 110 HP | Transmisión PowerQuad Plus 16/16 | Año 2004."
   }
+,
+  {
+    "nombre": "Embolsadora de granos",
+    "marca": "Ascanelli",
+    "modelo": "grub 9 pies",
+    "categoria": "Embolsadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "1.EMBOLSADORA-EVO-01.png",
+      "1.EMBOLSADORA-EVO-02.png",
+      "1.EMBOLSADORA-EVO-03.png",
+      "1.EMBOLSADORA-EVO-04.png"
+    ],
+    "descripcion": "Capacidad de Recepción: 2500 lts.  Capacidad de embolsado: 8.000 Kg/min.  Sinfín Cementado Horizontal: 450 mm.  Potencia Requerida: 100 HP  Tamaño de bolsas: 9 pies  Rodados: 265/70 R16 – Serie 4.  Maza 5 AG  Geometría de Tunel: Oblongo o aplastado.  Transmisión: Transmisión por cadena, Barra cardánica protegida. Limitador de torque a perno fusible. Toma de potencia: 540 r.p.m.  Sistema Hidráulico: Accionamiento de válvula permiten el movimiento de la percha de manera simple y rápida.  Sistema de elevación de percha: GRUB permite elevar la bolsa con un sistema Patentado único de percha integrada mediante el accionamiento de un cilindro hidráulico. Este sistema brinda mayor comodidad al usuario al momento de la colocación de la bolsa en la maquina.  Sistema de freno: Discos en ambas ruedas. Intensidad de frenado regulable mediante bomba de accionamiento hidráulico manual a palanca y manómetro indicador."
+  },
+  {
+    "nombre": "MIXER VERTICAL-MODELO RS 1600",
+    "marca": "Ascanelli",
+    "modelo": "RS 1600",
+    "categoria": "Mixer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "2.1MIXER-SIMPLE-ASCANELLI-RS-1600-EVO.png",
+      "2.2mixer-05.png",
+      "2.3mixer-acarre-1024x681.png",
+      "2.4mixer-puerta-1024x681.png",
+      "2.5mixer-sin-f-1024x681.png"
+    ],
+    "descripcion": "Capacidad: 14 m³  Potencia Requerida TMD directa: 120 HP.  Potencia Requerida con caja alta y baja: 100 HP   Sistema de descarga: Acarreador a cadenas integral con regulación de tramo móvil en altura y velocidad de descarga mediante accionamiento hidráulico.  Velocidad de Sinfin: Transmisión directa: 35 rpm / 25 rpm. Con caja ALTA/BAJA  35 rpm / 19 rpm.   Sistema de mezclado: Sinfín central con alas 5/8”, con nueve cuchillas intercambiables de acero al boro, una cuchilla barredora y dos contra-cuchillas forzadoras regulables.  Cuchillas de corte: 9  Rodados de Alta Flotación: (500/45×22.5): 2.  Chasis: Tubular abulonado, de un eje simple.  Opcionales:   – Balanza Electrónica Celdas distribuidas en la cuba.  – Encamizado: Revestimiento de cuba 1500 mm de acero inoxidable o Acero SAE 1010  – Revestimiento cementado externo de sinfín perimetral de 100 mm."
+  },
+  {
+    "nombre": "MIXER VERTICAL-MODELO RS 2600",
+    "marca": "Ascanelli",
+    "modelo": "RS 2600",
+    "categoria": "Mixer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "3.1MIXER-DOBLE-ASCANELLI-RS-2600-EVO.png",
+      "3.2ruedas-mixer-doble-ascanelli.jpg",
+      "3.3MIXER-2600-chasis-2-1280x718.png",
+      "3.4MIXER-2600-sinfines-1280x718.png",
+      "3.5MIXER-2600tras-1280x718.png"
+    ],
+    "descripcion": "Capacidad: 24 m3³  Potencia Requerida HP Sin Reductor: 150  Sistema de descarga: Acarreador a cadenas integral con regulación de tramo móvil en altura y velocidad de descarga mediante accionamiento hidráulico.  Velocidad de Sinfin: Transmisión con caja alta y baja: 35 rpm-25 rpm   Sistema de mezclado: Doble Sinfín con alas 5/8”, con cuchillas de corte de acero al boro y barredoras intercambiables. Dos contra-cuchillas forzadoras regulables.  Chasis: tubular  Cuchillas de corte: 9  Sistema de ejes: Sistema balancín autodireccional.  Rodados de alta flotación: 500/45×22.5  Opcionales:  – Balanza Electrónica: Con puntas de ejes desmontables y celdas sobre el eje trasero.  – Encamizado: Revestimiento de cuba 1500 mm de acero inoxidable o Acero SAE 1010.  – Revestimiento cementado externo de sinfín  peimetral de 100 mm."
+  },
+  {
+    "nombre": "Sembradora magnum rs 4000 grano fino",
+    "marca": "Ascanelli",
+    "modelo": "Magnum RS 4000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "1sembradora.png",
+      "Semb-GF-25.png",
+      "Semb-GF-26.png",
+      "Semb-GF-27.png",
+      "Semb-GF-29.png",
+      "Semb-GF-30.png"
+    ],
+    "descripcion": "Cuchilla de Corte:  Disco ondulado diámetro exterior 16″ – Maza con doble rodillo cónico.  Disco Plantador: Doble disco diámetro exterior 15″ – Maza con doble rodillo cónico – Púa compactadora fondo de línea.  Fertilización: Simple en la línea.   Opcional: Cajón alfalfero.  Sistema de siembra: Opera con trenes con doble paralelogramo y presión regulable, doble rueda limitadora de profundidad con sistema balancín (libre de engrase), doble rueda de tapadora de chapa (14/15”) y rueda aprieta semillas.  Copiado de Terreno: Cuerpo de siembra con paralelogramo largo y 210 mm de recorrido.  Configuración de Siembra: Dos barras (Delantera y Trasera) permiten trabajar de manera independiente entre ellas. 17,5 / 35 surcos. – 21/42 surcos."
+  },
+  {
+    "nombre": "Sembradora magnum rs 4000 grano grueso",
+    "marca": "Ascanelli",
+    "modelo": "Magnum RS 4000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "sembrdora-ascanelli-magnum-rs-4000-multiproposito.png",
+      "CUERPOS-SEM-neu.png",
+      "MULTIPROPOSITO-12-700-2017-LANZA-BAJA.png",
+      "Semb-M-37.png",
+      "CUERPOS-SEM-cuadrado.png",
+      "CUERPOS-SEM-junior.png"
+    ],
+    "descripcion": "Cuchilla de Corte: Disco ondulado diámetro exterior 17″ – Maza con doble rodillo cónico.  Disco Plantador: Doble disco diámetro exterior 16″ – Maza con doble rodillo cónico – Púa compactadora fondo de línea.  Fertilización: Simple en linea o al costado – Doble fertilización – Doble fertilización con kit a 26 cm.  Configuración de Siembra: Dos barras (Delantera y Trasera) que trabajand de manera independiente entre ellas.   Sistema de siembra: Opera con trenes con doble paralelogramo y presión regulable, doble rueda limitadora de profundidad con sistema balancín (libre de engrase), discos tapadores (15”) con copiado de terreno independiente y rueda aprieta semillas.  Copiado de Terreno: Cuerpo de siembra con paralelogramo largo y 210 mm de recorrido.  Opcional:  – Sistema Precision Planting.  – Monitor TIM.  – Dosificador Matermac."
+  },
+  {
+    "nombre": "Sembradora magnum rs 4000 Multiproposito",
+    "marca": "Ascanelli",
+    "modelo": "Magnum RS 4000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "sembrdora-ascanelli-magnum-rs-4000-multiproposito.png",
+      "CUERPOS-SEM-neu.png",
+      "MULTIPROPOSITO-12-700-2017-LANZA-BAJA.png",
+      "Semb-M-37.png",
+      "CUERPOS-SEM-cuadrado.png",
+      "CUERPOS-SEM-junior.png"
+    ],
+    "descripcion": "Cuchilla de Corte: Disco ondulado diámetro exterior 16″ – Maza con doble rodillo cónico  Disco Plantador: Doble disco diámetro exterior 15″ – Maza con doble rodillo cónico de libre mantenimiento.  Fertilización: Simple en línea – Doble fertilización.  Sistema de siembra: Opera con trenes con doble paralelogramo y presión regulable, doble rueda limitadora de profundidad con sistema balancín (libre de engrase), doble rueda de tapadora de chapa (14/15”) y rueda aprieta semillas.  Copiado de Terreno: Cuerpo de siembra con paralelogramo largo y 210 mm de recorrido.  Opcional:  Sistema Precision Planting ."
+  },
+  {
+    "nombre": "ACONDICIONADOR DE SUELOS- MODELO ATT 6000",
+    "marca": "Ascanelli",
+    "modelo": "ATT 6000",
+    "categoria": "Acondicionador de suelos",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "Acondicionador-de-suelos-Ascanelli_ATT6000-2024.png",
+      "rolos-acondicionador-ascanelli-att6000_Mesa-de-trabajo-1.png",
+      "rolos-acondicionador-ascanelli-att6000_Mesa-de-trabajo-1-(1).png"
+    ],
+    "descripcion": "La gran velocidad de trabajo, de entre 12 y 18 Km/h, combinadas con el bajo consumo de diesel por ha, hacen de esta herramienta una de las más eficientes para el picado y distribución de rastrojos como así también para el control de malezas de invierno, labrando entre 7 y 10.4 ha/hora para el modelo de 6m de ancho de labor,  8.1 y 12.2 ha/hora para el modelo de 7m de ancho de trabajo y 9.3 y 13.9 ha/hora para el modelo de 8m de ancho de laboreo."
+  },
+  {
+    "nombre": "TOLVAS AUTODESCARGABLES-MODELO EVO 43 tn-8 Ruedas",
+    "marca": "Ascanelli",
+    "modelo": "EVO 43 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "ascanelli_evo_43tn.png",
+      "tolva-evo-43-ascanelli-detalle-01.jpg",
+      "tolva-evo-43-ascanelli-detalle-02.jpg",
+      "tolva-evo-43-ascanelli-detalle-03.jpg",
+      "tolva-evo-43-ascanelli-detalle-04.jpg",
+      "tolva-evo-43-ascanelli-detalle-05.jpg",
+      "tolva-evo-43-ascanelli-detalle-06.jpg"
+    ],
+    "descripcion": "Capacidad Lts: 51.500  Capacidad Tn: 43  Potencia Requerida HP: 220  Tubo Descarga mm: 580  Rodados Alta Flotación: 8 (24,5-32)  Objetivo: Creamos la nueva EVO 43 tn para alinearnos a los cambios observados en el sistema logístico. A modo de ejemplo citamos la incorporación de camiones bi-trenes con mayor capacidad y cosechadoras de alto rendimiento."
+  },
+  {
+    "nombre": "TOLVAS AUTODESCARGABLES-MODELO MAGNUM+ 33 tn-6 Ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 33 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-MAGNUM-33-2017.206.png",
+      "Tolva-detalles-01-1.png",
+      "Tolva-detalles-03-3.png",
+      "Tolva-detalles-07-1.png",
+      "Tolva-detalles-41.png"
+    ],
+    "descripcion": "Capacidad Lts.: 41200  Capacidad Tn: 33  Potencia Requerida HP: 150  Diámetro Tubo Descarga mm.: 500  Rodados Alta Flotación: 6 (24.5×32)  Ejes: Dos ejes, 6 ruedas, con sistema de balancín auto-direccionable en eje trasero, permitiendo un copiado eficiente de las irregularidades del terreno y una adecuada distribución de carga sobre el mismo. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite.  Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines.  Tiempo de descarga: 3,5 minutos.  Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales.  Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "TOLVAS AUTODESCARGABLES-MODELO MAGNUM+ 33 tn-4 Ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 33 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "tolva-ascanelli-33-tn-4-ruedas.jpg",
+      "Tolva-detalles-01-1(1).png",
+      "Tolva-detalles-02-1.png",
+      "Tolva-detalles-03-3(1).png",
+      "Tolva-detalles-04.png",
+      "Tolva-detalles-41(1).png"
+    ],
+    "descripcion": "Capacidad Lts.: 41200  Capacidad Tn: 33  Potencia Requerida HP: 150  Diámetro Tubo Descarga mm.: 500  Rodados Alta Flotación: 4 (3075 LR – 32)  Ejes: Dos ejes, 4 ruedas. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite.  Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines.  Tiempo de descarga: 3,5 minutos.  Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales.  Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "TOLVAS AUTODESCARGABLES-MODELO MAGNUM+ 30 tn 6 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 30 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-MAGNUM-30-2017.201.png",
+      "Tolva-detalles-01.png",
+      "Tolva-detalles-02-1(1).png",
+      "Tolva-detalles-04(1).png",
+      "Tolva-detalles-06.png",
+      "Tolva-detalles-40.png"
+    ],
+    "descripcion": "Capacidad Lts.: 37000  Capacidad Tn: 30  Potencia Requerida HP: 150  Tubo Descarga mm.: 500  Rodados Alta Flotación: 6 (30/5LR 32)  Ejes: Dos ejes, 6 ruedas, con sistema de balancín auto-direccionable en eje trasero, permitiendo un copiado eficiente de las irregularidades del terreno y una adecuada distribución de carga sobre el mismo. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite.  Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines.  Tiempo de descarga: 3 minutos.   Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales.  Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "MODELO MAGNUM+ 30 tn-4 ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 30 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "Tolva-30-tn-4-ruedas-AMARILLA-ok.png",
+      "Tolva-30-tn-4-ruedas-Tolva-detalles-02-1.png",
+      "Tolva-30-tn-4-ruedas-Tolva-detalles-04.png",
+      "Tolva-30-tn-4-ruedas-Tolva-detalles-08-1.png"
+    ],
+    "descripcion": "Capacidad Lts.: 37000  Capacidad Tn: 30  Potencia Requerida HP: 150  Diámetro Tubo Descarga mm.: 500  Rodados Alta Flotación: 4 (30/5LR 32)  Ejes: Dos ejes, 4 ruedas iguales. Robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite, mazas en baño de aceite.   Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines.   Tiempo de descarga: 3 minutos.   Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo y bloqueo de ruedas autodireccionales.  Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "MODELO MAGNUM+ 28 tn-4 Ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 28 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "Tolva-28-.png",
+      "Tolva-28-Tolva-detalles-01-1.png",
+      "Tolva-28-Tolva-detalles-02-1.png",
+      "Tolva-28-Tolva-detalles-03-3.png",
+      "Tolva-28-Tolva-detalles-04.png"
+    ],
+    "descripcion": "Capacidad Lts.: 34500  Capacidad Tn: 28  Potencia Requerida HP: 140  Diámetro Tubo Descarga mm.: 500  Rodados Alta Flotación: 4 (24.5×32)  Ejes: Dos ejes, 4 ruedas, robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite.  Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines.  Tiempo de descarga: 2,5 / 3 minutos.  Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina y el plegado del tubo.  Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "MODELO MAGNUM+ RICE 26 tn-4 Ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ RICE 26 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-ASCANELLI-RICE-ARROZ.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-02-WEB.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-05-WEB.png",
+      "TOLVA-ASCANELLI-RICE-ARROZTolva-detalles-02-1.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-Tolva-detalles-04.png",
+      "TOLVA-ASCANELLI-RICE-ARROZ-Tolva-detalles-06.png"
+    ],
+    "descripcion": "Capacidad Lts.: 31450  Capacidad Tn: 26  Potencia Requerida HP: 180  Diámetro Tubo Descarga mm.: 500  Rodados: 4 (24.5×32) con tacos.  Ejes: 4 ruedas, 1 eje balancín auto direccionable, mazas lubricadas con grasa. Lanza fija diseñada espacialmente para cosecha de arroz.  Sistema de descarga: Sinfín barredor y sinfín elevador con cementado doble y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tubo encamisado.  Tiempo de descarga: 2.5 / 3 minutos.  Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo.  Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "MODELO MAGNUM+ 24 tn-4 Ruedas",
+    "marca": "Ascanelli",
+    "modelo": "Magnum+ 24 tn",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "TOLVA-24-TN-2017.364.png",
+      "TOLVA-24-TN-Tolva-detalles-01-1.png",
+      "TOLVA-24-TN-Tolva-detalles-02-1.png",
+      "TOLVA-24-TN-Tolva-detalles-04.png",
+      "TOLVA-24-TN-Tolva-detalles-06.png"
+    ],
+    "descripcion": "Capacidad Lts.: 29600  Capacidad Tn: 24  Potencia Requerida HP: 120  Diámetro Tubo Descarga: 450 mm  Rodados Alta Flotación: 4 23.1 – 30 ( 16 Telas)  Ejes: Dos ejes, 4 ruedas, robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite.  Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines.  Tiempo de descarga: 2.5 minutos.  Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo.  Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos)."
+  },
+  {
+    "nombre": "Rolo Triturador de Rastrojos",
+    "marca": "Bellmaq",
+    "modelo": "Rolo Triturador",
+    "categoria": "Rolo",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-1-rolo-triturador-de-rastrojos-rolotriturador_01.jpg",
+      "bellmaq-1-rolo-triturador-de-rastrojos-rolotriturador_02.jpg",
+      "bellmaq-1-rolo-triturador-de-rastrojos-rolotriturador_03-1.jpg"
+    ],
+    "descripcion": "El Rolo Triturador es utilizado para optimizar la preparación de la cama de siembra y lograr mejores condiciones y rendimientos para los cultivos a sembrar, capacitado para triturar rastrojos de algodón, girasol, maíz, sorgo, etc. y lograr la cobertura necesaria para evitar la evaporación de humedad del suelo y el desarrollo de malezas, de esta forma disminuir los costos en el uso de glifosatos."
+  },
+  {
+    "nombre": "Rolo Peine Rabasto",
+    "marca": "Bellmaq",
+    "modelo": "Rolo Peine",
+    "categoria": "Rolo",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-2-rolo-peine-rabasto-rolo_peine_rabasto_01.jpg",
+      "bellmaq-2-rolo-peine-rabasto-rolo_peine_rabasto_02.jpg",
+      "bellmaq-2-rolo-peine-rabasto-rolo_peine_rabasto_03.jpg",
+      "bellmaq-2-rolo-peine-rabasto-rolo_peine_rabasto_04.jpg",
+      "bellmaq-2-rolo-peine-rabasto-rolo_peine_rabasto_05.jpg",
+      "bellmaq-2-rolo-peine-rabasto-rolo_peine_rabasto_06.jpg",
+      "bellmaq-2-rolo-peine-rabasto-rolo_peine_rabasto_07.jpg"
+    ],
+    "descripcion": "El Rolo Peine y Rabasto es un producto apto para la preparación de una adecuada cama de siembra, refinar la tierra y emparejar el terreno para un cultivo más parejo."
+  },
+  {
+    "nombre": "Rolo desterronador",
+    "marca": "Bellmaq",
+    "modelo": "Rolo Desterronador",
+    "categoria": "Rolo",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-3-rolo-desterronador-rolo_desterronador_01.jpg",
+      "bellmaq-3-rolo-desterronador-rolo_desterronador_02.jpg",
+      "bellmaq-3-rolo-desterronador-rolo_desterronador_03.jpg"
+    ],
+    "descripcion": "El Rolo Desterronador Hidráulico se emplea en tareas de laboreo secundario, para reducir la porosidad del suelo, modificando el espacio que queda entre los terrones y rompiendo estos mismos."
+  },
+  {
+    "nombre": "Controlador mecanico de malezas ECO MAX",
+    "marca": "Bellmaq",
+    "modelo": "ECO MAX",
+    "categoria": "Controlador de malezas",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-4-controlador-mecanico-de-malezas-eco-max-carpidor_01.jpg",
+      "bellmaq-4-controlador-mecanico-de-malezas-eco-max-carpidor_02.jpg",
+      "bellmaq-4-controlador-mecanico-de-malezas-eco-max-carpidor_03.jpg",
+      "bellmaq-4-controlador-mecanico-de-malezas-eco-max-carpidor_04.jpg"
+    ],
+    "descripcion": "Detalles técnicos:"
+  },
+  {
+    "nombre": "Trailer TRV 6000 Y 7000",
+    "marca": "Bellmaq",
+    "modelo": "TRV 6000/7000",
+    "categoria": "Trailer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-5-trailer-trv-6000-y-7000-trv6000_01.jpg",
+      "bellmaq-5-trailer-trv-6000-y-7000-trv6000_02.jpg",
+      "bellmaq-5-trailer-trv-6000-y-7000-trv6000_03.jpg",
+      "bellmaq-5-trailer-trv-6000-y-7000-trv6000_04.jpg",
+      "bellmaq-5-trailer-trv-6000-y-7000-trv7000_01.jpg",
+      "bellmaq-5-trailer-trv-6000-y-7000-trv7000_02.jpg"
+    ],
+    "descripcion": "Trailer con sistema basculante para vehículos de hasta 5000kg."
+  },
+  {
+    "nombre": "Trailer TRV MAX",
+    "marca": "Bellmaq",
+    "modelo": "TRV MAX",
+    "categoria": "Trailer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-6-trailer-trv-max-trvmax_01.jpg"
+    ],
+    "descripcion": "No cuenta con descripcion en la pagina web"
+  },
+  {
+    "nombre": "Transportador de Rollos T-5R",
+    "marca": "Bellmaq",
+    "modelo": "T-5R",
+    "categoria": "Transportador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-7-transportador-de-rollos-t-5r-t5r_01.jpg",
+      "bellmaq-7-transportador-de-rollos-t-5r-t5r_02.jpg",
+      "bellmaq-7-transportador-de-rollos-t-5r-t5r_03.jpg",
+      "bellmaq-7-transportador-de-rollos-t-5r-t5r_04.jpg",
+      "bellmaq-7-transportador-de-rollos-t-5r-t5r_05.jpg"
+    ],
+    "descripcion": "Bastidor: De estructura tubular en caños conformados. Horquilla: Tubular, con distancia entre púas regulable. Largueros: Tubulares, de distancia regulable según el tamaño del rollo. Rodado: 2 ejes independientes para cubiertas 18 telas 400/60 x 15,5 de alta flotación. Accionamiento: Hidráulico para todos sus movimientos con cilindros compensados. Comandos: Por válvula hidráulica desde el tractor. Sistema de Carga: Lateral mediante la horquilla o posterior retroceso. Capacidad de Carga: 5 rollos de 1,50mts. o 6 rollos de 1,20mts. Tiempo de Carga: Aprox. 4 min. para 5 rollos. Tiempo de Descarga: Aprox. 1 minuto. Forma de Descarga: En línea contínua o racionado a distancia. Forma de Transporte: Mediante tractor o camioneta."
+  },
+  {
+    "nombre": "Transportador 3 puntos y arrastre",
+    "marca": "Bellmaq",
+    "modelo": "3 puntos y arrastre",
+    "categoria": "Transportador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-8-transportador-3-puntos-y-arrastre-trans3ptosyarrastre_01.jpg",
+      "bellmaq-8-transportador-3-puntos-y-arrastre-trans3ptosyarrastre_02.jpg",
+      "bellmaq-8-transportador-3-puntos-y-arrastre-trans3ptosyarrastre_03.jpg"
+    ],
+    "descripcion": "No cuenta con descripcion en la pagina web"
+  },
+  {
+    "nombre": "Rastra doble acción y tiro excéntrico",
+    "marca": "Bellmaq",
+    "modelo": "RD120 / RD160 / RD200 / RD240",
+    "categoria": "Rastra",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-9-rastra-doble-accin-y-tiro-excntrico-rastra_dobleaccion_01.jpg",
+      "bellmaq-9-rastra-doble-accin-y-tiro-excntrico-rastra_dobleaccion_02.jpg"
+    ],
+    "descripcion": "Modelos: RD120 / RD160 / RD200 / RD240  Opcional: Discos dentados, Lisos o Mixtos Separación entre discos: 175mm Angulo de corte registrable en 16 puntos según la necesidad del trabajo Limpia discos y Cojinetes de fricción."
+  },
+  {
+    "nombre": "Cincel CL-700",
+    "marca": "Bellmaq",
+    "modelo": "CL-700",
+    "categoria": "Cincel",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-10-cincel-cl-700-cincel_01.jpg"
+    ],
+    "descripcion": "Modelos:"
+  },
+  {
+    "nombre": "Aporcador",
+    "marca": "Bellmaq",
+    "modelo": "Aporcador",
+    "categoria": "Aporcador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-11-aporcador-aporcador_01-1.jpg",
+      "bellmaq-11-aporcador-aporcador_02.jpg"
+    ],
+    "descripcion": "Chasis en bastidor único tubular 100 x 100 x 6mm con acoplamiento para 3 puntos Ruedas con Regulación de profundidad con doble rodamiento de cajas oscilantes Timones de alta resistencia construído en pieza única de 1” (25mm) extendiblehasta 2,10mts. con rejas regulables en grados."
+  },
+  {
+    "nombre": "Rastra doble acción y tiro excéntrico",
+    "marca": "Bellmaq",
+    "modelo": "RD120 / RD160 / RD200 / RD240",
+    "categoria": "Rastra",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-12-rastra-doble-accin-y-tiro-excntrico-rastra_dobleaccion_01.jpg",
+      "bellmaq-12-rastra-doble-accin-y-tiro-excntrico-rastra_dobleaccion_02.jpg"
+    ],
+    "descripcion": "Modelos: RD120 / RD160 / RD200 / RD240"
+  },
+  {
+    "nombre": "Cincel CL-700",
+    "marca": "Bellmaq",
+    "modelo": "CL-700",
+    "categoria": "Cincel",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-13-cincel-cl-700-cincel_01.jpg"
+    ],
+    "descripcion": "Modelos:"
+  },
+  {
+    "nombre": "Subsolador",
+    "marca": "Bellmaq",
+    "modelo": "SR500 / SR300",
+    "categoria": "Subsolador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-14-subsolador-subsolador_01.jpg"
+    ],
+    "descripcion": "Modelos: SR500 y SR300"
+  },
+  {
+    "nombre": "Vibrocultivador VR210",
+    "marca": "Bellmaq",
+    "modelo": "VR210",
+    "categoria": "Vibrocultivador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-15-vibrocultivador-vr210-vibrocultivador_01.jpg",
+      "bellmaq-15-vibrocultivador-vr210-vibrocultivador_02.jpg"
+    ],
+    "descripcion": "Chasis en bastidor único tubular 100 x 100 x 6mm con acoplamiento para 3 puntos"
+  },
+  {
+    "nombre": "Alomador AL200",
+    "marca": "Bellmaq",
+    "modelo": "AL200",
+    "categoria": "Alomador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-16-alomador-al200-alomador_frutilla_091.jpg"
+    ],
+    "descripcion": "No cuenta con descripcion en la pagina web"
+  },
+  {
+    "nombre": "Arado",
+    "marca": "Bellmaq",
+    "modelo": "3 Rejas 12\"",
+    "categoria": "Arado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-17-arado-arado_01.jpg",
+      "bellmaq-17-arado-arado_02.jpg"
+    ],
+    "descripcion": "3 Rejas de 12”"
+  },
+  {
+    "nombre": "Desmalezadora parquera",
+    "marca": "Bellmaq",
+    "modelo": "Parquera",
+    "categoria": "Desmalezadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-18-desmalezadora-parquera-desmalezparquera_01.jpg",
+      "bellmaq-18-desmalezadora-parquera-desmalezparquera_02.jpg",
+      "bellmaq-18-desmalezadora-parquera-desmalezparquera_03.jpg"
+    ],
+    "descripcion": "Ancho de corte: 1800mm."
+  },
+  {
+    "nombre": "Desmalezadora 3 puntos y arrastre",
+    "marca": "Bellmaq",
+    "modelo": "3 puntos y arrastre",
+    "categoria": "Desmalezadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-19-desmalezadora-3-puntos-y-arrastre-desmalez3ptosyarrsatre_01.jpg",
+      "bellmaq-19-desmalezadora-3-puntos-y-arrastre-desmalez3ptosyarrsatre_02.jpg",
+      "bellmaq-19-desmalezadora-3-puntos-y-arrastre-desmalez3ptosyarrsatre_03.jpg",
+      "bellmaq-19-desmalezadora-3-puntos-y-arrastre-desmalez3ptosyarrsatre_04.jpg",
+      "bellmaq-19-desmalezadora-3-puntos-y-arrastre-desmalez3ptosyarrsatre_05.jpg"
+    ],
+    "descripcion": "Kit de arrastre adaptable sobre máquina para 3 Puntos"
+  },
+  {
+    "nombre": "Niveladora",
+    "marca": "Bellmaq",
+    "modelo": "Liviana",
+    "categoria": "Niveladora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-20-niveladora-niveladora_01.jpg"
+    ],
+    "descripcion": "Niveladora liviana con sistema anclaje para 3 puntos"
+  },
+  {
+    "nombre": "Hoyadora",
+    "marca": "Bellmaq",
+    "modelo": "3 puntos",
+    "categoria": "Hoyadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-21-hoyadora-hoyadora_01.jpg"
+    ],
+    "descripcion": "Sistema de anclaje para 3 puntos"
+  },
+  {
+    "nombre": "Carro volcador",
+    "marca": "Bellmaq",
+    "modelo": "UPN 100",
+    "categoria": "Carro",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-22-carro-volcador-acoplado_01.jpg",
+      "bellmaq-22-carro-volcador-acoplado_02.jpg",
+      "bellmaq-22-carro-volcador-acoplado_03.jpg",
+      "bellmaq-22-carro-volcador-acoplado_04.jpg"
+    ],
+    "descripcion": "Chasis construído con UPN 100"
+  },
+  {
+    "nombre": "Tanque",
+    "marca": "Bellmaq",
+    "modelo": "Tanque",
+    "categoria": "Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "bellmaq-23-tanque-tanque_01.jpg",
+      "bellmaq-23-tanque-tanque_02.jpg",
+      "bellmaq-23-tanque-tanque_03.jpg"
+    ],
+    "descripcion": "No cuenta con descripcion en la pagina web"
+  },
+  {
+    "nombre": "Acoplado tanques con Cajón",
+    "marca": "Belen",
+    "modelo": "3000L a 10000L",
+    "categoria": "Acoplado Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-1acoplado-tanques-con-cajn-acoplado_tanque_para_combustible_04_f.png"
+    ],
+    "descripcion": "Acoplado tanque abulonado con 1 cajón lateral chico  Modelos Disponibles 3000 L 4000 L 5000 L 6000 L 8000 L 10000 L"
+  },
+  {
+    "nombre": "Acoplado tanque Full",
+    "marca": "Belen",
+    "modelo": "3000L",
+    "categoria": "Acoplado Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-2acoplado-tanque-full-acoplado_tanque_para_combustible_03_f.png"
+    ],
+    "descripcion": "Acoplado tanque Con baulera, depósito de agua superior de fibra de 750 L o plástico de 900 L y cajones laterales  Modelos Disponibles 3000 L Chasis de 3.80 metros - Tanque abulonado al chasis"
+  },
+  {
+    "nombre": "Acoplado tanques especial",
+    "marca": "Belen",
+    "modelo": "2000L a 6000L",
+    "categoria": "Acoplado Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-3acoplado-tanques-especial-acoplado_tanque_para_combustible_05_f.png"
+    ],
+    "descripcion": "Acoplado tanque para combustible especial con depósito plástico de agua delantero de 750L con 1 cajón lateral chico  Modelos Disponibles 2000 L 3000 L 4000 L 5000 L 6000 L"
+  },
+  {
+    "nombre": "Acoplado tanques especial con baulera",
+    "marca": "Belen",
+    "modelo": "2000L a 6000L",
+    "categoria": "Acoplado Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-4acoplado-tanques-especial-con-baulera-acoplado_tanque_para_combustible_06_f.png"
+    ],
+    "descripcion": "Acoplado tanque para combustible especial con baulera trasera. Tanque abulonado al chasis  Modelos Disponibles 2000 L 3000 L 4000 L 5000 L 6000 L"
+  },
+  {
+    "nombre": "Acoplado tanques 1500 L",
+    "marca": "Belen",
+    "modelo": "1500L",
+    "categoria": "Acoplado Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-5acoplado-tanques-1500-l-acoplado_tanque_para_combustible_07_f_c.png"
+    ],
+    "descripcion": "Acoplado tanque para combustible chico. tanque abulonado al chasis  Modelos Disponibles 1500 L"
+  },
+  {
+    "nombre": "Acoplado tanque Full",
+    "marca": "Belen",
+    "modelo": "2000L a 4000L",
+    "categoria": "Acoplado Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "descripcion": "Acoplado tanque con baulera trasera, depósito plástico delantero de agua de 750 L y cajones laterales.  Modelos Disponibles 2000 L 3000 L 4000 L"
+  },
+  {
+    "nombre": "Acoplado tolva con arco 22",
+    "marca": "Belen",
+    "modelo": "22Tn",
+    "categoria": "Acoplado Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-6acoplado-tolva-con-arco-22-zzz1_tolva_c_arco_01_f.png"
+    ],
+    "descripcion": "Acoplado tolva con arco 22 Toneladas  Modelos Disponibles 22 Tn"
+  },
+  {
+    "nombre": "Full trailer 22 T",
+    "marca": "Belen",
+    "modelo": "22Tn",
+    "categoria": "Trailer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-8full-trailer-22-t-sem_y_fer_03_f.png"
+    ],
+    "descripcion": "Full trailer | 22 Tn | Divisorio al medio | Destape rápido | Baulera trasera y delantera | Divisorio al medio Protegido en su interior con pintura Epoxi Doble boquilla, guardabarros, luces | Sin fin de 5,00 m de largo (diámetro 200 mm) c /multiplicador  Modelos Disponibles 22 Tn"
+  },
+  {
+    "nombre": "Acoplado Semillas y Fertilizantes 22 T",
+    "marca": "Belen",
+    "modelo": "22Tn",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-9acoplado-semillas-y-fertilizantes-22-t-sem_y_fer_01_f.png"
+    ],
+    "descripcion": "Acoplado semillas y fertilizante con destape rápido. Divisorio al medio, Doble boquilla, Sin fin de 5.00 m de largo (diámetro 200mm) c/ multiplicador, pintura epoxi con guardabarros  Modelos Disponibles 22 Tn"
+  },
+  {
+    "nombre": "Acoplado Semillas y Fertilizantes 8/10/14",
+    "marca": "Belen",
+    "modelo": "8/10/14Tn",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-10acoplado-semillas-y-fertilizantes-8-10-14-sem_y_fer_02_f.png"
+    ],
+    "descripcion": "Acoplado semillas y fertilizante con destape rápido. Divisorio al medio, Doble boquilla, Sin fin de 4.80 m de largo (diámetro 160mm) c/ multiplicador, pintura epoxi con guardabarros  Modelos Disponibles 8 Tn 10 Tn 14 Tn"
+  },
+  {
+    "nombre": "Full trailer 14 T",
+    "marca": "Belen",
+    "modelo": "14Tn",
+    "categoria": "Trailer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-11full-trailer-14-t-sem_y_fer_04_f.png"
+    ],
+    "descripcion": "Full trailer | 14 Tn | Destape rápido | Divisorio al medio | Baulera trasera y delantera | Protegido en su interior con pintura Epoxi | Doble boquilla, guardabarros, luces | Sin fin de 4,80 m de largo (diámetro 160 mm)  Modelos Disponibles 14 Tn"
+  },
+  {
+    "nombre": "Chasis con tanque de fibra",
+    "marca": "Belen",
+    "modelo": "3000L a 10000L",
+    "categoria": "Chasis",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-12chasis-con-tanque-de-fibra-tanque_agua_01_f.png"
+    ],
+    "descripcion": "Acoplado Tanque de Fibra Mod. 3000 L-6000 L- 8000 L-10000 L En 2 Ejes | Con Plataforma atrás y adelante con 1 cajón chico Con tanc Mod. 75C En 2 Ejes con 1 caja  Modelos Disponibles 3000 L 6000 L 8000 L 10000 L"
+  },
+  {
+    "nombre": "Chasis con tanque de plástico",
+    "marca": "Belen",
+    "modelo": "Chasis",
+    "categoria": "Chasis",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-13chasis-con-tanque-de-plstico-tanque_agua_02_f.png"
+    ],
+    "descripcion": ""
+  },
+  {
+    "nombre": "Acoplado De 8 a 10 Tn",
+    "marca": "Belen",
+    "modelo": "8 a 10 Tn",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-14acoplado-de-8-a-10-tn-playos_rurales_01_f.png"
+    ],
+    "descripcion": "Acoplado playos rurales. Piso antideslizante 1/8. Puertas laterales volcables  Modelos Disponibles 8 Tn 9 Tn 10 Tn"
+  },
+  {
+    "nombre": "Acoplado De 3 a 4 Tn",
+    "marca": "Belen",
+    "modelo": "3 a 4 Tn",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-15acoplado-de-3-a-4-tn-playos_rurales_02_f-1.png"
+    ],
+    "descripcion": "Acoplado playos rurales. Piso antideslizante 1/8. Puertas laterales volvables  Modelos Disponibles 3 Tn 4 Tn"
+  },
+  {
+    "nombre": "Acoplado De 2 Tn",
+    "marca": "Belen",
+    "modelo": "2 Tn",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-16acoplado-de-2-tn-playos_rurales_03_f.png"
+    ],
+    "descripcion": "Acoplado playos rurales. Piso antideslizante 1/8. Puerta trasera volcable  Modelos Disponibles 2 Tn"
+  },
+  {
+    "nombre": "Carretón con rampa",
+    "marca": "Belen",
+    "modelo": "4/6/8 Tn",
+    "categoria": "Carretón",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-17carretn-con-rampa-carreton_01_f.png"
+    ],
+    "descripcion": "Acoplado carretón con rampa  Modelos Disponibles 4 Tn 6 Tn 8 Tn"
+  },
+  {
+    "nombre": "Acoplado vaquero",
+    "marca": "Belen",
+    "modelo": "3 a 6 animales",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-18acoplado-vaquero-vaquero_01_f.png"
+    ],
+    "descripcion": "Tipo balancín con lanza regulable Mod. 3 a 4 animales | Mod. 5 a 6 animales Puerta trasera (doble acción)  Modelos Disponibles 3 a 4 animales 5 a 6 animales"
+  },
+  {
+    "nombre": "Acoplado Especial",
+    "marca": "Belen",
+    "modelo": "Especial",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-19acoplado-especial-acoplado_especial_01_f.png"
+    ],
+    "descripcion": "Acoplado Tipo balancín c/lanza regulable Mod. 3,5 m de largo x 1,8 m de ancho x 2 m de altos"
+  },
+  {
+    "nombre": "Acoplado Hidráulico trasero tipo batea",
+    "marca": "Belen",
+    "modelo": "4/6/8 Tn",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-20hidrulico-trasero-tipo-batea-acoplado_volcador_01_f.png"
+    ],
+    "descripcion": "Acoplado volcador hidráulico trasero. con baranda trasera volcable  Modelos Disponibles 4 Tn 6 Tn 8 Tn"
+  },
+  {
+    "nombre": "Acoplado Hidráulico bilateral",
+    "marca": "Belen",
+    "modelo": "4/6/8 Tn",
+    "categoria": "Acoplado",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-21acoplado-hidrulico-bilateral-acoplado_volcador_02_f.png",
+      "belen-22acoplado-hidrulico-bilateral-acoplado_volcador_03_f.png"
+    ],
+    "descripcion": "Acoplado volcador hidráulico bilateral. con puertas laterales volcables  Modelos Disponibles 4 Tn 6 Tn 8 Tn"
+  },
+  {
+    "nombre": "Volcador manual",
+    "marca": "Belen",
+    "modelo": "Manual",
+    "categoria": "Volcador",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "descripcion": ""
+  },
+  {
+    "nombre": "Pala hidráulica",
+    "marca": "Belen",
+    "modelo": "B. 2000",
+    "categoria": "Pala",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-23pala-hidrulica-pala_hidraulica_f.png"
+    ],
+    "descripcion": "Pala hidráulica con descarga trasera. Mod. B. 2000 con rejas laterales y gato con cilindro hidráulico incorporado"
+  },
+  {
+    "nombre": "Tanque Aéreo",
+    "marca": "Belen",
+    "modelo": "3000L a 15000L",
+    "categoria": "Tanque",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "belen-24tanque-areo-tanque_aereo_01_f.png"
+    ],
+    "descripcion": "Tanques aéreos con pata de apoyo. construido con chapa estampada de 1/8  Modelos Disponibles 3000 L 4000 L 5000 L 6000 L 8000 L 10000 L 15000 L"
+  },
+  {
+    "nombre": "BATEAS VOLCADORAS",
+    "marca": "Comofra",
+    "modelo": "8 y 12 Tn",
+    "categoria": "Batea",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "comfra-1bateas-volcadoras-batea-comofra-isometrica-calco-web.png",
+      "comfra-1bateas-volcadoras-batea-volcadora-75-comofra-web.png"
+    ],
+    "descripcion": "Estas bateas volcadoras de 8 y 12 toneladas están diseñadas para el manejo y transporte eficiente de una variedad de productos, ya sean secos, húmedos, livianos o pesados. Son prácticas y versátiles, ofreciendo comodidad y durabilidad con un costo muy satisfactorio, lo cual las convierte en una excelente inversión para realizar trabajos con el máximo rendimiento.  Están construidas completamente en chapa de acero al carbono y cuentan con una caja de carga tipo semi-monocasco reforzada con laterales envolventes. Su chasis reforzado, de estructura simple y resistente, está elaborado en chapa estampada de gran robustez y rigidez, brindando una larga vida útil y resistencia en las condiciones de trabajo más exigentes.  El enganche con rótula oscilante proporciona mayor seguridad en el transporte, y el portón trasero está diseñado también para apertura tipo libro, aportando flexibilidad en la descarga. La ubicación del eje cerca del centro de gravedad transfiere parte del peso a la barra de tiro del tractor, lo que es indispensable para mantener la estabilidad durante el transporte.  Sistema de ejes: ofrece opciones de rodado (11L16), (275/80 x 22,5), (385/65 x 22,5), y (400/60 x 22,5). En configuración de un solo eje, se incluye rodado 750 x 16 dual o 275/80 x 22,5.  Sistema hidráulico: equipado con un cilindro telescópico de 4 o 5 etapas que permite elevar la batea a un ángulo superior a 45°, facilitando la descarga completa y rápida de materiales."
+  },
+  {
+    "nombre": "Tolva par semillas  y Fertilizantes",
+    "marca": "Comofra",
+    "modelo": "Semillas y Fertilizantes",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "comfra-2tolva-par-semillas-y-fertilizantes-tolva-semillera-comofra-26000-isometrica-con-calco-web1.png"
+    ],
+    "descripcion": "Estas tolvas fueron diseñada para el manejo y trasporte de semillas y fertilizante a granel. Se utilizan principalmente para completar la tareas de siembra, ya que facilita la carga, traslado y descarga de semillas y fertilizantes.  Son prácticas y versátiles, ofrecen comodidad y durabilidad con un costo altamente satisfactorio, una excelente inversión para realizar los trabajos y obtener los máximos beneficios.  Construídas completamente en chapa de acero al carbono, abulonadas en su totalidad, chasis reforzado con una estructura simple y resistente totalmente construido con chapa estampada de gran robustez y rigidez."
+  },
+  {
+    "nombre": "Tolva Autodescargable",
+    "marca": "Comofra",
+    "modelo": "INNOVA",
+    "categoria": "Tolva",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "comfra-3tolva-autodescargable-autod-main.webp"
+    ],
+    "descripcion": "El acoplado Autodescargable modelo INNOVA en todas sus capacidades, posee una longitud de la Caja de Cereal de 5.900 mm, esto facilita el transporte en carretones y disminuye el radio de giro. El abulonado de la mayor parte de sus componentes permite lograr una mejor absorción de esfuerzos y una mejor terminación a la unidad. La elección de neumáticos de igual dimensión logra una mejor compactación del suelo. Tubo de descarga de 450 mm., permite una rápida descarga. Cuchilla de descarga con mando hidráulico. Sistema basculante en eje delantero permite copiar las irregularidades del terreno logrando una excelente transitabilidad y estabilidad. Confiable en el giro y en el transporte de la unidad al utilizar aro giratorio a bolitas. Lanza con registro en altura para compensar el uso de diferentes neumáticos (23.1.30, 28L26, 24.5.32). Punta de lanza rebatible, permite ahorro de espacio."
+  },
+  {
+    "nombre": "MIXER HORIZONTAL 16 m3.",
+    "marca": "Comofra",
+    "modelo": "16 m3",
+    "categoria": "Mixer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "comfra-4mixer-horizontal-16-m3-ferthorizontalbanner.webp"
+    ],
+    "descripcion": "Reducido costo de mantenimiento. Fácil operación. Facilidad para circular en espacios reducidos. Puntas de ejes abulonadas. Gato hidráulico. Balanza trasera tipo taco y delantera punta enganche. Eje perfil grey 180. Reducido costo de mantenimiento. Fácil operación. Carga mas repartida sobre los ejes. Puntas de eje abulonadas con celda incorporada. Eje perfil grey 160. Giro mediante plato a bolas. Punta de enganche amortiguado."
+  },
+  {
+    "nombre": "MIXER HORIZONTAL 10 m3.",
+    "marca": "Comofra",
+    "modelo": "10 m3",
+    "categoria": "Mixer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "comfra-5mixer-horizontal-10-m3-mixerh-10-prod.webp"
+    ],
+    "descripcion": "Reducido costo de mantenimiento. Fácil operación. Facilidad para circular en espacios reducido. Balanza tipo cilíndrica entre la caja y el chasis. Eje Palanquilla 3″ SAE 1045. Intercambiabilidad entre 1eje balancín. Fácil operación. Facilidad para circular en espacios reducido y terrenos ondulados. Mas económico. Balanza tipo cilíndrica entre la caja y el chasis. Eje tipo balancín. Intercambiabilidad entre 1 eje – balancín."
+  },
+  {
+    "nombre": "Mixers Verticales",
+    "marca": "Comofra",
+    "modelo": "SF/V1B, SF/V1, SF/V2",
+    "categoria": "Mixer",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "comfra-6mixers-verticales-mixer-vertical-comofra-web.png"
+    ],
+    "descripcion": "MODELOS Modelo SF/V1B Modelo SF/V1 10 m3. Modelo SF/V1 14 m3. Modelo SF/V2 25 m3. Este Mixer Vertical,  ha sido diseñado para desmenuzar silaje picado largo, rollos enteros de heno de hasta 1,80 metros de diámetro, y fardos prismáticos de heno de hasta 2,6 metros de largo. También mezcla y distribuye alimentos húmedos o secos para ganado bovino, porcino, caprino, avícola, entre otros. Entre sus características se incluyen:  Heno desmenuzado o molido. Silajes de maiz, sorgo y pastura. Forraje picado fino o largo. Semillas de algodón y hez de malta. Granos secos o húmedos, molidos, partidos o enteros."
+  },
+  {
+    "nombre": "sembradora-fertilizadora PRECISA-MAX",
+    "marca": "Giorgi",
+    "modelo": "PRECISA-MAX",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-1-sembradora-fertilizadora-precisa-max-precisa-max1-1.webp",
+      "giorgi-1-sembradora-fertilizadora-precisa-max-precisa-max1.webp",
+      "giorgi-1-sembradora-fertilizadora-precisa-max-precisa-max2.webp",
+      "giorgi-1-sembradora-fertilizadora-precisa-max-precisa-max4.webp",
+      "giorgi-1-sembradora-fertilizadora-precisa-max-precisa-max5.webp"
+    ],
+    "descripcion": "La sembradora-fertilizadora PRECISA-MAX para semillas gruesas y finas es la evolución de la reconocida Precisa 8000, con nuevas funcionalidades y un diseño completamente renovado que elevan la experiencia de siembra a un nuevo nivel. Su robustez, capacidad operativa y precisión en la implantación la convierten en una herramienta estratégica para optimizar cada jornada de trabajo.  Configuraciones: una extensa gama de combinaciones de cuerpos sembradores, en cantidades y separaciones desde 35 hasta 70 cm."
+  },
+  {
+    "nombre": "Sembradora ARGENTUN-MAX",
+    "marca": "Giorgi",
+    "modelo": "ARGENTUN-MAX",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-2-argentun-max-argentun-max-1.jpg",
+      "giorgi-2-argentun-max-argentun-max.jpg",
+      "giorgi-2-argentun-max-argentun-max1.jpg",
+      "giorgi-2-argentun-max-argentun-max3.jpg",
+      "giorgi-2-argentun-max-argentun-max7-1.jpg",
+      "giorgi-2-argentun-max-argentun-max8.jpg"
+    ],
+    "descripcion": "ARGENTUN-MAX es el prototipo de la nueva sembradora-fertilizadora de pliegue frontal para semillas gruesas. Diseñada para ofrecer mayor capacidad, eficiencia operativa y precisión de implantación, redefine el concepto de sembradoras front-folding del mercado, incorporando tecnología de vanguardia en un chasis robusto y ágil para el transporte. La máquina que vino a completar la gama de soluciones en siembra de GIORGI.  Ventajas: Alerones con neumáticos delanteros y traseros montados en paralelogramos articulados. Cuerpos sembradores de diseño actualizado. Chasis central con estructura reforzada y pliegue frontal, que garantiza un equilibrio perfecto de peso y gran estabilidad durante el transporte.  Configuraciones versátiles: 24 cuerpos sembradores a 52,5 cm, con variantes en 30 a 42 cm y 36 a 35 cm, para adaptarse a distintos tipos de cultivos."
+  },
+  {
+    "nombre": "Sembradora Precisa 8000",
+    "marca": "Giorgi",
+    "modelo": "Precisa 8000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-3-sembradora-precisa-8000-004-gr2h6242-grande-mediano-jpg.webp",
+      "giorgi-3-sembradora-precisa-8000-asb22021-ok-grande-mediano-jpg.webp",
+      "giorgi-3-sembradora-precisa-8000-asb22173-ok-grande-mediano-jpg.webp",
+      "giorgi-3-sembradora-precisa-8000-asba8619-grande-mediano-jpg-1.webp",
+      "giorgi-3-sembradora-precisa-8000-asba8619-grande-mediano-jpg.webp"
+    ],
+    "descripcion": "Órganos del sistema de siembra directa y fertilización ubicados en 3 paralelogramos articulados e independientes.  Ventajas: Funcionamiento autónomo de cada órgano. Regulación puntual de la carga para cada sistema, variando la tensión sobre cada resorte. Regulación rápida de la carga, en el caso de cuchillas delanteras y discos fertilizadores, agregando o quitando topes a los respectivos cilindros hidráulicos que accionan estos conjuntos.  Órganos del sistema de siembra directa y fertilización ubicados en 3 paralelogramos articulados e independientes.  Módulos reducidos"
+  },
+  {
+    "nombre": "Sembradora Precisa 52/40 Sembradora Precisa 90 - 52/40",
+    "marca": "Giorgi",
+    "modelo": "Precisa 52/40 y 90",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-4-sembradora-precisa-52-40-y-sembradora-precisa-90---52-40-aerea-jpg.webp",
+      "giorgi-4-sembradora-precisa-52-40-y-sembradora-precisa-90---52-40-asb81405-scaled.webp",
+      "giorgi-4-sembradora-precisa-52-40-y-sembradora-precisa-90---52-40-precisa-52-40-jpg.webp",
+      "giorgi-4-sembradora-precisa-52-40-y-sembradora-precisa-90---52-40-precisa-52-40a-jpg.webp"
+    ],
+    "descripcion": "SEMBRADORAS – FERTILIZADORAS PARA SEMILLAS GRUESAS Y FINAS Características técnicas: De 1 a 3 módulos de siembra. Las unidades de siembra pueden equiparse con: sistema mecánico (con distribuidores de giro horizontal para semillas calibradas) o distintas marcas y modelos  de sistemas neumáticos (con distribuidores de giro vertical, para semillas no calibradas). Chasis modulares articulados: Optimizan el copiado de los desniveles en los lotes a sembrar. Tolvas de gran capacidad: Ubicadas sobre cada módulo. Distribución uniforme de pesos y cargas.  3 LÍNEAS DE PARALELOGRAMOS INDEPENDIENTES Órganos del sistema de siembra directa y fertilización lateral montados sobre 3 paralelogramos articulados e independientes, ofreciendo un funcionamiento  autónomo tanto de los cuerpos sembradores, como de las cuchillas de corte y los discos fertilizadores.  NUEVO DISEÑO DE CUERPOS SEMBRADORES MÁS COMPACTOS CON CUCHILLAS DELANTERAS Equipadas con los cuerpos de siembra desarrollados para el modelo Precisa 17/70 (y posteriormente instalados en el modelo Precisa 9000). Cuchillas delanteras  incorporadas a los cuerpos sembradores, con novedoso sistema de pivote vertical y horizontal, que poseen un resorte de compresión que se complementa funcionalmente  al resorte principal de cada cuerpo, beneficiando la carga necesaria para un óptimo mantenimiento de la presión sobre el terreno y mejorando la penetración de los órganos  de corte e implante.  VENTAJAS Menor costo de inversión. Menor ancho de transporte. La misma precisión. Accionamientos hidráulicos simplificados: Incorporando las cuchillas de corte a los cuerpos de siembra, se disminuyó la cantidad de cilindros hidráulicos por módulo,  reduciendo los tiempos de respuesta hidráulica en las cabeceras de los lotes, tanto en ascenso como en descenso de sus órganos."
+  },
+  {
+    "nombre": "Sembradora Precisa 70/35 Sembradora Precisa 90 - 70/35",
+    "marca": "Giorgi",
+    "modelo": "Precisa 70/35 y 90",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-5-sembradora-precisa-70-35-sembradora-precisa-90---70-35-20230830_145920-1-scaled.webp",
+      "giorgi-5-sembradora-precisa-70-35-sembradora-precisa-90---70-35-asb80875-ok-scaled.webp",
+      "giorgi-5-sembradora-precisa-70-35-sembradora-precisa-90---70-35-precisa-70-35-jpg.webp"
+    ],
+    "descripcion": "SEMBRADORAS – FERTILIZADORAS PARA SEMILLAS GRUESAS Y FINAS Características técnicas: De 1 a 3 módulos de siembra. Las unidades de siembra pueden equiparse con: sistema mecánico (con distribuidores de giro horizontal para semillas calibradas) o distintas marcas y modelos de sistemas  neumáticos (con distribuidores de giro vertical, para semillas no calibradas). Transmisiones individuales a cada unidad de siembra mediante transmisiones flexibles blindadas (a) o utilizando bloques a 90° (b). Chasis modulares articulados: Optimizan el copiado de los desniveles en los lotes a sembrar. Tolvas de gran capacidad: Ubicadas sobre cada módulo. Distribución uniforme de pesos y cargas. Cuerpos sembradores montados en una sola línea. Dos ejes, independientes entre sí, bajan y suben todos los cuerpos para sembrar a separación 35 cm. Accionando uno de los  ejes, ascienden y descienden sólo el 50% para siembras a separación 70 cm, sin necesidad de reubicarlos.CUERPOS SEMBRADORES Y CUCHILLAS DELANTERAS:  INDEPENDIENTES Órganos del sistema de siembra directa y fertilización lateral montados sobre 3 paralelogramos articulados e independientes, ofreciendo un funcionamiento autónomo tanto  de los cuerpos sembradores, como de las cuchillas de corte y los discos fertilizadores.  NUEVO DISEÑO DE CUERPOS SEMBRADORES MÁS COMPACTOS CON CUCHILLAS DELANTERAS: LA MISMA PRECISIÓN EN SIEMBRA. Equipadas con los cuerpos de siembra desarrollados para el modelo Precisa 17/70 (y posteriormente instalados en el modelo Precisa 9000). Cuchillas delanteras incorporadas  a los cuerpos sembradores, con novedoso sistema de pivote vertical y horizontal, que poseen un resorte de compresión que se complementa funcionalmente al resorte principal  de cada cuerpo, beneficiando la carga necesaria para un óptimo mantenimiento de la presión sobre el terreno y mejorando la penetración de los órganos de corte e implante.  VENTAJAS"
+  },
+  {
+    "nombre": "Sembradora Precisa 9000",
+    "marca": "Giorgi",
+    "modelo": "Precisa 9000",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-6-sembradora-precisa-9000-asb81222-ok-scaled-1.webp",
+      "giorgi-6-sembradora-precisa-9000-asb81222-ok-scaled.webp",
+      "giorgi-6-sembradora-precisa-9000-asb81243-ok-scaled.webp",
+      "giorgi-6-sembradora-precisa-9000-asb81287-ok-scaled.webp",
+      "giorgi-6-sembradora-precisa-9000-precisa-9000-jpg.webp"
+    ],
+    "descripcion": "NUEVO DISEÑO DE CUERPOS SEMBRADORES MÁS COMPACTOS CON CUCHILLAS DELANTERAS: LA MISMA PRECISIÓN EN SIEMBRA. Equipadas con los cuerpos de siembra desarrollados para el modelo Precisa 17/70. Cuchillas delanteras incorporadas a los cuerpos sembradores, con novedoso sistema de pivote vertical y  horizontal, que poseen un resorte de compresión que se complementa funcionalmente al resorte principal de cada cuerpo, beneficiando la carga necesaria para un óptimo mantenimiento de la  presión sobre el terreno y mejorando la penetración de los órganos de corte e implante.De 1 a 4 módulos de siembra. Consultar por otras configuraciones. Las unidades de siembra pueden equiparse con: sistema mecánico (con distribuidores de giro horizontal para semillas calibradas) o distintas marcas y modelos de sistemas neumáticos (con  distribuidores de giro vertical, para semillas no calibradas). Accionamientos hidráulicos simplificados: Incorporando las cuchillas de corte a los cuerpos de siembra, se disminuyó la cantidad de cilindros hidráulicos por módulo, reduciendo los tiempos de  respuesta hidráulica en las cabeceras de los lotes, tanto en ascenso como en descenso de sus órganos. Chasis modulares articulados: Optimizan el copiado de los desniveles en los lotes a sembrar. Tolvas de gran capacidad: Ubicadas sobre cada módulo. Distribución uniforme de pesos y cargas. Con lanza para trabajo. La ubicación de los cuerpos de siembra puede regularse a pedido.Ventajas La misma precisión en siembra. Menor ancho de transporte. Nuevo diseño de cuerpos sembradores con cuchillas delanteras: más compactos."
+  },
+  {
+    "nombre": "Sembradora Precisa AP 80",
+    "marca": "Giorgi",
+    "modelo": "Precisa AP 80",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-7-sembradora-precisa-ap-80-1-precisa-ap-80-1.png",
+      "giorgi-7-sembradora-precisa-ap-80-2-1.png",
+      "giorgi-7-sembradora-precisa-ap-80-precisa-80-jpg.webp",
+      "giorgi-7-sembradora-precisa-ap-80-precisa-ap-80-jpg.webp"
+    ],
+    "descripcion": "PLANTADORAS – FERTILIZADORAS"
+  },
+  {
+    "nombre": "Sembradora Precisa AD 90",
+    "marca": "Giorgi",
+    "modelo": "Precisa AD 90",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-8-sembradora-precisa-ad-90-2-1.png",
+      "giorgi-8-sembradora-precisa-ad-90-3.png",
+      "giorgi-8-sembradora-precisa-ad-90-4-1.png",
+      "giorgi-8-sembradora-precisa-ad-90-xsam_0052b-jpg.webp"
+    ],
+    "descripcion": "Características técnicas:"
+  },
+  {
+    "nombre": "Sembradora Precisa mini",
+    "marca": "Giorgi",
+    "modelo": "Precisa mini",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-9-sembradora-precisa-mini-dscn6700-scaled.webp",
+      "giorgi-9-sembradora-precisa-mini-dscn6716-scaled.webp",
+      "giorgi-9-sembradora-precisa-mini-dscn6775-scaled.webp"
+    ],
+    "descripcion": "PEQUEÑAS SEMBRADORAS DE SEMILLAS GRUESAS, DE ARRASTRE Características técnicas: De 4, 5 y 6 cuerpos Separaciones entre cuerpos: desde 35 cm. hasta 70 cm Las unidades de siembra pueden equiparse con sistema mecánico o neumático. Las tolvas para semillas pueden ser individuales o de mayor capacidad. De fertilización simple (en líneas o lateral) o doble (ambas). Kit de siembra directa compuesto por: cuchillas independientes, ruedas contactadoras, púas y discos tapadores dentados. Neumáticos: 2 de 11 L-16 (10 telas)."
+  },
+  {
+    "nombre": "Sembradora Maxima  Sembradora Maxima Full",
+    "marca": "Giorgi",
+    "modelo": "Maxima / Maxima Full",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-10-sembradora-maxima-sembradora-maxima-fulll-dji_0012-scaled.webp",
+      "giorgi-10-sembradora-maxima-sembradora-maxima-fulll-dji_0229-scaled.webp",
+      "giorgi-10-sembradora-maxima-sembradora-maxima-fulll-img_0174-scaled.webp",
+      "giorgi-10-sembradora-maxima-sembradora-maxima-fulll-img_0386-scaled.webp"
+    ],
+    "descripcion": "SEMBRADORAS – FERTILIZADORAS PARA SEMILLAS FINAS, SOJA Y PASTURAS / SIEMBRA DIRECTA Y CONVENCIONAL Características técnicas: Cuerpos de siembra y cuchillas delanteras: montados en paralelogramos articulados e independientes De 1 a 3 módulos, según cantidad de cuerpos Dos tolvas dobles por módulo (semillas 56% + fertilizante 44%): gran autonomía  Opcional: tolvas para pasturas Transporte longitudinal Equipadas con neumáticos 400/60 x 15,5”  MODELO MÁXIMA 2 trenes de siembra (nuevo diseño de discos abre-surcos desencontrados), de 18 a 56 cuerpos, a separación 19 cm Potencia de tracción: 4 a 5 HP/cuerpo  MODELO MÁXIMA-FULL"
+  },
+  {
+    "nombre": "Sembradora Opti-Max",
+    "marca": "Giorgi",
+    "modelo": "Opti-Max",
+    "categoria": "Sembradora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [
+      "giorgi-11-sembradora-opti-max-b-scaled.webp",
+      "giorgi-11-sembradora-opti-max-c-scaled.webp",
+      "giorgi-11-sembradora-opti-max-opti-max-1-jpg.webp",
+      "giorgi-11-sembradora-opti-max-video-jpg.webp"
+    ],
+    "descripcion": "Características generales: Siembra Directa y Convencional. Simple y Doble Fertilización. Distribuidores de siembra:  Sistema Neumático: Placas dosificadoras de semillas de giro vertical. Sistema Mecánico: Placas dosificadoras de semillas de giro horizontal. Importante despeje en transporte: mejora el traslado. Barral independiente para cuerpos de siembra: permite múltiples combinaciones utilizando el o los mismos chasis. Tolvas Semilleras de gran capacidad: incrementan la autonomía de siembra. Revestidas en su interior con pintura poliuretánica horneada. Tolvas para Simple o Doble Fertilización: Tolvas para doble fertilización (lateral y en líneas) Volcando tabiques: sólo fertilización lateral o sólo fertilización en líneas Revestimientos interiores con pintura poliuretánica horneada. Fondos en chapa de acero inoxidable. Zarandas tamizadoras desmontables. Barral porta accesorios independiente: admite la colocación de cuchillas delanteras regulables y cuerpos fertilizadores independientes con regulación manual en altura (permiten sembrar semillas finas).  Especificaciones técnicas generales"
+  },
+  {
+    "nombre": "FERTILIZADORAS-Control 1424 A/P",
+    "marca": "Yomel",
+    "modelo": "Control 1424 A/P",
+    "categoria": "Fertilizadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "descripcion": "Esparcidora de tres puntos y arrastre de fertilizantes sólidos y granulados, centrífuga, con dos discos rotativos y paletas de acero inoxidable. Tolva de chapa, con toma de fuerza para 540 RPM del tractor. Lona cobertora. Eje simple.  Ancho de Labor: 24 metros Capacidad: 1400 litros Distribuidor: Bidisco Control 1424P: de acople al 3 puntos del tractor Control 1424A: con llantas para neumáticos 11L15 (2)"
+  },
+  {
+    "nombre": "FERTILIZADORAS- RD/RDP 1436",
+    "marca": "Yomel",
+    "modelo": "RD/RDP 1436",
+    "categoria": "Fertilizadora",
+    "esNuevo": true,
+    "anio": null,
+    "ids_imagenes": [],
+    "descripcion": "Fertilizadora de arrastre y tres puntos con sistema dosificador Vibrosystem, que mediante un movimiento excéntrico produce una mínima vibración al sistema dosificador, esto se traduce en una buena uniformidad de dosis y a la vez la vibración actúa como método de remoción del material sin necesidad de otro tipo de removedor.  Distribuidor y bulonería de acero inoxidable, apertura y cierre hidráulico de dosificación desde el comando hidráulico del tractor, que permite dosificar en forma individual a cada uno de los discos distribuidores o los dos al mismo tiempo. Tolva de chapa. Chasis tubular de robusta construcción. Lona cobertora y eje simple.  Ancho de Labor: 36 metros Capacidad: 1400 litros Distribuidor: Bidisco. RDP 1436: de acople al 3 puntos del tractor RD 1436: con llantas para neumáticos11L15 (2)"
+  }
+
 ]

@@ -32,3 +32,6 @@ next-env.d.ts
 
 TODO.txt
 /lib/generated/prisma
+
+# carpetas temporales de data entry
+/temp_data
