@@ -141,32 +141,25 @@ export function Header() {
                 Inicio
               </Link>
               <Link
-                href="/tractores"
+                href={`/${implementosNuevosSection}`}
                 className="text-foreground hover:text-primary"
                 onClick={handleLinkClick}
               >
-                Tractores
+                Implementos Nuevos
               </Link>
               <Link
-                href="/implementos"
-                className="text-foreground hover:text-primary"
-                onClick={handleLinkClick}
-              >
-                Implementos
-              </Link>
-              <Link
-                href="/repuestos"
-                className="text-foreground hover:text-primary"
-                onClick={handleLinkClick}
-              >
-                Repuestos
-              </Link>
-              <Link
-                href="/usados"
+                href={`/${implementosUsadosSection}`}
                 className="text-foreground hover:text-primary"
                 onClick={handleLinkClick}
               >
                 Usados
+              </Link>
+              <Link
+                href={`/${repuestosSection}`}
+                className="text-foreground hover:text-primary"
+                onClick={handleLinkClick}
+              >
+                Repuestos
               </Link>
               <Link
                 href="/quienes-somos"
@@ -182,7 +175,6 @@ export function Header() {
               >
                 Sucursales
               </Link>
-
               <Link
                 href="/contacto"
                 className="text-foreground hover:text-primary"
