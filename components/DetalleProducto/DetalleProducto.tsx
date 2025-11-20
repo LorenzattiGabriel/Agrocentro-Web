@@ -45,33 +45,43 @@ export default function DetalleProducto({ producto, urlCatalogo, recomendados }:
 
             <div className="flex flex-col items-center col-span-2 md:col-span-1 gap-4">
                 <div className="relative w-full aspect-square">
-                    {producto.ids_imagenes.map((img, index) => (
-                        <img
-                            key={index}
-                            src={img}
-                            alt={`${producto.nombre} - imagen ${index + 1}`}
-                            className={`absolute inset-0 w-full h-full object-contain rounded-lg bg-white shadow-sm transition-opacity duration-300 ${
-                                index === currentImageIndex ? "opacity-100" : "opacity-0"
-                            }`}
-                        />
-                    ))}
-                    {producto.ids_imagenes.length > 1 && (
+                    {producto.ids_imagenes.length > 0 ? (
                         <>
-                            <button
-                                onClick={prevImage}
-                                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors cursor-pointer z-10"
-                                aria-label="Imagen anterior"
-                            >
-                                <ChevronLeft className="h-6 w-6" />
-                            </button>
-                            <button
-                                onClick={nextImage}
-                                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors cursor-pointer z-10"
-                                aria-label="Siguiente imagen"
-                            >
-                                <ChevronRight className="h-6 w-6" />
-                            </button>
+                            {producto.ids_imagenes.map((img, index) => (
+                                <img
+                                    key={index}
+                                    src={img || "/placeholder.svg"}
+                                    alt={`${producto.nombre} - imagen ${index + 1}`}
+                                    className={`absolute inset-0 w-full h-full object-contain rounded-lg bg-white shadow-sm transition-opacity duration-300 ${
+                                        index === currentImageIndex ? "opacity-100" : "opacity-0"
+                                    }`}
+                                />
+                            ))}
+                            {producto.ids_imagenes.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={prevImage}
+                                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors cursor-pointer z-10"
+                                        aria-label="Imagen anterior"
+                                    >
+                                        <ChevronLeft className="h-6 w-6" />
+                                    </button>
+                                    <button
+                                        onClick={nextImage}
+                                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-2 rounded-full transition-colors cursor-pointer z-10"
+                                        aria-label="Siguiente imagen"
+                                    >
+                                        <ChevronRight className="h-6 w-6" />
+                                    </button>
+                                </>
+                            )}
                         </>
+                    ) : (
+                        <img
+                            src="/placeholder.svg"
+                            alt={`${producto.nombre} - imagen no disponible`}
+                            className="w-full h-full object-contain rounded-lg bg-white shadow-sm"
+                        />
                     )}
                 </div>
                 {/* Thumbnails */}

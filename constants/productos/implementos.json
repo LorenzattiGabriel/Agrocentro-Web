@@ -881,7 +881,9 @@
     "categoria": "Acoplado Tanque",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "belen-2acoplado-tanque-full-acoplado_tanque_para_combustible_03_f.png"
+    ],
     "descripcion": "Acoplado tanque con baulera trasera, depósito plástico delantero de agua de 750 L y cajones laterales.  Modelos Disponibles 2000 L 3000 L 4000 L"
   },
   {
@@ -1072,7 +1074,9 @@
     "categoria": "Volcador",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "belen-20hidrulico-trasero-tipo-batea-acoplado_volcador_01_f.png"
+    ],
     "descripcion": ""
   },
   {
@@ -1347,7 +1351,9 @@
     "categoria": "Fertilizadora",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "yomel-control-1424-fertilizadora.png"
+    ],
     "descripcion": "Esparcidora de tres puntos y arrastre de fertilizantes sólidos y granulados, centrífuga, con dos discos rotativos y paletas de acero inoxidable. Tolva de chapa, con toma de fuerza para 540 RPM del tractor. Lona cobertora. Eje simple.  Ancho de Labor: 24 metros Capacidad: 1400 litros Distribuidor: Bidisco Control 1424P: de acople al 3 puntos del tractor Control 1424A: con llantas para neumáticos 11L15 (2)"
   },
   {
@@ -1357,7 +1363,9 @@
     "categoria": "Fertilizadora",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": [],
+    "ids_imagenes": [
+      "yomel-rdp-1436-fertilizadora.png"
+    ],
     "descripcion": "Fertilizadora de arrastre y tres puntos con sistema dosificador Vibrosystem, que mediante un movimiento excéntrico produce una mínima vibración al sistema dosificador, esto se traduce en una buena uniformidad de dosis y a la vez la vibración actúa como método de remoción del material sin necesidad de otro tipo de removedor.  Distribuidor y bulonería de acero inoxidable, apertura y cierre hidráulico de dosificación desde el comando hidráulico del tractor, que permite dosificar en forma individual a cada uno de los discos distribuidores o los dos al mismo tiempo. Tolva de chapa. Chasis tubular de robusta construcción. Lona cobertora y eje simple.  Ancho de Labor: 36 metros Capacidad: 1400 litros Distribuidor: Bidisco. RDP 1436: de acople al 3 puntos del tractor RD 1436: con llantas para neumáticos11L15 (2)"
   }
 
