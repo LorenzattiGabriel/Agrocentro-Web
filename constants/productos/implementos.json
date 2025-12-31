@@ -102,12 +102,11 @@
     "categoria": "Tolva",
     "esNuevo": false,
     "anio": null,
-    "ids_imagenes": ["8.-Tolva-semillera-(1).jpg"],
+    "ids_imagenes": [
+      "8.-Tolva-semillera-(1).jpg"
+    ],
     "descripcion": "Optimiza la aplicación de tus semillas con esta Tolva semillera de 7 toneladas. Equipada con un chimango inoculador, garantiza una distribución uniforme y eficiente para tus cultivos. Características: Capacidad 7 Toneladas | Chimango con inoculador."
-  }
-
-
-,
+  },
   {
     "nombre": "Tolva autodescargable",
     "marca": "Ascanelli",
@@ -115,7 +114,9 @@
     "categoria": "Tolva",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": ["1.-Tolva-autodescargable.png"],
+    "ids_imagenes": [
+      "1.-Tolva-autodescargable.png"
+    ],
     "descripcion": "Tolva autodescargable - marca Ascanelli - modelo Magnum + 24 toneladas - Capacidad Lts.: 29600. Capacidad Tn: 24. Potencia Requerida HP: 120. Diámetro Tubo Descarga mm.: 450. Rodados Alta Flotación: 4 23.1 - 30 ( 16 Telas). Ejes: Dos ejes, 4 ruedas, robusto eje trasero con perfil Grey. Eje delantero, avantrén con aro giratorio de doble bolilla, mazas en baño de aceite. Sistema de descarga: Sinfín barredor y sinfín elevador cementados y balanceados electrónicamente. Accionamiento por TDF (540 rpm), con caja escuadra en baño de aceite con engranajes cónicos para el funcionamiento simultáneo de los sinfines. Tiempo de descarga: 2.5 minutos. Sistema hidráulico: Comando hidráulico para la apertura/cierre de la guillotina, el plegado del tubo. Descarga por gravedad: Compuerta inferior de descarga ultra-rápida, con batea volcable en su totalidad hacia ambos laterales (permite la descarga por gravedad en apenas 45 segundos). Chasis: De estructura extra-resistente, chasis principal tubular. Composición de cuba general abulonada, enfocada en la exportación, reduciendo tensiones y flexibilizando el comportamiento del implemento frente a esfuerzos. Accesorios: Cobertor de lona accionado desde el piso (con cierre total). Instalación eléctrica con luces de posición, giro, stop y reflector en tubo de descarga. paragolpes plegable. Opcionales - Balanza Electrónica: Con puntas de ejes desmontables y celdas sobre el eje trasero. -Boquilla Giratoria: Exclusivo sistema de boquilla superior giratoria hidráulica para orientar la descarga. - Tubo Oscilante: Sistema de inclinación de tubo completo, por accionamiento hidráulico, ganando despeje del pico a la pisada de rueda y reduciendo la altura de descarga para embolsado principalmente. - Tubo Descarga 500 mm. Enlace: https://ascanellisa.com.ar/tolva-autodescargable-magnum24/"
   },
   {
@@ -164,80 +165,10 @@
     "categoria": "Grúa",
     "esNuevo": true,
     "anio": null,
-    "ids_imagenes": ["5.-Grúa-eco---marca-Fabrinor.jpg"],
+    "ids_imagenes": [
+      "5.-Grúa-eco---marca-Fabrinor.jpg"
+    ],
     "descripcion": "Grúa eco - marca Fabrinor - 1200kg. Con gancho giratorio y percha."
-  },
-  {
-    "nombre": "Tolva para semillas y fertilizantes",
-    "marca": "Comofra",
-    "modelo": "Quantum AT/SF 26.000",
-    "categoria": "Tolva",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": ["6.-Tolva-para-semillas-y-fertilizantes.png"],
-    "descripcion": "Tolva para semillas y fertilizantes - marca Comofra - modelo Quantum AT/SF 26.000. Capacidad 26000litros. Peso engomado: 3700kg. Carga máxima: 21000kg. Capacidad: 26m3. Diámetro tubo desc. 190mm. Longitud tubo desc. 6000mm. Tiempo descarga aproximada 65min. Accionamiento: motor hidráulico 200cm3 con multiplicación. Bomba hidr. Requerida 60 l/min. Eje tubular estándar para camión con tensores regulares. Rodado de llanta dual 8.25 x 22.5. Rodado para cubierta 275/89-22.5 - 285/80-22.5 - 295/80-22.5. Rodado opcional llanta 11.75x22.5 | P/ cubierta 385/80-22.5. Chasis perfil de chapa SAE 1010 esp. 6.35mm. Tolva construida en chapa negra estampada, divisorio central, doble boquilla. Kit luces reglamentaria de serie. Tubo descarga multiuso diámetro 190mm | Motor hidráulico 200cm3 | kit mangueras hidráulicas | tubo telescopio. Equipamiento lona sistema destape rápido | tanque para inoculador | guardabarros | tanque para agua."
-  },
-  {
-    "nombre": "Rastrillo hilerador",
-    "marca": "Don Baron",
-    "modelo": "14 estrellas ancho regulable",
-    "categoria": "Rastrillo",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "7.-Rastrillo-hilerador---marca-Don-Baron-(1).jpg",
-      "7.-Rastrillo-hilerador---marca-Don-Baron-(2).jpg"
-    ],
-    "descripcion": "Rastrillo hilerador - marca Don Baron - 14 estrellas ancho regulable. Chasis construido con tubos estructurales de sección cuadrada. Estrellas de 1,60 mts de diámetro con mazas montadas sobre rodamientos cónicos 30206 enfrentados, con retenes y guardapolvos lo que asegura una mayor vida útil del conjunto. Poseen 40 dientes, cada uno en acero SAE 1070 tratado térmicamente, de diseño exclusivo que favorece un acarreo suave y limpio del forraje, aún en terrenos irregulares gracias a su diseño de alto despeje logrando rendimiento y calidad en la recolección del mismo. Las estrellas se elevan y bajan hidráulicamente 350 mm, trabándose en la posición de transporte, cuidando la vida útil de los resortes. Cilindro hidráulico para apertura trasera. Horquillas delanteras con freno a disco. Rodados: cuatro llantas 17’’x 7’’ (se entrega sin neumáticos)."
-  },
-  {
-    "nombre": "Batea volcadora",
-    "marca": "Comofra",
-    "modelo": "BV 15m3 / 18 tn",
-    "categoria": "Batea",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "8.-Batea-volcadora---marca-Comofra-(1).jpg",
-      "8.-Batea-volcadora---marca-Comofra-(2).jpg"
-    ],
-    "descripcion": "Batea volcadora - marca Comofra - modelo BV 15m3 / 18 tn. Estas bateas volcadoras de 8 y 12 toneladas están diseñadas para el manejo y transporte eficiente de una variedad de productos, ya sean secos, húmedos, livianos o pesados. Están construidas completamente en chapa de acero al carbono y cuentan con una caja de carga tipo semi-monocasco reforzada con laterales envolventes. Su chasis reforzado, de estructura simple y resistente, está elaborado en chapa estampada de gran robustez y rigidez, brindando una larga vida útil y resistencia en las condiciones de trabajo más exigentes. El enganche con rótula oscilante proporciona mayor seguridad en el transporte, y el portón trasero está diseñado también para apertura tipo libro, aportando flexibilidad en la descarga. La ubicación del eje cerca del centro de gravedad transfiere parte del peso a la barra de tiro del tractor, lo que es indispensable para mantener la estabilidad durante el transporte. Sistema de ejes: ofrece opciones de rodado (11L16), (275/80 x 22,5), (385/65 x 22,5), y (400/60 x 22,5). En configuración de un solo eje, se incluye rodado 750 x 16 dual o 275/80 x 22,5. Sistema hidráulico: equipado con un cilindro telescópico de 4 o 5 etapas que permite elevar la batea a un ángulo superior a 45°, facilitando la descarga completa y rápida de materiales. VENTAJAS: Bajo costo de mantenimiento - Fácil operación - Alta resistencia para una mayor vida útil."
-  },
-  {
-    "nombre": "Desmalezadora",
-    "marca": "Bernardin",
-    "modelo": "1500",
-    "categoria": "Desmalezadora",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "9.-Desmalezadora-(1).webp",
-      "9.-Desmalezadora-(2).webp"
-    ],
-    "descripcion": "Desmalezadora - marca Bernardin - modelo 1500. Con cilindro hidráulico y toma de fuerza - corte 1.50mts."
-  },
-  {
-    "nombre": "Transportador de rollos",
-    "marca": "Bernardin",
-    "modelo": "TR 8000",
-    "categoria": "Transportador",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": ["10.-Transportador-de-rollos---marca-Bernardin.jpg"],
-    "descripcion": "Transportador de rollos - marca Bernardin - modelo TR 8000. Chasis construido íntegramente en estructura tubular de caños reforzados, con horquilla regulable entre púas y largueros tubulares regulables al tamaño del rollo que se va a movilizar. Accionado con sistema hidráulico provisto de 4 pistones de 4”, uno eleva la púa de recolección y el otro provee el movimiento de inclinación de la planchada de carga y dos colocados en ambos ejes trabajando como descarga de rollos. Este producto es diseñado para el uso de un solo operario, el cual acciona todas las funciones del transportador de rollos desde el tractor obteniendo mayor velocidad de recolección y menor consumo de combustible. Características: - Capacidad: 6 rollos de 1,85 m. - Largo 11,50 m - Ancho 2,80 m. - Altura 2,60 m. - Peso 1.800 kg. - Pie de apoyo: 3.000 kg. - Rodado: 400/ 60 x 15,5. (18 telas de alta flotación sin cubiertas con ejes independientes) - Sistema de seguridad anti descarga en caños estructurales: si. - Barras protectoras de rodado: si. - Opcional: accesorio para rollos de menor tamaño."
-  },
-  {
-    "nombre": "Pluma para bolsones",
-    "marca": "Bernardin",
-    "modelo": "3000kg",
-    "categoria": "Pluma",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "11.-Pluma-para-bolsones---marca-Bernardin-(1).jpg",
-      "11.-Pluma-para-bolsones---marca-Bernardin-(2).jpg"
-    ],
-    "descripcion": "Pluma para bolsones - marca Bernardin. Construida totalmente en acero plegado, brazo de carga cerrado 3mts. De largo, extendido 6mts. Capacidad máxima de carga: 3000kg (brazo de carga cerrado), 1000kg (Brazo extendido). Giro de carga: 165 Grados. Posee un cilindro hidráulico de 4 pulgadas para levante, un cilindro hidráulico de 3 pulgadas para giro y un cilindro hidráulico de 2 ½ pulgadas para el brazo telescópico."
   },
   {
     "nombre": "Tractor John Deere 6110M (ficticio)",
@@ -247,13 +178,12 @@
     "esNuevo": false,
     "anio": 2004,
     "ids_imagenes": [
-        "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
-        "https://www.publicdomainpictures.net/pictures/690000/velka/tractor-agricultural-vehicle-photo.jpg",
-        "https://www.publicdomainpictures.net/pictures/690000/velka/tractor-agricultural-vehicle-photo-1747162109mwL.jpg"
+      "https://www.publicdomainpictures.net/pictures/520000/velka/tractor-trekker-john-deere-boer.jpg",
+      "https://www.publicdomainpictures.net/pictures/690000/velka/tractor-agricultural-vehicle-photo.jpg",
+      "https://www.publicdomainpictures.net/pictures/690000/velka/tractor-agricultural-vehicle-photo-1747162109mwL.jpg"
     ],
     "descripcion": "(Producto ficticio) Presentamos el tractor John Deere 6110M, un verdadero caballo de batalla del año 2004 que combina la legendaria durabilidad de John Deere con la potencia necesaria para enfrentar las tareas más exigentes del campo. Con su motor de 110 HP, este tractor ha sido un pilar en explotaciones agrícolas de todo el mundo, demostrando una y otra vez su fiabilidad y rendimiento superior en una amplia variedad de aplicaciones, desde la siembra hasta la cosecha y el transporte.\n\nEste modelo está equipado con la reconocida transmisión PowerQuad Plus 16/16, que ofrece cambios de marcha suaves y eficientes, permitiendo al operador adaptar la velocidad y el par motor a las condiciones del terreno con una facilidad inigualable. La cabina, diseñada pensando en la comodidad del operador, proporciona una excelente visibilidad y un entorno de trabajo ergonómico, reduciendo la fatiga durante las largas jornadas de trabajo y maximizando la productividad.\n\nA pesar de ser un modelo de 2004, el John Deere 6110M sigue siendo una opción inteligente y económica para agricultores que buscan un equipo robusto, fácil de mantener y con un rendimiento probado. Es la herramienta perfecta para quienes valoran la potencia, la simplicidad y la confianza que solo una marca como John Deere puede ofrecer. Características: Potencia 110 HP | Transmisión PowerQuad Plus 16/16 | Año 2004."
-  }
-,
+  },
   {
     "nombre": "Embolsadora de granos",
     "marca": "Ascanelli",
@@ -1104,79 +1034,6 @@
     "descripcion": "Tanques aéreos con pata de apoyo. construido con chapa estampada de 1/8  Modelos Disponibles 3000 L 4000 L 5000 L 6000 L 8000 L 10000 L 15000 L"
   },
   {
-    "nombre": "BATEAS VOLCADORAS",
-    "marca": "Comofra",
-    "modelo": "8 y 12 Tn",
-    "categoria": "Batea",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "comfra-1bateas-volcadoras-batea-comofra-isometrica-calco-web.png",
-      "comfra-1bateas-volcadoras-batea-volcadora-75-comofra-web.png"
-    ],
-    "descripcion": "Estas bateas volcadoras de 8 y 12 toneladas están diseñadas para el manejo y transporte eficiente de una variedad de productos, ya sean secos, húmedos, livianos o pesados. Son prácticas y versátiles, ofreciendo comodidad y durabilidad con un costo muy satisfactorio, lo cual las convierte en una excelente inversión para realizar trabajos con el máximo rendimiento.  Están construidas completamente en chapa de acero al carbono y cuentan con una caja de carga tipo semi-monocasco reforzada con laterales envolventes. Su chasis reforzado, de estructura simple y resistente, está elaborado en chapa estampada de gran robustez y rigidez, brindando una larga vida útil y resistencia en las condiciones de trabajo más exigentes.  El enganche con rótula oscilante proporciona mayor seguridad en el transporte, y el portón trasero está diseñado también para apertura tipo libro, aportando flexibilidad en la descarga. La ubicación del eje cerca del centro de gravedad transfiere parte del peso a la barra de tiro del tractor, lo que es indispensable para mantener la estabilidad durante el transporte.  Sistema de ejes: ofrece opciones de rodado (11L16), (275/80 x 22,5), (385/65 x 22,5), y (400/60 x 22,5). En configuración de un solo eje, se incluye rodado 750 x 16 dual o 275/80 x 22,5.  Sistema hidráulico: equipado con un cilindro telescópico de 4 o 5 etapas que permite elevar la batea a un ángulo superior a 45°, facilitando la descarga completa y rápida de materiales."
-  },
-  {
-    "nombre": "Tolva par semillas  y Fertilizantes",
-    "marca": "Comofra",
-    "modelo": "Semillas y Fertilizantes",
-    "categoria": "Tolva",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "comfra-2tolva-par-semillas-y-fertilizantes-tolva-semillera-comofra-26000-isometrica-con-calco-web1.png"
-    ],
-    "descripcion": "Estas tolvas fueron diseñada para el manejo y trasporte de semillas y fertilizante a granel. Se utilizan principalmente para completar la tareas de siembra, ya que facilita la carga, traslado y descarga de semillas y fertilizantes.  Son prácticas y versátiles, ofrecen comodidad y durabilidad con un costo altamente satisfactorio, una excelente inversión para realizar los trabajos y obtener los máximos beneficios.  Construídas completamente en chapa de acero al carbono, abulonadas en su totalidad, chasis reforzado con una estructura simple y resistente totalmente construido con chapa estampada de gran robustez y rigidez."
-  },
-  {
-    "nombre": "Tolva Autodescargable",
-    "marca": "Comofra",
-    "modelo": "INNOVA",
-    "categoria": "Tolva",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "comfra-3tolva-autodescargable-autod-main.webp"
-    ],
-    "descripcion": "El acoplado Autodescargable modelo INNOVA en todas sus capacidades, posee una longitud de la Caja de Cereal de 5.900 mm, esto facilita el transporte en carretones y disminuye el radio de giro. El abulonado de la mayor parte de sus componentes permite lograr una mejor absorción de esfuerzos y una mejor terminación a la unidad. La elección de neumáticos de igual dimensión logra una mejor compactación del suelo. Tubo de descarga de 450 mm., permite una rápida descarga. Cuchilla de descarga con mando hidráulico. Sistema basculante en eje delantero permite copiar las irregularidades del terreno logrando una excelente transitabilidad y estabilidad. Confiable en el giro y en el transporte de la unidad al utilizar aro giratorio a bolitas. Lanza con registro en altura para compensar el uso de diferentes neumáticos (23.1.30, 28L26, 24.5.32). Punta de lanza rebatible, permite ahorro de espacio."
-  },
-  {
-    "nombre": "MIXER HORIZONTAL 16 m3.",
-    "marca": "Comofra",
-    "modelo": "16 m3",
-    "categoria": "Mixer",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "comfra-4mixer-horizontal-16-m3-ferthorizontalbanner.webp"
-    ],
-    "descripcion": "Reducido costo de mantenimiento. Fácil operación. Facilidad para circular en espacios reducidos. Puntas de ejes abulonadas. Gato hidráulico. Balanza trasera tipo taco y delantera punta enganche. Eje perfil grey 180. Reducido costo de mantenimiento. Fácil operación. Carga mas repartida sobre los ejes. Puntas de eje abulonadas con celda incorporada. Eje perfil grey 160. Giro mediante plato a bolas. Punta de enganche amortiguado."
-  },
-  {
-    "nombre": "MIXER HORIZONTAL 10 m3.",
-    "marca": "Comofra",
-    "modelo": "10 m3",
-    "categoria": "Mixer",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "comfra-5mixer-horizontal-10-m3-mixerh-10-prod.webp"
-    ],
-    "descripcion": "Reducido costo de mantenimiento. Fácil operación. Facilidad para circular en espacios reducido. Balanza tipo cilíndrica entre la caja y el chasis. Eje Palanquilla 3″ SAE 1045. Intercambiabilidad entre 1eje balancín. Fácil operación. Facilidad para circular en espacios reducido y terrenos ondulados. Mas económico. Balanza tipo cilíndrica entre la caja y el chasis. Eje tipo balancín. Intercambiabilidad entre 1 eje – balancín."
-  },
-  {
-    "nombre": "Mixers Verticales",
-    "marca": "Comofra",
-    "modelo": "SF/V1B, SF/V1, SF/V2",
-    "categoria": "Mixer",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "comfra-6mixers-verticales-mixer-vertical-comofra-web.png"
-    ],
-    "descripcion": "MODELOS Modelo SF/V1B Modelo SF/V1 10 m3. Modelo SF/V1 14 m3. Modelo SF/V2 25 m3. Este Mixer Vertical,  ha sido diseñado para desmenuzar silaje picado largo, rollos enteros de heno de hasta 1,80 metros de diámetro, y fardos prismáticos de heno de hasta 2,6 metros de largo. También mezcla y distribuye alimentos húmedos o secos para ganado bovino, porcino, caprino, avícola, entre otros. Entre sus características se incluyen:  Heno desmenuzado o molido. Silajes de maiz, sorgo y pastura. Forraje picado fino o largo. Semillas de algodón y hez de malta. Granos secos o húmedos, molidos, partidos o enteros."
-  },
-  {
     "nombre": "sembradora-fertilizadora PRECISA-MAX",
     "marca": "Giorgi",
     "modelo": "PRECISA-MAX",
@@ -1343,30 +1200,5 @@
       "giorgi-11-sembradora-opti-max-video-jpg.webp"
     ],
     "descripcion": "Características generales: Siembra Directa y Convencional. Simple y Doble Fertilización. Distribuidores de siembra:  Sistema Neumático: Placas dosificadoras de semillas de giro vertical. Sistema Mecánico: Placas dosificadoras de semillas de giro horizontal. Importante despeje en transporte: mejora el traslado. Barral independiente para cuerpos de siembra: permite múltiples combinaciones utilizando el o los mismos chasis. Tolvas Semilleras de gran capacidad: incrementan la autonomía de siembra. Revestidas en su interior con pintura poliuretánica horneada. Tolvas para Simple o Doble Fertilización: Tolvas para doble fertilización (lateral y en líneas) Volcando tabiques: sólo fertilización lateral o sólo fertilización en líneas Revestimientos interiores con pintura poliuretánica horneada. Fondos en chapa de acero inoxidable. Zarandas tamizadoras desmontables. Barral porta accesorios independiente: admite la colocación de cuchillas delanteras regulables y cuerpos fertilizadores independientes con regulación manual en altura (permiten sembrar semillas finas).  Especificaciones técnicas generales"
-  },
-  {
-    "nombre": "FERTILIZADORAS-Control 1424 A/P",
-    "marca": "Yomel",
-    "modelo": "Control 1424 A/P",
-    "categoria": "Fertilizadora",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "yomel-control-1424-fertilizadora.png"
-    ],
-    "descripcion": "Esparcidora de tres puntos y arrastre de fertilizantes sólidos y granulados, centrífuga, con dos discos rotativos y paletas de acero inoxidable. Tolva de chapa, con toma de fuerza para 540 RPM del tractor. Lona cobertora. Eje simple.  Ancho de Labor: 24 metros Capacidad: 1400 litros Distribuidor: Bidisco Control 1424P: de acople al 3 puntos del tractor Control 1424A: con llantas para neumáticos 11L15 (2)"
-  },
-  {
-    "nombre": "FERTILIZADORAS- RD/RDP 1436",
-    "marca": "Yomel",
-    "modelo": "RD/RDP 1436",
-    "categoria": "Fertilizadora",
-    "esNuevo": true,
-    "anio": null,
-    "ids_imagenes": [
-      "yomel-rdp-1436-fertilizadora.png"
-    ],
-    "descripcion": "Fertilizadora de arrastre y tres puntos con sistema dosificador Vibrosystem, que mediante un movimiento excéntrico produce una mínima vibración al sistema dosificador, esto se traduce en una buena uniformidad de dosis y a la vez la vibración actúa como método de remoción del material sin necesidad de otro tipo de removedor.  Distribuidor y bulonería de acero inoxidable, apertura y cierre hidráulico de dosificación desde el comando hidráulico del tractor, que permite dosificar en forma individual a cada uno de los discos distribuidores o los dos al mismo tiempo. Tolva de chapa. Chasis tubular de robusta construcción. Lona cobertora y eje simple.  Ancho de Labor: 36 metros Capacidad: 1400 litros Distribuidor: Bidisco. RDP 1436: de acople al 3 puntos del tractor RD 1436: con llantas para neumáticos11L15 (2)"
   }
-
 ]
