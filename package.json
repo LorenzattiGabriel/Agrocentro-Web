@@ -8,7 +8,8 @@
     "lint": "next lint",
     "start": "next start",
     "migrate:images": "tsx scripts/migrate-images-to-storage.ts",
-    "test:crud": "tsx scripts/test-crud-backoffice.ts"
+    "test:crud": "tsx scripts/test-crud-backoffice.ts",
+    "test:crud:repuesto": "tsx scripts/test-crud-repuesto.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
