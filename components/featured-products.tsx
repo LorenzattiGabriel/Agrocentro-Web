@@ -2,11 +2,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { implementosNuevosSection, implementosUsadosSection } from "@/constants/website-sections"
+import { implementosNuevosSection } from "@/constants/website-sections"
 import getProductsBySection from "./SectionCatalogo/utils/getDemoData"
 import { ArrowRightIcon } from "lucide-react"
 import { ImplementoNuevo } from "@/types/Producto"
-import { implementosNuevosImgsPath } from "@/constants/images-paths"
+import ProductImage from "@/components/ProductImage"
 
 const urlNuevos = `/${implementosNuevosSection}`;
 const urlContacto = "/contacto";
@@ -28,10 +28,13 @@ export async function FeaturedProducts() {
           {featuredProducts.map((product) => (
             <Card key={product.id} className="group overflow-hidden flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="relative overflow-hidden">
-                <img
-                  src={product.ids_imagenes[0] ? `${implementosNuevosImgsPath}/${product.ids_imagenes[0]}` : "/placeholder.svg"}
+                <ProductImage
+                  src={product.ids_imagenes[0]}
                   alt={product.nombre}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                  productType="implementos"
+                  isNew={true}
+                  loading="eager"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/50 to-transparent" />
                 <Badge
