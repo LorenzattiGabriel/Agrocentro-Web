@@ -1,6 +1,7 @@
 "use client";
 
 import { Implemento, ImplementoUsado, Producto, Repuesto } from "@/types/Producto"
+import { getFirstImageUrl } from "@/lib/utils/images"
 
 type Props = {
     producto: Producto
@@ -31,7 +32,7 @@ export default function CardProducto({producto}:Props){
             onClick={()=>window.open(`/${producto.section}/${producto.id}`, "_self")} 
         >
             <img 
-                src={producto.ids_imagenes[0]} 
+                src={getFirstImageUrl(producto.ids_imagenes)} 
                 alt={producto.nombre} 
                 className="w-full h-56 object-cover bg-white"
                 loading="lazy"
