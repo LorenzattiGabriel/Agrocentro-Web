@@ -181,14 +181,16 @@ export function getSupabaseImageUrl(imagePath: string): string {
     .replace(/^\//, '')                      // Quitar / inicial si queda
     .replace(/^public\//, '')                // Quitar public/ si existe
 
-  // Si no tiene carpeta y no es una ruta válida, no podemos convertirla
-  if (!relativePath || relativePath === cleanedPath.replace(/^\//, '')) {
-    // Intentar con lo que tengamos
+  // Si ya tiene la estructura de carpetas correcta, usarla directamente
+  // Esto evita duplicación de carpetas
+  if (hasFolder(relativePath)) {
+    const supabaseUrl = buildSupabaseUrl(relativePath)
+    return supabaseUrl || PLACEHOLDER_IMAGE
   }
 
-  // Construir URL de Supabase
-  const supabaseUrl = buildSupabaseUrl(relativePath)
-  return supabaseUrl || PLACEHOLDER_IMAGE
+  // Si no tiene carpeta, no podemos saber dónde buscar
+  // Retornar placeholder (no intentar adivinar)
+  return PLACEHOLDER_IMAGE
 }
 
 /**
