@@ -3,6 +3,10 @@
 import { useState, useEffect } from "react"
 import { getImageUrl, getSupabaseImageUrl } from "@/lib/utils/images"
 
+// ============================================================================
+// TYPE DEFINITIONS
+// ============================================================================
+
 interface ProductImageProps {
   src: string | null | undefined
   alt: string
@@ -13,11 +17,33 @@ interface ProductImageProps {
   isNew?: boolean
 }
 
+enum LoadAttempt {
+  LOCAL = 0,
+  SUPABASE = 1,
+  FAILED = 2
+}
+
+// ============================================================================
+// COMPONENT
+// ============================================================================
+
 /**
- * Componente de imagen con fallback automático OPTIMIZADO:
- * 1. Intenta cargar desde /images/products/ LOCAL (más rápido)
- * 2. Si falla, intenta desde Supabase Storage
- * 3. Si falla, muestra /placeholder.svg
+ * Componente de imagen con fallback inteligente:
+ * 
+ * Estrategia de carga:
+ * 1. Intenta la URL principal (local o Supabase según contexto)
+ * 2. Si falla, intenta Supabase Storage como fallback
+ * 3. Si todo falla, muestra placeholder
+ * 
+ * @example
+ * ```tsx
+ * <ProductImage 
+ *   src="imagen.png" 
+ *   alt="Producto" 
+ *   productType="implementos"
+ *   isNew={true}
+ * />
+ * ```
  */
 export default function ProductImage({ 
   src, 
@@ -28,44 +54,34 @@ export default function ProductImage({
   productType,
   isNew
 }: ProductImageProps) {
-  const [currentSrc, setCurrentSrc] = useState<string>(getImageUrl(src, productType, isNew))
-  const [attemptCount, setAttemptCount] = useState(0)
-  const [hasError, setHasError] = useState(false)
+  const [currentSrc, setCurrentSrc] = useState<string>(
+    getImageUrl(src, productType, isNew)
+  )
+  const [attemptCount, setAttemptCount] = useState<LoadAttempt>(LoadAttempt.LOCAL)
 
-  // Reset when src changes
+  // Reset state when source changes
   useEffect(() => {
     const newSrc = getImageUrl(src, productType, isNew)
     setCurrentSrc(newSrc)
-    setAttemptCount(0)
-    setHasError(false)
+    setAttemptCount(LoadAttempt.LOCAL)
   }, [src, productType, isNew])
 
-  const handleError = () => {
-    console.log('[ProductImage] Error loading:', currentSrc, 'Attempt:', attemptCount)
-    
-    if (attemptCount === 0) {
-      // Primer fallo (local), intentar Supabase
+  const handleImageError = () => {
+    // Primera falla: intentar Supabase como fallback
+    if (attemptCount === LoadAttempt.LOCAL) {
       const supabaseUrl = getSupabaseImageUrl(src || '')
-      console.log('[ProductImage] Trying Supabase:', supabaseUrl)
       
-      if (supabaseUrl !== currentSrc && supabaseUrl !== '/placeholder.svg') {
-        setAttemptCount(1)
+      if (supabaseUrl && supabaseUrl !== currentSrc && supabaseUrl !== '/placeholder.svg') {
+        setAttemptCount(LoadAttempt.SUPABASE)
         setCurrentSrc(supabaseUrl)
         return
       }
     }
 
-    // Segundo fallo o no hay URL de Supabase válida, mostrar placeholder
-    console.log('[ProductImage] All attempts failed, showing placeholder')
+    // Segunda falla o sin alternativas: mostrar placeholder
+    setAttemptCount(LoadAttempt.FAILED)
     setCurrentSrc('/placeholder.svg')
-    setHasError(true)
     onError?.()
-  }
-
-  const handleLoad = () => {
-    if (attemptCount > 0 || hasError) {
-      console.log('[ProductImage] Successfully loaded:', currentSrc, 'after', attemptCount, 'attempts')
-    }
   }
 
   return (
@@ -74,8 +90,7 @@ export default function ProductImage({
       alt={alt}
       className={className}
       loading={loading}
-      onError={handleError}
-      onLoad={handleLoad}
+      onError={handleImageError}
     />
   )
 }
