@@ -3,61 +3,120 @@
  * Las imágenes nuevas tienen formato: timestamp-random-nombre.png
  */
 function isNewImage(imagePath: string): boolean {
+  const fileName = imagePath.split('/').pop() || ''
   // Las imágenes nuevas tienen timestamp al inicio (números largos)
-  const hasTimestamp = /^\d{13}-[a-z0-9]+-/.test(imagePath.split('/').pop() || '')
+  const hasTimestamp = /^\d{13}-[a-z0-9]+-/.test(fileName) || /^test-\d{13}/.test(fileName)
+  console.log('[isNewImage]', fileName, '→', hasTimestamp)
   return hasTimestamp
 }
 
 /**
  * Convierte una ruta de imagen a la URL completa con detección automática
  * @param imagePath - Ruta de la imagen (puede ser local o de Supabase)
+ * @param productType - Tipo de producto (opcional: 'implementos' o 'repuestos')
+ * @param isNew - Si es nuevo o usado (opcional, solo para implementos)
  * @returns URL completa de la imagen
  */
-export function getImageUrl(imagePath: string | null | undefined): string {
+export function getImageUrl(
+  imagePath: string | null | undefined, 
+  productType?: 'implementos' | 'repuestos',
+  isNew?: boolean
+): string {
+  console.log('[getImageUrl] Input:', imagePath, '| Type:', productType, '| IsNew:', isNew)
+  
   // Si no hay imagen, retornar placeholder
   if (!imagePath) {
+    console.log('[getImageUrl] No image path, using placeholder')
     return '/placeholder.svg'
   }
 
   // Si ya es una URL completa de Supabase, retornarla
   if (imagePath.includes('supabase.co/storage/v1/object/public/product-images/')) {
+    console.log('[getImageUrl] Already Supabase URL')
     return imagePath
   }
 
   // Si ya es una URL completa http/https (pero no de Supabase Storage)
   if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+    console.log('[getImageUrl] External URL')
     return imagePath
   }
 
   // Si comienza con /images/products/, es una imagen LOCAL antigua
   if (imagePath.startsWith('/images/products/')) {
+    console.log('[getImageUrl] Local absolute path')
     return imagePath
   }
 
   // Si comienza con /, es una ruta local absoluta
   if (imagePath.startsWith('/')) {
+    console.log('[getImageUrl] Generic local path')
     return imagePath
   }
 
   // Si comienza con public/, convertir a ruta absoluta local
   if (imagePath.startsWith('public/')) {
-    return '/' + imagePath
+    const localPath = '/' + imagePath
+    console.log('[getImageUrl] Public path →', localPath)
+    return localPath
   }
 
   // Para rutas relativas, detectar si es nueva o antigua
   // Rutas nuevas: "implementos/nuevos/1736137200000-abc123-nombre.png"
   // Rutas antiguas: "nombre-viejo.png" o "marca-modelo.jpg"
   
+  // Si ya incluye la carpeta completa (implementos/nuevos/ o repuestos/)
+  if (imagePath.includes('implementos/') || imagePath.includes('repuestos/')) {
+    if (isNewImage(imagePath)) {
+      // Imagen NUEVA → Supabase Storage
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+      if (supabaseUrl) {
+        const fullUrl = `${supabaseUrl}/storage/v1/object/public/product-images/${imagePath}`
+        console.log('[getImageUrl] New image with path → Supabase:', fullUrl)
+        return fullUrl
+      }
+    }
+    // Imagen antigua con carpeta → Local
+    const localPath = `/images/products/${imagePath}`
+    console.log('[getImageUrl] Old image with path → Local:', localPath)
+    return localPath
+  }
+
+  // Solo nombre de archivo sin carpetas
   if (isNewImage(imagePath)) {
     // Imagen NUEVA del backoffice → Supabase Storage
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     if (supabaseUrl) {
-      return `${supabaseUrl}/storage/v1/object/public/product-images/${imagePath}`
+      // Si tenemos tipo de producto, construir la ruta correcta
+      let fullPath = imagePath
+      if (productType === 'implementos' && isNew !== undefined) {
+        fullPath = `implementos/${isNew ? 'nuevos' : 'usados'}/${imagePath}`
+      } else if (productType === 'repuestos') {
+        fullPath = `repuestos/${imagePath}`
+      }
+      const fullUrl = `${supabaseUrl}/storage/v1/object/public/product-images/${fullPath}`
+      console.log('[getImageUrl] New image (filename only) → Supabase:', fullUrl)
+      return fullUrl
     }
   }
 
-  // Imagen ANTIGUA o sin timestamp → Local
-  return `/images/products/${imagePath}`
+  // Imagen ANTIGUA (solo nombre de archivo) → Intentar construir ruta local
+  if (productType && isNew !== undefined) {
+    let folder = ''
+    if (productType === 'implementos') {
+      folder = isNew ? 'implementos/nuevos' : 'implementos/usados'
+    } else if (productType === 'repuestos') {
+      folder = 'repuestos'
+    }
+    const localPath = `/images/products/${folder}/${imagePath}`
+    console.log('[getImageUrl] Old image (filename only) with context → Local:', localPath)
+    return localPath
+  }
+
+  // Fallback: solo nombre de archivo sin contexto → Buscar en todas las carpetas de implementos/nuevos
+  const localPath = `/images/products/implementos/nuevos/${imagePath}`
+  console.log('[getImageUrl] Old image (filename only) no context → Fallback local:', localPath)
+  return localPath
 }
 
 /**

@@ -394,10 +394,10 @@ export default function EditarProductoPage() {
             {/* Imágenes existentes */}
             {imagenesExistentes.length > 0 && (
               <div>
-                <h3 className="text-sm font-medium mb-3">Imágenes actuales</h3>
+                <h3 className="text-sm font-medium mb-3">Imágenes actuales ({imagenesExistentes.length})</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {imagenesExistentes.map((imagen, index) => (
-                    <div key={index} className="relative aspect-square">
+                    <div key={index} className="relative aspect-square bg-gray-100 rounded-lg">
                       <ProductImage
                         src={imagen}
                         alt={`Imagen ${index + 1}`}
@@ -407,13 +407,26 @@ export default function EditarProductoPage() {
                       <button
                         type="button"
                         onClick={() => removeExistingImage(index)}
-                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600 shadow-lg z-10"
+                        title="Eliminar imagen"
                       >
                         <X className="h-4 w-4" />
                       </button>
+                      {/* Debug info */}
+                      <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-xs p-1 truncate rounded-b-lg">
+                        {imagen.split('/').pop()?.substring(0, 20)}...
+                      </div>
                     </div>
                   ))}
                 </div>
+              </div>
+            )}
+            
+            {/* Si no hay imágenes */}
+            {imagenesExistentes.length === 0 && nuevasImagenesPreview.length === 0 && (
+              <div className="text-center py-8 bg-gray-50 rounded-lg border-2 border-dashed">
+                <p className="text-gray-500">Este producto no tiene imágenes</p>
+                <p className="text-sm text-gray-400 mt-1">Sube al menos una imagen para mejor visualización</p>
               </div>
             )}
 

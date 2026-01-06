@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { getImageUrl, getSupabaseImageUrl } from "@/lib/utils/images"
 
 interface ProductImageProps {
@@ -9,6 +9,8 @@ interface ProductImageProps {
   className?: string
   loading?: "lazy" | "eager"
   onError?: () => void
+  productType?: 'implementos' | 'repuestos'
+  isNew?: boolean
 }
 
 /**
@@ -22,15 +24,30 @@ export default function ProductImage({
   alt, 
   className = "", 
   loading = "lazy",
-  onError 
+  onError,
+  productType,
+  isNew
 }: ProductImageProps) {
-  const [currentSrc, setCurrentSrc] = useState<string>(getImageUrl(src))
+  const [currentSrc, setCurrentSrc] = useState<string>(getImageUrl(src, productType, isNew))
   const [attemptCount, setAttemptCount] = useState(0)
+  const [hasError, setHasError] = useState(false)
+
+  // Reset when src changes
+  useEffect(() => {
+    const newSrc = getImageUrl(src, productType, isNew)
+    setCurrentSrc(newSrc)
+    setAttemptCount(0)
+    setHasError(false)
+  }, [src, productType, isNew])
 
   const handleError = () => {
+    console.log('[ProductImage] Error loading:', currentSrc, 'Attempt:', attemptCount)
+    
     if (attemptCount === 0) {
       // Primer fallo (local), intentar Supabase
       const supabaseUrl = getSupabaseImageUrl(src || '')
+      console.log('[ProductImage] Trying Supabase:', supabaseUrl)
+      
       if (supabaseUrl !== currentSrc && supabaseUrl !== '/placeholder.svg') {
         setAttemptCount(1)
         setCurrentSrc(supabaseUrl)
@@ -39,8 +56,16 @@ export default function ProductImage({
     }
 
     // Segundo fallo o no hay URL de Supabase válida, mostrar placeholder
+    console.log('[ProductImage] All attempts failed, showing placeholder')
     setCurrentSrc('/placeholder.svg')
+    setHasError(true)
     onError?.()
+  }
+
+  const handleLoad = () => {
+    if (attemptCount > 0 || hasError) {
+      console.log('[ProductImage] Successfully loaded:', currentSrc, 'after', attemptCount, 'attempts')
+    }
   }
 
   return (
@@ -50,6 +75,7 @@ export default function ProductImage({
       className={className}
       loading={loading}
       onError={handleError}
+      onLoad={handleLoad}
     />
   )
 }
