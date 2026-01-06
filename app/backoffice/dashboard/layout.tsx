@@ -31,7 +31,7 @@ export default function DashboardLayout({
       const { data: { user } } = await supabase.auth.getUser()
       
       if (!user) {
-        router.push('/admin/login')
+        router.push('/backoffice/login')
         return
       }
 
@@ -44,7 +44,7 @@ export default function DashboardLayout({
 
       if (!profile) {
         await supabase.auth.signOut()
-        router.push('/admin/login')
+        router.push('/backoffice/login')
         return
       }
 
@@ -56,24 +56,24 @@ export default function DashboardLayout({
 
   const handleLogout = async () => {
     await supabase.auth.signOut()
-    router.push("/admin/login")
+    router.push("/backoffice/login")
     router.refresh()
   }
 
   const navigation = [
     {
       name: "Dashboard",
-      href: "/admin/dashboard",
+      href: "/backoffice/dashboard",
       icon: LayoutDashboard,
     },
     {
       name: "Productos",
-      href: "/admin/dashboard/productos",
+      href: "/backoffice/dashboard/productos",
       icon: Package,
     },
     {
       name: "Imágenes",
-      href: "/admin/dashboard/imagenes",
+      href: "/backoffice/dashboard/imagenes",
       icon: ImageIcon,
     },
   ]
@@ -109,7 +109,7 @@ export default function DashboardLayout({
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-white/10">
-            <Link href="/admin/dashboard" className="flex items-center space-x-2">
+            <Link href="/backoffice/dashboard" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary rounded-lg" />
               <span className="font-bold text-lg">Admin Panel</span>
             </Link>

@@ -1,18 +1,22 @@
 "use client"
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
+import { useEffect, useState } from "react"
+import { useRouter, useParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Upload, X } from "lucide-react"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
+import ProductImage from "@/components/ProductImage"
 
-export default function NuevoProductoPage() {
+export default function EditarProductoPage() {
   const router = useRouter()
+  const params = useParams()
+  const productId = params.id as string
   const supabase = createClient()
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [saving, setSaving] = useState(false)
   const [uploadingImages, setUploadingImages] = useState(false)
   const [error, setError] = useState("")
 
@@ -24,10 +28,75 @@ export default function NuevoProductoPage() {
   const [categoria, setCategoria] = useState("")
   const [estado, setEstado] = useState<'nuevo' | 'usado'>('nuevo')
   const [descripcion, setDescripcion] = useState("")
-  const [imagenes, setImagenes] = useState<File[]>([])
-  const [imagenesPreview, setImagenesPreview] = useState<string[]>([])
+  const [imagenesExistentes, setImagenesExistentes] = useState<string[]>([])
+  const [nuevasImagenes, setNuevasImagenes] = useState<File[]>([])
+  const [nuevasImagenesPreview, setNuevasImagenesPreview] = useState<string[]>([])
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Cargar datos del producto
+  useEffect(() => {
+    const loadProducto = async () => {
+      try {
+        // Intentar cargar desde implementos
+        let { data, error } = await supabase
+          .from("implementos")
+          .select("*")
+          .eq("id", productId)
+          .single()
+
+        let tipoProducto: 'implemento' | 'repuesto' = 'implemento'
+
+        // Si no está en implementos, intentar en repuestos
+        if (error || !data) {
+          const result = await supabase
+            .from("repuestos")
+            .select("*")
+            .eq("id", productId)
+            .single()
+          
+          data = result.data
+          error = result.error
+          tipoProducto = 'repuesto'
+        }
+
+        if (error || !data) {
+          throw new Error("Producto no encontrado")
+        }
+
+        // Llenar el formulario
+        setTipo(tipoProducto)
+        setNombre(data.nombre || "")
+        setMarca(data.marca || "")
+        setModelo(data.modelo || "")
+        setCategoria(data.categoria || "")
+        setEstado(data.esNuevo ? 'nuevo' : 'usado')
+        setDescripcion(data.descripcion || "")
+        setImagenesExistentes(data.ids_imagenes || [])
+      } catch (err: any) {
+        setError(err.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadProducto()
+  }, [productId, supabase])
+
+  const getImageUrl = (path: string) => {
+    if (!path) return '/placeholder.svg'
+    if (path.startsWith('http://') || path.startsWith('https://')) return path
+    if (path.startsWith('/')) return path
+    
+    // Intentar Supabase Storage primero
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    if (supabaseUrl) {
+      return `${supabaseUrl}/storage/v1/object/public/product-images/${path}`
+    }
+    
+    // Fallback a local
+    return `/images/products/${path}`
+  }
+
+  const handleNuevasImagenesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || [])
     
     // Validar tipo y tamaño
@@ -43,31 +112,35 @@ export default function NuevoProductoPage() {
       return true
     })
 
-    setImagenes(prev => [...prev, ...validFiles])
+    setNuevasImagenes(prev => [...prev, ...validFiles])
 
     // Crear previews
     validFiles.forEach(file => {
       const reader = new FileReader()
       reader.onloadend = () => {
-        setImagenesPreview(prev => [...prev, reader.result as string])
+        setNuevasImagenesPreview(prev => [...prev, reader.result as string])
       }
       reader.readAsDataURL(file)
     })
   }
 
-  const removeImage = (index: number) => {
-    setImagenes(prev => prev.filter((_, i) => i !== index))
-    setImagenesPreview(prev => prev.filter((_, i) => i !== index))
+  const removeExistingImage = (index: number) => {
+    setImagenesExistentes(prev => prev.filter((_, i) => i !== index))
   }
 
-  const uploadImages = async (): Promise<string[]> => {
-    if (imagenes.length === 0) return []
+  const removeNewImage = (index: number) => {
+    setNuevasImagenes(prev => prev.filter((_, i) => i !== index))
+    setNuevasImagenesPreview(prev => prev.filter((_, i) => i !== index))
+  }
+
+  const uploadNewImages = async (): Promise<string[]> => {
+    if (nuevasImagenes.length === 0) return []
 
     setUploadingImages(true)
     const uploadedPaths: string[] = []
 
     try {
-      for (const file of imagenes) {
+      for (const file of nuevasImagenes) {
         // Generar nombre único
         const timestamp = Date.now()
         const randomStr = Math.random().toString(36).substring(7)
@@ -108,7 +181,7 @@ export default function NuevoProductoPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setLoading(true)
+    setSaving(true)
     setError("")
 
     try {
@@ -117,8 +190,11 @@ export default function NuevoProductoPage() {
         throw new Error("Nombre y marca son obligatorios")
       }
 
-      // Subir imágenes
-      const imagesPaths = await uploadImages()
+      // Subir nuevas imágenes
+      const newImagesPaths = await uploadNewImages()
+
+      // Combinar imágenes existentes con las nuevas
+      const allImages = [...imagenesExistentes, ...newImagesPaths]
 
       // Preparar datos
       const productoData = {
@@ -128,26 +204,50 @@ export default function NuevoProductoPage() {
         categoria: categoria || null,
         descripcion: descripcion || null,
         esNuevo: estado === 'nuevo',
-        ids_imagenes: imagesPaths,
+        ids_imagenes: allImages,
       }
 
-      // Insertar en la tabla correspondiente
+      // Actualizar en la tabla correspondiente
       const table = tipo === 'implemento' ? 'implementos' : 'repuestos'
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from(table)
-        .insert([productoData])
-        .select()
+        .update(productoData)
+        .eq('id', productId)
 
       if (error) throw error
 
       // Redirigir al listado
-      router.push('/admin/dashboard/productos')
+      router.push('/backoffice/dashboard/productos')
       router.refresh()
     } catch (err: any) {
       setError(err.message)
     } finally {
-      setLoading(false)
+      setSaving(false)
     }
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Cargando producto...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error && !nombre) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <p className="text-red-600 mb-4">{error}</p>
+          <Link href="/backoffice/dashboard/productos">
+            <Button>Volver al listado</Button>
+          </Link>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -161,9 +261,9 @@ export default function NuevoProductoPage() {
           </Button>
         </Link>
         <div>
-          <h1 className="text-3xl font-bold">Nuevo Producto</h1>
+          <h1 className="text-3xl font-bold">Editar Producto</h1>
           <p className="text-muted-foreground mt-2">
-            Agrega un nuevo implemento o repuesto al catálogo
+            Modifica la información del producto
           </p>
         </div>
       </div>
@@ -175,36 +275,17 @@ export default function NuevoProductoPage() {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Tipo de producto */}
+        {/* Tipo de producto (solo lectura) */}
         <Card>
           <CardHeader>
             <CardTitle>Tipo de Producto</CardTitle>
             <CardDescription>
-              Selecciona si es un implemento o un repuesto
+              El tipo no puede modificarse después de crear el producto
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex gap-4">
-              <label className="flex items-center space-x-2 cursor-pointer">
-                <input
-                  type="radio"
-                  value="implemento"
-                  checked={tipo === 'implemento'}
-                  onChange={(e) => setTipo(e.target.value as 'implemento')}
-                  className="w-4 h-4"
-                />
-                <span>Implemento</span>
-              </label>
-              <label className="flex items-center space-x-2 cursor-pointer">
-                <input
-                  type="radio"
-                  value="repuesto"
-                  checked={tipo === 'repuesto'}
-                  onChange={(e) => setTipo(e.target.value as 'repuesto')}
-                  className="w-4 h-4"
-                />
-                <span>Repuesto</span>
-              </label>
+            <div className="px-4 py-2 bg-gray-100 rounded-md inline-block">
+              {tipo === 'implemento' ? 'Implemento' : 'Repuesto'}
             </div>
           </CardContent>
         </Card>
@@ -226,7 +307,6 @@ export default function NuevoProductoPage() {
                   onChange={(e) => setNombre(e.target.value)}
                   required
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Ej: Sembradora de precisión"
                 />
               </div>
 
@@ -240,7 +320,6 @@ export default function NuevoProductoPage() {
                   onChange={(e) => setMarca(e.target.value)}
                   required
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Ej: John Deere"
                 />
               </div>
 
@@ -253,7 +332,6 @@ export default function NuevoProductoPage() {
                   value={modelo}
                   onChange={(e) => setModelo(e.target.value)}
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Ej: XYZ-2000"
                 />
               </div>
 
@@ -266,7 +344,6 @@ export default function NuevoProductoPage() {
                   value={categoria}
                   onChange={(e) => setCategoria(e.target.value)}
                   className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Ej: Sembradoras"
                 />
               </div>
 
@@ -284,7 +361,7 @@ export default function NuevoProductoPage() {
                     <option value="usado">Usado</option>
                   </select>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {estado === 'nuevo' ? 'Se guardará en: implementos/nuevos/' : 'Se guardará en: implementos/usados/'}
+                    Las nuevas imágenes se guardarán en: implementos/{estado}/
                   </p>
                 </div>
               )}
@@ -300,7 +377,6 @@ export default function NuevoProductoPage() {
                 onChange={(e) => setDescripcion(e.target.value)}
                 rows={4}
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Descripción detallada del producto..."
               />
             </div>
           </CardContent>
@@ -311,29 +387,58 @@ export default function NuevoProductoPage() {
           <CardHeader>
             <CardTitle>Imágenes</CardTitle>
             <CardDescription>
-              Sube hasta 10 imágenes del producto (máx 5MB cada una)
+              Gestiona las imágenes del producto
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            {/* Preview de imágenes */}
-            {imagenesPreview.length > 0 && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {imagenesPreview.map((preview, index) => (
-                  <div key={index} className="relative aspect-square">
-                    <img
-                      src={preview}
-                      alt={`Preview ${index + 1}`}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => removeImage(index)}
-                      className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
-                    >
-                      <X className="h-4 w-4" />
-                    </button>
-                  </div>
-                ))}
+            {/* Imágenes existentes */}
+            {imagenesExistentes.length > 0 && (
+              <div>
+                <h3 className="text-sm font-medium mb-3">Imágenes actuales</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {imagenesExistentes.map((imagen, index) => (
+                    <div key={index} className="relative aspect-square">
+                      <ProductImage
+                        src={imagen}
+                        alt={`Imagen ${index + 1}`}
+                        className="w-full h-full object-cover rounded-lg"
+                        loading="eager"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeExistingImage(index)}
+                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Nuevas imágenes */}
+            {nuevasImagenesPreview.length > 0 && (
+              <div>
+                <h3 className="text-sm font-medium mb-3">Nuevas imágenes</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {nuevasImagenesPreview.map((preview, index) => (
+                    <div key={index} className="relative aspect-square">
+                      <img
+                        src={preview}
+                        alt={`Nueva ${index + 1}`}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeNewImage(index)}
+                        className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
@@ -343,7 +448,7 @@ export default function NuevoProductoPage() {
                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-primary transition-colors">
                   <Upload className="h-12 w-12 mx-auto text-gray-400 mb-4" />
                   <p className="text-sm text-gray-600">
-                    Haz clic para seleccionar imágenes
+                    Agregar más imágenes
                   </p>
                   <p className="text-xs text-gray-400 mt-1">
                     PNG, JPG, WEBP hasta 5MB
@@ -353,9 +458,8 @@ export default function NuevoProductoPage() {
                   type="file"
                   accept="image/*"
                   multiple
-                  onChange={handleImageChange}
+                  onChange={handleNuevasImagenesChange}
                   className="hidden"
-                  disabled={imagenes.length >= 10}
                 />
               </label>
             </div>
@@ -366,11 +470,11 @@ export default function NuevoProductoPage() {
         <div className="flex gap-4">
           <Button
             type="submit"
-            disabled={loading || uploadingImages}
+            disabled={saving || uploadingImages}
           >
-            {loading ? "Guardando..." : uploadingImages ? "Subiendo imágenes..." : "Guardar Producto"}
+            {saving ? "Guardando..." : uploadingImages ? "Subiendo imágenes..." : "Guardar Cambios"}
           </Button>
-          <Link href="/admin/dashboard/productos">
+          <Link href="/backoffice/dashboard/productos">
             <Button type="button" variant="outline">
               Cancelar
             </Button>

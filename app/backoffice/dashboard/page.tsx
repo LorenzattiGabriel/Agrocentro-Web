@@ -245,7 +245,7 @@ export default async function DashboardPage() {
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <a
-            href="/admin/dashboard/productos/nuevo"
+            href="/backoffice/dashboard/productos/nuevo"
             className="flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-primary hover:bg-primary/5 transition-colors"
           >
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -260,7 +260,7 @@ export default async function DashboardPage() {
           </a>
 
           <a
-            href="/admin/dashboard/productos"
+            href="/backoffice/dashboard/productos"
             className="flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-primary hover:bg-primary/5 transition-colors"
           >
             <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">

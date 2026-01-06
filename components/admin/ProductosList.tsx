@@ -169,7 +169,7 @@ export function ProductosList({ productos }: { productos: Producto[] }) {
                           <Eye className="h-4 w-4" />
                         </Button>
                       </Link>
-                      <Link href={`/admin/dashboard/productos/${producto.id}/editar`}>
+                      <Link href={`/backoffice/dashboard/productos/${producto.id}/editar`}>
                         <Button variant="ghost" size="sm">
                           <Edit className="h-4 w-4" />
                         </Button>

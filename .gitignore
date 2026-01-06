@@ -34,4 +34,5 @@ TODO.txt
 /lib/generated/prisma
 
 # carpetas temporales de data entry
-/temp_data
+/temp_data.env.production
+vercel-env-variables.txt

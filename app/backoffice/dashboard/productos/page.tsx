@@ -36,7 +36,7 @@ export default async function ProductosPage() {
             Gestiona tu catálogo de implementos y repuestos
           </p>
         </div>
-        <Link href="/admin/dashboard/productos/nuevo">
+        <Link href="/backoffice/dashboard/productos/nuevo">
           <Button>
             <Plus className="h-4 w-4 mr-2" />
             Agregar Producto

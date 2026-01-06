@@ -52,7 +52,7 @@ export default function LoginPage() {
         }
 
         console.log('Admin verificado, redirigiendo...')
-        router.push('/admin/dashboard')
+        router.push('/backoffice/dashboard')
         router.refresh()
       }
     } catch (err: any) {
