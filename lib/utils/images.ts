@@ -96,20 +96,17 @@ function buildLocalUrl(path: string): string {
 // ============================================================================
 
 /**
- * Convierte una ruta de imagen a URL completa con estrategia inteligente:
+ * Convierte una ruta de imagen a URL completa.
  * 
- * 1. URLs externas → retornar tal cual
- * 2. Rutas absolutas locales → retornar tal cual
- * 3. Rutas con carpetas (implementos/nuevos/):
- *    - Si tiene timestamp → Supabase Storage
- *    - Si no → Local (/images/products/)
- * 4. Solo nombre de archivo:
- *    - Si tiene timestamp → Supabase Storage (agregar carpeta)
- *    - Si no → Local (agregar carpeta)
+ * ESTRATEGIA SIMPLE:
+ * - Si la ruta tiene carpetas (implementos/, repuestos/) → Supabase Storage
+ * - Si es URL completa → retornar tal cual
+ * - Si empieza con / → ruta local
+ * - Si es solo nombre → placeholder (no debería pasar)
  * 
- * @param imagePath - Ruta de la imagen (puede ser local, de Supabase, o solo nombre)
- * @param productType - Tipo de producto ('implementos' o 'repuestos')
- * @param isNew - Si es nuevo o usado (solo para implementos)
+ * @param imagePath - Ruta de la imagen
+ * @param productType - Tipo de producto (no usado, mantenido por compatibilidad)
+ * @param isNew - Si es nuevo o usado (no usado, mantenido por compatibilidad)
  * @returns URL completa de la imagen
  */
 export function getImageUrl(
@@ -117,40 +114,28 @@ export function getImageUrl(
   productType?: ProductType,
   isNew?: boolean
 ): string {
-  // Validación inicial
+  // Sin imagen → placeholder
   if (!imagePath) return PLACEHOLDER_IMAGE
 
-  // Limpiar URLs malformadas
-  const cleanedPath = cleanMalformedUrl(imagePath)
+  // URL completa (http/https) → usar tal cual
+  if (isFullUrl(imagePath)) return imagePath
 
-  // Casos directos (sin procesamiento)
-  if (isFullUrl(cleanedPath)) return cleanedPath
-  if (cleanedPath.startsWith('/')) return cleanedPath
-  if (cleanedPath.startsWith('public/')) return `/${cleanedPath}`
+  // Ruta absoluta local (/...) → usar tal cual
+  if (imagePath.startsWith('/')) return imagePath
 
-  // Extraer nombre de archivo
-  const fileName = cleanedPath.split('/').pop() || cleanedPath
-  const isNewImg = isNewImage(fileName)
+  // Ruta con public/ → convertir a absoluta
+  if (imagePath.startsWith('public/')) return `/${imagePath}`
 
-  // CASO 1: Ruta ya tiene carpetas (implementos/nuevos/imagen.png)
-  if (hasFolder(cleanedPath)) {
-    if (isNewImg) {
-      const supabaseUrl = buildSupabaseUrl(cleanedPath)
-      if (supabaseUrl) return supabaseUrl
-    }
-    return buildLocalUrl(cleanedPath)
+  // Ruta con estructura de carpetas (implementos/nuevos/, repuestos/, etc)
+  // → CARGAR DESDE SUPABASE
+  if (hasFolder(imagePath)) {
+    const supabaseUrl = buildSupabaseUrl(imagePath)
+    return supabaseUrl || PLACEHOLDER_IMAGE
   }
 
-  // CASO 2: Solo nombre de archivo - necesita carpeta
-  const folder = productType ? buildFolder(productType, isNew) : 'implementos/nuevos'
-  const fullPath = `${folder}/${cleanedPath}`
-
-  if (isNewImg) {
-    const supabaseUrl = buildSupabaseUrl(fullPath)
-    if (supabaseUrl) return supabaseUrl
-  }
-
-  return buildLocalUrl(fullPath)
+  // Solo nombre de archivo sin carpetas → placeholder
+  // (esto no debería pasar si la BD está bien)
+  return PLACEHOLDER_IMAGE
 }
 
 /**
@@ -160,18 +145,23 @@ export function getImageUrl(
  * @returns URL de Supabase Storage
  */
 export function getSupabaseImageUrl(imagePath: string): string {
+  console.log('[getSupabaseImageUrl] INPUT:', imagePath)
+  
   if (!imagePath) return PLACEHOLDER_IMAGE
 
   // Limpiar URLs malformadas
   const cleanedPath = cleanMalformedUrl(imagePath)
+  console.log('[getSupabaseImageUrl] CLEANED:', cleanedPath)
 
   // Si ya es una URL completa de Supabase, retornarla
   if (isFullUrl(cleanedPath) && cleanedPath.includes('supabase.co')) {
+    console.log('[getSupabaseImageUrl] Already Supabase URL')
     return cleanedPath
   }
 
   // Si es una URL completa pero NO de Supabase, no podemos convertirla
   if (isFullUrl(cleanedPath)) {
+    console.log('[getSupabaseImageUrl] External URL, returning placeholder')
     return PLACEHOLDER_IMAGE
   }
 
@@ -180,16 +170,21 @@ export function getSupabaseImageUrl(imagePath: string): string {
     .replace(/^\/images\/products\//, '')  // Quitar prefijo local
     .replace(/^\//, '')                      // Quitar / inicial si queda
     .replace(/^public\//, '')                // Quitar public/ si existe
+  
+  console.log('[getSupabaseImageUrl] RELATIVE PATH:', relativePath)
+  console.log('[getSupabaseImageUrl] HAS FOLDER:', hasFolder(relativePath))
 
   // Si ya tiene la estructura de carpetas correcta, usarla directamente
   // Esto evita duplicación de carpetas
   if (hasFolder(relativePath)) {
     const supabaseUrl = buildSupabaseUrl(relativePath)
+    console.log('[getSupabaseImageUrl] FINAL URL:', supabaseUrl)
     return supabaseUrl || PLACEHOLDER_IMAGE
   }
 
   // Si no tiene carpeta, no podemos saber dónde buscar
   // Retornar placeholder (no intentar adivinar)
+  console.log('[getSupabaseImageUrl] No folder found, returning placeholder')
   return PLACEHOLDER_IMAGE
 }
 

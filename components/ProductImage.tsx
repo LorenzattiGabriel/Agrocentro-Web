@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { getImageUrl, getSupabaseImageUrl } from "@/lib/utils/images"
+import { getImageUrl } from "@/lib/utils/images"
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -17,31 +17,22 @@ interface ProductImageProps {
   isNew?: boolean
 }
 
-enum LoadAttempt {
-  LOCAL = 0,
-  SUPABASE = 1,
-  FAILED = 2
-}
-
 // ============================================================================
 // COMPONENT
 // ============================================================================
 
 /**
- * Componente de imagen con fallback inteligente:
+ * Componente de imagen simplificado:
  * 
- * Estrategia de carga:
- * 1. Intenta la URL principal (local o Supabase según contexto)
- * 2. Si falla, intenta Supabase Storage como fallback
- * 3. Si todo falla, muestra placeholder
+ * 1. Obtiene la URL correcta con getImageUrl
+ * 2. Si falla al cargar → muestra placeholder
+ * 3. Sin fallbacks complicados
  * 
  * @example
  * ```tsx
  * <ProductImage 
- *   src="imagen.png" 
- *   alt="Producto" 
- *   productType="implementos"
- *   isNew={true}
+ *   src="implementos/nuevos/imagen.png" 
+ *   alt="Producto"
  * />
  * ```
  */
@@ -57,31 +48,21 @@ export default function ProductImage({
   const [currentSrc, setCurrentSrc] = useState<string>(
     getImageUrl(src, productType, isNew)
   )
-  const [attemptCount, setAttemptCount] = useState<LoadAttempt>(LoadAttempt.LOCAL)
+  const [hasError, setHasError] = useState(false)
 
   // Reset state when source changes
   useEffect(() => {
     const newSrc = getImageUrl(src, productType, isNew)
     setCurrentSrc(newSrc)
-    setAttemptCount(LoadAttempt.LOCAL)
+    setHasError(false)
   }, [src, productType, isNew])
 
   const handleImageError = () => {
-    // Primera falla: intentar Supabase como fallback
-    if (attemptCount === LoadAttempt.LOCAL) {
-      const supabaseUrl = getSupabaseImageUrl(src || '')
-      
-      if (supabaseUrl && supabaseUrl !== currentSrc && supabaseUrl !== '/placeholder.svg') {
-        setAttemptCount(LoadAttempt.SUPABASE)
-        setCurrentSrc(supabaseUrl)
-        return
-      }
+    if (!hasError) {
+      setHasError(true)
+      setCurrentSrc('/placeholder.svg')
+      onError?.()
     }
-
-    // Segunda falla o sin alternativas: mostrar placeholder
-    setAttemptCount(LoadAttempt.FAILED)
-    setCurrentSrc('/placeholder.svg')
-    onError?.()
   }
 
   return (
