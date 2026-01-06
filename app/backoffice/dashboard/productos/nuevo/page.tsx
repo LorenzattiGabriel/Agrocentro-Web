@@ -154,7 +154,7 @@ export default function NuevoProductoPage() {
     <div className="space-y-6 max-w-4xl">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <Link href="/admin/dashboard/productos">
+        <Link href="/backoffice/dashboard/productos">
           <Button variant="ghost" size="sm">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Volver
