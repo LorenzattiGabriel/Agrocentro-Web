@@ -120,16 +120,20 @@ export default function NuevoProductoPage() {
       // Subir imágenes
       const imagesPaths = await uploadImages()
 
-      // Preparar datos
-      const productoData = {
+      // Preparar datos base
+      const productoDataBase = {
         nombre,
         marca,
         modelo: modelo || null,
         categoria: categoria || null,
         descripcion: descripcion || null,
-        esNuevo: estado === 'nuevo',
         ids_imagenes: imagesPaths,
       }
+
+      // Agregar campos específicos según el tipo
+      const productoData = tipo === 'implemento'
+        ? { ...productoDataBase, esNuevo: estado === 'nuevo' }  // Solo implementos tienen esNuevo
+        : productoDataBase  // Repuestos NO tienen esNuevo
 
       // Insertar en la tabla correspondiente
       const table = tipo === 'implemento' ? 'implementos' : 'repuestos'
