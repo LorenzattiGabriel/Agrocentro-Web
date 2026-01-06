@@ -6,10 +6,10 @@ import { Producto, Repuesto } from "@/types/Producto";
 import CotizadorModal from "@/components/cotizador-modal";
 import CotizarButton from "@/components/SectionCatalogo/buttons/CotizarButton";
 import CardProducto from "@/components/SectionCatalogo/CardProducto";
+import ProductImage from "@/components/ProductImage";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import ContenidoDetalleProducto from "./ContenidoDetalleProducto/ContenidoDetalleProducto";
-import { getImageUrl } from "@/lib/utils/images";
 
 interface Props {
     producto: Producto;
@@ -49,13 +49,14 @@ export default function DetalleProducto({ producto, urlCatalogo, recomendados }:
                     {producto.ids_imagenes.length > 0 ? (
                         <>
                             {producto.ids_imagenes.map((img, index) => (
-                                <img
+                                <ProductImage
                                     key={index}
-                                    src={getImageUrl(img)}
+                                    src={img}
                                     alt={`${producto.nombre} - imagen ${index + 1}`}
                                     className={`absolute inset-0 w-full h-full object-contain rounded-lg bg-white shadow-sm transition-opacity duration-300 ${
                                         index === currentImageIndex ? "opacity-100" : "opacity-0"
                                     }`}
+                                    loading="eager"
                                 />
                             ))}
                             {producto.ids_imagenes.length > 1 && (
@@ -90,7 +91,7 @@ export default function DetalleProducto({ producto, urlCatalogo, recomendados }:
                     <div className="flex gap-2 justify-center flex-wrap">
                         {producto.ids_imagenes.map((img, index) => (
                             <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-20 h-20 rounded-md overflow-hidden border-2 transition ${currentImageIndex === index ? 'border-primary' : 'border-transparent'}`}>
-                                <img src={getImageUrl(img)} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
+                                <ProductImage src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" loading="eager" />
                             </button>
                         ))}
                     </div>

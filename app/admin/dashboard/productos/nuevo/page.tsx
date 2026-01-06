@@ -22,7 +22,7 @@ export default function NuevoProductoPage() {
   const [marca, setMarca] = useState("")
   const [modelo, setModelo] = useState("")
   const [categoria, setCategoria] = useState("")
-  const [estado, setEstado] = useState("nuevo")
+  const [estado, setEstado] = useState<'nuevo' | 'usado'>('nuevo')
   const [precio, setPrecio] = useState("")
   const [descripcion, setDescripcion] = useState("")
   const [imagenes, setImagenes] = useState<File[]>([])
@@ -72,13 +72,19 @@ export default function NuevoProductoPage() {
         // Generar nombre único
         const timestamp = Date.now()
         const randomStr = Math.random().toString(36).substring(7)
-        const extension = file.name.split('.').pop()
         const sanitizedName = file.name
           .replace(/\s+/g, '-')
           .replace(/[^a-zA-Z0-9.-]/g, '')
           .toLowerCase()
         const fileName = `${timestamp}-${randomStr}-${sanitizedName}`
-        const filePath = `${tipo}s/${fileName}`
+        
+        // Determinar la ruta según el tipo y estado
+        let filePath: string
+        if (tipo === 'implemento') {
+          filePath = `implementos/${estado}/${fileName}`
+        } else {
+          filePath = `repuestos/${fileName}`
+        }
 
         // Subir a Supabase Storage
         const { data, error } = await supabase.storage
@@ -266,19 +272,24 @@ export default function NuevoProductoPage() {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Estado
-                </label>
-                <select
-                  value={estado}
-                  onChange={(e) => setEstado(e.target.value)}
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <option value="nuevo">Nuevo</option>
-                  <option value="usado">Usado</option>
-                </select>
-              </div>
+              {tipo === 'implemento' && (
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Estado <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    value={estado}
+                    onChange={(e) => setEstado(e.target.value as 'nuevo' | 'usado')}
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="nuevo">Nuevo</option>
+                    <option value="usado">Usado</option>
+                  </select>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {estado === 'nuevo' ? 'Se guardará en: implementos/nuevos/' : 'Se guardará en: implementos/usados/'}
+                  </p>
+                </div>
+              )}
 
               <div>
                 <label className="block text-sm font-medium mb-2">

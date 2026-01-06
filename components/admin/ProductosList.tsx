@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Edit, Trash2, Eye } from "lucide-react"
 import { createClient } from "@/lib/supabase/client"
+import ProductImage from "@/components/ProductImage"
 import Link from "next/link"
 
 type Producto = {
@@ -55,11 +56,9 @@ export function ProductosList({ productos }: { productos: Producto[] }) {
     }
   }
 
-  const getImageUrl = (ids: string[]) => {
-    if (!ids || ids.length === 0) return '/placeholder.svg'
-    const firstImage = ids[0]
-    if (firstImage.startsWith('http')) return firstImage
-    return `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/product-images/${firstImage}`
+  const getFirstImage = (ids: string[]) => {
+    if (!ids || ids.length === 0) return null
+    return ids[0]
   }
 
   return (
@@ -122,10 +121,11 @@ export function ProductosList({ productos }: { productos: Producto[] }) {
                 <tr key={producto.id} className="border-b hover:bg-gray-50">
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-3">
-                      <img
-                        src={getImageUrl(producto.ids_imagenes)}
+                      <ProductImage
+                        src={getFirstImage(producto.ids_imagenes)}
                         alt={producto.nombre}
                         className="w-12 h-12 object-cover rounded"
+                        loading="lazy"
                       />
                       <div>
                         <div className="font-medium">{producto.nombre}</div>

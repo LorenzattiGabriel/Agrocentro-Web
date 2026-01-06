@@ -123,6 +123,10 @@ async function migrateImages() {
   console.log('📂 Escaneando imágenes locales...');
   const images = getAllImages(LOCAL_IMAGES_PATH);
   console.log(`   Encontradas ${images.length} imágenes\n`);
+  console.log('📁 Estructura del bucket:');
+  console.log('   - implementos/nuevos/');
+  console.log('   - implementos/usados/');
+  console.log('   - repuestos/\n');
 
   if (images.length === 0) {
     console.log('⚠️  No se encontraron imágenes para migrar');
