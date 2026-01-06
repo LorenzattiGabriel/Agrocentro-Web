@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -19,10 +19,40 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode
 }) {
+  const router = useRouter()
+  const [isChecking, setIsChecking] = useState(true)
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const pathname = usePathname()
-  const router = useRouter()
   const supabase = createClient()
+
+  // Verificar autenticación
+  useEffect(() => {
+    const checkAuth = async () => {
+      const { data: { user } } = await supabase.auth.getUser()
+      
+      if (!user) {
+        router.push('/admin/login')
+        return
+      }
+
+      // Verificar que es admin
+      const { data: profile } = await supabase
+        .from('admin_profiles')
+        .select('*')
+        .eq('id', user.id)
+        .single()
+
+      if (!profile) {
+        await supabase.auth.signOut()
+        router.push('/admin/login')
+        return
+      }
+
+      setIsChecking(false)
+    }
+
+    checkAuth()
+  }, [router, supabase])
 
   const handleLogout = async () => {
     await supabase.auth.signOut()
@@ -47,6 +77,18 @@ export default function DashboardLayout({
       icon: ImageIcon,
     },
   ]
+
+  // Mostrar loading mientras verifica autenticación
+  if (isChecking) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Verificando sesión...</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">

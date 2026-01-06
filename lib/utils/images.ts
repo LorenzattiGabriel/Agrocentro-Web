@@ -1,5 +1,5 @@
 /**
- * Convierte una ruta de imagen a la URL completa de Supabase Storage con fallback local
+ * Convierte una ruta de imagen a la URL completa con prioridad LOCAL (más rápido)
  * @param imagePath - Ruta de la imagen (puede ser local o de Supabase)
  * @returns URL completa de la imagen
  */
@@ -9,12 +9,19 @@ export function getImageUrl(imagePath: string | null | undefined): string {
     return '/placeholder.svg'
   }
 
-  // Si ya es una URL completa (http/https), retornarla tal cual
+  // Si ya es una URL completa de Supabase, extraer solo el path relativo
+  if (imagePath.includes('/storage/v1/object/public/product-images/')) {
+    const relativePath = imagePath.split('/storage/v1/object/public/product-images/')[1]
+    // PRIORIDAD: Usar local primero (más rápido, las imágenes aún no están migradas)
+    return `/images/products/${relativePath}`
+  }
+
+  // Si ya es una URL completa http/https (pero no de Supabase Storage)
   if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
     return imagePath
   }
 
-  // Si comienza con /, es una ruta local absoluta - mantenerla para fallback
+  // Si comienza con /, es una ruta local absoluta
   if (imagePath.startsWith('/')) {
     return imagePath
   }
@@ -24,16 +31,42 @@ export function getImageUrl(imagePath: string | null | undefined): string {
     return '/' + imagePath
   }
 
-  // Para rutas relativas (ej: "implementos/nuevos/imagen.png"), 
-  // intentar primero Supabase, con fallback a local
-  // La lógica de fallback se maneja con onError en el componente
+  // Para rutas relativas: PRIORIZAR LOCAL (más rápido mientras migra)
+  // El componente ProductImage intentará Supabase si local falla
+  return `/images/products/${imagePath}`
+}
+
+/**
+ * Obtiene la URL de Supabase Storage para una imagen
+ * @param imagePath - Ruta de la imagen
+ * @returns URL de Supabase Storage
+ */
+export function getSupabaseImageUrl(imagePath: string): string {
+  if (!imagePath) {
+    return '/placeholder.svg'
+  }
+
+  // Si ya es una URL completa de Supabase, retornarla
+  if (imagePath.includes('supabase.co/storage')) {
+    return imagePath
+  }
+
+  // Si es una ruta local absoluta, extraer el path relativo
+  if (imagePath.startsWith('/images/products/')) {
+    const relativePath = imagePath.replace('/images/products/', '')
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    if (supabaseUrl) {
+      return `${supabaseUrl}/storage/v1/object/public/product-images/${relativePath}`
+    }
+  }
+
+  // Para rutas relativas, construir URL de Supabase
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
   if (supabaseUrl) {
     return `${supabaseUrl}/storage/v1/object/public/product-images/${imagePath}`
   }
 
-  // Fallback: si no hay URL de Supabase, usar ruta local
-  return `/images/products/${imagePath}`
+  return '/placeholder.svg'
 }
 
 /**
@@ -47,6 +80,10 @@ export function getLocalImageUrl(imagePath: string): string {
   }
 
   // Si ya es una ruta absoluta local, retornarla
+  if (imagePath.startsWith('/images/products/')) {
+    return imagePath
+  }
+
   if (imagePath.startsWith('/')) {
     return imagePath
   }

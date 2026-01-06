@@ -32,19 +32,26 @@ export default function LoginPage() {
       }
 
       if (data.user) {
+        console.log('Usuario logueado:', data.user.id)
+        
         // Verificar que el usuario es admin
-        const { data: profile } = await supabase
+        const { data: profile, error: profileError } = await supabase
           .from('admin_profiles')
           .select('*')
           .eq('id', data.user.id)
           .single()
 
+        console.log('Profile data:', profile)
+        console.log('Profile error:', profileError)
+
         if (!profile) {
+          console.error('No se encontró perfil de admin')
           await supabase.auth.signOut()
-          setError("No tienes permisos de administrador")
+          setError(`No tienes permisos de administrador. Error: ${profileError?.message || 'Perfil no encontrado'}`)
           return
         }
 
+        console.log('Admin verificado, redirigiendo...')
         router.push('/admin/dashboard')
         router.refresh()
       }

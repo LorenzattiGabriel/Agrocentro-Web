@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { getImageUrl, getLocalImageUrl } from "@/lib/utils/images"
+import { getImageUrl, getSupabaseImageUrl } from "@/lib/utils/images"
 
 interface ProductImageProps {
   src: string | null | undefined
@@ -12,9 +12,9 @@ interface ProductImageProps {
 }
 
 /**
- * Componente de imagen con fallback automático:
- * 1. Intenta cargar desde Supabase Storage
- * 2. Si falla, intenta desde /images/products/ local
+ * Componente de imagen con fallback automático OPTIMIZADO:
+ * 1. Intenta cargar desde /images/products/ LOCAL (más rápido)
+ * 2. Si falla, intenta desde Supabase Storage
  * 3. Si falla, muestra /placeholder.svg
  */
 export default function ProductImage({ 
@@ -25,25 +25,21 @@ export default function ProductImage({
   onError 
 }: ProductImageProps) {
   const [currentSrc, setCurrentSrc] = useState<string>(getImageUrl(src))
-  const [hasError, setHasError] = useState(false)
+  const [attemptCount, setAttemptCount] = useState(0)
 
   const handleError = () => {
-    if (hasError) {
-      // Ya probamos el fallback, mostrar placeholder
-      setCurrentSrc('/placeholder.svg')
-      return
+    if (attemptCount === 0) {
+      // Primer fallo (local), intentar Supabase
+      const supabaseUrl = getSupabaseImageUrl(src || '')
+      if (supabaseUrl !== currentSrc && supabaseUrl !== '/placeholder.svg') {
+        setAttemptCount(1)
+        setCurrentSrc(supabaseUrl)
+        return
+      }
     }
 
-    // Intentar con la ruta local
-    const localUrl = getLocalImageUrl(src || '')
-    if (localUrl !== currentSrc) {
-      setHasError(true)
-      setCurrentSrc(localUrl)
-    } else {
-      // Si la URL local es igual a la actual, ir directo al placeholder
-      setCurrentSrc('/placeholder.svg')
-    }
-
+    // Segundo fallo o no hay URL de Supabase válida, mostrar placeholder
+    setCurrentSrc('/placeholder.svg')
     onError?.()
   }
 

@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowLeft, Upload, X } from "lucide-react"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
+import ProductImage from "@/components/ProductImage"
 
 export default function EditarProductoPage() {
   const router = useRouter()
@@ -83,8 +84,18 @@ export default function EditarProductoPage() {
   }, [productId, supabase])
 
   const getImageUrl = (path: string) => {
-    if (path.startsWith('http')) return path
-    return `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/product-images/${path}`
+    if (!path) return '/placeholder.svg'
+    if (path.startsWith('http://') || path.startsWith('https://')) return path
+    if (path.startsWith('/')) return path
+    
+    // Intentar Supabase Storage primero
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    if (supabaseUrl) {
+      return `${supabaseUrl}/storage/v1/object/public/product-images/${path}`
+    }
+    
+    // Fallback a local
+    return `/images/products/${path}`
   }
 
   const handleNuevasImagenesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -402,10 +413,11 @@ export default function EditarProductoPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {imagenesExistentes.map((imagen, index) => (
                     <div key={index} className="relative aspect-square">
-                      <img
-                        src={getImageUrl(imagen)}
+                      <ProductImage
+                        src={imagen}
                         alt={`Imagen ${index + 1}`}
                         className="w-full h-full object-cover rounded-lg"
+                        loading="eager"
                       />
                       <button
                         type="button"
