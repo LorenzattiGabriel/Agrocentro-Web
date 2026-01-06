@@ -82,7 +82,9 @@ export default function NuevoProductoPage() {
         if (tipo === 'implemento') {
           filePath = `implementos/${estado}/${fileName}`
         } else {
-          filePath = `repuestos/${fileName}`
+          // Para repuestos, incluir la marca en la ruta
+          const marcaNormalizada = marca.toLowerCase().replace(/\s+/g, '-')
+          filePath = `repuestos/${marcaNormalizada}/${fileName}`
         }
 
         // Subir a Supabase Storage
@@ -117,14 +119,18 @@ export default function NuevoProductoPage() {
         throw new Error("Nombre y marca son obligatorios")
       }
 
+      // Validación: para repuestos, la marca es necesaria antes de subir imágenes
+      if (tipo === 'repuesto' && !marca && imagenes.length > 0) {
+        throw new Error("Debes especificar la marca antes de subir imágenes para repuestos")
+      }
+
       // Subir imágenes
       const imagesPaths = await uploadImages()
 
-      // Preparar datos base
+      // Preparar datos base (campos comunes a ambas tablas)
       const productoDataBase = {
         nombre,
         marca,
-        modelo: modelo || null,
         categoria: categoria || null,
         descripcion: descripcion || null,
         ids_imagenes: imagesPaths,
@@ -132,8 +138,12 @@ export default function NuevoProductoPage() {
 
       // Agregar campos específicos según el tipo
       const productoData = tipo === 'implemento'
-        ? { ...productoDataBase, esNuevo: estado === 'nuevo' }  // Solo implementos tienen esNuevo
-        : productoDataBase  // Repuestos NO tienen esNuevo
+        ? { 
+            ...productoDataBase, 
+            modelo: modelo || null,  // Solo implementos tienen modelo
+            esNuevo: estado === 'nuevo'  // Solo implementos tienen esNuevo
+          }
+        : productoDataBase  // Repuestos solo tienen los campos base
 
       // Insertar en la tabla correspondiente
       const table = tipo === 'implemento' ? 'implementos' : 'repuestos'
@@ -248,18 +258,21 @@ export default function NuevoProductoPage() {
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Modelo
-                </label>
-                <input
-                  type="text"
-                  value={modelo}
-                  onChange={(e) => setModelo(e.target.value)}
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Ej: XYZ-2000"
-                />
-              </div>
+              {/* Modelo: solo para implementos */}
+              {tipo === 'implemento' && (
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Modelo
+                  </label>
+                  <input
+                    type="text"
+                    value={modelo}
+                    onChange={(e) => setModelo(e.target.value)}
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Ej: XYZ-2000"
+                  />
+                </div>
+              )}
 
               <div>
                 <label className="block text-sm font-medium mb-2">
@@ -274,6 +287,7 @@ export default function NuevoProductoPage() {
                 />
               </div>
 
+              {/* Estado: solo para implementos */}
               {tipo === 'implemento' && (
                 <div>
                   <label className="block text-sm font-medium mb-2">
