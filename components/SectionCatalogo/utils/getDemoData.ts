@@ -92,7 +92,8 @@ export default async function getProductsBySection(section: ProductoSection){
                 .map(p => ({
                     ...p, 
                     section: "implementos-nuevos",
-                    ids_imagenes: getImageUrls(p.ids_imagenes.map(img => `implementos/nuevos/${img}`))
+                    // Las rutas en la BD ya incluyen la carpeta completa
+                    ids_imagenes: p.ids_imagenes
                 } as ImplementoNuevo));
         
         case "implementos-usados":
@@ -102,7 +103,8 @@ export default async function getProductsBySection(section: ProductoSection){
                     ...p, 
                     section: "implementos-usados", 
                     year: p.anio,
-                    ids_imagenes: getImageUrls(p.ids_imagenes.map(img => `implementos/usados/${img}`))
+                    // Las rutas en la BD ya incluyen la carpeta completa
+                    ids_imagenes: p.ids_imagenes
                 } as ImplementoUsado));
         
         case "repuestos":
@@ -110,7 +112,8 @@ export default async function getProductsBySection(section: ProductoSection){
                 .map(p => ({
                     ...p, 
                     section: "repuestos",
-                    ids_imagenes: getImageUrls(p.ids_imagenes.map(img => `repuestos/${p.marca.toLowerCase()}/${img}`))
+                    // Las rutas en la BD ya incluyen la carpeta completa con marca
+                    ids_imagenes: p.ids_imagenes
                 } as Repuesto));
     }
 }
