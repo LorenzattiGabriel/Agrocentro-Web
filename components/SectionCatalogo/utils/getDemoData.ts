@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { ImplementoNuevo, ImplementoUsado, ProductoSection, Repuesto } from "@/types/Producto";
+import { getImageUrls } from "@/lib/supabase";
 import arrImplementos from "@/constants/productos/implementos.json"
 import arrRepuestos from "@/constants/productos/repuestos.json"
 
@@ -88,15 +89,28 @@ export default async function getProductsBySection(section: ProductoSection){
         case "implementos-nuevos": 
             return implementos
                 .filter(p => p.esNuevo)
-                .map(p => ({...p, section: "implementos-nuevos"} as ImplementoNuevo));
+                .map(p => ({
+                    ...p, 
+                    section: "implementos-nuevos",
+                    ids_imagenes: getImageUrls(p.ids_imagenes.map(img => `implementos/nuevos/${img}`))
+                } as ImplementoNuevo));
         
         case "implementos-usados":
             return implementos
                 .filter(p => !p.esNuevo)
-                .map(p => ({...p, section: "implementos-usados", year: p.anio} as ImplementoUsado));
+                .map(p => ({
+                    ...p, 
+                    section: "implementos-usados", 
+                    year: p.anio,
+                    ids_imagenes: getImageUrls(p.ids_imagenes.map(img => `implementos/usados/${img}`))
+                } as ImplementoUsado));
         
         case "repuestos":
             return repuestos
-                .map(p => ({...p, section: "repuestos"} as Repuesto));
+                .map(p => ({
+                    ...p, 
+                    section: "repuestos",
+                    ids_imagenes: getImageUrls(p.ids_imagenes.map(img => `repuestos/${p.marca.toLowerCase()}/${img}`))
+                } as Repuesto));
     }
 }

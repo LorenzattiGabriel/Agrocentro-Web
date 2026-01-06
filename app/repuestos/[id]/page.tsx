@@ -13,17 +13,8 @@ interface Props {
 
 export default async function RepuestoPage({ params }: Props){
 
+    // Fetch productos (URLs de Supabase ya incluidas)
     const productos = await getDemoData(repuestosSection) as Repuesto[];
-    
-    //asignar PATH a imagenes de Repuestos
-    productos.forEach(repuesto => {
-        repuesto.ids_imagenes = repuesto.ids_imagenes.map(id_imagen => {
-            if (!id_imagen.includes(repuestosImgsPath))
-                return `${repuestosImgsPath}/${repuesto.marca.toLowerCase()}/${id_imagen}`
-
-            return id_imagen;
-        });
-    });
     
     const repuesto = productos.find(p=>p.id === params.id) as Repuesto;
     const recomendados = productos.filter(p=>p.categoria===repuesto?.categoria).slice(0, 10);
@@ -33,7 +24,6 @@ export default async function RepuestoPage({ params }: Props){
     if (!repuesto) {
         return <ProductoNoEncontrado nombreSection="Repuesto" urlCatalogo={`/${repuestosSection}`} />
     }
-
 
     return (
         <DetalleProducto producto={repuesto} urlCatalogo={urlCatalogo} recomendados={recomendados}/>

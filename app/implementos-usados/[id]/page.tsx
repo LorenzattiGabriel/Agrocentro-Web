@@ -13,18 +13,8 @@ interface Props {
 
 export default async function ImplementoUsadoPage({ params }: Props){
 
+    // Fetch productos (URLs de Supabase ya incluidas)
     const productos = await getDemoData(implementosUsadosSection) as ImplementoNuevo[];
-    
-    //asignar PATH a imagenes
-    productos.forEach(implementoNuevo => {
-        implementoNuevo.ids_imagenes = implementoNuevo.ids_imagenes.map(id_imagen => {
-            if (!id_imagen.includes(implementosUsadosImgsPath) && !id_imagen.includes("https://"))
-                return `${implementosUsadosImgsPath}/${id_imagen}`
-
-
-            return id_imagen;
-        });
-    });
     
     const implemento = productos.find(p=>p.id === params.id) as ImplementoNuevo;
     const recomendados = productos.filter(p=>p.categoria===implemento?.categoria).slice(0, 10);
