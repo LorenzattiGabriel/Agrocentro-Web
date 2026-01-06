@@ -32,6 +32,27 @@ function isFullUrl(path: string): boolean {
 }
 
 /**
+ * Limpia URLs malformadas que puedan estar en la base de datos
+ * Ejemplos de URLs rotas:
+ * - "https:/domain.com" (falta una /)
+ * - "/local/path/https:/domain.com" (mezcladas)
+ */
+function cleanMalformedUrl(path: string): string {
+  // Si contiene "supabase.co" pero no empieza con http
+  if (path.includes('supabase.co') && !isFullUrl(path)) {
+    // Extraer solo la parte de Supabase
+    const match = path.match(/(https?:\/)?\/.*supabase\.co.*/)
+    if (match) {
+      let url = match[0]
+      // Arreglar https:/ a https://
+      url = url.replace(/^https?:\/([^/])/, 'https://$1')
+      return url
+    }
+  }
+  return path
+}
+
+/**
  * Verifica si una ruta ya incluye la estructura de carpetas
  */
 function hasFolder(path: string): boolean {
@@ -99,27 +120,30 @@ export function getImageUrl(
   // Validación inicial
   if (!imagePath) return PLACEHOLDER_IMAGE
 
+  // Limpiar URLs malformadas
+  const cleanedPath = cleanMalformedUrl(imagePath)
+
   // Casos directos (sin procesamiento)
-  if (isFullUrl(imagePath)) return imagePath
-  if (imagePath.startsWith('/')) return imagePath
-  if (imagePath.startsWith('public/')) return `/${imagePath}`
+  if (isFullUrl(cleanedPath)) return cleanedPath
+  if (cleanedPath.startsWith('/')) return cleanedPath
+  if (cleanedPath.startsWith('public/')) return `/${cleanedPath}`
 
   // Extraer nombre de archivo
-  const fileName = imagePath.split('/').pop() || imagePath
+  const fileName = cleanedPath.split('/').pop() || cleanedPath
   const isNewImg = isNewImage(fileName)
 
   // CASO 1: Ruta ya tiene carpetas (implementos/nuevos/imagen.png)
-  if (hasFolder(imagePath)) {
+  if (hasFolder(cleanedPath)) {
     if (isNewImg) {
-      const supabaseUrl = buildSupabaseUrl(imagePath)
+      const supabaseUrl = buildSupabaseUrl(cleanedPath)
       if (supabaseUrl) return supabaseUrl
     }
-    return buildLocalUrl(imagePath)
+    return buildLocalUrl(cleanedPath)
   }
 
   // CASO 2: Solo nombre de archivo - necesita carpeta
   const folder = productType ? buildFolder(productType, isNew) : 'implementos/nuevos'
-  const fullPath = `${folder}/${imagePath}`
+  const fullPath = `${folder}/${cleanedPath}`
 
   if (isNewImg) {
     const supabaseUrl = buildSupabaseUrl(fullPath)
@@ -131,41 +155,40 @@ export function getImageUrl(
 
 /**
  * Obtiene la URL de Supabase Storage para una imagen (para fallback)
+ * Convierte cualquier ruta (local, relativa, etc) a URL de Supabase
  * @param imagePath - Ruta de la imagen
  * @returns URL de Supabase Storage
  */
 export function getSupabaseImageUrl(imagePath: string): string {
-  if (!imagePath) {
-    return '/placeholder.svg'
-  }
+  if (!imagePath) return PLACEHOLDER_IMAGE
+
+  // Limpiar URLs malformadas
+  const cleanedPath = cleanMalformedUrl(imagePath)
 
   // Si ya es una URL completa de Supabase, retornarla
-  if (imagePath.includes('supabase.co/storage')) {
-    return imagePath
+  if (isFullUrl(cleanedPath) && cleanedPath.includes('supabase.co')) {
+    return cleanedPath
   }
 
-  // Si es una ruta local absoluta, extraer el path relativo
-  if (imagePath.startsWith('/images/products/')) {
-    const relativePath = imagePath.replace('/images/products/', '')
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    if (supabaseUrl) {
-      return `${supabaseUrl}/storage/v1/object/public/product-images/${relativePath}`
-    }
+  // Si es una URL completa pero NO de Supabase, no podemos convertirla
+  if (isFullUrl(cleanedPath)) {
+    return PLACEHOLDER_IMAGE
   }
 
-  // Si comienza con /, quitar el prefijo
-  let cleanPath = imagePath
-  if (imagePath.startsWith('/')) {
-    cleanPath = imagePath.substring(1)
+  // Extraer solo la parte relativa (quitar /images/products/ si existe)
+  let relativePath = cleanedPath
+    .replace(/^\/images\/products\//, '')  // Quitar prefijo local
+    .replace(/^\//, '')                      // Quitar / inicial si queda
+    .replace(/^public\//, '')                // Quitar public/ si existe
+
+  // Si no tiene carpeta y no es una ruta válida, no podemos convertirla
+  if (!relativePath || relativePath === cleanedPath.replace(/^\//, '')) {
+    // Intentar con lo que tengamos
   }
 
   // Construir URL de Supabase
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-  if (supabaseUrl) {
-    return `${supabaseUrl}/storage/v1/object/public/product-images/${cleanPath}`
-  }
-
-  return '/placeholder.svg'
+  const supabaseUrl = buildSupabaseUrl(relativePath)
+  return supabaseUrl || PLACEHOLDER_IMAGE
 }
 
 /**
