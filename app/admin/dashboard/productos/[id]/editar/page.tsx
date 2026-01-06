@@ -27,7 +27,6 @@ export default function EditarProductoPage() {
   const [modelo, setModelo] = useState("")
   const [categoria, setCategoria] = useState("")
   const [estado, setEstado] = useState<'nuevo' | 'usado'>('nuevo')
-  const [precio, setPrecio] = useState("")
   const [descripcion, setDescripcion] = useState("")
   const [imagenesExistentes, setImagenesExistentes] = useState<string[]>([])
   const [nuevasImagenes, setNuevasImagenes] = useState<File[]>([])
@@ -69,8 +68,7 @@ export default function EditarProductoPage() {
         setMarca(data.marca || "")
         setModelo(data.modelo || "")
         setCategoria(data.categoria || "")
-        setEstado((data.estado || "nuevo") as 'nuevo' | 'usado')
-        setPrecio(data.precio ? data.precio.toString() : "")
+        setEstado(data.esNuevo ? 'nuevo' : 'usado')
         setDescripcion(data.descripcion || "")
         setImagenesExistentes(data.ids_imagenes || [])
       } catch (err: any) {
@@ -204,9 +202,8 @@ export default function EditarProductoPage() {
         marca,
         modelo: modelo || null,
         categoria: categoria || null,
-        estado: estado || null,
-        precio: precio ? parseFloat(precio) : null,
         descripcion: descripcion || null,
+        esNuevo: estado === 'nuevo',
         ids_imagenes: allImages,
       }
 
@@ -369,18 +366,6 @@ export default function EditarProductoPage() {
                 </div>
               )}
 
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Precio (opcional)
-                </label>
-                <input
-                  type="number"
-                  value={precio}
-                  onChange={(e) => setPrecio(e.target.value)}
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  step="0.01"
-                />
-              </div>
             </div>
 
             <div>

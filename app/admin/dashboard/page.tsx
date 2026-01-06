@@ -1,13 +1,13 @@
 import { createClient } from "@/lib/supabase/server"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Package, Image as ImageIcon, Users } from "lucide-react"
+import { Package, Image as ImageIcon, AlertCircle, TrendingUp, Layers } from "lucide-react"
 
 export const dynamic = 'force-dynamic'
 
 export default async function DashboardPage() {
   const supabase = await createClient()
 
-  // Obtener estadísticas
+  // Obtener estadísticas básicas
   const [
     { count: implementosCount },
     { count: repuestosCount },
@@ -18,6 +18,15 @@ export default async function DashboardPage() {
     supabase.auth.getUser(),
   ])
 
+  // Obtener datos detallados
+  const [
+    { data: implementos },
+    { data: repuestos },
+  ] = await Promise.all([
+    supabase.from("implementos").select("*"),
+    supabase.from("repuestos").select("*"),
+  ])
+
   const { data: profile } = await supabase
     .from("admin_profiles")
     .select("*")
@@ -25,6 +34,51 @@ export default async function DashboardPage() {
     .single()
 
   const totalProductos = (implementosCount || 0) + (repuestosCount || 0)
+
+  // Calcular métricas avanzadas
+  const implementosNuevos = implementos?.filter(p => p.esNuevo === true).length || 0
+  const implementosUsados = implementos?.filter(p => p.esNuevo === false).length || 0
+  
+  const productosSinImagenes = [
+    ...(implementos || []),
+    ...(repuestos || [])
+  ].filter(p => !p.ids_imagenes || p.ids_imagenes.length === 0).length
+
+  const productosConImagenes = totalProductos - productosSinImagenes
+
+  // Agrupar por categoría
+  const categorias = [...(implementos || []), ...(repuestos || [])]
+    .reduce((acc: any, p) => {
+      const cat = p.categoria || 'Sin categoría'
+      acc[cat] = (acc[cat] || 0) + 1
+      return acc
+    }, {})
+
+  const topCategorias = Object.entries(categorias)
+    .sort(([, a]: any, [, b]: any) => b - a)
+    .slice(0, 5)
+
+  // Agrupar por marca
+  const marcas = [...(implementos || []), ...(repuestos || [])]
+    .reduce((acc: any, p) => {
+      const marca = p.marca || 'Sin marca'
+      acc[marca] = (acc[marca] || 0) + 1
+      return acc
+    }, {})
+
+  const topMarcas = Object.entries(marcas)
+    .sort(([, a]: any, [, b]: any) => b - a)
+    .slice(0, 5)
+
+  // Productos agregados recientemente (últimos 7 días)
+  const hace7Dias = new Date()
+  hace7Dias.setDate(hace7Dias.getDate() - 7)
+  
+  const productosRecientes = [...(implementos || []), ...(repuestos || [])]
+    .filter(p => {
+      const createdAt = new Date(p.created_at)
+      return createdAt >= hace7Dias
+    }).length
 
   return (
     <div className="space-y-6">
@@ -35,8 +89,8 @@ export default async function DashboardPage() {
         </p>
       </div>
 
-      {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Stats Cards Principales */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
@@ -47,7 +101,7 @@ export default async function DashboardPage() {
           <CardContent>
             <div className="text-3xl font-bold">{totalProductos}</div>
             <p className="text-xs text-muted-foreground mt-1">
-              Implementos y repuestos
+              {implementosCount} implementos, {repuestosCount} repuestos
             </p>
           </CardContent>
         </Card>
@@ -57,12 +111,12 @@ export default async function DashboardPage() {
             <CardTitle className="text-sm font-medium text-muted-foreground">
               Implementos
             </CardTitle>
-            <Package className="h-5 w-5 text-green-600" />
+            <Layers className="h-5 w-5 text-green-600" />
           </CardHeader>
           <CardContent>
             <div className="text-3xl font-bold">{implementosCount || 0}</div>
             <p className="text-xs text-muted-foreground mt-1">
-              Nuevos y usados
+              {implementosNuevos} nuevos, {implementosUsados} usados
             </p>
           </CardContent>
         </Card>
@@ -70,15 +124,113 @@ export default async function DashboardPage() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
-              Repuestos
+              Con Imágenes
             </CardTitle>
-            <Package className="h-5 w-5 text-blue-600" />
+            <ImageIcon className="h-5 w-5 text-blue-600" />
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold">{repuestosCount || 0}</div>
+            <div className="text-3xl font-bold">{productosConImagenes}</div>
             <p className="text-xs text-muted-foreground mt-1">
-              Piezas y componentes
+              {((productosConImagenes / totalProductos) * 100).toFixed(1)}% del catálogo
             </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium text-muted-foreground">
+              Agregados (7d)
+            </CardTitle>
+            <TrendingUp className="h-5 w-5 text-orange-600" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-3xl font-bold">{productosRecientes}</div>
+            <p className="text-xs text-muted-foreground mt-1">
+              Últimos 7 días
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Alertas y Avisos */}
+      {productosSinImagenes > 0 && (
+        <Card className="border-orange-200 bg-orange-50">
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <AlertCircle className="h-5 w-5 text-orange-600" />
+              <CardTitle className="text-orange-900">Atención Requerida</CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <p className="text-orange-800">
+              <strong>{productosSinImagenes} productos</strong> no tienen imágenes asignadas. 
+              Considera agregar imágenes para mejorar la experiencia de los usuarios.
+            </p>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Métricas Detalladas */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Top Categorías */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Top 5 Categorías</CardTitle>
+            <CardDescription>Productos por categoría</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {topCategorias.map(([categoria, count]: any, index) => (
+                <div key={categoria} className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium">
+                      {index + 1}
+                    </div>
+                    <span className="font-medium">{categoria}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-primary rounded-full" 
+                        style={{ width: `${(count / totalProductos) * 100}%` }}
+                      />
+                    </div>
+                    <span className="text-sm font-medium w-12 text-right">{count}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Top Marcas */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Top 5 Marcas</CardTitle>
+            <CardDescription>Productos por marca</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {topMarcas.map(([marca, count]: any, index) => (
+                <div key={marca} className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-sm font-medium text-green-700">
+                      {index + 1}
+                    </div>
+                    <span className="font-medium">{marca}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-green-600 rounded-full" 
+                        style={{ width: `${(count / totalProductos) * 100}%` }}
+                      />
+                    </div>
+                    <span className="text-sm font-medium w-12 text-right">{count}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </CardContent>
         </Card>
       </div>
