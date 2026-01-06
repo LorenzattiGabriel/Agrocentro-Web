@@ -36,6 +36,8 @@ export default function CardProducto({producto}:Props){
                 alt={producto.nombre} 
                 className="w-full h-56 object-cover bg-white"
                 loading="lazy"
+                productType={producto.section === 'repuestos' ? 'repuestos' : 'implementos'}
+                isNew={producto.section === 'implementos-nuevos' ? true : producto.section === 'implementos-usados' ? false : undefined}
             />
 
             

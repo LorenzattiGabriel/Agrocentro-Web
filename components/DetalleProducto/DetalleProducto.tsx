@@ -57,6 +57,8 @@ export default function DetalleProducto({ producto, urlCatalogo, recomendados }:
                                         index === currentImageIndex ? "opacity-100" : "opacity-0"
                                     }`}
                                     loading="eager"
+                                    productType={producto.section === 'repuestos' ? 'repuestos' : 'implementos'}
+                                    isNew={producto.section === 'implementos-nuevos' ? true : producto.section === 'implementos-usados' ? false : undefined}
                                 />
                             ))}
                             {producto.ids_imagenes.length > 1 && (
@@ -91,7 +93,14 @@ export default function DetalleProducto({ producto, urlCatalogo, recomendados }:
                     <div className="flex gap-2 justify-center flex-wrap">
                         {producto.ids_imagenes.map((img, index) => (
                             <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-20 h-20 rounded-md overflow-hidden border-2 transition ${currentImageIndex === index ? 'border-primary' : 'border-transparent'}`}>
-                                <ProductImage src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" loading="eager" />
+                                <ProductImage 
+                                    src={img} 
+                                    alt={`Thumbnail ${index + 1}`} 
+                                    className="w-full h-full object-cover" 
+                                    loading="eager"
+                                    productType={producto.section === 'repuestos' ? 'repuestos' : 'implementos'}
+                                    isNew={producto.section === 'implementos-nuevos' ? true : producto.section === 'implementos-usados' ? false : undefined}
+                                />
                             </button>
                         ))}
                     </div>
