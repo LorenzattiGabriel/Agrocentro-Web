@@ -3,10 +3,11 @@
 import useCatalogoRepuestos from "@/hooks/useCatalogoRepuestos";
 import { Repuesto } from "@/types/Producto";
 import CardProducto from "../CardProducto";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { filtrosCheckbox } from "../filtros/FiltroCheckbox/constants/filtrosCheckbox";
 import FiltroTag from "../FiltroTag/FiltroTag";
 import SectionCatalogo from "../SectionCatalogo";
+import Pagination from "../Pagination/Pagination";
 import FiltroCheckbox from "../filtros/FiltroCheckbox/FiltroCheckbox";
 import { searchbar_input_id } from "../searchbar/SearchBar";
 
@@ -31,9 +32,22 @@ export default function CatalogoRepuestos({ initialData }: Props) {
         selectedOrder, setSelectedOrder
     } = useCatalogoRepuestos(initialData, arrOpcionesMarca, arrOpcionesCategoria);
 
+    // Paginación
+    const ITEMS_PER_PAGE = 20;
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = Math.ceil(productos.length / ITEMS_PER_PAGE);
+    
+    // Resetear a página 1 cuando cambian los filtros
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [productos.length, search, selectedOrder]);
+    
+    // Calcular productos de la página actual
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const currentProducts = productos.slice(startIndex, endIndex);
 
-
-    const cards = productos.map((producto) => <CardProducto producto={producto} key={producto.id}/>);
+    const cards = currentProducts.map((producto) => <CardProducto producto={producto} key={producto.id}/>);
 
 
     const [verTodoCategorias, setVerTodoCategorias] = useState<boolean>(true);
@@ -139,6 +153,15 @@ export default function CatalogoRepuestos({ initialData }: Props) {
                         />
                     )}
                 </div>
+            }
+            paginationElement={
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={setCurrentPage}
+                    totalItems={productos.length}
+                    itemsPerPage={ITEMS_PER_PAGE}
+                />
             }
         />
     </main>

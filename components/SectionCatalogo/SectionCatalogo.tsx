@@ -15,10 +15,11 @@ type Props = {
     selectedOrder: string,
     setSelectedOrder: Dispatch<SetStateAction<string>>,
     filtrosElement: JSX.Element,
-    tagsElement: JSX.Element
+    tagsElement: JSX.Element,
+    paginationElement?: JSX.Element
 }
 
-export default function SectionCatalogo({section, sectionName, cards, setSearch, selectedOrder, setSelectedOrder, filtrosElement, tagsElement}: Props){
+export default function SectionCatalogo({section, sectionName, cards, setSearch, selectedOrder, setSelectedOrder, filtrosElement, tagsElement, paginationElement}: Props){
 
     const [showSidebar, setShowSidebar] = useState(false);
 
@@ -99,7 +100,8 @@ export default function SectionCatalogo({section, sectionName, cards, setSearch,
                 {cards}
             </section>
 
-
+            {/* Paginación */}
+            {paginationElement}
 
         </div>
     </div>
