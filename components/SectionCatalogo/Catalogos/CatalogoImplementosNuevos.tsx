@@ -15,8 +15,8 @@ interface Props {
 
 export default function CatalogoImplementosNuevos({ initialData }: Props) {
     
-    const arrOpcionesMarca = Array.from(new Set(initialData.map((producto) => producto.marca)));
-    const arrOpcionesCategoria = Array.from(new Set(initialData.map((producto) => producto.categoria)));
+    const arrOpcionesMarca = Array.from(new Set(initialData.map((producto) => producto.marca).filter(Boolean)));
+    const arrOpcionesCategoria = Array.from(new Set(initialData.map((producto) => producto.categoria).filter(Boolean)));
     
     const {
         productos,
