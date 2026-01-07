@@ -91,10 +91,9 @@ export default function SectionCatalogo({section, sectionName, cards, setSearch,
             {/* Catalogo */}
             <section
                 className="
-                    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 
-                    justify-items-center justify-left
-                    gap-3 xl:gap-6
-                    py-8 px-8
+                    grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+                    gap-4 md:gap-6
+                    py-8 px-4 sm:px-6 md:px-8
                 "
             >
                 {cards}

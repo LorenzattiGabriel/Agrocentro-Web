@@ -20,7 +20,7 @@ export default function CardProducto({producto}:Props){
         <article
             key={producto.id} 
             className="
-                max-w-70 w-full
+                w-full
                 bg-white 
                 flex flex-col overflow-hidden 
                 rounded-2xl border-1 hover:border-secondary
@@ -34,7 +34,7 @@ export default function CardProducto({producto}:Props){
             <ProductImage 
                 src={producto.ids_imagenes?.[0]} 
                 alt={producto.nombre} 
-                className="w-full h-56 object-cover bg-white"
+                className="w-full h-48 sm:h-56 object-cover bg-white"
                 loading="lazy"
                 productType={producto.section === 'repuestos' ? 'repuestos' : 'implementos'}
                 isNew={producto.section === 'implementos-nuevos' ? true : producto.section === 'implementos-usados' ? false : undefined}
