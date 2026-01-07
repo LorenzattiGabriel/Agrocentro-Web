@@ -88,22 +88,21 @@ export default function CardProducto({producto}:Props){
 
             {producto.section==="repuestos"&&
                 <div className="flex-1 flex flex-col p-4">
-                    <header>
+                    <header className="mb-3">
                         <div className="flex items-center gap-1 justify-end absolute top-2 right-2 bg-accent text-background rounded-2xl px-2 py-0.5">
                                 <dt className="hidden">Categoría:</dt>
-                                <dd className="font-normal">{repuesto.categoria}</dd>
+                                <dd className="font-normal text-xs">{repuesto.categoria}</dd>
                         </div>
-                        <h2 className="text-lg font-semibold text-foreground mb-1">{repuesto.nombre}</h2>
+                        <h2 className="text-lg font-semibold text-foreground mb-1 pr-20">{repuesto.nombre}</h2>
                         <p className="text-sm text-secondary mb-2">{repuesto.marca}</p>
                     </header>
 
-                    <main className="h-full">
-                        <dl className="flex flex-col justify-end gap-1 text-md h-full">
-                            <div className="flex items-start gap-2">
-                                <dt>Descripcion:</dt>
-                                <dd className="font-bold text-foreground/90">{repuesto.descripcion}</dd>
-                            </div>
-                        </dl>
+                    <main className="flex-1">
+                        {repuesto.descripcion && (
+                            <p className="text-sm text-foreground/70 line-clamp-3">
+                                {repuesto.descripcion}
+                            </p>
+                        )}
                     </main>
                 </div>
             }
